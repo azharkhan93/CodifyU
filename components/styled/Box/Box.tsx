@@ -70,19 +70,27 @@ export type BoxProps = ThemedSpaceProps &
   
     ShadowProps & {
       gap?: string | number | string[] | number[];
-      'data-aos'?: string;
+      // 'data-aos'?: string;
     };
-    
-    export const Box = styled('div').withConfig({
-      shouldForwardProp: (prop) => isPropValid(prop),
-    }).attrs<BoxProps>(props => ({
-      'data-aos': props['data-aos'],
-    }))`
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      ${systemStyles}
-    `;
+    // export const Box = styled('div').withConfig({
+    //   shouldForwardProp: (prop) => isPropValid(prop),
+    // })`
+    //   display: flex;
+    //   flex-direction: column;
+    //   box-sizing: border-box;
+    //   ${systemStyles}
+    // `;
+
+    // export const Box = styled('div').withConfig({
+    //   shouldForwardProp: (prop) => isPropValid(prop),
+    // }).attrs<BoxProps>(props => ({
+    //   'data-aos': props['data-aos'],
+    // }))`
+    //   display: flex;
+    //   flex-direction: column;
+    //   box-sizing: border-box;
+    //   ${systemStyles}
+    // `;
 
     // export const Box = styled('div').withConfig({
     //   shouldForwardProp: (prop, defaultValidatorFn) =>
@@ -104,12 +112,12 @@ export type BoxProps = ThemedSpaceProps &
     //   ${systemStyles}
     // `;
 
-// export const Box = styled.div.withConfig(StyledWithConfig)<BoxProps>`
-//   display: flex;
-//   flex-direction: column;
-//   box-sizing: border-box;
-//   ${systemStyles}
-// `;
+export const Box = styled.div.withConfig(StyledWithConfig)<BoxProps>`
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  ${systemStyles}
+`;
 
 export const CenterBox = styled(Box)`
   display: flex;

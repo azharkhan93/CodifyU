@@ -14,6 +14,7 @@ export const StyledLink = styled.a<StyledLinkProps>`
   font-family: "DMSansRegular";
   font-size: 0.9;
   font-weight: 400;
+  color: #ADFF2F;
   ${typography}
   ${color}
   position: relative;

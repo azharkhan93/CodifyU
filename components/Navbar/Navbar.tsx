@@ -31,6 +31,7 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <Row
+         flexDirection={["row", "row"]}
         data-aos="fade-left"
         px={["m", "xl"]}
         position="fixed"
@@ -38,7 +39,7 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={"white"}
+        bg={"primary"}
         style={{
           zIndex: "50",
         }}
@@ -61,7 +62,7 @@ export const Navbar: React.FC = () => {
           ></Box>
 
           <Box onClick={handleToggle}>
-            <CiMenuFries size={30} color="black" />
+            <CiMenuFries size={30} color="white" />
           </Box>
         </Box>
 
@@ -98,7 +99,7 @@ export const Navbar: React.FC = () => {
             justifyContent={"center"}
             width={"100vw"}
             height={"100vh"}
-            bg="white"
+            bg="primary"
             zIndex={9999}
             display={["flex", "none"]}
             position="fixed"
@@ -131,7 +132,7 @@ export const Navbar: React.FC = () => {
             >
               {NavbarData.map((item, index) => (
                 <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-                  <Text variant={"body"} color={"primary"}>
+                  <Text variant={"body"} color={"white"}>
                     {item.title}
                   </Text>
                 </StyledLink>
@@ -142,7 +143,7 @@ export const Navbar: React.FC = () => {
                 borderTopLeftRadius={"xxl"}
                 display={["block", "none"]}
                 variant={"primary"}
-                bg={"black"}
+                bg={"grey"}
                 py={"m"}
                 px={"xl"}
                 borderRadius={"m"}

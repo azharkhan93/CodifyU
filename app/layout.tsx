@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import 'aos/dist/aos.css';  
 import AOS from 'aos';
+import { Navbar } from "@/components/Navbar";
 
 export default function RootLayout({
   children,
@@ -34,15 +35,16 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
-        <GlobalStyle />
-        <AppThemeProvider>
-          <ApolloProvider client={client}>
-              {children}
-           
-          </ApolloProvider>
-        </AppThemeProvider>
-      </body>
-    </html>
+    <body>
+      <AppThemeProvider>
+        <ApolloProvider client={client}>
+          <Navbar />
+          <GlobalStyle />
+          {children}
+        </ApolloProvider>
+      </AppThemeProvider>
+    </body>
+  </html>
+      
   );
 }
