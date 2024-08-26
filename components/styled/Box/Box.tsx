@@ -35,6 +35,7 @@ import {
   ThemedSpaceProps,
 } from "@/theme";
 import { AppSpaceProps } from "@/theme/elements/spacing";
+import isPropValid from "@emotion/is-prop-valid";
 
 const gap = style({
   prop: "gap",
@@ -66,16 +67,49 @@ export type BoxProps = ThemedSpaceProps &
   FlexboxProps &
   PositionProps &
   BackgroundColorProps &
-  ShadowProps & {
-    gap?: string | number | string[] | number[];
-  };
+  
+    ShadowProps & {
+      gap?: string | number | string[] | number[];
+      'data-aos'?: string;
+    };
+    
+    export const Box = styled('div').withConfig({
+      shouldForwardProp: (prop) => isPropValid(prop),
+    }).attrs<BoxProps>(props => ({
+      'data-aos': props['data-aos'],
+    }))`
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      ${systemStyles}
+    `;
 
-export const Box = styled.div.withConfig(StyledWithConfig)<BoxProps>`
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  ${systemStyles}
-`;
+    // export const Box = styled('div').withConfig({
+    //   shouldForwardProp: (prop, defaultValidatorFn) =>
+    //     isPropValid(prop) && defaultValidatorFn(prop),
+    // }).attrs<BoxProps>(props => ({
+    //   'data-aos': props['data-aos'],
+    // }))`
+    //   display: flex;
+    //   flex-direction: column;
+    //   box-sizing: border-box;
+    //   ${systemStyles}
+    // `;
+    // export const Box = styled.div.attrs<BoxProps>(props => ({
+    //   'data-aos': props['data-aos'],
+    // }))`
+    //   display: flex;
+    //   flex-direction: column;
+    //   box-sizing: border-box;
+    //   ${systemStyles}
+    // `;
+
+// export const Box = styled.div.withConfig(StyledWithConfig)<BoxProps>`
+//   display: flex;
+//   flex-direction: column;
+//   box-sizing: border-box;
+//   ${systemStyles}
+// `;
 
 export const CenterBox = styled(Box)`
   display: flex;
@@ -86,7 +120,7 @@ export const CenterBox = styled(Box)`
 
 export const HoverBox = styled(CenterBox)<BoxProps>`
   &:hover {
-    background-color: ${BASE_COLORS.greyLight};
+    background-color: ${BASE_COLORS.grey};
   }
   cursor: pointer;
 `;

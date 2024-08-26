@@ -1,11 +1,13 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import { Box, CenterBox } from "@/components/styled/Box";
 import { Text } from "@/components/styled/Text";
 import Logo from "@/public/assets/svgs/logo-transparent.svg";
-import { Player } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
 import LoadingAnimation from "@/public/assets/lottie-animations/loading.json";
+const Player = dynamic(() => import("@lottiefiles/react-lottie-player").then(mod => mod.Player), {
+  ssr: false,
+});
 
 export default function Page() {
   return (

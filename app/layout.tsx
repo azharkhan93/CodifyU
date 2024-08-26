@@ -6,18 +6,31 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "@/utils/apolloClient";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import 'aos/dist/aos.css';  
+import AOS from 'aos';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
   useEffect(() => {
-    if (localStorage.getItem("token") === null) {
-      router.push("/");
-    }
-  }, [router]);
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+      once: true, 
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [children]);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   if (localStorage.getItem("token") === null) {
+  //     router.push("/");
+  //   }
+  // }, [router]);
 
   return (
     <html lang="en">
@@ -25,9 +38,8 @@ export default function RootLayout({
         <GlobalStyle />
         <AppThemeProvider>
           <ApolloProvider client={client}>
-            <Box width={"100vw"} height={"100vh"}>
               {children}
-            </Box>
+           
           </ApolloProvider>
         </AppThemeProvider>
       </body>

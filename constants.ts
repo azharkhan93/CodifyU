@@ -16,82 +16,22 @@ export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 // export const API_HOST =
 //   "https://0d65-2405-201-5505-116b-dcd9-8a32-2e9f-f0e1.ngrok-free.app/admin/graphql";
 
-export const SideBarData = [
+export const NavbarData = [
   {
-    heading: "APP DATASETS",
-    navLink: [
-      // { label: "Overview", icon: faBinoculars, href: "/dashboard/overview" },
-      {
-        label: "Edu. Institutes",
-        icon: faBuildingColumns,
-        href: "/dashboard/edu-institutes",
-      },
-      {
-        label: "Product Categories",
-        icon: faTableList,
-        href: "/dashboard/product-categories",
-      },
-      {
-        label: "Deals",
-        icon: faReceipt,
-        href: "/dashboard/deals",
-      },
-
-      {
-        label: "Brands",
-        icon: faSliders,
-        href: "/dashboard/brands",
-      },
-    ],
+    title: "Home",
+    link: "/",
   },
   {
-    heading: "PLATFORM",
-    navLink: [
-      {
-        label: "Users",
-        icon: faUser,
-        href: "/dashboard/users",
-      },
-      {
-        label: "Products",
-        icon: faStore,
-        href: "/dashboard/products",
-      },
-    ],
+    title: "About",
+    link: "/services",
+    
+  },
+  {
+    title: "Contact",
+    link: "/contact",
   },
 
-  // {
-  //   heading: "APP CONFIG",
-  //   navLink: [
-  //     {
-  //       label: "Listing Settings",
-  //       icon: faSliders,
-  //       href: "/dashboard/listing-settings",
-  //     },
-  //     {
-  //       label: "General Settings",
-  //       icon: faGear,
-  //       href: "/dashboard/general-settings",
-  //     },
-  //   ],
-  // },
-  // {
-  //   heading: "STATS",
-  //   navLink: [
-  //     {
-  //       label: "User Stats",
-  //       icon: faChartSimple,
-  //       href: "/dashboard/user-stats",
-  //     },
-  //     {
-  //       label: "Platform Stats",
-  //       icon: faChartLine,
-  //       href: "/dashboard/platform-stats",
-  //     },
-  //   ],
-  // },
 ];
-
 export const RowData = [
   {
     name: "Helsinki",
