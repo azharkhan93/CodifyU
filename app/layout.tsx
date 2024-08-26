@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import 'aos/dist/aos.css';  
 import AOS from 'aos';
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function RootLayout({
   children,
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Navbar />
           <GlobalStyle />
           {children}
+          <Footer />
         </ApolloProvider>
       </AppThemeProvider>
     </body>

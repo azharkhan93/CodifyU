@@ -1,27 +1,59 @@
-import { textAlign } from "styled-system";
-import { Box, CenterBox, Column, Row, Text } from "../styled";
+"use client";
+import {
+  AnimatedColumn,
+  AnimatedRow,
+  Box,
+  CenterBox,
+  Column,
+  Row,
+  Text,
+} from "../styled";
 import { HeroData } from "./components/HeroData";
+import { featureItems } from "@/constants";
+import { FeatureItems } from "./components/FeatureItems";
+import { useInView } from "@/hooks/useInView";
 
 export const HeroSection = () => {
+  const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
+  const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
   return (
     <Box
       bg={"primary"}
       alignItems={"center"}
+      justifyContent={"center"}
       width={"100%"}
       flexDirection={"column"}
       gap={"l"}
       px={"xxxxl"}
     >
-      <Column
+      <AnimatedColumn
+        ref={refColumn}
+        isInView={isInViewColumn}
+        py={"m"}
         gap={"xl"}
         width={"100%"}
         border={"2px solid green"}
         alignItems={"flex-start"}
         mt={"xlg"}
       >
-        <Text variant="subHeading" color="white">
-          Award Wining Digital Agency
-        </Text>
+        <Row
+          flexDirection={["row", "row"]}
+          alignItems={"center"}
+          width={"100%"}
+          gap={"s"}
+        >
+          <Box
+            height={"2px"}
+            bg={"white"}
+            width={"6%"}
+            //   ml={"header"}
+            borderRadius={"circle"}
+          ></Box>
+          <Text variant="subHeading" color="white">
+            Award Wining Digital Agency
+          </Text>
+        </Row>
+
         <Text
           variant="heading"
           color="white"
@@ -29,12 +61,14 @@ export const HeroSection = () => {
           textAlign={"center"}
         >
           Where Innovation Meets{" "}
-          <span style={{ color: "green", fontSize: "35px" }}>
+          <span style={{ color: "green", fontSize: "33px" }}>
             Digital Excellence
           </span>
         </Text>
-      </Column>
-      <Row
+      </AnimatedColumn>
+      <AnimatedRow
+        ref={refRow}
+        isInView={isInViewRow}
         flexDirection={["row", "row"]}
         border={"2px solid red"}
         width={"100%"}
@@ -43,81 +77,15 @@ export const HeroSection = () => {
         <Box
           alignItems={"center"}
           border={"1px solid white"}
-          //  justifyContent={"space-between"}
           flexDirection={"row"}
           width={"48%"}
           flexWrap={"wrap"}
           gap={"l"}
           py={"xxl"}
         >
-          <Text
-            variant="body"
-            color="white"
-            py={"s"}
-            px={"l"}
-            borderRadius={"circle"}
-            style={{
-              borderLeft: "3px solid green",
-              borderRight: "3px solid green",
-            }}
-            // borderTopLeftRadius={"2px solid green "}
-          >
-            Mobile App Development
-          </Text>
-
-          <Text
-            variant="body"
-            color="white"
-            py={"s"}
-            px={"l"}
-            borderRadius={"circle"}
-            style={{
-              borderLeft: "3px solid green",
-              borderRight: "3px solid green",
-            }}
-          >
-            Website Development
-          </Text>
-
-          <Text
-            variant="body"
-            color="white"
-            py={"s"}
-            px={"l"}
-            borderRadius={"circle"}
-            style={{
-              borderLeft: "3px solid green",
-              borderRight: "3px solid green",
-            }}
-          >
-            Graphic Design
-          </Text>
-          <Text
-            variant="body"
-            color="white"
-            py={"s"}
-            px={"l"}
-            borderRadius={"circle"}
-            style={{
-              borderLeft: "3px solid green",
-              borderRight: "3px solid green",
-            }}
-          >
-            Digital Marketing
-          </Text>
-          <Text
-            variant="body"
-            color="white"
-            py={"s"}
-            px={"l"}
-            borderRadius={"circle"}
-            style={{
-              borderLeft: "3px solid green",
-              borderRight: "3px solid green",
-            }}
-          >
-            Digital Marketing
-          </Text>
+          {featureItems.map((item, index) => (
+            <FeatureItems key={index} text={item} />
+          ))}
         </Box>
         <CenterBox width={"40%"} borderLeft={"3px solid green"}>
           <Text variant="body" color="white" textAlign={"start"} px={"header"}>
@@ -125,7 +93,7 @@ export const HeroSection = () => {
             expeerince of almost more tha 50 years in market
           </Text>
         </CenterBox>
-      </Row>
+      </AnimatedRow>
       <HeroData />
     </Box>
   );

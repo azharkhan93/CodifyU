@@ -4,5 +4,6 @@ export * from "./InputBox";
 export * from "./ListInputBox";
 export * from "./FileInputBox";
 export * from "./HeroSection"
+export * from "./Footer"
 
 

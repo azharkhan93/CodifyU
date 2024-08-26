@@ -31,17 +31,19 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <Row
-         flexDirection={["row", "row"]}
+        flexDirection={["row", "row"]}
         data-aos="fade-left"
+        borderBottom={"glassmorphismBorder"}
         px={["m", "xl"]}
         position="fixed"
         top={0}
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={"primary"}
+        // bg={"glassmorphismBg"}
+        bg={"white"}
         style={{
-          zIndex: "50",
+          zIndex: "100",
         }}
       >
         <CenterBox>
@@ -85,11 +87,12 @@ export const Navbar: React.FC = () => {
             variant={"primary"}
             display={["none", "block"]}
             py={"m"}
-            borderRadius={"circle"}
-            px={"xl"}
+            borderTopRightRadius={"m"}
+            borderBottomLeftRadius={"m"}
+            px={"xxl"}
             bg={"primary"}
           >
-            Enquire Now
+            {`Lets' Talk`}
           </Button>
         </Box>
 
