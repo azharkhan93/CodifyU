@@ -1,40 +1,68 @@
 "use client";
 import {
   AnimatedColumn,
-  AnimatedRow,
   Box,
+  Button,
   CenterBox,
   Row,
   Text,
+  TypewriterText,
 } from "../styled";
-import { HeroData } from "./components/HeroData";
-import { featureItems } from "@/constants";
-import { FeatureItems } from "./components/FeatureItems";
 import { useInView } from "@/hooks/useInView";
-// import Typewriter from 'react-typewriter-effect';
 
 export const HeroSection = () => {
   const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
   const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
+
   return (
     <Box
-      bg={"primary"}
+      position="relative"
       alignItems={"center"}
       justifyContent={"center"}
       width={"100%"}
+      height={"100vh"}
       flexDirection={"column"}
       gap={"l"}
-      px={"xxxxl"}
+      px={["s", "xxxxl"]}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: -1,
+        }}
+      >
+        <source src="/images/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width={"100%"}
+        height={"100%"}
+        bg={"modalOverlayBg"}
+        zIndex={-1}
+      />
+
       <AnimatedColumn
         ref={refColumn}
         isInView={isInViewColumn}
         py={"m"}
         gap={"xl"}
         width={"100%"}
-        border={"2px solid green"}
         alignItems={"flex-start"}
         mt={"xlg"}
+        zIndex={1}
       >
         <Row
           flexDirection={["row", "row"]}
@@ -46,55 +74,45 @@ export const HeroSection = () => {
             height={"2px"}
             bg={"white"}
             width={"6%"}
-            //   ml={"header"}
             borderRadius={"circle"}
           ></Box>
-          <Text variant="subHeading" color="white">
-            Award Wining Digital Agency
-          </Text>
         </Row>
 
         <Text
-          variant="heading"
+          variant={["heading", "footerHeading"]}
           color="white"
-          width={"400px"}
+          width={["100%", "600px"]}
           textAlign={"center"}
         >
           Where Innovation Meets{" "}
-          <span style={{ color: "green", fontSize: "33px" }}>
-            Digital Excellence
-          </span>
+          <TypewriterText>Digital Excellence</TypewriterText>
         </Text>
-      </AnimatedColumn>
-      <AnimatedRow
-        ref={refRow}
-        isInView={isInViewRow}
-        flexDirection={["row", "row"]}
-        border={"2px solid red"}
-        width={"100%"}
-        justifyContent={"space-between"}
-      >
-        <Box
-          alignItems={"center"}
-          border={"1px solid white"}
-          flexDirection={"row"}
-          width={"48%"}
-          flexWrap={"wrap"}
-          gap={"l"}
-          py={"xxl"}
-        >
-          {featureItems.map((item, index) => (
-            <FeatureItems key={index} text={item} />
-          ))}
-        </Box>
-        <CenterBox width={"40%"} borderLeft={"3px solid green"}>
-          <Text variant="body" color="white" textAlign={"start"} px={"header"}>
-            we re the one of the best maketing agency in the whole market with a
-            expeerince of almost more tha 50 years in market
-          </Text>
+        <Text variant="subHeading" color="white">
+          Award-Winning Digital Agency
+        </Text>
+        <CenterBox flexDirection={"row"} gap={"xxxl"}>
+          <Button
+            variant={"primary"}
+            py={"m"}
+            borderTopRightRadius={"m"}
+            borderBottomLeftRadius={"m"}
+            px={"xxxxl"}
+            bg={"primary"}
+          >
+            View Work
+          </Button>
+          <Button
+            variant={"primary"}
+            py={"m"}
+            borderTopRightRadius={"m"}
+            borderBottomLeftRadius={"m"}
+            px={"xxxxl"}
+            bg={"primary"}
+          >
+            {`Lets' Talk`}
+          </Button>
         </CenterBox>
-      </AnimatedRow>
-      <HeroData />
+      </AnimatedColumn>
     </Box>
   );
 };

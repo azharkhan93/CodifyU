@@ -2,11 +2,11 @@
 import styled, { keyframes, css } from "styled-components";
 import { Box } from "../Box";
 import {
-  fadeUp,
+  blinkCaret,
   fadeUpFromLeft,
   fadeUpFromRight,
-  reverseTextAnimation,
   shimmerAnimation,
+  typewriter,
 } from "../StyledAnimations";
 import { Column } from "../Column";
 import { Row } from "../Row";
@@ -40,18 +40,11 @@ export const AnimatedRow = styled(Row)<AnimationProps>`
       : "none"};
 `;
 
-export const AnimatedLetter = styled.span`
+export const TypewriterText = styled.span`
   display: inline-block;
-  animation: ${reverseTextAnimation} 0.5s ease-in-out forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: ${typewriter} 4s steps(40, end) infinite,
+    ${blinkCaret} 500ms steps(40, end) infinite;
 `;
-// border-top: 4px solid transparent;
-// border-bottom: 4px solid transparent;
-// border-radius: 8px;
-// background: linear-gradient(
-//   to right,
-//   white 25%,
-//   black 50%,
-//   white 75%
-// );
-// background-size: 200% 100%;
-// animation: ${shimmerWave} 3s ease-in-out infinite;

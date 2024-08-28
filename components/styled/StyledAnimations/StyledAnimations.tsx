@@ -66,36 +66,26 @@ export const reverseTextAnimation = keyframes`
   }
 `;
 
-// export const reverseLoop = keyframes`
-//   0% {
-//     transform: translateX(0);
-//   }
-//   50% {
-//     transform: translateX(50px); 
-//   }
-//   100% {
-//     transform: translateX(0);
-//   }
-// `;
+
+export const typewriter = keyframes`
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+`;
+
+export const blinkCaret = keyframes`
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+`;
 
 
-
-
-
-// export const shimmerWave = keyframes`
-//   0% {
-//     background-position: -200% 0;
-//   }
-//   100% {
-//     background-position: 200% 0;
-//   }
-// `;
-
-
-// export const StyledAnimations = styled()`
-//   border-top: 4px solid;
-//   border-bottom: 4px solid;
-//   border-image: initial;
-//   animation: ${shimmerAnimation} 2s infinite ease-in-out;
-//   border-radius: 8px;
-// `;

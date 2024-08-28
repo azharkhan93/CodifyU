@@ -7,7 +7,7 @@ export const BASE_COLORS = {
   greyLight: "#E9ECEF",
   transparent: "",
   white: "#ffffff",
-  modalOverlayBg: "rgba(0,0,0,0.3)",
+  modalOverlayBg: "rgba(0,0,0,0.5)",
   shadow: "rgba(115, 82, 199, 0.176) 0px 0.5rem 1.25rem",
   glassmorphismBg: "rgba(255, 255, 255, 0.1)",
   glassmorphismBorder: "1px solid rgba(255, 255, 255, 1)",

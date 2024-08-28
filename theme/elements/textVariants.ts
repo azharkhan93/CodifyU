@@ -10,6 +10,10 @@ export const BASE_TEXT_VARIANTS = {
     fontSize: 24,
     fontFamily: BASE_FONTS.heading,
   },
+  footerHeading: {
+    fontSize: 50,
+    fontFamily: BASE_FONTS.ftHeading,
+  },
   subHeading: {
     fontSize: 20,
     fontFamily: BASE_FONTS.subHeading,

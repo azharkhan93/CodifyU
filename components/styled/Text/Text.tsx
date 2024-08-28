@@ -65,7 +65,8 @@ type TextProps = WidthProps &
     font?: AppThemeFonts;
     weight?: AppThemeWeights;
     size?: ResponsiveValue<number | string>;
-    variant?: AppTextVariants;
+    variant?: ResponsiveValue<AppTextVariants>;
+    // variant?: AppTextVariants;
   };
 
 export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
@@ -80,6 +81,6 @@ export const Text = styled.span.withConfig(StyledWithConfig)<TextProps>`
   ${shadow}
   ${customTypography}
   ${variant({
-    scale: "textVariants", // This should match the key in your theme
+    scale: "textVariants", 
   })}
 `;
