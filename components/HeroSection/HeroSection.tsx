@@ -73,7 +73,7 @@ export const HeroSection = () => {
           <Box
             height={"2px"}
             bg={"white"}
-            width={"6%"}
+            width={"20%"}
             borderRadius={"circle"}
           ></Box>
         </Row>
