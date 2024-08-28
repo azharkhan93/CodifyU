@@ -9,3 +9,4 @@ export * from "./StyledModal";
 export * from './StyledScrollBox'
 export * from "./StyledAnimations"
 export * from "./AnimationBox"
+export * from "./AnimatedSpan"

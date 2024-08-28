@@ -4,7 +4,6 @@ import {
   AnimatedRow,
   Box,
   CenterBox,
-  Column,
   Row,
   Text,
 } from "../styled";
@@ -12,6 +11,7 @@ import { HeroData } from "./components/HeroData";
 import { featureItems } from "@/constants";
 import { FeatureItems } from "./components/FeatureItems";
 import { useInView } from "@/hooks/useInView";
+// import Typewriter from 'react-typewriter-effect';
 
 export const HeroSection = () => {
   const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });

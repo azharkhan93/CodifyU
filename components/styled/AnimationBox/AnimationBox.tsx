@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import styled, { keyframes, css } from "styled-components";
 import { Box } from "../Box";
 import {
   fadeUp,
   fadeUpFromLeft,
   fadeUpFromRight,
+  reverseTextAnimation,
   shimmerAnimation,
 } from "../StyledAnimations";
 import { Column } from "../Column";
@@ -28,7 +29,7 @@ export const AnimatedColumn = styled(Column)<AnimationProps>`
           ${fadeUpFromLeft} 1.5s ease-out
         `
       : "none"};
-      `;
+`;
 
 export const AnimatedRow = styled(Row)<AnimationProps>`
   animation: ${(props) =>
@@ -39,6 +40,10 @@ export const AnimatedRow = styled(Row)<AnimationProps>`
       : "none"};
 `;
 
+export const AnimatedLetter = styled.span`
+  display: inline-block;
+  animation: ${reverseTextAnimation} 0.5s ease-in-out forwards;
+`;
 // border-top: 4px solid transparent;
 // border-bottom: 4px solid transparent;
 // border-radius: 8px;
