@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components";
+import { HeroSection, OurValues } from "@/components";
 import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
     <>
     
     <HeroSection />
+    <OurValues />
     
     </>
   );
