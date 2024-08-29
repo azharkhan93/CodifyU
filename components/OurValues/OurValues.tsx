@@ -1,25 +1,40 @@
-import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
+import {
+  AnimatedColumn,
+  AnimatedRow,
+  Box,
+  Button,
+  CenterBox,
+  Column,
+  Row,
+  Text,
+} from "../styled";
 import { FiCheckCircle } from "react-icons/fi";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
 
+
 export const OurValues = () => {
+ 
+
   return (
     <>
       <Row
-        px={["m","xxl"]}
+      
+        px={["m", "xxl"]}
         width={"100%"}
         // border={"2px solid red"}
-        flexDirection={["column","row"]}
+        flexDirection={["column", "row"]}
         justifyContent={"space-between"}
       >
         <Column
+          // ref={refColumn}
+          // isInView={isInViewColumn}
           py={"xl"}
           gap={"xxl"}
           justifyContent={"center"}
           alignItems={"flex-start"}
-          width={["100%","45%"]}
+          width={["100%", "45%"]}
         >
           <Text variant={"heading"}>Our Value Propostion</Text>
           <Text variant={"body"}>
@@ -43,7 +58,7 @@ export const OurValues = () => {
             flexDirection={"row"}
             flexWrap={"wrap"}
             gap={"xxxl"}
-            width={["350px","550px"]}
+            width={["350px", "550px"]}
             py={"xl"}
           >
             {VALUES_DATA.map((value) => (
@@ -56,10 +71,13 @@ export const OurValues = () => {
           </Row>
         </Column>
       </Row>
-      <Box width={["100%","90%"]} flexDirection={["column","row"]} gap={["xxxxl","xlg"]} py={"xxxl"}
-      alignItems={"center"}
-      justifyContent={"center"}
-    
+      <Box
+        width={["100%", "90%"]}
+        flexDirection={["column", "row"]}
+        gap={["xxxxl", "xlg"]}
+        py={"xxxl"}
+        alignItems={"center"}
+        justifyContent={"center"}
       >
         {STATS_DATA.map((stat) => (
           <StatsCards
@@ -74,9 +92,12 @@ export const OurValues = () => {
         py={"xxxl"}
         //   border={"2px solid red"}
       >
-        <Button bg={"secondary"} py={"m"} px={"xl"}
-        borderTopRightRadius={"m"}
-        borderTopLeftRadius={"m"}
+        <Button
+          bg={"secondary"}
+          py={"m"}
+          px={"xl"}
+          borderTopRightRadius={"m"}
+          borderTopLeftRadius={"m"}
         >
           Share Your Project Requirements
         </Button>

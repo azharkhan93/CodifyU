@@ -8,7 +8,7 @@ import {
   Text,
   TypewriterText,
 } from "../styled";
-import { useInView } from "@/hooks/useInView";
+// import { useInView } from "@/hooks/useInView";
 
 export const HeroSection = () => {
   // const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
@@ -71,9 +71,9 @@ export const HeroSection = () => {
           gap={"s"}
         >
           <Box
-            height={"2px"}
-            bg={"white"}
-            width={"20%"}
+            height={"3px"}
+            bg={"gradientBold"}
+            width={["40%","20%"]}
             borderRadius={"circle"}
           ></Box>
         </Row>

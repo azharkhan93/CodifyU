@@ -11,7 +11,7 @@ import {
   Text,
 } from "@/components";
 import { FaTimes } from "react-icons/fa";
-import { CiMenuFries } from "react-icons/ci";
+import { CgMenuGridO } from "react-icons/cg";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 
@@ -32,16 +32,13 @@ export const Navbar: React.FC = () => {
     <>
       <Row
         flexDirection={["row", "row"]}
-        data-aos="fade-left"
-        borderBottom={"glassmorphismBorder"}
         px={["m", "xl"]}
         position="fixed"
         top={0}
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        // bg={"glassmorphismBg"}
-        bg={"white"}
+        bg={"greenish"}
         style={{
           zIndex: "100",
         }}
@@ -64,7 +61,7 @@ export const Navbar: React.FC = () => {
           ></Box>
 
           <Box onClick={handleToggle}>
-            <CiMenuFries size={30} color="white" />
+            <CgMenuGridO size={34} color="white" />
           </Box>
         </Box>
 
