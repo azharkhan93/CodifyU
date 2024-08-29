@@ -11,8 +11,8 @@ import {
 import { useInView } from "@/hooks/useInView";
 
 export const HeroSection = () => {
-  const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
-  const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
+  // const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
+  // const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
 
   return (
     <Box
@@ -55,8 +55,8 @@ export const HeroSection = () => {
       />
 
       <AnimatedColumn
-        ref={refColumn}
-        isInView={isInViewColumn}
+        // ref={refColumn}
+        // isInView={isInViewColumn}
         py={"m"}
         gap={"xl"}
         width={"100%"}

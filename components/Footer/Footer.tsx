@@ -39,9 +39,9 @@ export const Footer = () => {
           <Column gap={"xl"}>
             <Text
               textAlign={"center"}
-              variant={"footerHeading"}
+              variant={["heading","footerHeading"]}
               color={"white"}
-              width={"530px"}
+              width={["100%","530px"]}
             >
               Have Any Project Idea! {`Lets's Talk With Us`}
             </Text>
