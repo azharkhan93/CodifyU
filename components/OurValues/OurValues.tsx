@@ -56,10 +56,10 @@ export const OurValues = () => {
           </Row>
         </Column>
       </Row>
-      <Box width={["400px","90%"]} flexDirection={"row"} gap={["xxxxl","xlg"]} py={"xxxl"}
-      alignItems={["center","center"]}
-      justifyContent={["center","center"]}
-      flexWrap={["wrap", "nowrap"]}
+      <Box width={["100%","90%"]} flexDirection={["column","row"]} gap={["xxxxl","xlg"]} py={"xxxl"}
+      alignItems={"center"}
+      justifyContent={"center"}
+    
       >
         {STATS_DATA.map((stat) => (
           <StatsCards
@@ -74,7 +74,10 @@ export const OurValues = () => {
         py={"xxxl"}
         //   border={"2px solid red"}
       >
-        <Button bg={"secondary"} py={"m"} px={"xl"}>
+        <Button bg={"secondary"} py={"m"} px={"xl"}
+        borderTopRightRadius={"m"}
+        borderTopLeftRadius={"m"}
+        >
           Share Your Project Requirements
         </Button>
       </CenterBox>

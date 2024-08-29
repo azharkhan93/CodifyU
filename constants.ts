@@ -67,5 +67,13 @@ export const featureItems = [
   "Graphic Design",
   "Digital Marketing",
 ];
+export const PARTNER_LOGOS = [
+  { src: "/images/dg.jpg", alt: "Logo 1", size: 90 },
+  { src: "/images/dg.jpg", alt: "Logo 2", size: 90 },
+  { src: "/images/dg.jpg", alt: "Logo 3", size: 90 },
+  { src: "/images/dg.jpg", alt: "Logo 4", size: 90 },
+  { src: "/images/dg.jpg", alt: "Logo 5", size: 90 },
+  { src: "/images/dg.jpg", alt: "Logo 6", size: 90 },
+];
 
 

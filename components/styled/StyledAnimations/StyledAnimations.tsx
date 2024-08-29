@@ -87,5 +87,27 @@ export const blinkCaret = keyframes`
     border-color: transparent;
   }
 `;
+export const slide = keyframes`
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+`;
+
+
+// const rotate = keyframes`
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// `;
+
+// const RotatingImage = styled(Image)`
+//   animation: ${rotate} 10s linear infinite;
+// `;
 
 

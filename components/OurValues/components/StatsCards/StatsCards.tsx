@@ -10,7 +10,7 @@ export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
     <Column
       alignItems={"center"}
       borderRight={"2px dotted red"}
-      width={["145px","300px"]}
+      width={["250px","300px"]}
       gap={"s"}
      
     >

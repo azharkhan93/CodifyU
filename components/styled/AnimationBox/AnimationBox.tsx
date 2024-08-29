@@ -6,6 +6,7 @@ import {
   fadeUpFromLeft,
   fadeUpFromRight,
   shimmerAnimation,
+  slide,
   typewriter,
 } from "../StyledAnimations";
 import { Column } from "../Column";
@@ -47,4 +48,9 @@ export const TypewriterText = styled.span`
   border-right: 2px solid transparent;
   animation: ${typewriter} 4s steps(40, end) infinite,
     ${blinkCaret} 500ms steps(40, end) infinite;
+`;
+
+export const SlidingWrapper = styled(Row)`
+  animation: ${slide} 20s linear infinite;
+  
 `;
