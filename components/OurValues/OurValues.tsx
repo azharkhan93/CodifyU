@@ -1,4 +1,4 @@
-import { Button, CenterBox, Column, Row, Text } from "../styled";
+import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 import { FiCheckCircle } from "react-icons/fi";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
@@ -8,10 +8,10 @@ export const OurValues = () => {
   return (
     <>
       <Row
-        px={"xxl"}
+        px={["m","xxl"]}
         width={"100%"}
         // border={"2px solid red"}
-        flexDirection={"row"}
+        flexDirection={["column","row"]}
         justifyContent={"space-between"}
       >
         <Column
@@ -19,7 +19,7 @@ export const OurValues = () => {
           gap={"xxl"}
           justifyContent={"center"}
           alignItems={"flex-start"}
-          width={"45%"}
+          width={["100%","45%"]}
         >
           <Text variant={"heading"}>Our Value Propostion</Text>
           <Text variant={"body"}>
@@ -43,7 +43,7 @@ export const OurValues = () => {
             flexDirection={"row"}
             flexWrap={"wrap"}
             gap={"xxxl"}
-            width={"550px"}
+            width={["350px","550px"]}
             py={"xl"}
           >
             {VALUES_DATA.map((value) => (
@@ -56,7 +56,11 @@ export const OurValues = () => {
           </Row>
         </Column>
       </Row>
-      <CenterBox width={"90%"} flexDirection={"row"} gap={"xlg"} py={"xxxl"}>
+      <Box width={["400px","90%"]} flexDirection={"row"} gap={["xxxxl","xlg"]} py={"xxxl"}
+      alignItems={["center","center"]}
+      justifyContent={["center","center"]}
+      flexWrap={["wrap", "nowrap"]}
+      >
         {STATS_DATA.map((stat) => (
           <StatsCards
             key={stat.id}
@@ -64,7 +68,7 @@ export const OurValues = () => {
             subHeading={stat.subHeading}
           />
         ))}
-      </CenterBox>
+      </Box>
 
       <CenterBox
         py={"xxxl"}

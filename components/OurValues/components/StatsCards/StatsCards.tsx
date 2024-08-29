@@ -1,6 +1,6 @@
 import { Column, Text } from "@/components/styled";
 
-interface StatCardProps {
+type StatCardProps = {
   heading: string;
   subHeading: string;
 }
@@ -10,8 +10,9 @@ export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
     <Column
       alignItems={"center"}
       borderRight={"2px dotted red"}
-      width={"300px"}
+      width={["145px","300px"]}
       gap={"s"}
+     
     >
       <Text variant={"heading"}>{heading}</Text>
       <Text variant={"subHeading"}>{subHeading}</Text>

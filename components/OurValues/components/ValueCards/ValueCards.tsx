@@ -13,7 +13,7 @@ export const ValueCards: React.FC<ValueCardProps> = ({ title, icon: Icon }) => {
       gap={"xl"}
       borderTop={"1px solid red"}
       borderBottom={"1px solid red"}
-      width={"200px"}
+      width={["150px","200px"]}
       alignItems={"flex-start"}
       p={"l"}
     >
