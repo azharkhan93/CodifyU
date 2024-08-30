@@ -1,13 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Box } from "@/components/styled";
-
-
-type LogoProps = {
-  src: string;
-  alt: string;
-  size: number;
-};
+import { LogoProps } from "@/types";
 
 export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
   return (

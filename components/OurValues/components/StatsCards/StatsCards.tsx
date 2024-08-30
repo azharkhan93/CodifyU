@@ -1,9 +1,7 @@
 import { Column, Text } from "@/components/styled";
+import { StatCardProps } from "@/types";
 
-type StatCardProps = {
-  heading: string;
-  subHeading: string;
-}
+
 
 export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
   return (

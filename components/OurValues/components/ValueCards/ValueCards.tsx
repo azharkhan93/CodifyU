@@ -1,10 +1,5 @@
 import { Column, Text } from "@/components/styled";
-import { IconType } from "react-icons";
-
-type ValueCardProps = {
-  title: string;
-  icon: IconType;
-};
+import { ValueCardProps } from "@/types";
 
 export const ValueCards: React.FC<ValueCardProps> = ({ title, icon: Icon }) => {
   return (
