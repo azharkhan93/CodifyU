@@ -1,6 +1,6 @@
 import {
-  AnimatedColumn,
-  AnimatedRow,
+  // AnimatedColumn,
+  // AnimatedRow,
   Box,
   Button,
   CenterBox,

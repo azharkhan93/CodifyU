@@ -1,18 +1,16 @@
 "use client";
 import {
-  AnimatedColumn,
   Box,
   Button,
   CenterBox,
+  Column,
   Row,
   Text,
   TypewriterText,
 } from "../styled";
-// import { useInView } from "@/hooks/useInView";
 
 export const HeroSection = () => {
-  // const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
-  // const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
+ 
 
   return (
     <Box
@@ -54,9 +52,7 @@ export const HeroSection = () => {
         zIndex={-1}
       />
 
-      <AnimatedColumn
-        // ref={refColumn}
-        // isInView={isInViewColumn}
+      <Column
         py={"m"}
         gap={"xl"}
         width={"100%"}
@@ -112,7 +108,7 @@ export const HeroSection = () => {
             {`Lets' Talk`}
           </Button>
         </CenterBox>
-      </AnimatedColumn>
+      </Column>
     </Box>
   );
 };

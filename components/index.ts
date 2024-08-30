@@ -6,5 +6,9 @@ export * from "./FileInputBox";
 export * from "./HeroSection"
 export * from "./Footer"
 export * from "./OurValues"
+export * from "./ReviewsSection"
+export * from "./ReviewsCard"
+
+
 
 

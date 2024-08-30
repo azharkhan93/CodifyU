@@ -10,23 +10,24 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer/Footer";
+import Head from "next/head";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, 
-      easing: 'ease-in-out', 
-      once: true, 
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, 
+  //     easing: 'ease-in-out', 
+  //     once: true, 
+  //   });
+  // }, []);
 
-  useEffect(() => {
-    AOS.refresh();
-  }, [children]);
+  // useEffect(() => {
+  //   AOS.refresh();
+  // }, [children]);
   // const router = useRouter();
   // useEffect(() => {
   //   if (localStorage.getItem("token") === null) {
@@ -36,6 +37,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+    <Head>
+        <title>CodiFyU</title> 
+        <meta name="description" content="Your website description" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" /> 
+      </Head>
     <body>
       <AppThemeProvider>
         <ApolloProvider client={client}>

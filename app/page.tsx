@@ -1,6 +1,7 @@
-import { HeroSection, OurValues } from "@/components";
+import { HeroSection, OurValues, ReviewsSection } from "@/components";
+
 import { Navbar } from "@/components/Navbar";
-import { Partners } from "@/components/Partners/Partners";
+ import { Partners } from "@/components/Partners/Partners";
 
 export default function Home() {
   return(
@@ -8,7 +9,9 @@ export default function Home() {
     
     <HeroSection />
     <OurValues />
+    <ReviewsSection />
     <Partners />
+    
     
     </>
   );

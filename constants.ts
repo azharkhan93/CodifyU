@@ -76,4 +76,38 @@ export const PARTNER_LOGOS = [
   { src: "/images/dg.jpg", alt: "Logo 6", size: 90 },
 ];
 
+export const reviews23 = [
+  
+  {
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/dg.jpg",
+    alt: "#1157 picture",
+  },
+  {
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/dg.jpg",
+    alt: "#1157 picture",
+  },
+  {
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/dg.jpg",
+    alt: "#1157 picture",
+  },
+  {
+    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
+    name: "#1157",
+    title: " LittleSnippets.net",
+    image: "/images/dg.jpg",
+    alt: "#1157 picture",
+  },
+  
+
+];
+
 

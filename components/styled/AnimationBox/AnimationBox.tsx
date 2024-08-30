@@ -1,45 +1,14 @@
 "use client";
 import styled, { keyframes, css } from "styled-components";
-import { Box } from "../Box";
+import { Box, CenterBox } from "../Box";
 import {
   blinkCaret,
-  fadeUpFromLeft,
-  fadeUpFromRight,
-  shimmerAnimation,
-  slide,
+  fing,
+  scrolling,
   typewriter,
 } from "../StyledAnimations";
-import { Column } from "../Column";
 import { Row } from "../Row";
 
-interface AnimationProps {
-  isInView?: boolean;
-}
-export const AnimationBox = styled(Box)`
-  border-top: 4px solid;
-  border-bottom: 4px solid;
-  border-image: initial;
-  animation: ${shimmerAnimation} 2s infinite ease-in-out;
-  border-radius: 8px;
-`;
-
-export const AnimatedColumn = styled(Column)<AnimationProps>`
-  animation: ${(props) =>
-    props.isInView
-      ? css`
-          ${fadeUpFromLeft} 1.5s ease-out
-        `
-      : "none"};
-`;
-
-export const AnimatedRow = styled(Row)<AnimationProps>`
-  animation: ${(props) =>
-    props.isInView
-      ? css`
-          ${fadeUpFromRight} 1.5s ease-out
-        `
-      : "none"};
-`;
 
 export const TypewriterText = styled.span`
   display: inline-block;
@@ -50,7 +19,11 @@ export const TypewriterText = styled.span`
     ${blinkCaret} 500ms steps(40, end) infinite;
 `;
 
-export const SlidingWrapper = styled(Row)`
-  animation: ${slide} 20s linear infinite;
-  
+export const Flock = styled(Row)`
+  animation: ${fing} 20s linear infinite;
+`;
+export const Floki = styled(CenterBox)`
+  display: flex;
+  // width: 400%;
+  animation: ${scrolling} 40s linear infinite;
 `;

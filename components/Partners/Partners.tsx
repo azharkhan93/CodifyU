@@ -1,5 +1,5 @@
 "use client";
-import { Row, Box, CenterBox, SlidingWrapper, Text, Column } from "../styled";
+import { Row, Box, CenterBox,  Text, Column, Flock } from "../styled";
 import { Logos } from "./components/Logos";
 import { PARTNER_LOGOS } from "@/constants";
 
@@ -26,12 +26,12 @@ export const Partners = () => {
           gap={"xl"}
           overflow={"hidden"}
         >
-          <SlidingWrapper flexDirection={["row", "row"]} gap={["xl", "xxxl"]}>
+          <Flock flexDirection={["row", "row"]} gap={["xl", "xxxl"]}>
         
             {PARTNER_LOGOS.map((logo, index) => (
               <Logos key={index} src={logo.src} alt={logo.alt} size={logo.size} />
             ))}
-          </SlidingWrapper>
+          </Flock>
         </CenterBox>
       </Row>
     </>

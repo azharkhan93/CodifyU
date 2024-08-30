@@ -6,6 +6,5 @@ export * from "./StyledInputBox";
 export * from "./Button";
 export * from "./StyledLink";
 export * from "./StyledModal";
-export * from './StyledScrollBox'
 export * from "./StyledAnimations"
 export * from "./AnimationBox"
