@@ -1,11 +1,10 @@
-
-import { reviews23 } from "@/constants"
-import { ReviewsCard } from "../ReviewsCard"
-import { Column, Box, CenterBox, Text, Floki } from "../styled"
+import { reviews23 } from "@/constants";
+import { ReviewsCard } from "../ReviewsCard";
+import { Column, Box, CenterBox, Text, Floki } from "../styled";
 
 export const ReviewsSection = () => {
-    return (
-        <Column
+  return (
+    <Column
       bg={"primary"}
       flexDirection={["column", "row"]}
       // border={"2px solid green"}
@@ -29,7 +28,7 @@ export const ReviewsSection = () => {
             ml={"header"}
             borderRadius={"circle"}
           ></Box>
-          <Text color={"secondary"} variant={"subHeading"} >
+          <Text color={"secondary"} variant={"subHeading"}>
             What Our Clients Say
           </Text>
         </Column>
@@ -43,12 +42,12 @@ export const ReviewsSection = () => {
       </Box>
 
       <CenterBox py={["xxxl", "xxxxl"]} flexDirection={["column", "row"]}>
-                <Floki flexDirection={"row"} gap={"xl"}>
-                    {reviews23.map((review, index) => (
-                        <ReviewsCard key={index} review={review} />
-                    ))}
-                </Floki>
-            </CenterBox>
+        <Floki flexDirection={"row"} gap={"xl"}>
+          {reviews23.map((review, index) => (
+            <ReviewsCard key={index} review={review} />
+          ))}
+        </Floki>
+      </CenterBox>
     </Column>
-    )
-}
+  );
+};

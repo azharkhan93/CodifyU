@@ -1,10 +1,10 @@
-import { AnimatedColumn, AnimatedRow, Box, CenterBox, Column, Row, Text } from "@/components/styled";
+import {  Box, CenterBox, Column, Row, Text } from "@/components/styled";
 import { useInView } from "@/hooks/useInView";
 import Image from "next/image";
 
 export const HeroData = () => {
-    const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
-  const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
+  //   const [refColumn, isInViewColumn] = useInView({ threshold: 0.1 });
+  // const [refRow, isInViewRow] = useInView({ threshold: 0.1 });
   return (
     <Row
       py={"s"}
@@ -12,9 +12,9 @@ export const HeroData = () => {
       flexDirection={["row", "row"]}
       justifyContent={"space-between"}
     >
-      <AnimatedRow
-       ref={refRow}
-       isInView={isInViewRow}
+      <Row
+      //  ref={refRow}
+      //  isInView={isInViewRow}
       >
         <Image
           src={"/images/dg.jpg"}
@@ -23,10 +23,10 @@ export const HeroData = () => {
           height={300}
           style={{ borderRadius: "10px" }}
         />
-      </AnimatedRow>
-      <AnimatedColumn
-      ref={refColumn}
-      isInView={isInViewColumn}
+      </Row>
+      <Column
+      // ref={refColumn}
+      // isInView={isInViewColumn}
         bg={"white"}
         justifyItems={"center"}
         justifyContent={"center"}
@@ -41,7 +41,7 @@ export const HeroData = () => {
         <Text>Years Of Experience</Text>
         <Text>850+</Text>
         <Text>Happy Customers</Text>
-      </AnimatedColumn>
+      </Column>
     </Row>
   );
 };
