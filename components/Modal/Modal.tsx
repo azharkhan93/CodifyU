@@ -45,7 +45,7 @@ export const Modal: React.FC<ModalProps> = ({
           onClick={onClose}
           style={{ cursor: "pointer" }}
         >
-          <FontAwesomeIcon icon={faTimes} size="3x" color="white" />
+          <FontAwesomeIcon icon={faTimes} size="2x" color="white" />
         </CenterBox>
         <Component onClose={onClose} />
       </StyledModal>

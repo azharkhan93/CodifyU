@@ -64,7 +64,7 @@ export const ModalContent = () => {
                  
                   
                   <Column
-                    width={"100%"}
+                    width={["98%","100%"]}
                     height={"100%"}
                     alignItems={"center"}
                     justifyContent={"center"}
@@ -79,7 +79,9 @@ export const ModalContent = () => {
 
 
                   </Text>
-                    <Box width={["97%", "80%"]}>
+                    <Box width={["97%", "80%"]}
+                    border={"2px solid green"}
+                    >
                       <UpdateForm
                         name={"name"}
                         placeholder={"name"}
@@ -88,7 +90,9 @@ export const ModalContent = () => {
                         
                       />
                     </Box>
-                    <Box width={["97%", "80%"]}>
+                    <Box width={["97%", "80%"]}
+                    border={"2px solid green"}
+                    >
                       <UpdateForm
                         name={"email"}
                         placeholder={"Enter Email"}
@@ -97,7 +101,9 @@ export const ModalContent = () => {
                        
                       />
                     </Box>
-                    <Box width={["97%", "80%"]}>
+                    <Box width={["97%", "80%"]}
+                    border={"2px solid green"}
+                    >
                       <TextArea
                       name={"message"}
                       placeholder={"Enter your message"} 
