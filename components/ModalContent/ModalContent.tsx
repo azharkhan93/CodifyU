@@ -68,11 +68,11 @@ export const ModalContent = () => {
                     height={"100%"}
                     alignItems={"center"}
                     justifyContent={"center"}
-                    gap={"xxl"}
+                    gap={["xl","xxl"]}
                   >
                      <Text
-                  variant={"heading"}
-                  px={"header"}
+                  variant={["subHeading","heading"]}
+                  px={["xl","header"]}
                   
                   >
                    { `Let'S Level Up Your Brand Together`}
