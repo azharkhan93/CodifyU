@@ -99,8 +99,8 @@ export const ModalContent = () => {
                     </Box>
                     <Box width={["97%", "80%"]}>
                       <TextArea
-                      name={"name"}
-                      placeholder={"Enter message"}
+                      name={"message"}
+                      placeholder={"Enter your message"} 
                       label={"Message"}
                       type="text"                      />
                     </Box>
