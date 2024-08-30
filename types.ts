@@ -39,3 +39,12 @@ export type LogoProps = {
     onClose: () => void;
     component: React.FC<{ onClose: () => void }>;
   };
+
+  export type TextAreaProps = {
+    name: string;
+    handleOnChange?: (e: string) => void;
+    placeholder: string;
+    type?: "text";
+    value: string | number;
+    onBlur?: () => void;
+  };

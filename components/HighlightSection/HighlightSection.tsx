@@ -1,12 +1,29 @@
 "use client";
 import { services } from "@/constants";
-import { Column, Row, Text } from "../styled";
+import { Box, Column, Row, Text } from "../styled";
 import { ServicesCard } from "./components/ServicesCard";
 
 export const HighlightSection = () => {
   return (
-    <Column width={"100%"}>
+    <Column width={"100%"}
+    position={"relative"}
+    style={{ 
+      backgroundImage: "url('/images/bg.jpeg')", 
+      backgroundSize: "cover", 
+      backgroundPosition: "center", 
+    }}
+     >
+        <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width={"100%"}
+        height={"100%"}
+        bg={"modalOverlayBg"}
+        zIndex={-1}
+      />
       <Column
+      zIndex={2}
         py={"xl"}
         gap={"xxl"}
         justifyContent={"center"}
@@ -14,8 +31,8 @@ export const HighlightSection = () => {
         width={["100%", "45%"]}
         px={["s","header"]}
       >
-        <Text variant={"heading"}>Intelligent Software Solutions</Text>
-        <Text variant={"body"}>
+        <Text variant={"heading"} color="white">Intelligent Software Solutions</Text>
+        <Text variant={"body"} color="white">
           We employ best practice processes and development methodologies as a
           foundation for rapid building of cutting-edge technology solutions in
           a structured and methodical way.

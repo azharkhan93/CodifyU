@@ -1,16 +1,12 @@
+"use client"
 import { BASE_COLORS } from "@/theme";
 import { StyledInputBox } from "../styled";
 import { ChangeEvent } from "react";
+import { TextAreaProps } from "@/types";
 
-export type InputBoxProps = {
-  name: string;
-  handleOnChange?: (e: string) => void;
-  placeholder: string;
-  type?: "text" | "number" | "email" | "password" | "file";
-  value: string | number;
-  onBlur?: () => void;
-};
-export const InputBox: React.FC<InputBoxProps> = ({
+
+
+export const TextArea: React.FC<TextAreaProps> = ({
   name,
   handleOnChange,
   placeholder,
@@ -29,7 +25,6 @@ export const InputBox: React.FC<InputBoxProps> = ({
       onChange={onChange}
       onBlur={onBlur}
       borderRadius={"xs"}
-      height={"40px"}
       placeholder={placeholder}
       type={type}
       value={value}
