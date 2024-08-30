@@ -30,12 +30,12 @@ export const Modal: React.FC<ModalProps> = ({
         borderRadius={"xs"}
         position={"relative"}
         boxShadow={BASE_COLORS.modalShadow}
-        height="80%"
+        height="70%"
         overflowY={"scroll"}
       >
         <CenterBox
           p={"s"}
-          bg={"primary"}
+          // bg={"primary"}
           borderRadius={"circle"}
           height={"33px"}
           width={"33px"}
@@ -45,7 +45,7 @@ export const Modal: React.FC<ModalProps> = ({
           onClick={onClose}
           style={{ cursor: "pointer" }}
         >
-          <FontAwesomeIcon icon={faTimes} size="2x" color="#2A3277" />
+          <FontAwesomeIcon icon={faTimes} size="3x" color="white" />
         </CenterBox>
         <Component onClose={onClose} />
       </StyledModal>

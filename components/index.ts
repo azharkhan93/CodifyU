@@ -12,6 +12,7 @@ export * from "./HighlightSection"
 export * from "./Modal"
 export * from "./ModalContent"
 export * from "./TextArea"
+export * from "./UpdateForm"
 
 
 

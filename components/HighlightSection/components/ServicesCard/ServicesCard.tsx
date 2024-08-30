@@ -1,21 +1,15 @@
 "use client";
 
 import { AnimatedColumn, Box, CenterBox, Column, Row, Text } from "@/components/styled";
-import { Service } from "@/types";
-
-type ServicesCardProps = {
-  service: Service;
-};
-
-
-
-
+import { BASE_COLORS } from "@/theme";
+import {ServicesCardProps } from "@/types";
 
 export const ServicesCard: React.FC<ServicesCardProps> = ({ service }) => {
   const IconComponent = service.icon;
 
   return (
     <AnimatedColumn
+    boxShadow={BASE_COLORS.modalShadow}
     position={"relative"}
       alignItems={"flex-start"}
       gap={"xl"}
@@ -25,7 +19,7 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ service }) => {
       width={"400px"}
      
 
-        bg={"greenish"}
+        bg={"gradientBold"}
     >
       <Box
         position="absolute"

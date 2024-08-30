@@ -62,3 +62,8 @@ export const FileInputBox: React.FC<FileInputBoxProps> = ({
 
 
   // this component should handle image uploading logic
+{/* <UpdateFormInputBox
+                    name={"name"}
+                    placeholder={"Name"}
+                    label={"Brand Name"}
+                  /> */}

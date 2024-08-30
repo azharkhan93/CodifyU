@@ -6,7 +6,7 @@ export type InputBoxProps = {
   name: string;
   handleOnChange?: (e: string) => void;
   placeholder: string;
-  type?: "text" | "number" | "email" | "password" | "file";
+  type?: "text" | "number" | "email" | "phone" | "file";
   value: string | number;
   onBlur?: () => void;
 };

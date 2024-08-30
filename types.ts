@@ -22,7 +22,9 @@ export type LogoProps = {
     alt: string;
     name: string;
   };
-  
+  export type ServicesCardProps = {
+    service: Service;
+  };
   export type ReviewCardProps = {
     review: Review;
   };
@@ -42,9 +44,10 @@ export type LogoProps = {
 
   export type TextAreaProps = {
     name: string;
-    handleOnChange?: (e: string) => void;
+    handleOnChange?: (value: string) => void; 
     placeholder: string;
-    type?: "text";
-    value: string | number;
+     type?: "text"; 
+    // value: string ; 
     onBlur?: () => void;
+    label?: string; 
   };

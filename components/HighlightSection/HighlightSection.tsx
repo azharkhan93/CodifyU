@@ -24,7 +24,7 @@ export const HighlightSection = () => {
       />
       <Column
       zIndex={2}
-        py={"xl"}
+        py={"xxxl"}
         gap={"xxl"}
         justifyContent={"center"}
         alignItems={"flex-start"}
