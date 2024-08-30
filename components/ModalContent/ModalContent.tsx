@@ -80,7 +80,7 @@ export const ModalContent = () => {
 
                   </Text>
                     <Box width={["97%", "80%"]}
-                    border={"2px solid green"}
+                  
                     >
                       <UpdateForm
                         name={"name"}
@@ -91,7 +91,7 @@ export const ModalContent = () => {
                       />
                     </Box>
                     <Box width={["97%", "80%"]}
-                    border={"2px solid green"}
+                  
                     >
                       <UpdateForm
                         name={"email"}
@@ -102,7 +102,7 @@ export const ModalContent = () => {
                       />
                     </Box>
                     <Box width={["97%", "80%"]}
-                    border={"2px solid green"}
+                  
                     >
                       <TextArea
                       name={"message"}

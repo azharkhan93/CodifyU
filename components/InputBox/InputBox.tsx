@@ -24,7 +24,7 @@ export const InputBox: React.FC<InputBoxProps> = ({
   return (
     <StyledInputBox
       border={`1px solid ${BASE_COLORS.primary}`}
-      width={"100%"}
+      width={["97%","100%"]}
       name={name}
       onChange={onChange}
       onBlur={onBlur}

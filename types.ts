@@ -51,3 +51,9 @@ export type LogoProps = {
     onBlur?: () => void;
     label?: string; 
   };
+
+  export type ModalContextProps = {
+    isModalOpen: boolean;
+    openModal: () => void;
+    closeModal: () => void;
+  }

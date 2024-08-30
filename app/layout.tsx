@@ -11,6 +11,7 @@ import AOS from 'aos';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer/Footer";
 import Head from "next/head";
+import { ModalProvider } from "@/contexts";
 
 
 export default function RootLayout({
@@ -18,26 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
- // Show the modal after 60 seconds and keep it open for 30 seconds
-  useEffect(() => {
-    const showModalTimer = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 4000); 
-
-    const hideModalTimer = setTimeout(() => {
-      setIsModalOpen(false);
-    }, 1000); // 90 seconds total (60s delay + 30s duration)
-
-    return () => {
-      clearTimeout(showModalTimer); // Cleanup show timer
-      clearTimeout(hideModalTimer); // Cleanup hide timer
-    };
-  }, []);
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+ 
 
   return (
     <html lang="en">
@@ -50,15 +32,13 @@ export default function RootLayout({
       <body>
         <AppThemeProvider>
           <ApolloProvider client={client}>
+          <ModalProvider>
             <Navbar />
             <GlobalStyle />
             {children}
             <Footer />
-            <Modal
-              isOpen={isModalOpen}
-              onClose={handleCloseModal}
-              component={ModalContent} 
-            />
+            </ModalProvider>
+           
           </ApolloProvider>
         </AppThemeProvider>
       </body>

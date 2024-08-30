@@ -3,6 +3,8 @@ import {
   Button,
   CenterBox,
   Column,
+  Modal,
+  ModalContent,
   Row,
   StyledLink,
   Text,
@@ -14,10 +16,14 @@ import {
 } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import { useRouter } from "next/navigation";
+import { useModal } from "@/contexts";
 
 
 export const Footer = () => {
   const router = useRouter();
+  const { openModal } = useModal();
+
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const navigateTo = (link: string) => {
@@ -47,28 +53,30 @@ export const Footer = () => {
             </Text>
           </Column>
           <Box
-            alignItems={"flex-start"}
-            justifyContent={"start"}
-            position={"relative"}
-            bg={"white"}
-            py={"s"}
-            width={"170px"}
-            px={"s"}
-            borderRadius={"circle"}
-          >
-            <FaArrowRight
-              style={{
-                position: "absolute",
-                right: "10px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                fontSize: "20px",
-              }}
-            />
-            <Button borderRadius={"circle"} py={"s"} px={"xl"}>
-              Get In Touch
-            </Button>
-          </Box>
+        alignItems={"flex-start"}
+        justifyContent={"start"}
+        position={"relative"}
+        bg={"white"}
+        py={"s"}
+        width={"170px"}
+        px={"s"}
+        borderRadius={"circle"}
+        onClick={openModal}
+      >
+        <FaArrowRight
+          style={{
+            position: "absolute",
+            right: "10px",
+            top: "50%",
+            transform: "translateY(-50%)",
+            fontSize: "20px",
+          }}
+        />
+        
+        <Button borderRadius={"circle"} py={"s"} px={"xl"} onClick={openModal}>
+          Get In Touch
+        </Button>
+      </Box>
         </CenterBox>
 
         <Box
