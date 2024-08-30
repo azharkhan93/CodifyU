@@ -92,15 +92,24 @@ export const OurValues = () => {
         py={"xxxl"}
         //   border={"2px solid red"}
       >
-        <Button
+        {/* <Button
           bg={"secondary"}
           py={"m"}
           px={"xl"}
           borderTopRightRadius={"m"}
           borderTopLeftRadius={"m"}
+        > */}
+        <Text
+        bg="secondary"
+        variant={"subHeading"}
+        px={"xl"}
+        py={"m"}
+        borderRadius={"s"}
+        style={{cursor: "pointer"}}
         >
           Share Your Project Requirements
-        </Button>
+          </Text>
+        {/* </Button> */}
       </CenterBox>
     </>
   );

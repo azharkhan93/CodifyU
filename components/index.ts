@@ -8,6 +8,9 @@ export * from "./Footer"
 export * from "./OurValues"
 export * from "./ReviewsSection"
 export * from "./ReviewsCard"
+export * from "./HighlightSection"
+export * from "./Modal"
+export * from "./ModalContent"
 
 
 

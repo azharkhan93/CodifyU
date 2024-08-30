@@ -26,3 +26,16 @@ export type LogoProps = {
   export type ReviewCardProps = {
     review: Review;
   };
+
+  export type Service = {
+    title: string;
+    description: string;
+    icon: IconType; 
+    linkText: string;
+  };
+
+  export type ModalProps = {
+    isOpen: boolean;
+    onClose: () => void;
+    component: React.FC<{ onClose: () => void }>;
+  };

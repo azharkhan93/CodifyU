@@ -10,8 +10,6 @@ import {
 } from "../styled";
 
 export const HeroSection = () => {
- 
-
   return (
     <Box
       position="relative"
@@ -69,7 +67,7 @@ export const HeroSection = () => {
           <Box
             height={"3px"}
             bg={"gradientBold"}
-            width={["40%","20%"]}
+            width={["40%", "20%"]}
             borderRadius={"circle"}
           ></Box>
         </Row>
@@ -83,8 +81,10 @@ export const HeroSection = () => {
           Where Innovation Meets{" "}
           <TypewriterText>Digital Excellence</TypewriterText>
         </Text>
-        <Text variant="subHeading" color="white">
-          Award-Winning Digital Agency
+        <Text variant="body" color="white" width={["100%","550px"]} textAlign={["start","center"]}>
+          Using deep domain expertise of our software developers, we create
+          impactful digital solutions that drive meaningful change with a
+          strategic vision.
         </Text>
         <CenterBox flexDirection={"row"} gap={"xxxl"}>
           <Button

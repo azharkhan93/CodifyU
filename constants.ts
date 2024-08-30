@@ -1,4 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
+import { MdPhoneIphone } from "react-icons/md";
+import { FaBrain } from 'react-icons/fa';
 
 
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
@@ -109,5 +111,35 @@ export const reviews23 = [
   
 
 ];
+export const services = [
+  {
+  title: "Mobile Development",
+  description:
+    "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
+    icon: MdPhoneIphone ,
+  linkText: "Learn more",
+}, 
+{
+  title: "AI/Ml",
+  description:
+    "Empower your business with intelligent automation technologies and use our expertise in AI/ML to boost your companys efficiency, agility, and profitability",
+    icon: FaBrain ,
+  linkText: "Learn more",
+}, 
+{
+  title: "Mobile Development",
+  description:
+    "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
+    icon: MdPhoneIphone ,
+  linkText: "Learn more",
+}, 
+{
+  title: "Mobile Development",
+  description:
+    "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
+    icon: MdPhoneIphone ,
+  linkText: "Learn more",
+}, 
+]
 
 
