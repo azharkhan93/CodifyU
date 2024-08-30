@@ -14,8 +14,8 @@ export const TopBar: React.FC<TopNavBarProps> = ({
   return (
     <Column
       alignItems={"start"}
-      justifyContent={"center"}
-      height={"470px"}
+       justifyContent={"center"}
+      height={"480px"}
       width={"100%"}
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -25,26 +25,27 @@ export const TopBar: React.FC<TopNavBarProps> = ({
       }}
     >
       <Column px={"xl"} mt={"header"} py={"xxlg"} width={"100%"} gap={"xxxl"}>
-        <Row alignItems={"center"} gap={"m"}>
+        <Row alignItems={"flex-start"} gap={"m"}>
           <Box
             height={"3px"}
-            bg={"primary"}
-            width={["23%", "5%"]}
+            bg={"greenish"}
+            width={["45%", "13%"]}
             borderRadius={"circle"}
           ></Box>
-          <Text variant={"heading"} color={"primary"} fontWeight={"extraBold"}>
+          <Text variant={"footerHeading"} color="greenish" fontWeight={"extraBold"}>
             {aboutText}
           </Text>
         </Row>
-        <Row alignItems={"center"} gap={"m"}>
-          <Text variant={"heading"} color="primary" fontWeight={"bold"}>
+        <Row alignItems={"flex-start"} gap={"m"}>
+          <Text variant={"heading"} color="greenish" fontWeight={"bold"}>
             {whoWeAreText}
           </Text>
           <Box
             height={"3px"}
-            bg={"primary"}
-            width={["30%", "8%"]}
+            bg={"greenish"}
+            width={["35%", "8%"]}
             borderRadius={"circle"}
+            ml={"xlg"}
           ></Box>
         </Row>
       </Column>

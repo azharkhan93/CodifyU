@@ -54,7 +54,7 @@ export const NavbarData = [
   },
   {
     title: "About",
-    link: "/services",
+    link: "/about",
     
   },
   {
@@ -141,5 +141,7 @@ export const services = [
   linkText: "Learn more",
 }, 
 ]
+
+
 
 

@@ -13,6 +13,10 @@ export * from "./Modal"
 export * from "./ModalContent"
 export * from "./TextArea"
 export * from "./UpdateForm"
+export * from "./TopBar"
+export * from "./Test"
+export * from "./ContactSection"
+export * from './MapSection'
 
 
 
