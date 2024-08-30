@@ -3,7 +3,8 @@
 import { Test } from "../Test";
 import { Column, Box, CenterBox, Text, Row } from "../styled";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-import { ContactDetailsCards } from "./components/ContactDetailsCard/ContactDeatilsCards";
+import { ContactDetailsCards } from "./components/ContactDetailsCard/ContactDetailsCards";
+
 
 export const ContactSection = () => {
   return (

@@ -57,3 +57,8 @@ export type LogoProps = {
     openModal: () => void;
     closeModal: () => void;
   }
+
+  export type InfoSectionProps = {
+    title: string;
+    content: React.ReactNode;
+  };
