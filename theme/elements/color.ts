@@ -7,6 +7,7 @@ export const BASE_COLORS = {
   greyLight: "#E9ECEF",
   transparent: "",
   white: "#ffffff",
+  gradient: "linear-gradient(147deg, #923cb5 50%, #000000 74%)",
   modalOverlayBg: "rgba(0,0,0,0.5)",
   boxShadow: "rgba(0, 123, 255, 1) 0px 0px 1.25rem 0px, rgba(0, 0, 0, 0.5) 0px 0px 1.25rem 0px",
   modalShadow:

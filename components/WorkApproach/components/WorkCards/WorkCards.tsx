@@ -11,12 +11,13 @@ export const WorkCards: React.FC<WorkCardProps> = ({
     <Column
     borderRight={"4px solid green"}
     borderLeft={"4px solid blue"}
-      py={"xl"}
+      py={"xxl"}
       width={["355px","400px"]}
       alignItems={"center"}
-      bg={"greenish"}
-      borderTopRightRadius={["m","xl"]}
-      px={"m"}
+      bg={"gradient"}
+      borderTopRightRadius={["xl","xl"]}
+      borderTopLeftRadius={["xl","xl"]}
+      px={["s","m"]}
     >
       <Column position="relative" alignItems={"center"}>
         <Box
