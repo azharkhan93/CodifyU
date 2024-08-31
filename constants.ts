@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { MdPhoneIphone } from "react-icons/md";
-import { FaBrain } from 'react-icons/fa';
+import { FaBrain, FaCode, FaLightbulb, FaSearch } from 'react-icons/fa';
 
 
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
@@ -163,6 +163,30 @@ export const faqItems = [
     answer:
       "We accept multiple payment methods, including online payments through credit/debit cards, PayPal, and bank transfers. We also offer flexible payment plans to accommodate the needs of our clients.",
   },
+];
+export const workCardItems = [
+  {
+    step: 1,
+    title: "Research and Discovery",
+    description:
+      "In this phase, we conduct extensive research to understand the project requirements, target audience, and market trends. our solutions are tailored to meet client needs effectively.",
+    icon: FaSearch,
+  },
+  {
+    step: 2,
+    title: "Planning and Strategy",
+    description:
+      "Based on our research, we develop a strategic plan that outlines the project scope, milestones, and timelines. This phase sets the roadmap for successful project execution.",
+    icon: FaLightbulb,
+  },
+  {
+    step: 3,
+    title: "Design and Development",
+    description:
+      "Our design and development team collaborates to create visually appealing and functional solutions. We prioritize user experience, ensuring that the end product is both intuitive and efficient.",
+    icon: FaCode,
+  },
+  
 ];
 
 

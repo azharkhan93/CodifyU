@@ -76,3 +76,9 @@ export type LogoProps = {
   export type FAQProps = {
     items: FAQItemProps[];
   }
+  export type WorkCardProps = {
+    step: number;
+    title: string;
+    description: string;
+    icon: IconType;
+  }

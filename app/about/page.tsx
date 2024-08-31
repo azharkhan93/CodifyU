@@ -1,4 +1,4 @@
-import { AboutUs, Faq, TopBar } from "@/components";
+import { AboutUs, Faq, TopBar, WorkApproach } from "@/components";
 
 import { faqItems } from "@/constants";
 
@@ -14,6 +14,7 @@ export default function Home() {
       <AboutUs />
 
       <Faq items={faqItems} />
+      <WorkApproach />
     </>
   );
 }
