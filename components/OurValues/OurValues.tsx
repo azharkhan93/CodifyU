@@ -20,6 +20,7 @@ export const OurValues = () => {
   return (
     <>
       <Row
+      data-aos="fade-up"
       
         px={["m", "xxl"]}
         width={"100%"}
@@ -50,8 +51,11 @@ export const OurValues = () => {
           </Text>
         </Column>
 
-        <Column alignItems={"center"} justifyContent={"center"} py={"xl"}>
+        <Column alignItems={"center"} justifyContent={"center"} py={"xl"}
+        data-aos="fade-right"
+        >
           <Row
+          data-aos="fade-right"
             alignItems="center"
             //  border={"2px solid black"}
             justifyContent={"space-between"}
@@ -72,6 +76,7 @@ export const OurValues = () => {
         </Column>
       </Row>
       <Box
+      data-aos="fade-up"
         width={["100%", "90%"]}
         flexDirection={["column", "row"]}
         gap={["xxxxl", "xlg"]}

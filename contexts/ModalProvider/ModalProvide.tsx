@@ -14,7 +14,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    const showModalTimer = setTimeout(() => setIsModalOpen(true), 4000);
+    const showModalTimer = setTimeout(() => setIsModalOpen(true), 5000);
     const hideModalTimer = setTimeout(() => setIsModalOpen(false), 1000);
 
     return () => {

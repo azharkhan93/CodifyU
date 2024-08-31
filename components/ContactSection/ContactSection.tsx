@@ -49,8 +49,9 @@ export const ContactSection = () => {
         width={["100%", "90%"]}
         px={["none", "xxxxl"]}
       >
-        <Test onActionComplete={() => console.log("Form submitted!")} />
+        <Test onActionComplete={() => console.log("Form submitted!")}  />
         <Box
+        data-aos="fade-right"
           mt={["l", "header"]}
           bg={"grey"}
           alignItems={"center"}

@@ -4,8 +4,8 @@ import { WorkCards } from "./components/WorkCards";
 
 export const WorkApproach = () => {
   return (
-    <Column py={"xl"}>
-      <CenterBox gap={"xl"}>
+    <Column py={"xl"} gap={["xl", "xxxl"]}>
+      <CenterBox gap={"xl"}  data-aos="fade-left">
         <Text variant={"heading"}>Our work Process</Text>
         <Text variant={["subHeading", "footerHeading"]}>
           Our Working Process
@@ -13,10 +13,10 @@ export const WorkApproach = () => {
       </CenterBox>
 
       <Row
-      data-aos="fade-up"
+        data-aos="fade-up"
         flexDirection={["column", "row"]}
         width={"100%"}
-        gap={"xxxl"}
+        gap={["xxxxl", "xxxl"]}
         alignItems={"center"}
         justifyContent={"center"}
         py={"xl"}
@@ -34,7 +34,6 @@ export const WorkApproach = () => {
     </Column>
   );
 };
-
 
 // import { StyleSheetManager } from "styled-components";
 // import isPropValid from "@emotion/is-prop-valid";
@@ -54,5 +53,3 @@ export const WorkApproach = () => {
 //   useEffect(() => {
 //     AOS.refresh();
 //   }, [children]);
-
-

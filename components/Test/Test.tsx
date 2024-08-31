@@ -64,7 +64,9 @@ Test: React.FC<UpdateComponentProps> = ({
               height: "100%",
             }}
           >
-            <CenterBox width={"100%"} height={"100%"}>
+            <CenterBox width={"100%"} height={"100%"}
+            data-aos="fade-up"
+            >
               <Column
                 width={["96%","70%"]}
                 gap={"xl"}

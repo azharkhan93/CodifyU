@@ -5,7 +5,7 @@ export const AboutUs = () => {
   return (
     <>
       <CenterBox py={"xl"} width={"100%"}>
-        <Column alignItems={"center"} width={["100%","800px"]} px={["s","xl"]}>
+        <Column alignItems={"center"} width={["100%","800px"]} px={["s","xl"]} data-aos="fade-right">
           <Text textAlign={"center"} variant={["heading","footerHeading"]}>
             We Help Every Businsess To Grow From Enterprenures To Iconic Brands
           </Text>

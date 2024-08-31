@@ -10,6 +10,7 @@ export const AboutCards = () => {
       alignItems={"center"}
     >
       <CenterBox
+      data-aos="fade-up"
         bg={"secondary"}
         width={["440px","500px"]}
         height={["421px","550px"]}
@@ -29,7 +30,9 @@ export const AboutCards = () => {
           }}
         />
       </CenterBox>
-      <Column py={"xxxxl"} gap={"xxl"} width={["100%","700px"]} px={["s","xl"]}>
+      <Column py={"xxxxl"} gap={"xxl"} width={["100%","700px"]} px={["s","xl"]}
+      data-aos="fade-right"
+      >
         <Text variant={"heading"}>About Us</Text>
         <Text variant={"heading"}>We Are Award Wining Digital Agency</Text>
         <Text variant={"body"} width={["100%","500px"]}>
