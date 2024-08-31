@@ -5,16 +5,15 @@ import { Column, Box, CenterBox, Text, Row } from "../styled";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { ContactDetailsCards } from "./components/ContactDetailsCard/ContactDetailsCards";
 
-
 export const ContactSection = () => {
   return (
     <Column
-    //   bg={"primary"}
+      //   bg={"primary"}
       flexDirection={["column", "row"]}
       py={["xxl", "header"]}
     >
       <Box
-      py={'xxxl'}
+        py={"xxxl"}
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
         gap={"l"}
@@ -49,19 +48,19 @@ export const ContactSection = () => {
       <CenterBox
         py={"xxxxl"}
         flexDirection={["column", "row"]}
-        width={["100%","90%"]}
+        width={["100%", "90%"]}
         px={["none", "xxxxl"]}
       >
         <Test onActionComplete={() => console.log("Form submitted!")} />
         <Box
-          mt={"header"}
+          mt={["l","header"]}
           bg={"grey"}
           alignItems={"center"}
           gap={"xxxl"}
           py={"header"}
           px={"m"}
           borderRadius={"m"}
-          width={["100%","700px"]}
+          width={["97%", "700px"]}
         >
           <ContactDetailsCards
             title="Address"
@@ -71,9 +70,7 @@ export const ContactSection = () => {
             title="Contact"
             content={
               <>
-                <Column
-                gap={'s'}
-                >
+                <Column gap={"s"}>
                   <Text variant={"body"}>Phone: +91 699988998877</Text>
                   {/* <br> */}
                   <Text variant={"body"}>Email: azjhkshhjk@codifyu.com</Text>
