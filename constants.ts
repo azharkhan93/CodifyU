@@ -189,6 +189,34 @@ export const workCardItems = [
   
 ];
 
+export const teamMembers = [
+  {
+    name: "Azam Iftikhar",
+    role: "ML Scientist",
+    imageUrl: "/images/bg.jpeg",
+    instagramUrl: "https://www.instagram.com",
+    linkedinUrl: "https://www.linkedin.com",
+    facebookUrl: "https://www.facebook.com",
+  },
+  {
+    name: "Azam Iftikhar",
+    role: "ML Scientist",
+    imageUrl: "/images/bg.jpeg",
+    instagramUrl: "https://www.instagram.com",
+    linkedinUrl: "https://www.linkedin.com",
+    facebookUrl: "https://www.facebook.com",
+  },
+  {
+    name: "Azam Iftikhar",
+    role: "ML Scientist",
+    imageUrl: "/images/bg.jpeg",
+    instagramUrl: "https://www.instagram.com",
+    linkedinUrl: "https://www.linkedin.com",
+    facebookUrl: "https://www.facebook.com",
+  },
+  
+];
+
 
 
 

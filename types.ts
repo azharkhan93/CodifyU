@@ -82,3 +82,14 @@ export type LogoProps = {
     description: string;
     icon: IconType;
   }
+  export type TeamMember = {
+    name: string;
+    role: string;
+    imageUrl: string;
+    instagramUrl: string;
+    linkedinUrl: string;
+    facebookUrl: string;
+  }
+  export type TeamCardsProps = {
+    member: TeamMember;
+  }

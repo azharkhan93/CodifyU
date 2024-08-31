@@ -1,4 +1,4 @@
-import { HeroSection, HighlightSection, OurValues, ReviewsSection } from "@/components";
+import { HeroSection, HighlightSection, OurValues, ReviewsSection, TeamMembers } from "@/components";
 
 import { Navbar } from "@/components/Navbar";
  import { Partners } from "@/components/Partners/Partners";
@@ -12,6 +12,7 @@ export default function Home() {
     <OurValues />
     <HighlightSection />
     <ReviewsSection />
+    <TeamMembers />
     <Partners />
     
     

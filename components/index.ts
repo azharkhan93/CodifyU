@@ -20,6 +20,7 @@ export * from './MapSection'
 export * from "./AboutUs"
 export * from "./Faq"
 export * from "./WorkApproach"
+export * from "./TeamMembers"
 
 
 
