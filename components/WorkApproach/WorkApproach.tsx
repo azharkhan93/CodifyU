@@ -13,6 +13,7 @@ export const WorkApproach = () => {
       </CenterBox>
 
       <Row
+      data-aos="fade-up"
         flexDirection={["column", "row"]}
         width={"100%"}
         gap={"xxxl"}
@@ -33,3 +34,25 @@ export const WorkApproach = () => {
     </Column>
   );
 };
+
+
+// import { StyleSheetManager } from "styled-components";
+// import isPropValid from "@emotion/is-prop-valid";
+
+// <StyleSheetManager shouldForwardProp={isPropValid}>
+
+// </StyleSheetManager>
+
+// useEffect(() => {
+//     AOS.init({
+//       duration: 1000,
+//       easing: "ease-in-out",
+//       once: false,
+//     });
+//   }, []);
+
+//   useEffect(() => {
+//     AOS.refresh();
+//   }, [children]);
+
+
