@@ -1,11 +1,7 @@
 import { CenterBox, Column, Row, Text } from "@/components/styled";
-import { TeamMember } from "@/types";
+import { TeamCardsProps } from "@/types";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-
-interface TeamCardsProps {
-  member: TeamMember;
-}
 
 export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
   return (
@@ -24,8 +20,8 @@ export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
           justifyContent={"center"}
           bg={"primary"}
           position={"absolute"}
-          top={[190,180]}
-          left={["",47]}
+          top={[190, 180]}
+          left={["", 47]}
           width={"290px"}
           gap={"l"}
           py={"m"}
@@ -37,13 +33,25 @@ export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
           <Text variant={"heading"}>{member.name}</Text>
           <Text variant={"subHeading"}>{member.role}</Text>
           <Row flexDirection={"row"} gap="m">
-            <a href={member.instagramUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={member.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram size={24} />
             </a>
-            <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={member.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin size={24} />
             </a>
-            <a href={member.facebookUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={member.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook size={24} />
             </a>
           </Row>
@@ -52,4 +60,3 @@ export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
     </Column>
   );
 };
-
