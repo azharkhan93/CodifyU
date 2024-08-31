@@ -18,7 +18,7 @@ export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
         <Column
           alignItems={"center"}
           justifyContent={"center"}
-          bg={"primary"}
+          bg={"modalOverlayBg"}
           position={"absolute"}
           top={[190, 180]}
           left={["", 47]}

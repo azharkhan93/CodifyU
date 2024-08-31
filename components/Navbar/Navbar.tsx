@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Box,
@@ -38,9 +38,11 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={"greenish"}
+         bg={"modalOverlayBg"}
         style={{
           zIndex: "100",
+           boxShadow: "0px 4px 8px rgba(0, 255, 0, 0.7), 0px 4px 8px rgba(0, 0, 255, 0.7)",
+          
         }}
       >
         <CenterBox>
@@ -99,7 +101,7 @@ export const Navbar: React.FC = () => {
             justifyContent={"center"}
             width={"100vw"}
             height={"100vh"}
-            bg="primary"
+            // bg="primary"
             zIndex={9999}
             display={["flex", "none"]}
             position="fixed"
@@ -107,6 +109,9 @@ export const Navbar: React.FC = () => {
             left={0}
             gap={"xxl"}
             px={"xl"}
+            style={{
+              background: "linear-gradient(147deg, #4d4855 0%, #000000 74%)",
+            }}
           >
             <CenterBox position={"absolute"} top={"m"} left={10}>
               <Image src="/images/logo.png" alt="Logo" width={80} height={80} />
