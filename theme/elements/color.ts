@@ -4,7 +4,7 @@ export const BASE_COLORS = {
   secondary: "#D93922",
   grey: "#8594A5",
   greenish: "#9e1f63",
-  greyLight: "#4d4855",
+  greyLight: "#FAF9F6",
   transparent: "",
   white: "#ffffff",
   gradient: "linear-gradient(147deg, #923cb5 50%, #000000 74%)",
