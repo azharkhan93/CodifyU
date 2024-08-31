@@ -183,7 +183,7 @@ export const workCardItems = [
     step: 3,
     title: "Design and Development",
     description:
-      "Our design and development team collaborates to create visually appealing and functional solutions. We prioritize user experience, ensuring that the end product is both intuitive and efficient.",
+      "Our design and development team collaborates to create visually appealing and functional solutions. We prioritize user experience, ensuring that the end product ",
     icon: FaCode,
   },
   
