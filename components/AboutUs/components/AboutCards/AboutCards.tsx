@@ -11,8 +11,8 @@ export const AboutCards = () => {
     >
       <CenterBox
         bg={"secondary"}
-        width={"500px"}
-        height={"550px"}
+        width={["440px","500px"]}
+        height={["421px","550px"]}
         position={"relative"}
       >
         <Image
@@ -29,10 +29,10 @@ export const AboutCards = () => {
           }}
         />
       </CenterBox>
-      <Column py={"xxxxl"} gap={"xxl"} width={"700px"} px={"xl"}>
+      <Column py={"xxxxl"} gap={"xxl"} width={["100%","700px"]} px={["s","xl"]}>
         <Text variant={"heading"}>About Us</Text>
         <Text variant={"heading"}>We Are Award Wining Digital Agency</Text>
-        <Text variant={"body"} width={"500px"}>
+        <Text variant={"body"} width={["100%","500px"]}>
           We Are Award Wining Digital Agency We Are Award Wining Digital Agency
           We Are Award Wining Digital Agency We Are Award Wining Digital Agency
         </Text>
@@ -58,7 +58,7 @@ export const AboutCards = () => {
         <Column>
           <Text>short dscription for heading award winng digtal agency</Text>
         </Column>
-        <CenterBox width={"30%"}>
+        <CenterBox width={["100%","30%"]}>
           <Button
             variant={"primary"}
             py={"m"}

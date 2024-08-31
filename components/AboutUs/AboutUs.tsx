@@ -5,8 +5,8 @@ export const AboutUs = () => {
   return (
     <>
       <CenterBox py={"xl"} width={"100%"}>
-        <Column alignItems={"center"} width={"800px"} px={"xl"}>
-          <Text textAlign={"center"} variant={"footerHeading"}>
+        <Column alignItems={"center"} width={["100%","800px"]} px={["s","xl"]}>
+          <Text textAlign={"center"} variant={["heading","footerHeading"]}>
             We Help Every Businsess To Grow From Enterprenures To Iconic Brands
           </Text>
           <Text textAlign={"center"} variant={"body"}>
