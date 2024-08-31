@@ -62,3 +62,17 @@ export type LogoProps = {
     title: string;
     content: React.ReactNode;
   };
+  export type TopNavBarProps = {
+    backgroundImage: string;
+    aboutText: string;
+    whoWeAreText: string;
+  }
+  export type FAQItemProps = {
+    question: string;
+    answer: string;
+  }
+
+  
+  export type FAQProps = {
+    items: FAQItemProps[];
+  }

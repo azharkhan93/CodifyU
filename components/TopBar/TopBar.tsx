@@ -1,10 +1,5 @@
+import { TopNavBarProps } from "@/types";
 import { Box, CenterBox, Column, Row, Text } from "../styled";
-
-interface TopNavBarProps {
-  backgroundImage: string;
-  aboutText: string;
-  whoWeAreText: string;
-}
 
 export const TopBar: React.FC<TopNavBarProps> = ({
   backgroundImage,
@@ -14,7 +9,7 @@ export const TopBar: React.FC<TopNavBarProps> = ({
   return (
     <Column
       alignItems={"start"}
-       justifyContent={"center"}
+      justifyContent={"center"}
       height={"480px"}
       width={"100%"}
       style={{
@@ -32,7 +27,11 @@ export const TopBar: React.FC<TopNavBarProps> = ({
             width={["45%", "13%"]}
             borderRadius={"circle"}
           ></Box>
-          <Text variant={"footerHeading"} color="greenish" fontWeight={"extraBold"}>
+          <Text
+            variant={"footerHeading"}
+            color="greenish"
+            fontWeight={"extraBold"}
+          >
             {aboutText}
           </Text>
         </Row>

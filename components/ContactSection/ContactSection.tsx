@@ -1,5 +1,4 @@
 "use client";
-
 import { Test } from "../Test";
 import { Column, Box, CenterBox, Text, Row } from "../styled";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
@@ -8,7 +7,6 @@ import { ContactDetailsCards } from "./components/ContactDetailsCard/ContactDeta
 export const ContactSection = () => {
   return (
     <Column
-      //   bg={"primary"}
       flexDirection={["column", "row"]}
       py={["xxl", "header"]}
     >
@@ -53,7 +51,7 @@ export const ContactSection = () => {
       >
         <Test onActionComplete={() => console.log("Form submitted!")} />
         <Box
-          mt={["l","header"]}
+          mt={["l", "header"]}
           bg={"grey"}
           alignItems={"center"}
           gap={"xxxl"}
@@ -72,7 +70,6 @@ export const ContactSection = () => {
               <>
                 <Column gap={"s"}>
                   <Text variant={"body"}>Phone: +91 699988998877</Text>
-                  {/* <br> */}
                   <Text variant={"body"}>Email: azjhkshhjk@codifyu.com</Text>
                 </Column>
               </>

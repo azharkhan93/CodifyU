@@ -1,19 +1,19 @@
-import { HeroSection, HighlightSection, OurValues, ReviewsSection, TopBar } from "@/components";
-import { ContactSection } from "@/components/ContactSection";
+import { AboutUs, Faq, TopBar } from "@/components";
 
-import { Navbar } from "@/components/Navbar";
- import { Partners } from "@/components/Partners/Partners";
-
+import { faqItems } from "@/constants";
 
 export default function Home() {
-  return(
+  return (
     <>
-    
-  <TopBar backgroundImage={"/images/about.jpg"} aboutText={"About Us"} whoWeAreText={"Who We Are"} />
+      <TopBar
+        backgroundImage={"/images/about.jpg"}
+        aboutText={"About Us"}
+        whoWeAreText={"Who We Are"}
+      />
 
-  
-    
-    
+      <AboutUs />
+
+      <Faq items={faqItems} />
     </>
   );
 }

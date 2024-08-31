@@ -17,6 +17,9 @@ export * from "./TopBar"
 export * from "./Test"
 export * from "./ContactSection"
 export * from './MapSection'
+export * from "./AboutUs"
+export * from "./Faq"
+export * from "./WorkApproach"
 
 
 

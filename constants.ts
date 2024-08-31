@@ -140,7 +140,31 @@ export const services = [
     icon: MdPhoneIphone ,
   linkText: "Learn more",
 }, 
+
 ]
+export const faqItems = [
+  {
+    question: "How Can I Request a Software Solution from Your Company?",
+    answer:
+      "You can request a software solution by visiting our website and exploring the various services we offer. Once you find the service that fits your needs, you can contact us through our online form or directly schedule a consultation. We'll discuss your requirements and provide a tailored solution.",
+  },
+  {
+    question: "What Types of Software Solutions Do You Offer?",
+    answer:
+      "We offer a wide range of software solutions, including custom software development, mobile app development, cloud solutions, and IT consulting. Our team specializes in creating tailored solutions to meet the specific needs of different industries.",
+  },
+  {
+    question: "Do You Provide Ongoing Support After the Software is Delivered?",
+    answer:
+      "Yes, we provide comprehensive support and maintenance services after the software is delivered. Our team is available to assist with updates, troubleshooting, and any additional modifications that may be needed as your business evolves.",
+  },
+  {
+    question: "What Payment Methods Do You Accept for Your Services?",
+    answer:
+      "We accept multiple payment methods, including online payments through credit/debit cards, PayPal, and bank transfers. We also offer flexible payment plans to accommodate the needs of our clients.",
+  },
+];
+
 
 
 
