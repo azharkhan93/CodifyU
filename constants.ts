@@ -67,9 +67,9 @@ export const featureItems = [
   "Digital Marketing",
 ];
 export const PARTNER_LOGOS = [
-  { src: "/clientlogos/google.png", alt: "Logo 6", size: 100 },
-{ src: "/clientlogos/americanairlines.jpg", alt: "Logo 2", size: 100 },
-  { src: "/clientlogos/ant.png", alt: "Logo 3", size: 100 },
+  { src: "/clientlogos/g1.png", alt: "Logo 6", size: 100 },
+{ src: "/clientlogos/airlines.png", alt: "Logo 2", size: 100 },
+  { src: "/clientlogos/ant1.png", alt: "Logo 3", size: 100 },
   { src: "/clientlogos/betmgm.jpg", alt: "Logo 4", size: 100 },
   { src: "/clientlogos/Callidus.jpg", alt: "Logo 5", size: 100 },
   { src: "/clientlogos/eth.jpg", alt: "Logo 6", size: 100 },
