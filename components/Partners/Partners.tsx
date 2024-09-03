@@ -5,8 +5,19 @@ import { PARTNER_LOGOS } from "@/constants";
 
 export const Partners = () => {
   return (
+
     <>
-      <Column px={["s", "xl"]} py={"l"} gap={"xl"} width={["100%","500px"]}
+    <Column
+    mt={"l"}
+    width={"100%"}
+    // bg={"primary"}
+  >
+    
+    
+    
+      <Column px={["s", "xl"]} py={"xl"} gap={"xl"} width={["100%","500px"]}
+      
+
       >
         <Text variant={"heading"}>Our Partners</Text>
         <Text variant={"body"}>
@@ -18,15 +29,17 @@ export const Partners = () => {
         width={"100%"}
         alignItems={"center"}
         justifyContent={"center"}
-        py={"xl"}
+        py={"xxxxl"}
+     
       >
         <CenterBox
           flexDirection={["column", "row"]}
           width={["100%", "80%"]}
           gap={"xl"}
           overflow={"hidden"}
+
         >
-          <Flock flexDirection={["row", "row"]} gap={["xl", "xxxl"]}>
+          <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
         
             {PARTNER_LOGOS.map((logo, index) => (
               <Logos key={index} src={logo.src} alt={logo.alt} size={logo.size} />
@@ -34,6 +47,9 @@ export const Partners = () => {
           </Flock>
         </CenterBox>
       </Row>
+      </Column>
     </>
   );
 };
+
+// style={{background: "radial-gradient(circle,#ffffff,#f0f0f0,#d0d0d0, #b0b0b0)"}}

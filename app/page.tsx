@@ -9,11 +9,12 @@ export default function Home() {
     <>
     
     <HeroSection />
+    <Partners />
     <OurValues />
     <HighlightSection />
     <ReviewsSection />
     <TeamMembers />
-    <Partners />
+    
     
     
     </>
