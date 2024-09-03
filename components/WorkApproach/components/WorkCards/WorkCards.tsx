@@ -18,6 +18,10 @@ export const WorkCards: React.FC<WorkCardProps> = ({
       borderTopRightRadius={["xl","xl"]}
       borderTopLeftRadius={["xl","xl"]}
       px={["s","m"]}
+      style={{
+        boxShadow:
+          "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5)",
+      }}
     >
       <Column position="relative" alignItems={"center"}>
         <Box
