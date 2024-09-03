@@ -22,7 +22,7 @@ export const TypewriterText = styled.span`
 `;
 
 export const Flock = styled(Row)`
-  animation: ${fing} 20s linear infinite;
+  animation: ${fing} 30s linear infinite;
 `;
 export const Floki = styled(CenterBox)`
   display: flex;

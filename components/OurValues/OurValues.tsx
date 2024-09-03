@@ -95,15 +95,7 @@ export const OurValues = () => {
 
       <CenterBox
         py={"xxxl"}
-        //   border={"2px solid red"}
       >
-        {/* <Button
-          bg={"secondary"}
-          py={"m"}
-          px={"xl"}
-          borderTopRightRadius={"m"}
-          borderTopLeftRadius={"m"}
-        > */}
         <Text
         bg="secondary"
         variant={"subHeading"}
