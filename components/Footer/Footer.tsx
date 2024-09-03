@@ -35,12 +35,12 @@ export const Footer = () => {
       <Box width={"100%"} bg={"secondary"} mt={"m"}>
         <CenterBox
           borderBottom={"2px solid white"}
-          py={"xxl"}
+          py={["xxxl","xxl"]}
           flexDirection={["column", "column"]}
           px={["s", "xxxl"]}
           mx={["none", "xxxxl"]}
           justifyContent={"space-between"}
-          gap={"xxxl"}
+          gap={["xxxxl","xxxl"]}
         >
           <Column gap={"xl"}>
             <Text
