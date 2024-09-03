@@ -1,6 +1,4 @@
 import {
-  // AnimatedColumn,
-  // AnimatedRow,
   Box,
   Button,
   CenterBox,
@@ -8,7 +6,6 @@ import {
   Row,
   Text,
 } from "../styled";
-import { FiCheckCircle } from "react-icons/fi";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
