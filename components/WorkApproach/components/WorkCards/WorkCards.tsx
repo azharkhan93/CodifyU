@@ -18,21 +18,24 @@ export const WorkCards: React.FC<WorkCardProps> = ({
       borderTopRightRadius={["xl","xl"]}
       borderTopLeftRadius={["xl","xl"]}
       px={["s","m"]}
-      style={{
-        boxShadow:
-          "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5)",
-      }}
+      
     >
-      <Column position="relative" alignItems={"center"}>
+      <Column position="relative" alignItems={"center"}
+      
+      >
         <Box
+        style={{
+          boxShadow:
+            "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5)",
+        }}
           position="relative"
-          bg={"primary"}
+           bg={"primary"}
           gap={"m"}
           width={"60px"}
           height={"40px"}
           alignItems={"center"}
           justifyContent={"center"}
-          borderRadius={"xl"}
+          borderRadius={"circle"}
         >
           <Icon size={25} fill="white" />
         </Box>
