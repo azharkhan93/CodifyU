@@ -10,7 +10,7 @@ export const Partners = () => {
     <Column
     mt={"l"}
     width={"100%"}
-    // bg={"primary"}
+    //  bg={"newcolor1"}
   >
     
     
@@ -40,11 +40,11 @@ export const Partners = () => {
 
         >
           <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
-        
-            {PARTNER_LOGOS.map((logo, index) => (
+            {PARTNER_LOGOS.concat(PARTNER_LOGOS).map((logo, index) => (
               <Logos key={index} src={logo.src} alt={logo.alt} size={logo.size} />
             ))}
           </Flock>
+          
         </CenterBox>
       </Row>
       </Column>

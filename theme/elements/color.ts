@@ -16,7 +16,10 @@ export const BASE_COLORS = {
     gradientBold: "#333399",
     blue600: "#2563eb",
     slate800: "#1e293b",
-    slate50: "#f8fafc"
+    slate50: "#f8fafc",
+    newColor: "#121212",
+    newcolor1: "#0B0B0C",
+    newColor2: "0E0E10"
 };
 
 export type AppColors = keyof typeof BASE_COLORS;

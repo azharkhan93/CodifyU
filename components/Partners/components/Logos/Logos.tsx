@@ -5,7 +5,11 @@ import { LogoProps } from "@/types";
 
 export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
   return (
-    <Box width={["100%", "auto"]}
+    <Box width={["220px", "220px"]}
+    // border={"1px solid red"}
+    alignItems={"center"}
+    justifyContent={"center"}
+    height={["140px","130px"]}
     
     >
       <Image

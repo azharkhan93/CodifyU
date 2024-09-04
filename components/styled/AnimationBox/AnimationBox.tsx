@@ -3,7 +3,7 @@ import styled, { keyframes, css } from "styled-components";
 import { Box, CenterBox } from "../Box";
 import {
   blinkCaret,
-  fing,
+  scrollLogos,
   scrolling,
   typewriter,
   waveAnimation,
@@ -22,11 +22,20 @@ export const TypewriterText = styled.span`
 `;
 
 export const Flock = styled(Row)`
-  animation: ${fing} 30s linear infinite;
+  white-space: nowrap;
+  animation: ${scrollLogos} 30s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  & > * {
+    flex: 0 0 auto;
+    // min-width: 220px;
+  }
 `;
 export const Floki = styled(CenterBox)`
   display: flex;
-  // width: 400%;
   animation: ${scrolling} 40s linear infinite;
 `;
 

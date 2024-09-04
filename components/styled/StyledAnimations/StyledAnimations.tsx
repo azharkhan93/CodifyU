@@ -34,12 +34,13 @@ export const blinkCaret = keyframes`
     border-color: transparent;
   }
 `;
-export const fing = keyframes`
+
+export const scrollLogos = keyframes`
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 `;
 
