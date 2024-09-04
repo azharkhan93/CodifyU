@@ -1,4 +1,4 @@
-import { HeroSection, HighlightSection, OurValues, ReviewsSection, TeamMembers, TechStacks } from "@/components";
+import { HeroSection, HighlightSection, OurValues, ParallaxSection, ReviewsSection, TeamMembers, TechStacks } from "@/components";
 
 import { Navbar } from "@/components/Navbar";
  import { Partners } from "@/components/Partners/Partners";
@@ -15,6 +15,8 @@ export default function Home() {
     <TechStacks />
     <ReviewsSection />
     <TeamMembers />
+
+    <ParallaxSection />
     
     
     

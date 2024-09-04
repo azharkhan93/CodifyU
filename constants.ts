@@ -12,7 +12,7 @@ export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 export const STATS_DATA = [
   {
     id: 1,
-    heading: "13+years",
+    heading: "7+years",
     subHeading: "In Business",
   },
   {
