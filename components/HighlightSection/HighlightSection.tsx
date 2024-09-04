@@ -7,11 +7,13 @@ export const HighlightSection = () => {
   return (
     <Column width={"100%"}
     position={"relative"}
-    style={{ 
-      backgroundImage: "url('/images/bg.jpeg')", 
-      backgroundSize: "cover", 
-      backgroundPosition: "center", 
-    }}
+    bg={"white"}
+    
+    // style={{ 
+    //   backgroundImage: "url('/images/bg.jpeg')", 
+    //   backgroundSize: "cover", 
+    //   backgroundPosition: "center", 
+    // }}
      >
         <Box
         position="absolute"
@@ -31,8 +33,8 @@ export const HighlightSection = () => {
         width={["100%", "45%"]}
         px={["s","header"]}
       >
-        <Text variant={"heading"} color="white">Intelligent Software Solutions</Text>
-        <Text variant={"body"} color="white">
+        <Text variant={"heading"} color="blue600">Intelligent Software Solutions</Text>
+        <Text variant={"body"} color="blue600">
           We employ best practice processes and development methodologies as a
           foundation for rapid building of cutting-edge technology solutions in
           a structured and methodical way.

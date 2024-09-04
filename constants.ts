@@ -1,6 +1,9 @@
 import { FiCheckCircle } from "react-icons/fi";
-import { MdPhoneIphone } from "react-icons/md";
-import { FaBrain, FaCode, FaLightbulb, FaSearch } from "react-icons/fa";
+import { MdCode, MdOutlineDeveloperMode, MdPhoneIphone } from "react-icons/md";
+import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, FaCogs  } from "react-icons/fa";
+import { AiOutlineRobot } from "react-icons/ai";
+import { SiNhl, SiOpenai, SiTensorflow, SiPython, SiDocker, SiMlflow } from "react-icons/si";
+
 
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 
@@ -113,10 +116,10 @@ export const reviews23 = [
 ];
 export const services = [
   {
-    title: "Mobile Development",
+    title: "Full-Stack Development",
     description:
       "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
-    icon: MdPhoneIphone,
+      icon: MdCode,
     linkText: "Learn more",
   },
   {
@@ -127,17 +130,17 @@ export const services = [
     linkText: "Learn more",
   },
   {
-    title: "Mobile Development",
+    title: "Geneartive AI",
     description:
       "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
-    icon: MdPhoneIphone,
+      icon: FaRobot,
     linkText: "Learn more",
   },
   {
-    title: "Mobile Development",
+    title: "Machine Learning",
     description:
       "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
-    icon: MdPhoneIphone,
+      icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
   },
 ];
@@ -213,3 +216,26 @@ export const teamMembers = [
     facebookUrl: "https://www.facebook.com",
   },
 ];
+
+export const techSections = [
+  { title: "Artificial Intelligence" },
+  { title: "Full Stack" },
+  { title: "Database" },
+  { title: "Cloud" },
+  { title: "Languages" },
+  { title: "Utilities" },
+];
+
+export const iconData = [
+  { IconComponent: AiOutlineRobot, size: 60, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiNhl, size: 60, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiOpenai, size: 60, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: FaBrain, size: 60, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: FaCogs, size: 60, color: "white", category: "Full Stack" },
+  { IconComponent: SiTensorflow, size: 60, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiPython, size: 60, color: "white", category: "Full Stack" },
+  { IconComponent: SiDocker, size: 60, color: "white", category: "Full Stack" },
+  { IconComponent: SiMlflow, size: 60, color: "white", category: "Artificial Intelligence" },
+];
+
+

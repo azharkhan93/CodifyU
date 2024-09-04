@@ -93,3 +93,16 @@ export type LogoProps = {
   export type TeamCardsProps = {
     member: TeamMember;
   }
+  export type TechSectionType = {
+    title3: string;
+  };
+
+  export type IconData = {
+    IconComponent: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }>;
+    size: number;
+    color: string;
+  };
+  
+  export type IconBoxProps = {
+    iconData: IconData;
+  };

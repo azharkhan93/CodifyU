@@ -19,7 +19,7 @@ export const HeroSection = () => {
       height={"100vh"}
       flexDirection={"column"}
       gap={"l"}
-      px={["s", "xxxxl"]}
+      px={["m", "xxxxl"]}
     >
       <video
         autoPlay
@@ -52,7 +52,7 @@ export const HeroSection = () => {
 
       <Column
         py={"m"}
-        gap={"xl"}
+        gap={"xxxl"}
         width={"100%"}
         alignItems={"flex-start"}
         mt={"xlg"}
@@ -75,16 +75,25 @@ export const HeroSection = () => {
         <Text
           variant={["heading", "footerHeading"]}
           color="white"
-          width={["100%", "600px"]}
+          width={["100%", "700px"]}
           textAlign={"center"}
         >
-          Where Innovation Meets{" "}
-          <TypewriterText>Digital Excellence</TypewriterText>
+          Welcome to{" "}
+          <span style={{ color: "orange", fontSize: "45px" }}>CodefyU</span>{" "}
+          Where Innovation Meets <TypewriterText>Execution</TypewriterText>
         </Text>
-        <Text variant="body" color="white" width={["100%","550px"]} textAlign={["start","center"]}>
-          Using deep domain expertise of our software developers, we create
-          impactful digital solutions that drive meaningful change with a
-          strategic vision.
+        <Text
+        px={"s"}
+          variant="body"
+          color="white"
+          width={["100%", "550px"]}
+          textAlign={["start", "center"]}
+          
+        >
+          We are your partners in transforming business operations through
+          cutting-edge technology. Our expertise in AI, Machine Learning,
+          Generative AI & Full-Stack Development equips you with customized
+          solutions designed to boost effiency, scability, & profitabilty.
         </Text>
         <CenterBox flexDirection={"row"} gap={"xxxl"}>
           <Button

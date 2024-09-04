@@ -21,6 +21,7 @@ export * from "./AboutUs"
 export * from "./Faq"
 export * from "./WorkApproach"
 export * from "./TeamMembers"
+export * from "./TechStacks"
 
 
 

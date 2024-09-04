@@ -7,6 +7,7 @@ export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
   const isNumber = /\d+/g;
   return (
     <Column
+    py={"m"}
       alignItems={"center"}
       borderRight={"2px dotted red"}
       width={["250px", "300px"]}

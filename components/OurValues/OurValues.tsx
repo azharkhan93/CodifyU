@@ -1,24 +1,13 @@
-import {
-  Box,
-  Button,
-  CenterBox,
-  Column,
-  Row,
-  Text,
-} from "../styled";
+import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
 
-
 export const OurValues = () => {
- 
-
   return (
     <>
       <Row
-      data-aos="fade-up"
-      
+        data-aos="fade-up"
         px={["m", "xxl"]}
         width={"100%"}
         // border={"2px solid red"}
@@ -34,25 +23,27 @@ export const OurValues = () => {
           alignItems={"flex-start"}
           width={["100%", "45%"]}
         >
-          <Text variant={"heading"}>Our Value Propostion</Text>
+          <Text variant={["heading", "footerHeading"]} >Why <span style={{ color: "orange", fontSize: "50px" }}>CodefyU</span>?</Text>
           <Text variant={"body"}>
-            In this post-pandemic world, as continuous disruption unfolds,
-            businesses need expert guidance and proven talent for their Digital
-            Transformation priorities.{" "}
+            We have succcessfully delivered over 200 projects over the last
+            8years collectively generating a value of $200million.High-Quality
+            tech solutions without high costs.{" "}
           </Text>
           <Text>
-            As a smart and agile software development agency, we custom engineer
-            sophisticated digital solutions, that enable our clients to stay
-            ahead of the game, and thrive in this ever-changing digital
-            landscape.
+            Our startup accelator program is your launchpad to
+            success.Fast-Track your market entry and expansion with our proven
+            strategies
           </Text>
         </Column>
 
-        <Column alignItems={"center"} justifyContent={"center"} py={"xl"}
-        data-aos="fade-right"
+        <Column
+          alignItems={"center"}
+          justifyContent={"center"}
+          py={"xl"}
+          data-aos="fade-right"
         >
           <Row
-          data-aos="fade-right"
+            data-aos="fade-right"
             alignItems="center"
             //  border={"2px solid black"}
             justifyContent={"space-between"}
@@ -73,7 +64,7 @@ export const OurValues = () => {
         </Column>
       </Row>
       <Box
-      data-aos="fade-up"
+        data-aos="fade-up"
         width={["100%", "90%"]}
         flexDirection={["column", "row"]}
         gap={["xxxxl", "xlg"]}
@@ -90,19 +81,17 @@ export const OurValues = () => {
         ))}
       </Box>
 
-      <CenterBox
-        py={"xxxl"}
-      >
+      <CenterBox py={"xxxl"}>
         <Text
-        bg="secondary"
-        variant={"subHeading"}
-        px={"xl"}
-        py={"m"}
-        borderRadius={"s"}
-        style={{cursor: "pointer"}}
+          bg="secondary"
+          variant={"subHeading"}
+          px={"xl"}
+          py={"m"}
+          borderRadius={"s"}
+          style={{ cursor: "pointer" }}
         >
           Share Your Project Requirements
-          </Text>
+        </Text>
         {/* </Button> */}
       </CenterBox>
     </>
