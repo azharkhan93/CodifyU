@@ -1,8 +1,8 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { MdCode, MdOutlineDeveloperMode, MdPhoneIphone } from "react-icons/md";
-import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, FaCogs  } from "react-icons/fa";
+import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, FaCogs, FaBootstrap, FaReact, FaJs, FaNodeJs, FaWordpress, FaAws, FaGitAlt, FaJava, FaPython  } from "react-icons/fa";
 import { AiOutlineRobot } from "react-icons/ai";
-import { SiNhl, SiOpenai, SiTensorflow, SiPython, SiDocker, SiMlflow } from "react-icons/si";
+import { SiNhl, SiOpenai, SiTensorflow, SiPython, SiDocker, SiMlflow, SiNextdotjs, SiExpress, SiDatabricks, SiMongodb, SiMysql, SiHive, SiGooglecloud, SiMicrosoftazure, SiKubernetes, SiCplusplus, SiCsharp, SiDotnet } from "react-icons/si";
 
 
 export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
@@ -192,24 +192,24 @@ export const workCardItems = [
 
 export const teamMembers = [
   {
-    name: "Azam Iftikhar",
-    role: "ML Scientist",
+    name: "Adnan Nazir: CEO",
+    role: "A distinguished AI and ML Engineer at Microsoft with a HIT background, specializing in NLP, OCR, Computer Vision, and LLMs. Adnaan has led the development of cutting-edge machine learning solutions, establishing himself as a top innovator in AI.",
     imageUrl: "/images/bg.jpeg",
     instagramUrl: "https://www.instagram.com",
     linkedinUrl: "https://www.linkedin.com",
     facebookUrl: "https://www.facebook.com",
   },
   {
-    name: "Azam Iftikhar",
-    role: "ML Scientist",
+    name: "Azam Iftikhar: CTO",
+    role: "Azam is a top-rated Upwork freelancer with Stanford, AWS, and Azure certifications. He has significantly boosted revenue and competitiveness for startups and enterprises, leading a crucial COVID detection project that secured $12.6M in funding and generated $20M in revenue through AI solutions.",
     imageUrl: "/images/bg.jpeg",
     instagramUrl: "https://www.instagram.com",
     linkedinUrl: "https://www.linkedin.com",
     facebookUrl: "https://www.facebook.com",
   },
   {
-    name: "Azam Iftikhar",
-    role: "ML Scientist",
+    name: "Arshaan Nazir: Data Scientist",
+    role: "Arshaan, an expert in Computer Vision and NLP, has led projects that secured around $15M in funding, including a startup acquisition by an S&P 500 company. His MLOps and cloud expertise (AWS, Azure, GCP) is enhanced by his contributions to the Langtest library and various ML and deep learning projects",
     imageUrl: "/images/bg.jpeg",
     instagramUrl: "https://www.instagram.com",
     linkedinUrl: "https://www.linkedin.com",
@@ -219,7 +219,8 @@ export const teamMembers = [
 
 export const techSections = [
   { title: "Artificial Intelligence" },
-  { title: "Full Stack" },
+  { title: "Front-End" },
+  { title: "Back-End" },
   { title: "Database" },
   { title: "Cloud" },
   { title: "Languages" },
@@ -227,15 +228,39 @@ export const techSections = [
 ];
 
 export const iconData = [
-  { IconComponent: AiOutlineRobot, size: 60, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiNhl, size: 60, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiOpenai, size: 60, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: FaBrain, size: 60, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: FaCogs, size: 60, color: "white", category: "Full Stack" },
-  { IconComponent: SiTensorflow, size: 60, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiPython, size: 60, color: "white", category: "Full Stack" },
-  { IconComponent: SiDocker, size: 60, color: "white", category: "Full Stack" },
-  { IconComponent: SiMlflow, size: 60, color: "white", category: "Artificial Intelligence" },
-];
+  { IconComponent: AiOutlineRobot, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiNhl, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiOpenai, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: FaBrain, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: FaCogs, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiTensorflow, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiPython, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiDocker, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: SiMlflow, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: FaBootstrap, size: 40, color: "white", category: "Front-End" },
+  { IconComponent: FaReact , size: 40, color: "white", category: "Front-End" },
+  { IconComponent: SiNextdotjs , size: 40, color: "white", category: "Front-End" },
+  { IconComponent: FaJs , size: 40, color: "white", category: "Front-End" },
+  { IconComponent: SiExpress , size: 40, color: "white", category: "Back-End" },
+  { IconComponent: SiExpress , size: 40, color: "white", category: "Back-End" },
+  { IconComponent: FaNodeJs , size: 40, color: "white", category: "Back-End" },
+  { IconComponent: FaWordpress , size: 40, color: "white", category: "Back-End" },
+  { IconComponent: SiDatabricks , size: 40, color: "white", category: "Database" },
+  { IconComponent: SiHive, size: 40, color: "white", category: "Database" },
+  { IconComponent: SiMongodb , size: 40, color: "white", category: "Database" },
+  { IconComponent: SiMysql , size: 40, color: "white", category: "Database" },
+  { IconComponent: FaAws, size: 40, color: "white", category: "Cloud" },
+  { IconComponent: SiMicrosoftazure , size: 40, color: "white", category: "Cloud" },
+  { IconComponent: SiGooglecloud  , size: 40, color: "white", category: "Cloud" },
+  { IconComponent: FaGitAlt, size: 40, color: "white", category: "Utilities" },
+  { IconComponent: SiDocker , size: 40, color: "white", category: "Utilities" },
+  { IconComponent: SiKubernetes  , size: 40, color: "white", category: "Utilities" },
+  { IconComponent: FaPython, size: 40, color: "white", category: "Languages" },
+  { IconComponent: FaJava , size: 40, color: "white", category: "Languages" },
+  { IconComponent: SiCsharp  , size: 40, color: "white", category: "Languages" },
+  { IconComponent: SiCplusplus , size: 40, color: "white", category: "Languages" },
+  { IconComponent: SiDotnet  , size: 40, color: "white", category: "Languages" },
+  
+]
 
 

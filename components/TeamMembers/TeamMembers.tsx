@@ -4,8 +4,9 @@ import { TeamCards } from "./components/TeamCards";
 
 export const TeamMembers = () => {
   return (
-    <Column alignItems={"center"} width={"100%"} py={"header"} px={"m"}>
+    <Column alignItems={"center"} width={"100%"} py={"header"} px={"m"} >
       <Column
+      
         py={"xl"}
         gap={"xxl"}
         justifyContent={"center"}
@@ -21,9 +22,9 @@ export const TeamMembers = () => {
       </Column>
 
       <Row
-        width={"80%"}
-        py={"xxxl"}
-        gap={["header", "none"]}
+        width={"90%"}
+        py={["header","header"]}
+        gap={["xlg", "none"]}
         flexDirection={["column", "row"]}
         alignItems={"center"}
         justifyContent={"space-between"}

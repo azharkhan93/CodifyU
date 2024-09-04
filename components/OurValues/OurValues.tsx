@@ -23,15 +23,17 @@ export const OurValues = () => {
           alignItems={"flex-start"}
           width={["100%", "45%"]}
         >
-          <Text variant={["heading", "footerHeading"]} >Why <span style={{ color: "orange", fontSize: "50px" }}>CodefyU</span>?</Text>
+          <Text variant={["heading", "footerHeading"]} >Why <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span>?</Text>
           <Text variant={"body"}>
             We have succcessfully delivered over 200 projects over the last
-            8years collectively generating a value of $200million.High-Quality
+            8years collectively generating a value of <span style={{color: "orange", fontSize: "20px"}}>$200million</span>. High-Quality
             tech solutions without high costs.{" "}
           </Text>
-          <Text>
+          <Text
+          variant={"body"}
+          >
             Our startup accelator program is your launchpad to
-            success.Fast-Track your market entry and expansion with our proven
+            success. Fast-Track your market entry and expansion with our proven
             strategies
           </Text>
         </Column>

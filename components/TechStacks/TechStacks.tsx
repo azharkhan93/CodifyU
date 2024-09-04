@@ -1,58 +1,101 @@
 "use client";
 import React, { useState } from "react";
-import { Column, Row } from "@/components";
+import { Column, Row, Text } from "@/components";
 import { iconData, techSections } from "@/constants";
 import { IconBox } from "./components/IconBox";
 import { Stacks } from "./components/Stacks";
 
 export const TechStacks = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>(
-    "Artificial Intelligence"
-  );
+  
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const filteredIcons = iconData.filter(
-    (icon) => icon.category === selectedCategory
+  const defaultCategories = [
+    "Cloud",
+    "Artificial Intelligence",
+    "Languages",
+    "Utilities",
+  ];
+
+  const filteredIcons = iconData.filter((icon) =>
+    selectedCategory
+      ? icon.category === selectedCategory
+      : defaultCategories.includes(icon.category)
   );
 
   return (
-    <Row
-      flexDirection={"row"}
-      width={"100%"}
-      bg={"secondary"}
-      justifyContent={"space-between"}
-      px={"header"}
-    >
+    <Column width={"100%"}>
       <Column
-        gap={"xl"}
-        width={"500px"}
-        alignItems={"center"}
+        zIndex={2}
+        py={"xxxl"}
+        gap={"xxl"}
         justifyContent={"center"}
+        alignItems={"flex-start"}
+        width={["100%", "45%"]}
+        px={["s", "header"]}
       >
-        <Column gap={"xxxl"} bg={"white"} px={"xxxl"}>
-          {techSections.map((section, index) => (
-            <Stacks
-              key={index}
-              title3={section.title}
-              onClick={() => setSelectedCategory(section.title)}
-            />
-          ))}
-        </Column>
+        <Text variant={"heading"} color="blue600">
+          Tools And Technologies
+        </Text>
+        <Text variant={"body"} color="blue600">
+          We employ best practice processes and development methodologies as a
+          foundation for rapid building of cutting-edge technology solutions in
+          a structured and methodical way.
+        </Text>
       </Column>
-      <Column gap={"xl"} bg={"white"}>
+      <Row
+        flexDirection={["column", "row"]}
+        width={"100%"}
+        gap={"xl"}
+        justifyContent={"space-between"}
+        px={["none", "header"]}
+      >
         <Row
-          width={"800px"}
-          border={"4px solid white"}
-          flexWrap={"wrap"}
-          gap={"xxxxl"}
-          flexDirection={"row"}
+          flexDirection={["row", "column"]}
+          gap={"xl"}
           alignItems={"center"}
           justifyContent={"center"}
+          flexWrap={"wrap"}
         >
-          {filteredIcons.map((data, index) => (
-            <IconBox key={index} iconData={data} />
-          ))}
+          <Row
+            py={"xl"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            gap={["m", "xxxl"]}
+            bg={"white"}
+            px={["none", "xxxl"]}
+            flexDirection={["row", "column"]}
+            flexWrap={"wrap"}
+          >
+            {techSections.map((section, index) => (
+              <Stacks
+                key={index}
+                title3={section.title}
+                onClick={() =>
+                  setSelectedCategory(
+                    selectedCategory === section.title ? null : section.title
+                  )
+                }
+              />
+            ))}
+          </Row>
         </Row>
-      </Column>
-    </Row>
+
+        <Column gap={"xl"} bg={"white"} py={"xl"}>
+          <Row
+            width={["100%", "800px"]}
+            border={"4px solid white"}
+            flexWrap={"wrap"}
+            gap={"xxxxl"}
+            flexDirection={"row"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            {filteredIcons.map((data, index) => (
+              <IconBox key={index} iconData={data} />
+            ))}
+          </Row>
+        </Column>
+      </Row>
+    </Column>
   );
 };

@@ -78,8 +78,8 @@ export const HeroSection = () => {
           width={["100%", "700px"]}
           textAlign={"center"}
         >
-          Welcome to{" "}
-          <span style={{ color: "orange", fontSize: "45px" }}>CodefyU</span>{" "}
+          Welcome To{" "}
+          <span style={{ color: "orange", fontSize: "40px" }}>CodefyU</span>{" "}
           Where Innovation Meets <TypewriterText>Execution</TypewriterText>
         </Text>
         <Text
