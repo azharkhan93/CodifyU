@@ -1,7 +1,6 @@
 import { CenterBox, Column, Row, Text } from "@/components/styled";
 import { TeamCardsProps } from "@/types";
 import Image from "next/image";
-import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
   return (

@@ -35,7 +35,7 @@ export const ParallaxSection = () => {
         width={["100%", "40%"]}
         gap={"xl"}
       >
-        <Text variant="heading" textAlign={["center", "center"]}>
+        <Text variant="heading" textAlign={["center", "center"]} fontFamily={"QuicksandRegular"}>
           {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry searching For Scable Solutions`}
         </Text>
         <Text variant="body" textAlign={"center"}>
