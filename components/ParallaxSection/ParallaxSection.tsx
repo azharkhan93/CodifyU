@@ -39,7 +39,7 @@ export const ParallaxSection = () => {
           {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry searching For Scable Solutions`}
         </Text>
         <Text variant="body" textAlign={"center"}>
-          Worried About The Delivery Of Scablable , High-quality Solutions
+          Worried About The Delivery Of Scablable , High-Quality Solutions
           without Sacrifying Speed?
         </Text>
         <CenterBox width={"100%"} mt={"xl"}>
@@ -52,7 +52,7 @@ export const ParallaxSection = () => {
                 px={"xxxl"}
                 borderRadius={"m"}
               >
-                Talk Witn Us
+                Talk With Us
               </Button>
             </CenterBox>
       </Row>
@@ -61,7 +61,7 @@ export const ParallaxSection = () => {
       <CenterBox>
         <iframe
           src="https://lottie.host/embed/28ff5dcf-904e-4e22-a52f-71caaf13a838/AW9QvY1gDf.json"
-          style={{ width: "500px", height: "450px", border: "none" }}
+          style={{ width: "500px", height: "370px", border: "none" }}
         ></iframe>
       </CenterBox>
     </CenterBox>

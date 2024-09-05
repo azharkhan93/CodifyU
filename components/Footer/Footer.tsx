@@ -32,7 +32,7 @@ export const Footer = () => {
   };
   return (
     <>
-      <Box width={"100%"} bg={"secondary"} mt={"m"}>
+      <Box width={"100%"} bg={"secondary"} >
         <CenterBox
           borderBottom={"2px solid white"}
           py={["xxxl","xxl"]}
