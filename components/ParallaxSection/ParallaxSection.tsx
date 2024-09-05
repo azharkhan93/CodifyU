@@ -43,21 +43,19 @@ export const ParallaxSection = () => {
           without Sacrifying Speed?
         </Text>
         <CenterBox width={"100%"} mt={"xl"}>
-              <Button
-                borderTopLeftRadius={"xxl"}
-
-                variant={"primary"}
-                bg={"grey"}
-                py={"m"}
-                px={"xxxl"}
-                borderRadius={"m"}
-              >
-                Talk With Us
-              </Button>
-            </CenterBox>
+          <Button
+            borderTopLeftRadius={"xxl"}
+            variant={"primary"}
+            bg={"grey"}
+            py={"m"}
+            px={"xxxl"}
+            borderRadius={"m"}
+          >
+            Talk With Us
+          </Button>
+        </CenterBox>
       </Row>
-      
-      
+
       <CenterBox>
         <iframe
           src="https://lottie.host/embed/28ff5dcf-904e-4e22-a52f-71caaf13a838/AW9QvY1gDf.json"
