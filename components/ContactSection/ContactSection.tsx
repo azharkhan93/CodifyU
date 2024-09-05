@@ -63,16 +63,23 @@ export const ContactSection = () => {
         >
           <ContactDetailsCards
             title="Address"
-            content="Rajbagh Srinagar, Near Hurriyat Office 190001"
+            content="Rajbagh Near Hurriyat Office Kursoo Rajbagh Srinagar Jammu and Kashmir 190008 India"
           />
           <ContactDetailsCards
             title="Contact"
             content={
               <>
                 <Column gap={"s"}>
-                  <Text variant={"body"}>Phone: +91 699988998877</Text>
-                  <Text variant={"body"}>Email: azjhkshhjk@codifyu.com</Text>
-                </Column>
+  <Text variant={"body"}>
+    <a href="tel:+917006168185" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006168185</a>
+  </Text>
+  <Text variant={"body"}>
+    <a href="tel:+917006569557" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006569557</a>
+  </Text>
+  <Text variant={"body"}>
+    <a href="mailto:info@codefyu.com" style={{color: "white", textDecoration: "none"}}>Email: info@codefyu.com</a>
+  </Text>
+</Column>
               </>
             }
           />

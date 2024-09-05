@@ -55,7 +55,7 @@ export const ParallaxSection = () => {
             px={"xxxl"}
             borderRadius={"m"}
           >
-           Book A Meeting
+            Book A Meeting
           </Button>
         </CenterBox>
       </Row>

@@ -11,19 +11,15 @@ import {
 } from "@/components";
 import React, { useState } from "react";
 
-import {
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/contexts";
-
 
 export const Footer = () => {
   const router = useRouter();
   const { openModal } = useModal();
 
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const navigateTo = (link: string) => {
@@ -32,51 +28,56 @@ export const Footer = () => {
   };
   return (
     <>
-      <Box width={"100%"} bg={"secondary"} >
+      <Box width={"100%"} bg={"secondary"}>
         <CenterBox
           borderBottom={"2px solid white"}
-          py={["xxxl","xxl"]}
+          py={["xxxl", "xxl"]}
           flexDirection={["column", "column"]}
           px={["s", "xxxl"]}
           mx={["none", "xxxxl"]}
           justifyContent={"space-between"}
-          gap={["xxxxl","xxxl"]}
+          gap={["xxxxl", "xxxl"]}
         >
           <Column gap={"xl"}>
             <Text
               textAlign={"center"}
-              variant={["heading","footerHeading"]}
+              variant={["heading", "footerHeading"]}
               color={"white"}
-              width={["100%","530px"]}
+              width={["100%", "530px"]}
             >
               Have Any Project Idea! {`Lets's Talk With Us`}
             </Text>
           </Column>
           <Box
-        alignItems={"flex-start"}
-        justifyContent={"start"}
-        position={"relative"}
-        bg={"white"}
-        py={"s"}
-        width={"170px"}
-        px={"s"}
-        borderRadius={"circle"}
-        onClick={openModal}
-      >
-        <FaArrowRight
-          style={{
-            position: "absolute",
-            right: "10px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            fontSize: "20px",
-          }}
-        />
-        
-        <Button borderRadius={"circle"} py={"s"} px={"xl"} onClick={openModal}>
-          Get In Touch
-        </Button>
-      </Box>
+            alignItems={"flex-start"}
+            justifyContent={"start"}
+            position={"relative"}
+            bg={"white"}
+            py={"s"}
+            width={"170px"}
+            px={"s"}
+            borderRadius={"circle"}
+            onClick={openModal}
+          >
+            <FaArrowRight
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                fontSize: "20px",
+              }}
+            />
+
+            <Button
+              borderRadius={"circle"}
+              py={"s"}
+              px={"xl"}
+              onClick={openModal}
+            >
+              Get In Touch
+            </Button>
+          </Box>
         </CenterBox>
 
         <Box
@@ -111,11 +112,14 @@ export const Footer = () => {
               </Text>
             </Box>
             <Row flexDirection={"row"} gap={"xl"}>
-              <Text variant="body" color="white">
-                +91 090-990090
+              <Text variant={"body"} color="white">
+                <a href="tel:+917006168185" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006168185</a>
               </Text>
-              <Text variant="body" color="white">
-                codifyu123@gmail.com
+              <Text variant={"body"}>
+                <a href="tel:+917006569557" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006569557</a>
+              </Text>
+              <Text variant={"body"}>
+                <a href="mailto:info@codefyu.com" style={{color: "white", textDecoration: "none"}}>Email: info@codefyu.com</a>
               </Text>
             </Row>
           </Box>
