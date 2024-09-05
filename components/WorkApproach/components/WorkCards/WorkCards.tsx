@@ -30,7 +30,7 @@ export const WorkCards: React.FC<WorkCardProps> = ({
         }}
           position="relative"
            bg={"primary"}
-          gap={"m"}
+          gap={"xl"}
           width={"60px"}
           height={"40px"}
           alignItems={"center"}
@@ -60,7 +60,7 @@ export const WorkCards: React.FC<WorkCardProps> = ({
       <Text mt={"xxxl"} variant={"subHeading"}>
         {title}
       </Text>
-      <Text variant={"body"} textAlign={"center"}>
+      <Text variant={"body"} textAlign={"center"} mt={"m"}>
         {description}
       </Text>
     </Column>

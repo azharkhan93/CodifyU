@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/contact.webp"}
+        backgroundImage={"/images/p2.jpg"}
         aboutText={"Contact Us"}
         whoWeAreText={"Reach Us"}
       />

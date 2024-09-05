@@ -15,7 +15,7 @@ export const ParallaxSection = () => {
       justifyContent={"space-between"}
       flexDirection={["column", "row"]}
       style={{
-        backgroundImage: "url('/images/bg.jpeg')",
+        backgroundImage: "url('/images/p4.jpeg')",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
@@ -35,8 +35,12 @@ export const ParallaxSection = () => {
         width={["100%", "40%"]}
         gap={"xl"}
       >
-        <Text variant="heading" textAlign={["center", "center"]} fontFamily={"QuicksandRegular"}>
-          {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry searching For Scable Solutions`}
+        <Text
+          variant="heading"
+          textAlign={["center", "center"]}
+          fontFamily={"QuicksandRegular"}
+        >
+          {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry Searching For Scable Solutions`}
         </Text>
         <Text variant="body" textAlign={"center"}>
           Worried About The Delivery Of Scablable , High-Quality Solutions
@@ -51,7 +55,7 @@ export const ParallaxSection = () => {
             px={"xxxl"}
             borderRadius={"m"}
           >
-            Talk With Us
+           Book A Meeting
           </Button>
         </CenterBox>
       </Row>
