@@ -6,10 +6,7 @@ import { ContactDetailsCards } from "./components/ContactDetailsCard/ContactDeta
 
 export const ContactSection = () => {
   return (
-    <Column
-      flexDirection={["column", "row"]}
-      py={["xxl", "header"]}
-    >
+    <Column flexDirection={["column", "row"]} py={["xxl", "header"]}>
       <Box
         py={"xxxl"}
         flexDirection={["column", "row"]}
@@ -19,7 +16,7 @@ export const ContactSection = () => {
       >
         <Column gap={["xl", "m"]}>
           <Text color={"secondary"} variant={"heading"} fontWeight={"bold"}>
-            Contact Us
+            Any Queries Talk To Us?
           </Text>
           <Box
             height={"3px"}
@@ -29,16 +26,15 @@ export const ContactSection = () => {
             borderRadius={"circle"}
           ></Box>
           <Text color={"secondary"} variant={"subHeading"}>
-            Any Queries Talk To Us?
+            Have a question to our team or need help with your project?
           </Text>
         </Column>
 
         <CenterBox width={["100%", "450px"]}>
           <Text color={"secondary"} variant={"body"}>
-            Our Team model offers a proven pathway to success, supported by
-            comprehensive training programs and continuous operational support.
-            Join a brand that is dedicated to helping you thrive in a
-            competitive market
+            Our Team model offers a proven pathway to success, Our team is ready
+            to provide client references, estimate your project, or answer any
+            other question related to your IT initiative.
           </Text>
         </CenterBox>
       </Box>
@@ -49,9 +45,9 @@ export const ContactSection = () => {
         width={["100%", "90%"]}
         px={["none", "xxxxl"]}
       >
-        <Test onActionComplete={() => console.log("Form submitted!")}  />
+        <Test onActionComplete={() => console.log("Form submitted!")} />
         <Box
-        data-aos="fade-right"
+          data-aos="fade-right"
           mt={["l", "header"]}
           bg={"grey"}
           alignItems={"center"}
@@ -70,16 +66,31 @@ export const ContactSection = () => {
             content={
               <>
                 <Column gap={"s"}>
-  <Text variant={"body"}>
-    <a href="tel:+917006168185" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006168185</a>
-  </Text>
-  <Text variant={"body"}>
-    <a href="tel:+917006569557" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006569557</a>
-  </Text>
-  <Text variant={"body"}>
-    <a href="mailto:info@codefyu.com" style={{color: "white", textDecoration: "none"}}>Email: info@codefyu.com</a>
-  </Text>
-</Column>
+                  <Text variant={"body"}>
+                    <a
+                      href="tel:+917006168185"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Phone: +91 7006168185
+                    </a>
+                  </Text>
+                  <Text variant={"body"}>
+                    <a
+                      href="tel:+917006569557"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Phone: +91 7006569557
+                    </a>
+                  </Text>
+                  <Text variant={"body"}>
+                    <a
+                      href="mailto:info@codefyu.com"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Email: info@codefyu.com
+                    </a>
+                  </Text>
+                </Column>
               </>
             }
           />

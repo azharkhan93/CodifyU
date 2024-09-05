@@ -2,6 +2,7 @@ import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
+import MySvg from '../../public/assets/svgs/tg.svg';
 
 export const OurValues = () => {
   return (
@@ -43,26 +44,28 @@ export const OurValues = () => {
           justifyContent={"center"}
           py={"xl"}
           data-aos="fade-right"
+          width={["350px", "700px"]}
         >
-          <Row
+          {/* <Row
             data-aos="fade-right"
             alignItems="center"
-            //  border={"2px solid black"}
+            
             justifyContent={"space-between"}
             flexDirection={"row"}
             flexWrap={"wrap"}
             gap={"xxxl"}
             width={["350px", "550px"]}
             py={"xl"}
-          >
-            {VALUES_DATA.map((value) => (
+          > */}
+            <MySvg width={390} height={400} />
+            {/* {VALUES_DATA.map((value) => (
               <ValueCards
                 key={value.id}
                 title={value.title}
                 icon={value.icon}
               />
-            ))}
-          </Row>
+            ))} */}
+          {/* </Row> */}
         </Column>
       </Row>
       <Box
