@@ -44,7 +44,7 @@ export const OurValues = () => {
           justifyContent={"center"}
           py={"xl"}
           data-aos="fade-right"
-          width={["350px", "700px"]}
+          width={["98%", "700px"]}
         >
           {/* <Row
             data-aos="fade-right"

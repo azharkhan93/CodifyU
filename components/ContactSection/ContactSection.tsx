@@ -96,7 +96,7 @@ export const ContactSection = () => {
           />
           <ContactDetailsCards
             title="Open Time"
-            content="Mon-Fri 10:00AM to 12:00PM"
+            content="Mon-Sat 09:00AM To 05:00PM"
           />
 
           <Column gap={"m"} width={"100%"}>

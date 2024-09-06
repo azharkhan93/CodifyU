@@ -113,13 +113,13 @@ export const Footer = () => {
             </Box>
             <Row flexDirection={"row"} gap={"xl"}>
               <Text variant={"body"} color="white">
-                <a href="tel:+917006168185" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006168185</a>
+                <a href="tel:+917006168185" style={{color: "white", textDecoration: "none"}}>+91 7006168185</a>
               </Text>
               <Text variant={"body"}>
-                <a href="tel:+917006569557" style={{color: "white", textDecoration: "none"}}>Phone: +91 7006569557</a>
+                <a href="tel:+917006569557" style={{color: "white", textDecoration: "none"}}>+91 7006569557</a>
               </Text>
               <Text variant={"body"}>
-                <a href="mailto:info@codefyu.com" style={{color: "white", textDecoration: "none"}}>Email: info@codefyu.com</a>
+                <a href="mailto:info@codefyu.com" style={{color: "white", textDecoration: "none"}}>info@codefyu.com</a>
               </Text>
             </Row>
           </Box>

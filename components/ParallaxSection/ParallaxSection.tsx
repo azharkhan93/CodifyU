@@ -44,7 +44,7 @@ export const ParallaxSection = () => {
           {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry Searching For Scable Solutions`}
         </Text>
         <Text variant="body" textAlign={"center"}>
-        <span style={{ color: "orange", fontSize: "27px" }}>Got A Project In Mind?</span>
+        <span style={{ color: "orange", fontSize: "20px" }}>Got A Project In Mind?</span>
           Worried About The Delivery Of Scablable , High-Quality Solutions
           without Sacrifying Speed?
         </Text>
