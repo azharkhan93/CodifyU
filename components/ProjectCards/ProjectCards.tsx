@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Product } from "@/types";
 import { API_URL } from "@/constants";
-import { FaSpinner } from "react-icons/fa"; 
+import { FaSpinner } from "react-icons/fa";
 
 export const ProjectCards = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -16,6 +16,7 @@ export const ProjectCards = () => {
       try {
         const response = await axios.get(API_URL);
         setProducts(response.data);
+        console.log("Fetched products:", response.data); 
       } catch (error) {
         console.error("Failed to fetch products:", error);
       } finally {
@@ -34,27 +35,27 @@ export const ProjectCards = () => {
         justifyContent="center"
         height="100vh"
       >
-        <FaSpinner className="animate-spin" size={70} color="black" /> 
-        
+        <FaSpinner className="animate-spin" size={70} color="black" />
       </CenterBox>
     );
   }
+
+  
 
   return (
     <Column
       flexDirection={["column", "row"]}
       py={["xxl", "header"]}
       gap={"xxxxl"}
-      //   border={"3px solid red"}
       alignItems={"center"}
       justifyContent={"center"}
     >
-      {products.map((product) => (
+      {products.map((product, index) => (
         <Box
           borderTopRightRadius={"xl"}
           borderTopLeftRadius={"xl"}
           width={"97%"}
-          key={product.id}
+          key={product.productName + index} 
           py={"xxxl"}
           px={["s", "xl"]}
           flexDirection={["column-reverse", "row"]}
@@ -84,11 +85,11 @@ export const ProjectCards = () => {
             <Text variant={"heading"}>Technology And Tools</Text>
             {product.iconUrls.length > 0 && (
               <Row gap={"m"} alignItems={"center"} flexDirection={"row"}>
-                {product.iconUrls.map((iconUrl, index) => (
+                {product.iconUrls.map((iconUrl, iconIndex) => (
                   <Image
-                    key={index}
+                    key={`${iconUrl}-${iconIndex}`} 
                     src={iconUrl}
-                    alt={`Icon ${index}`}
+                    alt={`Icon ${iconIndex}`}
                     width={40}
                     height={40}
                     style={{ borderRadius: "50%" }}
@@ -124,4 +125,8 @@ export const ProjectCards = () => {
     </Column>
   );
 };
+
+
+
+
 
