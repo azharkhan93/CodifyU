@@ -3,13 +3,7 @@ const nextConfig = {
   compiler: { styledComponents: { ssr: true } },
   images: {
     dangerouslyAllowSVG: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "mvp-lit-list-dev.s3.eu-west-2.amazonaws.com",
-        port: "",
-      },
-    ],
+    domains: ['mvp-lit-list-dev.s3.eu-west-2.amazonaws.com', 'res.cloudinary.com'], 
   },
   webpack(config) {
     config.module.rules.push({
@@ -22,4 +16,5 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
 

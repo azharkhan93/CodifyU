@@ -23,6 +23,7 @@ export * from "./WorkApproach"
 export * from "./TeamMembers"
 export * from "./TechStacks"
 export * from "./ParallaxSection"
+export * from "./ProjectCards"
 
 
 

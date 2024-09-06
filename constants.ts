@@ -62,6 +62,10 @@ export const NavbarData = [
     title: "Contact",
     link: "/contact",
   },
+  {
+    title: "PortFolio",
+    link: "/portfolio",
+  },
 ];
 export const featureItems = [
   "Mobile App Development",
