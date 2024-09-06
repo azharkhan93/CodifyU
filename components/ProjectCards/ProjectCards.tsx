@@ -89,8 +89,8 @@ export const ProjectCards = () => {
                     key={index}
                     src={iconUrl}
                     alt={`Icon ${index}`}
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     style={{ borderRadius: "50%" }}
                   />
                 ))}
