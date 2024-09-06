@@ -266,5 +266,6 @@ export const iconData = [
   { IconComponent: SiDotnet  , size: 40, color: "white", category: "Languages" },
   
 ]
+export const API_URL = "/api/getProducts";
 
 
