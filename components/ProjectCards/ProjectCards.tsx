@@ -2,43 +2,28 @@
 import Image from "next/image";
 import { Box, Button, CenterBox, Column, Row, Text } from "@/components";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import { Product } from "@/types";
-import { API_URL } from "@/constants";
+import { Post } from "@/types";
 import { FaSpinner } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
-export const ProjectCards = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+interface ProjectCardsProps {
+  products: Post[];
+}
+
+export const ProjectCards = ({ products }: ProjectCardsProps) => {
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(API_URL);
-        setProducts(response.data);
-        console.log("Fetched products:", response.data); 
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+    console.log("Products:", products);
+    if (products.length > 0) {
+      setLoading(false);
+    }
+  }, [products]);
 
-    fetchProducts();
-  }, []);
-
-  if (loading) {
-    return (
-      <CenterBox
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        height="100vh"
-      >
-        <FaSpinner className="animate-spin" size={70} color="black" />
-      </CenterBox>
-    );
-  }
+  const handleViewMore = (slug: string) => {
+    router.push(`/blogs/${slug}`);
+  };
 
   
 
@@ -55,7 +40,7 @@ export const ProjectCards = () => {
           borderTopRightRadius={"xl"}
           borderTopLeftRadius={"xl"}
           width={"97%"}
-          key={product.productName + index} 
+          key={product.slug + index}
           py={"xxxl"}
           px={["s", "xl"]}
           flexDirection={["column-reverse", "row"]}
@@ -80,14 +65,14 @@ export const ProjectCards = () => {
               variant={"body"}
               width={["100%", "600px"]}
             >
-              {product.productDes}
+              {product.productDesc ? product.productDesc : "No Description"}
             </Text>
             <Text variant={"heading"}>Technology And Tools</Text>
             {product.iconUrls.length > 0 && (
               <Row gap={"m"} alignItems={"center"} flexDirection={"row"}>
                 {product.iconUrls.map((iconUrl, iconIndex) => (
                   <Image
-                    key={`${iconUrl}-${iconIndex}`} 
+                    key={`${iconUrl}-${iconIndex}`}
                     src={iconUrl}
                     alt={`Icon ${iconIndex}`}
                     width={40}
@@ -97,6 +82,7 @@ export const ProjectCards = () => {
                 ))}
               </Row>
             )}
+
             <Box width={["60%", "30%"]}>
               <Button
                 border={"none"}
@@ -105,6 +91,7 @@ export const ProjectCards = () => {
                 py={"m"}
                 px={"s"}
                 bg={"grey"}
+                onClick={() => handleViewMore(product.slug)}
               >
                 View Case Study
               </Button>
@@ -125,6 +112,10 @@ export const ProjectCards = () => {
     </Column>
   );
 };
+
+
+
+
 
 
 

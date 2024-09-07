@@ -24,6 +24,7 @@ export * from "./TeamMembers"
 export * from "./TechStacks"
 export * from "./ParallaxSection"
 export * from "./ProjectCards"
+export * from "./PortfolioSection"
 
 
 

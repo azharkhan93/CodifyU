@@ -106,10 +106,11 @@ export type LogoProps = {
   export type IconBoxProps = {
     iconData: IconData;
   };
-  export type  Product = {
+  export type  Post = {
+    slug: string;
     id: string;
     imageUrl: string;
     productName: string;
-    productDes: string;
+    productDesc: string;
     iconUrls: string[];
   }
