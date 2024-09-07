@@ -4,22 +4,9 @@ import { Box, Column, Text } from "@/components";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa"; 
+import { PageProps, Product } from "@/types";
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
 
-type Product = {
-  slug: string;
-  id: string;
-  imageUrl: string;
-  productName: string;
-  productDesc: string;
-  productDesc1: string;
-  iconUrls: string[];
-};
 
 export default function Page({ params }: PageProps) {
   const [product, setProduct] = useState<Product | null>(null);

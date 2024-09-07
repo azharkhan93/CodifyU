@@ -114,3 +114,19 @@ export type LogoProps = {
     productDesc: string;
     iconUrls: string[];
   }
+
+  export type PageProps = {
+    params: {
+      slug: string;
+    };
+  }
+
+  export type Product = {
+    slug: string;
+    id: string;
+    imageUrl: string;
+    productName: string;
+    productDesc: string;
+    productDesc1: string;
+    iconUrls: string[];
+  };
