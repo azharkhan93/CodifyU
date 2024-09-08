@@ -34,7 +34,7 @@ export function extractRichText(blocks: any[]): string[] {
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           return paragraphText
-            ? `<p style="font-size: 16px; text-align: center; padding-left: 250px; padding-right: 250px;">${paragraphText}</p>`
+            ? `<p style="font-size: 14px; text-align: center; padding-left: 240px; padding-right: 240px;">${paragraphText}</p>`
             : '';
         case "image":
           const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
