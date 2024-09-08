@@ -27,15 +27,15 @@ export function extractRichText(blocks: any[]): string[] {
           case "heading_2":
             lastHeading = processRichText(block.heading_2.rich_text);
             console.log("Heading 2 captured:", lastHeading);
-            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 230px; padding-right: 230px;">${lastHeading}</h2>`;
+            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 260px; padding-right: 260px;">${lastHeading}</h2>`;
           case "heading_3":
             lastHeading = processRichText(block.heading_3.rich_text);
             console.log("Heading 3 captured:", lastHeading);
-            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 230px; padding-right: 230px;">${lastHeading}</h3>`;
+            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 260px; padding-right: 260px;">${lastHeading}</h3>`;
           case "paragraph":
             const paragraphText = processRichText(block.paragraph.rich_text);
             return paragraphText
-              ? `<p style="font-size: 14px; text-align: center; padding-left: 245px; padding-right: 245px;">${paragraphText}</p>`
+              ? `<p style="font-size: 14px; text-align: center; padding-left: 249px; padding-right: 249px;">${paragraphText}</p>`
               : '';
           case "image":
             const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
