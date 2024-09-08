@@ -1,6 +1,7 @@
 import { notion } from "./notionClient";
 import { extractRichText } from "./richText";
 
+
 export async function getBlogPosts() {
   try {
    
