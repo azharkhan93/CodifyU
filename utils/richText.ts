@@ -1,53 +1,100 @@
+const defaultImageDimensions = { width: 600, height: 600 };
+
+const headingImageDimensions: { [key: string]: { width: number; height: number } } = {
+  "Key Achievements": { width: 600, height: 500 },
+  "Non-Invasive Testing": { width: 600, height: 400 },
+  "Technical Expertise": { width: 900, height: 500 },
+  "Market Impact": { width: 800, height: 500 },
+  "Technologies And Tools": { width: 70, height: 70 },
+};
+
+function getImageDimensions(heading: string) {
+  return headingImageDimensions[heading] || defaultImageDimensions;
+}
 
 export function extractRichText(blocks: any[]): string[] {
-    return blocks.map((block) => {
-      try {
-        switch (block.type) {
-          case "heading_1":
-            return `<h1 style="font-size: 28px;">${processRichText(block.heading_1.rich_text)}</h1>`;
-          case "heading_2":
-            return `<h2 style="font-size: 24px; font-weight: bold;">${processRichText(block.heading_2.rich_text)}</h2>`;
-          case "heading_3":
-            return `<h3 style="font-size: 20px; font-weight: bold;">${processRichText(block.heading_3.rich_text)}</h3>`;
-          case "paragraph":
-            return `<p style="font-size: 16px;">${processRichText(block.paragraph.rich_text)}</p>`;
-          case "image":
-            const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+  let lastHeading = "";
+  let images: string[] = [];
+
+  return blocks.map((block) => {
+    try {
+      switch (block.type) {
+        case "heading_1":
+          lastHeading = processRichText(block.heading_1.rich_text);
+          console.log("Heading 1 captured:", lastHeading);
+          return `<h1 style="font-size: 28px;  padding-left: 270px; padding-right: 270px; ">${lastHeading}</h1>`;
+        case "heading_2":
+          lastHeading = processRichText(block.heading_2.rich_text);
+          console.log("Heading 2 captured:", lastHeading);
+          return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 270px; padding-right: 270px; ">${lastHeading}</h2>`;
+        case "heading_3":
+          lastHeading = processRichText(block.heading_3.rich_text);
+          console.log("Heading 3 captured:", lastHeading);
+          return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 270px; padding-right: 270px;">${lastHeading}</h3>`;
+        case "paragraph":
+          const paragraphText = processRichText(block.paragraph.rich_text);
+          return paragraphText
+            ? `<p style="font-size: 16px; text-align: center; padding-left: 270px; padding-right: 270px;">${paragraphText}</p>`
+            : '';
+        case "image":
+          const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+          const { width, height } = getImageDimensions(lastHeading);
+          console.log("Image under heading:", lastHeading, "with dimensions:", { width, height });
+
+          if (lastHeading === "Technologies And Tools") {
+            // Collect images for "Technologies And Tools" heading
+            if (imageUrl) {
+              images.push(`<img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; ${width }px; " />`);
+            }
+            return ""; // Don't return anything for individual images, they are collected
+          } else if (lastHeading === "Key Achievements" || lastHeading === "Non-Invasive Testing") {
             return imageUrl
-              ? `<img src="${imageUrl}" alt="Image" style=" width: 400px;  border-radius: 20px;" />`
+              ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px; " /></div>`
               : "";
-          case "embed":
-          case "url":
-            const embedUrl = block[block.type]?.url || "";
-            return embedUrl
-              ? `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer" style="margin-bottom: 14px; display: block; color: blue; text-decoration: underline;">${embedUrl}</a>`
+          } else {
+            return imageUrl
+              ? `<img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px; " />`
               : "";
-          default:
-            return "<p style='margin-bottom: 14px;'>Unsupported block type</p>";
-        }
-      } catch (error) {
-        console.error("Error processing block:", block, error);
-        return "<p style='margin-bottom: 14px;'>Error processing block</p>";
+          }
+        case "embed":
+        case "url":
+          const embedUrl = block[block.type]?.url || "";
+          return embedUrl
+            ? `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer" style="margin-bottom: 14px; display: block; color: blue; text-decoration: underline;">${embedUrl}</a>`
+            : "";
+        default:
+          return `<p style='color: red;'>Unsupported block type: ${block.type}</p>`;
       }
-    });
-  }
-  
-  function processRichText(richTextArray: any[]): string {
-    return richTextArray
-      .map((text) => {
-        if (text.type === "text") {
-          const content = text.text.content;
-          const urlPattern = /(https?:\/\/[^\s]+)/g;
-          const processedContent = content.replace(
-            urlPattern,
-            (url: string) =>
-              `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
-          );
-  
-          return processedContent;
-        }
-        return "";
-      })
-      .join(" ");
-  }
+    } catch (error) {
+      console.error("Error processing block:", block, error);
+      return "<p style='margin-bottom: 14px;'>Error processing block</p>";
+    }
+  }).concat(
+    images.length > 0 ? `<div style="padding: 30px 0px;  display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap; gap: 20px;  ">${images.join('')}</div>` : []
+  );
+}
+
+function processRichText(richTextArray: any[]): string {
+  return richTextArray
+    .map((text) => {
+      if (text.type === "text") {
+        const content = text.text.content;
+        const urlPattern = /(https?:\/\/[^\s]+)/g;
+        return content.replace(
+          urlPattern,
+          (url: string) =>
+            `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
+        );
+      }
+      return "";
+    })
+    .join(" ");
+}
+
+
+
+
+
+
+
   

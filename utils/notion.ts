@@ -31,12 +31,7 @@ export async function getBlogPosts() {
         const productDesc =
           page.properties["Description"]?.rich_text?.[0]?.plain_text || "";
 
-        // Log individual fields for better visibility
-        console.log("Page ID:", page.id);
-        console.log("Slug:", slug);
-        console.log("Product Name:", productName);
-        console.log("Product Description:", productDesc);
-        console.log("Image URL:", imageUrl);
+        
 
         
         const descriptionBlocks = await getPageContent(page.id);
@@ -44,13 +39,13 @@ export async function getBlogPosts() {
 
         const productDesc1 = richTextData.join(" ") || "";
 
-        // Extract and format icons
+        
         const iconUrls = (page.properties["Icon1"]?.files || []).map(
           (file: any) =>
             file.type === "external" ? file.external.url : file.file?.url || ""
         );
 
-        console.log("Icon URLs:", iconUrls); 
+
 
         return {
           id: page.id,
@@ -84,92 +79,13 @@ async function getPageContent(pageId: string) {
     cursor = next_cursor ?? undefined;
   } while (cursor);
 
+  // console.log("Page Content Blocks:", blocks);
+
   return blocks;
 }
 
 
 
-
-
-
-
-
-// export async function getRichTextContent(slug: string) {
-//   try {
-//     const response = await notion.databases.query({
-//       database_id: process.env.NOTION_DATABASE_ID!,
-//       filter: {
-//         property: "slug",
-//         rich_text: {
-//           equals: slug,
-//         },
-//       },
-//     });
-
-//     if (response.results.length === 0) {
-//       throw new Error("No page found with the given slug.");
-//     }
-
-//     const pageId = response.results[0].id;
-
-//     const blocksResponse = await notion.blocks.children.list({
-//       block_id: pageId,
-//     });
-
-//     console.log("Blocks Response Data:", blocksResponse.results);
-
-//     const richTextContent = blocksResponse.results.map((block: any) => {
-//       console.log("Block Data:", block);
-
-//       let content = {};
-
-//       switch (block.type) {
-//         case "heading_1":
-//         case "heading_2":
-//         case "heading_3":
-//           console.log("Heading Block Detected:", block[block.type]); 
-//           content = {
-//             type: "heading",
-//             text: block[block.type].rich_text?.map((textObj: any) => textObj.plain_text).join('') || "",
-//           };
-//           break;
-//         case "paragraph":
-//           console.log("Paragraph Block Detected:", block.paragraph); 
-//           content = {
-//             type: "paragraph",
-//             text: block.paragraph.rich_text?.map((textObj: any) => textObj.plain_text).join('') || "",
-//           };
-//           break;
-//         case "image":
-//           console.log("Image Block Detected:", block.image); 
-//           const imageUrl =
-//             block.image.type === "external"
-//               ? block.image.external.url
-//               : block.image.file.url;
-
-//           content = {
-//             type: "image",
-//             url: imageUrl,
-//           };
-//           break;
-//         default:
-//           console.log("Other Block Type Detected:", block.type, block);
-//           break;
-//       }
-
-//       console.log("Extracted Content:", content);
-
-//       return content;
-//     });
-
-//     console.log("Rich Text Content:", richTextContent);
-
-//     return richTextContent;
-//   } catch (error) {
-//     console.error("Error fetching rich text content:", error);
-//     throw error;
-//   }
-// }
 
 
 

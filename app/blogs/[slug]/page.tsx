@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import { Box, Column, Text } from "@/components";
+import { Box, Column, Row, Text } from "@/components";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa"; 
@@ -54,23 +54,58 @@ export default function Page({ params }: PageProps) {
       justifyContent={"center"}
       py={"xxl"}
     >
-      <Text variant={"heading"} fontWeight={"bold"}>
+      
+      <Row
+      gap={"xl"}
+      alignItems={"center"}
+      flexDirection={["column","row"]}
+      justifyContent={"space-between"}
+      width={"100%"}
+      >
+        <Column
+        gap={"xl"}
+        width={["100%","700px"]}
+        >
+       
+        <Text variant={"footerHeading"} textAlign={["center","center"]}>
         {product.productName}
       </Text>
-      {product.imageUrl && (
-        <Image
-          src={product.imageUrl}
-          alt={product.productName}
-          width={600}
-          height={400}
-          style={{ borderRadius: "8px" }}
-        />
-      )}
-      <Text variant={"heading"} fontWeight={"bold"}>
+      <Text variant={["subHeading","heading"]} textAlign={"center"}>
         {product.productDesc}
       </Text>
+      </Column>
+      {product.imageUrl && (
+    <Column
+      width={["100%", "auto"]}
+      maxWidth={["360px", "600px"]}
+      position={"relative"}
+      height={["330px", "400px"]}
+      
+      overflow={"hidden"}
+    >
+      <Image
+        src={product.imageUrl}
+        alt={product.productName}
+        width={600}
+        height={400}
+        style={{ borderRadius: "20px" }}
+      />
+    </Column>
+  )}
+      </Row>
+      {/* <Row
+      alignItems={"center"}
+      flexDirection={"row"}
+      justifyContent={"center"}
+      gap={"xl"}
+      width={"100%"}
+      border={"4px solid green"}
+      
+      > */}
+      
       <Text variant="body" dangerouslySetInnerHTML={{ __html: product.productDesc1 || "" }} />
-      <Text variant={"heading"}>Technology and Tools</Text>
+      {/* </Row> */}
+     
     </Column>
   );
 }
