@@ -34,7 +34,7 @@ export function extractRichText(blocks: any[]): string[] {
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           return paragraphText
-            ? `<p style="font-size: 16px; text-align: center; padding-left: 270px; padding-right: 270px;">${paragraphText}</p>`
+            ? `<p style="font-size: 16px; text-align: center; padding-left: 250px; padding-right: 250px;">${paragraphText}</p>`
             : '';
         case "image":
           const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
@@ -42,11 +42,11 @@ export function extractRichText(blocks: any[]): string[] {
           console.log("Image under heading:", lastHeading, "with dimensions:", { width, height });
 
           if (lastHeading === "Technologies And Tools") {
-            // Collect images for "Technologies And Tools" heading
+            
             if (imageUrl) {
               images.push(`<img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; ${width }px; " />`);
             }
-            return ""; // Don't return anything for individual images, they are collected
+            return ""; 
           } else if (lastHeading === "Key Achievements" || lastHeading === "Non-Invasive Testing") {
             return imageUrl
               ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px; " /></div>`
