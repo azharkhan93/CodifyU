@@ -23,35 +23,37 @@ export function extractRichText(blocks: any[]): string[] {
           case "heading_1":
             lastHeading = processRichText(block.heading_1.rich_text);
             console.log("Heading 1 captured:", lastHeading);
-            return `<h1 style="font-size: 28px; padding-left: 230px; padding-right: 230px;">${lastHeading}</h1>`;
+            return `<h1 style="font-size: 28px; padding-left: 278px; padding-right: 278px; font-family: 'QuicksandSemiBold', sans-serif;">${lastHeading}</h1>`;
           case "heading_2":
             lastHeading = processRichText(block.heading_2.rich_text);
             console.log("Heading 2 captured:", lastHeading);
-            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 260px; padding-right: 260px;">${lastHeading}</h2>`;
+            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 278px; padding-right: 278px; font-family: 'QuicksandSemiBold', sans-serif;">${lastHeading}</h2>`;
           case "heading_3":
             lastHeading = processRichText(block.heading_3.rich_text);
             console.log("Heading 3 captured:", lastHeading);
-            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 260px; padding-right: 260px;">${lastHeading}</h3>`;
+            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 260px; padding-right: 260px; font-family: 'QuicksandSemiBold', sans-serif;">${lastHeading}</h3>`;
           case "paragraph":
             const paragraphText = processRichText(block.paragraph.rich_text);
             return paragraphText
-              ? `<p style="font-size: 14px; text-align: center; padding-left: 249px; padding-right: 249px;">${paragraphText}</p>`
+              ? `<p style="font-size: 14px; text-align: center; padding-left: 249px; padding-right: 249px; font-family: 'DMSansSemiBold', sans-serif;">${paragraphText}</p>`
               : '';
           case "image":
             const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
             const { width, height } = getImageDimensions(lastHeading);
             console.log("Image under heading:", lastHeading, "with dimensions:", { width, height });
 
-            if (lastHeading === "Technologies And Tools") {
-              if (imageUrl) {
-                images.push(
-                  `<img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px;" />`
-                );
-              }
-              return "";
-            } else if (lastHeading === "Key Achievements" || lastHeading === "Non-Invasive Testing") {
+            // Center images for specific headings
+            if (
+              lastHeading === "Technologies And Tools" ||
+              lastHeading === "Key Achievements" ||
+              lastHeading === "Non-Invasive Testing" ||
+              lastHeading === "Technical Expertise" ||
+              lastHeading === "Market Impact"
+            ) {
               return imageUrl
-                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" /></div>`
+                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;">
+                    <img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" />
+                   </div>`
                 : "";
             } else {
               return imageUrl
@@ -95,6 +97,7 @@ function processRichText(richTextArray: any[]): string {
     })
     .join(" ");
 }
+
 
 
 
