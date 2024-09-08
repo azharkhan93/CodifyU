@@ -1,6 +1,3 @@
-
-
-
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
   let images: string[] = [];

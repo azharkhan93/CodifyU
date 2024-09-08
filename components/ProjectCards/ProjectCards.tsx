@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Box, Button, CenterBox, Column, Row, Text } from "@/components";
 import { useEffect, useState } from "react";
 import { Post } from "@/types";
-import { FaSpinner } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 interface ProjectCardsProps {
@@ -12,20 +11,12 @@ interface ProjectCardsProps {
 
 export const ProjectCards = ({ products }: ProjectCardsProps) => {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    console.log("Products:", products);
-    if (products.length > 0) {
-      setLoading(false);
-    }
-  }, [products]);
+  useEffect(() => {}, [products]);
 
   const handleViewMore = (slug: string) => {
-    router.push(`/blogs/${slug}`);
+    router.push(`/portfolios/${slug}`);
   };
-
-  
 
   return (
     <Column
@@ -112,12 +103,3 @@ export const ProjectCards = ({ products }: ProjectCardsProps) => {
     </Column>
   );
 };
-
-
-
-
-
-
-
-
-
