@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Box, Button, CenterBox, Column, Row, Text } from "@/components";
-import { useEffect, useState } from "react";
+import { Box, Button,  Column, Row, Text } from "@/components";
+import { useEffect} from "react";
 import { Post } from "@/types";
 import { useRouter } from "next/navigation";
 

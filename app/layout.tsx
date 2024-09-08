@@ -2,9 +2,7 @@
 import {  GlobalStyle, } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
-import { ApolloProvider } from "@apollo/client";
-import { client } from "@/utils/apolloClient";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer/Footer";
 import Head from "next/head";
@@ -38,14 +36,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>CodiFyU</title> 
+        <title>CodeFyU</title> 
         <meta name="description" content="one stop for all sofware solutions" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" /> 
       </Head>
       <body>
         <AppThemeProvider>
-          <ApolloProvider client={client}>
+         
           <ModalProvider>
           <StyleSheetManager shouldForwardProp={isPropValid}>
             <Navbar />
@@ -55,7 +53,7 @@ export default function RootLayout({
             </StyleSheetManager>
             </ModalProvider>
            
-          </ApolloProvider>
+         
         </AppThemeProvider>
       </body>
     </html>
