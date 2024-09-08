@@ -1,16 +1,5 @@
-const defaultImageDimensions = { width: 600, height: 600 };
 
-const headingImageDimensions: { [key: string]: { width: number; height: number } } = {
-  "Key Achievements": { width: 600, height: 500 },
-  "Non-Invasive Testing": { width: 600, height: 400 },
-  "Technical Expertise": { width: 900, height: 500 },
-  "Market Impact": { width: 800, height: 500 },
-  "Technologies And Tools": { width: 70, height: 70 },
-};
 
-function getImageDimensions(heading: string) {
-  return headingImageDimensions[heading] || defaultImageDimensions;
-}
 
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
@@ -35,35 +24,34 @@ export function extractRichText(blocks: any[]): string[] {
           case "paragraph":
             const paragraphText = processRichText(block.paragraph.rich_text);
             return paragraphText
-              ? `<p style="font-size: 14px; text-align: center; padding-left: 10px; padding-right: 10px; font-family: 'QuicksandSemiBold', sans-serif;">${paragraphText}</p>`
+              ? `<p style="font-size: 18px; text-align: center; padding-left: 10px; padding-right: 10px; font-family: 'QuicksandSemiBold', sans-serif;">${paragraphText}</p>`
               : '';
           case "image":
             const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
-            const { width, height } = getImageDimensions(lastHeading);
-            console.log("Image under heading:", lastHeading, "with dimensions:", { width, height });
+           
 
             const imageClass = lastHeading === "Technologies And Tools" ? "responsive-image2" : "responsive-image";
 
             if (lastHeading === "Technical Expertise" || lastHeading === "Market Impact") {
               return imageUrl
-                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}" style="width: ${width}px; height: ${height}px;" /></div>`
+                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}"  /></div>`
                 : "";
             }
             
             if (lastHeading === "Technologies And Tools") {
               if (imageUrl) {
                 images.push(
-                  `<img src="${imageUrl}" alt="Image" class="${imageClass}" style="width: ${width}px; height: ${height}px;" />`
+                  `<img src="${imageUrl}" alt="Image" class="${imageClass}" " />`
                 );
               }
               return "";
             } else if (lastHeading === "Key Achievements" || lastHeading === "Non-Invasive Testing") {
               return imageUrl
-                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" /></div>`
+                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}"   margin-bottom: 10px;" /></div>`
                 : "";
             } else {
               return imageUrl
-                ? `<img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" />`
+                ? `<img src="${imageUrl}" alt="Image"  margin-bottom: 10px;" />`
                 : "";
             }
           case "embed":
