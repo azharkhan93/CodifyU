@@ -23,43 +23,43 @@ export function extractRichText(blocks: any[]): string[] {
           case "heading_1":
             lastHeading = processRichText(block.heading_1.rich_text);
             console.log("Heading 1 captured:", lastHeading);
-            return `<h1 style="font-size: 28px; padding-left: 270px; padding-right: 270px;">${lastHeading}</h1>`;
+            return `<h1 style="font-size: 28px; padding-left: 20px;">${lastHeading}</h1>`;
           case "heading_2":
             lastHeading = processRichText(block.heading_2.rich_text);
             console.log("Heading 2 captured:", lastHeading);
-            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 270px; padding-right: 270px;">${lastHeading}</h2>`;
+            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 20px;">${lastHeading}</h2>`;
           case "heading_3":
             lastHeading = processRichText(block.heading_3.rich_text);
             console.log("Heading 3 captured:", lastHeading);
-            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 280px; padding-right: 280px;">${lastHeading}</h3>`;
+            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 20px;">${lastHeading}</h3>`;
           case "paragraph":
             const paragraphText = processRichText(block.paragraph.rich_text);
             return paragraphText
-              ? `<p style="font-size: 14px; text-align: center; padding-left: 240px; padding-right: 240px; font-family: 'QuicksandSemiBold', sans-serif;">${paragraphText}</p>`
+              ? `<p style="font-size: 14px; text-align: center; padding-left: 10px; padding-right: 10px; font-family: 'QuicksandSemiBold', sans-serif;">${paragraphText}</p>`
               : '';
           case "image":
             const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
             const { width, height } = getImageDimensions(lastHeading);
             console.log("Image under heading:", lastHeading, "with dimensions:", { width, height });
 
-            // Center images for "Technical Expertise" and "Market Impact"
+            const imageClass = lastHeading === "Technologies And Tools" ? "responsive-image2" : "responsive-image";
+
             if (lastHeading === "Technical Expertise" || lastHeading === "Market Impact") {
               return imageUrl
-                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" /></div>`
+                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}" style="width: ${width}px; height: ${height}px;" /></div>`
                 : "";
             }
-
-            // Keep other images as is
+            
             if (lastHeading === "Technologies And Tools") {
               if (imageUrl) {
                 images.push(
-                  `<img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px;" />`
+                  `<img src="${imageUrl}" alt="Image" class="${imageClass}" style="width: ${width}px; height: ${height}px;" />`
                 );
               }
               return "";
             } else if (lastHeading === "Key Achievements" || lastHeading === "Non-Invasive Testing") {
               return imageUrl
-                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" /></div>`
+                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}" style="width: ${width}px; height: ${height}px; border-radius: 20px; margin-bottom: 10px;" /></div>`
                 : "";
             } else {
               return imageUrl
@@ -82,7 +82,7 @@ export function extractRichText(blocks: any[]): string[] {
     })
     .concat(
       images.length > 0
-        ? `<div style="padding: 30px 0px; display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap; gap: 20px;">${images.join('')}</div>`
+        ? `<div style="padding: 30px 0px; display: flex; justify-content: center;  flex-wrap: wrap; gap: 20px;" class="responsive-image2; width: 900px;">${images.join('')}</div>`
         : []
     );
 }
@@ -103,6 +103,7 @@ function processRichText(richTextArray: any[]): string {
     })
     .join(" ");
 }
+
 
 
 
