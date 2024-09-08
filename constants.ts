@@ -1,14 +1,11 @@
 import { FiCheckCircle } from "react-icons/fi";
-import { MdCode, MdOutlineDeveloperMode, MdPhoneIphone } from "react-icons/md";
+import { MdCode, MdOutlineDeveloperMode, } from "react-icons/md";
 import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, FaCogs, FaBootstrap, FaReact, FaJs, FaNodeJs, FaWordpress, FaAws, FaGitAlt, FaJava, FaPython  } from "react-icons/fa";
 import { AiOutlineRobot } from "react-icons/ai";
 import { SiNhl, SiOpenai, SiTensorflow, SiPython, SiDocker, SiMlflow, SiNextdotjs, SiExpress, SiDatabricks, SiMongodb, SiMysql, SiHive, SiGooglecloud, SiMicrosoftazure, SiKubernetes, SiCplusplus, SiCsharp, SiDotnet } from "react-icons/si";
 
 
-export const API_HOST = "https://mvp-lit-list.saibbyweb.com/admin/graphql";
 
-// export const API_HOST =
-//   "https://0d65-2405-201-5505-116b-dcd9-8a32-2e9f-f0e1.ngrok-free.app/admin/graphql";
 export const STATS_DATA = [
   {
     id: 1,

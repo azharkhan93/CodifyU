@@ -130,3 +130,7 @@ export type LogoProps = {
     productDesc1: string;
     iconUrls: string[];
   };
+
+  export type ProjectCardsProps  = {
+    products: Post[];
+  }

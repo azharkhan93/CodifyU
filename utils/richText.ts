@@ -70,8 +70,6 @@ export function extractRichText(blocks: any[]): string[] {
         : []
     );
 }
-
-// Helper function to process rich text array and return formatted text
 function processRichText(richTextArray: any[]): string {
   return richTextArray
     .map((text) => {

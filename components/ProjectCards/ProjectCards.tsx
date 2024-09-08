@@ -2,14 +2,10 @@
 import Image from "next/image";
 import { Box, Button,  Column, Row, Text } from "@/components";
 import { useEffect} from "react";
-import { Post } from "@/types";
+import { Post, ProjectCardsProps } from "@/types";
 import { useRouter } from "next/navigation";
 
-interface ProjectCardsProps {
-  products: Post[];
-}
-
-export const ProjectCards = ({ products }: ProjectCardsProps) => {
+export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
   const router = useRouter();
 
   useEffect(() => {}, [products]);
