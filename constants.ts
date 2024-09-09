@@ -63,6 +63,10 @@ export const NavbarData = [
     title: "PortFolio",
     link: "/portfolio",
   },
+  {
+    title: "Services",
+    link: "/portfolio",
+  },
 ];
 export const featureItems = [
   "Mobile App Development",
@@ -71,18 +75,18 @@ export const featureItems = [
   "Digital Marketing",
 ];
 export const PARTNER_LOGOS = [
-  { src: "/clientlogos/g1.png", alt: "Logo 6", size: 100 },
-{ src: "/clientlogos/airlines.png", alt: "Logo 2", size: 100 },
-  { src: "/clientlogos/ant1.png", alt: "Logo 3", size: 100 },
-  { src: "/clientlogos/betmgm.jpg", alt: "Logo 4", size: 100 },
-  { src: "/clientlogos/Callidus.jpg", alt: "Logo 5", size: 100 },
-  { src: "/clientlogos/eth.jpg", alt: "Logo 6", size: 100 },
-  { src: "/clientlogos/its.jpg", alt: "Logo 6", size: 100 },
-  { src: "/clientlogos/johnsnow.jpg", alt: "Logo 6", size: 100 },
-  { src: "/clientlogos/mindgeek.jpg", alt: "Logo 6", size: 100 },
-  { src: "/clientlogos/square.jpg", alt: "Logo 6", size: 100 },
-  { src: "/clientlogos/start.jpg", alt: "Logo 6", size: 100 },
-  { src: "/clientlogos/adnet.jpg", alt: "Logo 1", size: 100 },
+  { src: "/clientlogos/g23.webp", alt: "Logo 6", size: 200 },
+{ src: "/clientlogos/airlines.webp", alt: "Logo 2", size: 200 },
+  { src: "/clientlogos/tint.png", alt: "Logo 3", size: 160 },
+  { src: "/clientlogos/mgm1.jpg", alt: "Logo 4", size: 130 },
+  { src: "/clientlogos/LogoMain.png", alt: "Logo 5", size: 170 },
+  { src: "/clientlogos/zurich.jpg", alt: "Logo 6", size: 200 },
+  { src: "/clientlogos/its.jpg", alt: "Logo 6", size: 150 },
+  { src: "/clientlogos/john.png", alt: "Logo 6", size: 220 },
+  { src: "/clientlogos/mindgeek.jpg", alt: "Logo 6", size: 150 },
+  { src: "/clientlogos/square.jpg", alt: "Logo 6", size: 140 },
+  { src: "/clientlogos/start.jpg", alt: "Logo 6", size: 130 },
+  { src: "/clientlogos/ad.webp", alt: "Logo 1", size: 160 },
 ];
 
 export const reviews23 = [

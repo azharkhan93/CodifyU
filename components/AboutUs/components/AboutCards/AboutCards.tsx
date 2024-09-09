@@ -1,4 +1,4 @@
-import { Button, CenterBox, Column, Row, Text } from "@/components/styled";
+import { Box, Button, CenterBox, Column, Row, Text } from "@/components/styled";
 import Image from "next/image";
 import { FaAward, FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
 
@@ -10,26 +10,31 @@ export const AboutCards = () => {
       alignItems={"center"}
     >
       <CenterBox
-        data-aos="fade-up"
-        bg={"secondary"}
-        width={["440px", "500px"]}
-        height={["421px", "550px"]}
-        position={"relative"}
-      >
-        <Image
-          src={"/images/bg.jpeg"}
-          alt="no image"
-          width={500}
-          height={400}
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "80%",
-            transform: "translate(-50%, -50%)",
-            borderRadius: "6px",
-          }}
-        />
-      </CenterBox>
+  data-aos="fade-up"
+  bg="secondary"
+  width={["400px", "460px"]}
+  height={["400px", "550px"]}
+  position="relative"
+>
+  <Box
+    width={["350px","500px"]}
+    height={["300px", "400px"]}
+    position="absolute"
+    top="12%"
+    left={["7%","16%"]}
+    alignItems={"center"}
+    justifyContent={"center"}
+    borderRadius="s"
+    overflow="hidden"
+  >
+    <Image
+      src="/images/bg.jpeg"
+      alt="no image"
+      width={500}
+      height={400}
+    />
+  </Box>
+</CenterBox>
       <Column
         py={"xxxxl"}
         gap={"xxl"}
