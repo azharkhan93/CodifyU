@@ -223,7 +223,7 @@ export const teamMembers = [
 ];
 
 export const techSections = [
-  { title: "Artificial Intelligence" },
+  { title: "AI/ML" },
   { title: "Front-End" },
   { title: "Back-End" },
   { title: "Database" },
@@ -233,15 +233,15 @@ export const techSections = [
 ];
 
 export const iconData = [
-  { IconComponent: AiOutlineRobot, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiNhl, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiOpenai, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: FaBrain, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: FaCogs, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiTensorflow, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiPython, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiDocker, size: 40, color: "white", category: "Artificial Intelligence" },
-  { IconComponent: SiMlflow, size: 40, color: "white", category: "Artificial Intelligence" },
+  { IconComponent: AiOutlineRobot, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: SiNhl, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: SiOpenai, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: FaBrain, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: FaCogs, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: SiTensorflow, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: SiPython, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: SiDocker, size: 40, color: "white", category: "AI/ML" },
+  { IconComponent: SiMlflow, size: 40, color: "white", category: "AI/ML" },
   { IconComponent: FaBootstrap, size: 40, color: "white", category: "Front-End" },
   { IconComponent: FaReact , size: 40, color: "white", category: "Front-End" },
   { IconComponent: SiNextdotjs , size: 40, color: "white", category: "Front-End" },

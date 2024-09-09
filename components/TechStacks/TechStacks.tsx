@@ -11,7 +11,7 @@ export const TechStacks = () => {
 
   const defaultCategories = [
     "Cloud",
-    "Artificial Intelligence",
+    "AI/ML",
     "Languages",
     "Utilities",
   ];

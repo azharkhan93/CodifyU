@@ -86,7 +86,10 @@ export const OurValues = () => {
         ))}
       </Box>
 
-      <CenterBox py={"xxxl"}>
+      <CenterBox py={"xxxl"}
+      style={{opacity: 0}}
+   
+      >
         <Text
           bg="secondary"
           variant={"subHeading"}
@@ -97,7 +100,7 @@ export const OurValues = () => {
         >
           Share Your Project Requirements
         </Text>
-        {/* </Button> */}
+       
       </CenterBox>
     </>
   );
