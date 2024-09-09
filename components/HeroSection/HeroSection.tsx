@@ -34,10 +34,10 @@ export const HeroSection = () => {
           height: "100%",
           objectFit: "cover",
           transform: "translate(-50%, -50%)",
-          zIndex: -1,
+          //  zIndex: -1,
         }}
       >
-        <source src="/images/hero.mp4" type="video/mp4" />
+        <source src="/images/z.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <Box
