@@ -13,7 +13,7 @@ export const TeamMembers = () => {
         alignItems={"flex-start"}
         width={["100%", "45%"]}
       >
-        <Text variant={"heading"}>Meet Our Talents</Text>
+        <Text variant={["heading", "footerHeading"]}>Meet Our Talents</Text>
         <Text variant={"body"}>
           In this post-pandemic world, as continuous disruption unfolds,
           businesses need expert guidance and proven talent for their Digital

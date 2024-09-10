@@ -30,7 +30,7 @@ export const TeamCards: React.FC<TeamCardsProps> = ({ member }) => {
           borderTop={"3px solid green"}
           borderRadius={"s"}
         >
-          <Text variant={"heading"}>{member.name}</Text>
+          <Text variant={"subHeading"}>{member.name}</Text>
           <Text variant={"body"}>{member.role}</Text>
           {/* <Row flexDirection={"row"} gap="m">
             <a

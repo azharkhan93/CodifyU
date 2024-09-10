@@ -9,7 +9,7 @@ export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
     // border={"1px solid red"}
     alignItems={"center"}
     justifyContent={"center"}
-    height={["140px","130px"]}
+    height={["150px","150px"]}
     
     >
       <Image

@@ -6,14 +6,14 @@ export const AboutUs = () => {
     <>
       <CenterBox py={["xxxxl", "xxxl"]} width={"100%"}>
         <Column
-          gap={"l"}
+          gap={"xl"}
           alignItems={"center"}
           width={["100%", "900px"]}
           px={["s", "xl"]}
           data-aos="fade-right"
         >
           <Text
-            textAlign={["start","center"]}
+            textAlign={["center","center"]}
             variant={["heading", "footerHeading"]}
             color="blue600"
           >

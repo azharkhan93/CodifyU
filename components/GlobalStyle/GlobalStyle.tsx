@@ -65,6 +65,35 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-display: swap;
     }
+    @font-face {
+        font-family: 'RobotoBold';
+        src: url('/assets/fonts/Roboto-Bold.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'RobotoRegular';
+        src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'RobotoMedium';
+        src: url('/assets/fonts/Roboto-Medium.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'RobotoBlack';
+        src: url('/assets/fonts/Roboto-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+    }
 
     * {
     font-family: "DMSansRegular"; 

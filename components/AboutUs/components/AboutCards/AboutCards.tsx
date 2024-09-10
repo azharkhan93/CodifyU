@@ -43,7 +43,7 @@ export const AboutCards = () => {
         data-aos="fade-right"
       >
         <Text variant={"footerHeading"}>About Us</Text>
-        <Text variant={"heading"} width={["100%", "600px"]}>
+        <Text variant={["heading","heading"]} width={["100%", "600px"]}>
           Beyond Technology Your Competitive Edge for Growth
         </Text>
         <Text variant={"body"} width={["100%", "600px"]}>
@@ -58,7 +58,7 @@ export const AboutCards = () => {
 
         <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
           <FaUsers size={28} fill="black" />
-          <Text variant={"heading"}>Client-Centric Approach</Text>
+          <Text variant={["subHeading", "heading"]}>Client-Centric Approach</Text>
         </Row>
         <Column>
           <Text variant={"body"} width={["100%", "600px"]}>
@@ -68,7 +68,7 @@ export const AboutCards = () => {
         </Column>
         <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
           <FaDollarSign size={28} fill="black" />
-          <Text variant={"heading"}>Quality and Savings</Text>
+          <Text variant={["subHeading", "heading"]} >Quality and Savings</Text>
         </Row>
         <Column>
           <Text variant={"body"} width={["100%", "600px"]}>
@@ -79,7 +79,7 @@ export const AboutCards = () => {
         </Column>
         <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
           <FaTools size={28} fill="black" />
-          <Text variant={"heading"}>End-to-End Development</Text>
+          <Text variant={["subHeading", "heading"]} >End-to-End Development</Text>
         </Row>
         <Column>
           <Text variant={"body"} width={["100%", "600px"]}>

@@ -30,10 +30,10 @@ export const TechStacks = () => {
         gap={"xxl"}
         justifyContent={"center"}
         alignItems={"flex-start"}
-        width={["100%", "45%"]}
+        width={["100%", "60%"]}
         px={["s", "header"]}
       >
-        <Text variant={"heading"} color="blue600">
+        <Text variant={["heading","footerHeading"]} color="blue600">
           Tools And Technologies
         </Text>
         <Text variant={"body"} color="blue600">

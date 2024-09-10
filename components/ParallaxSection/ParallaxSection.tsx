@@ -32,13 +32,13 @@ export const ParallaxSection = () => {
       />
       <Row
         flexDirection={["column", "column"]}
-        width={["100%", "40%"]}
+        width={["100%", "57%"]}
         gap={"xl"}
       >
         <Text
-          variant="heading"
-          textAlign={["center", "center"]}
-          fontFamily={"QuicksandRegular"}
+
+          variant={["subHeading","heading"]}
+          textAlign={["start", "center"]}
         >
           
           {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry Searching For Scable Solutions`}
@@ -62,10 +62,12 @@ export const ParallaxSection = () => {
         </CenterBox>
       </Row>
 
-      <CenterBox>
+      <CenterBox
+      position={"relative"}
+      >
         <iframe
           src="https://lottie.host/embed/28ff5dcf-904e-4e22-a52f-71caaf13a838/AW9QvY1gDf.json"
-          style={{ width: "500px", height: "370px", border: "none" }}
+          style={{ width: "500px", height: "390px", border: "none" }}
         ></iframe>
       </CenterBox>
     </CenterBox>

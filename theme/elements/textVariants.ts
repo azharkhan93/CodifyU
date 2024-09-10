@@ -1,13 +1,10 @@
 import {
-  BASE_BORDER_RADII,
-  BASE_COLORS,
-  BASE_FONT_WEIGHTS,
   BASE_FONTS,
 } from "../elements";
 
 export const BASE_TEXT_VARIANTS = {
   heading: {
-    fontSize: 24,
+    fontSize: 33,
     fontFamily: BASE_FONTS.heading,
   },
   footerHeading: {
@@ -15,11 +12,11 @@ export const BASE_TEXT_VARIANTS = {
     fontFamily: BASE_FONTS.ftHeading,
   },
   subHeading: {
-    fontSize: 20,
+    fontSize: 28,
     fontFamily: BASE_FONTS.subHeading,
   },
   body: {
-    fontSize: 16,
+    fontSize: 18,
     fontFamily: BASE_FONTS.body,
   },
 };

@@ -94,7 +94,7 @@ export const Footer = () => {
             alignItems={["flex-start", "flex-start"]}
             flexDirection={"column"}
           >
-            <Text variant="heading" color="white">
+            <Text variant="subHeading" color="white">
               Quick Links
             </Text>
             <Row flexDirection={"row"} gap={"xl"}>
@@ -143,7 +143,7 @@ export const Footer = () => {
             alignItems={["flex-start", "flex-start"]}
             flexDirection={"column"}
           >
-            <Text variant="heading" color="white">
+            <Text variant="subHeading" color="white">
               Follow Us
             </Text>
             <Row flexDirection={"row"} gap={"xl"}>

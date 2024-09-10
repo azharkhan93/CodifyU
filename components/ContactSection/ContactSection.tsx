@@ -15,17 +15,11 @@ export const ContactSection = () => {
         px={"xl"}
       >
         <Column gap={["xl", "m"]}>
-          <Text color={"secondary"} variant={"heading"} fontWeight={"bold"}>
+          <Text color={"secondary"} variant={["heading", "footerHeading"]} >
             Any Queries Talk To Us?
           </Text>
-          <Box
-            height={"3px"}
-            bg={"secondary"}
-            width={"70%"}
-            ml={"header"}
-            borderRadius={"circle"}
-          ></Box>
-          <Text color={"secondary"} variant={"subHeading"}>
+
+          <Text color={"secondary"} variant={["subHeading","heading"]} textAlign={["center","center"]}>
             Have a question to our team or need help with your project?
           </Text>
         </Column>
@@ -100,7 +94,7 @@ export const ContactSection = () => {
           />
 
           <Column gap={"m"} width={"100%"}>
-            <Text variant={"heading"}>Stay Connected</Text>
+            <Text variant={"subHeading"}>Stay Connected</Text>
             <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
               <FaFacebook size={24} />
               <FaInstagram size={24} />
