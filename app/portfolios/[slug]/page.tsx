@@ -75,7 +75,6 @@ export default function Page({ params }: PageProps) {
           </Column>
           {product.imageUrl && (
             <Column
-              // width={["100%", "auto"]}
                width={["360px", "600px"]}
               position={"relative"}
               height={["330px", "400px"]}

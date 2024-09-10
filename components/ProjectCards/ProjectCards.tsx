@@ -87,21 +87,27 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
               </Button>
             </Box>
           </Column>
-          <Box width={["100%", "700px"]} position={"relative"} 
-          // height={"400px"}
+          <Box width={["363px", "700px"]} 
+          //  height={"300px"}
+          //  border={"2px solid green"}
+           position={"relative"}
           >
             
+          
             <Image
               src={product.imageUrl}
               alt={product.productName}
-              layout="responsive"
-              width={400}
-              height={600}
+               layout="responsive"
+              width={650}
+              height={450}
               style={{ borderRadius: "8px" }}
             />
             </Box>
+      
+           
+            </Box>
        
-        </Box>
+        
       ))}
     </Column>
   );
