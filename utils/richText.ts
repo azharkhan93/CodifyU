@@ -58,7 +58,6 @@ export function extractRichText(blocks: any[]): string[] {
         case "image":
           const imageUrl =
             block.image?.file?.url || block.image?.external?.url || "";
-          const imageClass = getDynamicImageClass(lastHeading);
 
           if (imageUrl) {
             if (index === blocks.length - 1) {
@@ -207,15 +206,4 @@ function processRichText(richTextArray: any[]): string {
     .join(" ");
 }
 
-function getDynamicImageClass(heading: string): string {
-  switch (heading) {
-    case "Technologies And Tools":
-    case "Technical Expertise":
-    case "Market Impact":
-    case "Key Achievements":
-    case "Non-Invasive Testing":
-      return "responsive-image";
-    default:
-      return "responsive-image";
-  }
-}
+
