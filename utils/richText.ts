@@ -133,8 +133,7 @@ export function extractRichText(blocks: any[]): string[] {
     `<style>
       @media (max-width: 768px) {
         .content-images-container {
-         
-          display: flex;
+         display: flex;
           flex-direction: column;
         }
         .content, .images {
@@ -170,8 +169,7 @@ export function extractRichText(blocks: any[]): string[] {
         }
       }
       .content {
-       
-        display: flex;
+      display: flex;
         flex-direction: column;
         gap: 15px;
       }
