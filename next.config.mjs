@@ -4,11 +4,7 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'mvp-lit-list-dev.s3.eu-west-2.amazonaws.com',
-        pathname: '/**',
-      },
+
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',

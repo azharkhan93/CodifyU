@@ -51,6 +51,7 @@ export default function Page({ params }: PageProps) {
         whoWeAreText={"Explore Our portfolios"}
       />
       <Column
+      px={["s","l"]}
         mt={"xlg"}
         flexDirection={"column"}
         alignItems={"center"}
@@ -68,14 +69,14 @@ export default function Page({ params }: PageProps) {
             <Text variant={"footerHeading"} textAlign={["center", "center"]}>
               {product.productName}
             </Text>
-            <Text variant={["subHeading", "heading"]} textAlign={"center"}>
+            <Text variant={["body", "subHeading"]} textAlign={"center"}>
               {product.productDesc}
             </Text>
           </Column>
           {product.imageUrl && (
             <Column
-              width={["100%", "auto"]}
-              maxWidth={["360px", "600px"]}
+              // width={["100%", "auto"]}
+               width={["360px", "600px"]}
               position={"relative"}
               height={["330px", "400px"]}
               overflow={"hidden"}
@@ -85,7 +86,8 @@ export default function Page({ params }: PageProps) {
                 alt={product.productName}
                 width={600}
                 height={400}
-                style={{ borderRadius: "20px" }}
+                style={{ borderRadius: "20px", 
+                 }}
               />
             </Column>
           )}

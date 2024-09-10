@@ -23,7 +23,7 @@ html, body {
 /* Add these styles in your global CSS file or styled-component */
 
 .responsive-image {
-  width: 360px !important;
+  width: 400px !important;
   height: 300px !important;
   border-radius: 20px !important;
 }
@@ -49,7 +49,7 @@ html, body {
 
 @media (min-width: 1024px) {
   .responsive-image {
-    width: 600px !important;
+    width: 550px !important;
     height: 400px !important;
     border-radius: 20px !important;
   }

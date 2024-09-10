@@ -4,6 +4,7 @@ import { Box, Button,  Column, Row, Text } from "@/components";
 import { useEffect} from "react";
 import { Post, ProjectCardsProps } from "@/types";
 import { useRouter } from "next/navigation";
+import { CgBox } from "react-icons/cg";
 
 export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
   const router = useRouter();
@@ -29,7 +30,7 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
           width={"97%"}
           key={product.slug + index}
           py={"xxxl"}
-          px={["s", "xl"]}
+          // px={["s", "xl"]}
           flexDirection={["column-reverse", "row"]}
           alignItems={"center"}
           justifyContent={"center"}
@@ -39,7 +40,9 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
               "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5)",
           }}
         >
-          <Column gap={["xl", "xl"]} width={["100%", "800px"]}>
+          <Column gap={["xl", "xl"]} width={["100%", "700px"]} 
+          pl={["s","m"]}
+          >
             <Text
               color={"primary"}
               variant={["heading", "footerHeading"]}
@@ -84,16 +87,20 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
               </Button>
             </Box>
           </Column>
-          <Box width={["100%", "550px"]} position={"relative"}>
+          <Box width={["100%", "700px"]} position={"relative"} 
+          // height={"400px"}
+          >
+            
             <Image
               src={product.imageUrl}
               alt={product.productName}
               layout="responsive"
               width={400}
-              height={450}
+              height={600}
               style={{ borderRadius: "8px" }}
             />
-          </Box>
+            </Box>
+       
         </Box>
       ))}
     </Column>
