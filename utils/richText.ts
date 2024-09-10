@@ -4,7 +4,7 @@ export function extractRichText(blocks: any[]): string[] {
   let currentContent: string[] = [];
   let currentImages: string[] = [];
   let imagesAfterLastHeading: string[] = [];
-  let isRowReverse = false; // Flag for row-reverse layout
+  let isRowReverse = false;
 
   blocks.forEach((block, index) => {
     try {
@@ -16,25 +16,35 @@ export function extractRichText(blocks: any[]): string[] {
           const headingLevel = block.type.replace("heading_", "h");
 
           currentContent.push(
-            `<${headingLevel} style="font-size: ${getFontSizeForHeading(block.type)}; padding-left: 10px; margin: 0; ; ">${lastHeading}</${headingLevel}>`
+            `<${headingLevel} style="font-size: ${getFontSizeForHeading(
+              block.type
+            )}; padding-left: 10px; margin: 0; ; ">${lastHeading}</${headingLevel}>`
           );
-       
+
           if (index === blocks.length - 1) {
             contentGroupHtml.push(
-              `<div class="content-images-container ${isRowReverse ? 'row-reverse' : ''}">
+              `<div class="content-images-container ${
+                isRowReverse ? "row-reverse" : ""
+              }">
                 <div class="content">
-                  ${currentContent.join('')}
+                  ${currentContent.join("")}
                 </div>
                 <div class="images">
-                  ${currentImages.join('')}
+                  ${currentImages.join("")}
                 </div>
-                ${imagesAfterLastHeading.length > 0 ? `<div class="images-row">${imagesAfterLastHeading.join('')}</div>` : ''}
+                ${
+                  imagesAfterLastHeading.length > 0
+                    ? `<div class="images-row">${imagesAfterLastHeading.join(
+                        ""
+                      )}</div>`
+                    : ""
+                }
               </div>`
             );
             currentContent = [];
             currentImages = [];
             imagesAfterLastHeading = [];
-            isRowReverse = !isRowReverse; 
+            isRowReverse = !isRowReverse;
           }
           break;
 
@@ -46,9 +56,9 @@ export function extractRichText(blocks: any[]): string[] {
           break;
 
         case "image":
-          const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+          const imageUrl =
+            block.image?.file?.url || block.image?.external?.url || "";
           const imageClass = getDynamicImageClass(lastHeading);
-      
 
           if (imageUrl) {
             if (index === blocks.length - 1) {
@@ -74,36 +84,52 @@ export function extractRichText(blocks: any[]): string[] {
           break;
 
         default:
-          currentContent.push(`<p style='color: red;'>Unsupported block type: ${block.type}</p>`);
+          currentContent.push(
+            `<p style='color: red;'>Unsupported block type: ${block.type}</p>`
+          );
       }
 
       if (block.type === "image" || index === blocks.length - 1) {
-        if (currentContent.length > 0 || currentImages.length > 0 || imagesAfterLastHeading.length > 0) {
+        if (
+          currentContent.length > 0 ||
+          currentImages.length > 0 ||
+          imagesAfterLastHeading.length > 0
+        ) {
           contentGroupHtml.push(
-            `<div class="content-images-container ${isRowReverse ? 'row-reverse' : ''}">
+            `<div class="content-images-container ${
+              isRowReverse ? "row-reverse" : ""
+            }">
               <div class="content">
-                ${currentContent.join('')}
+                ${currentContent.join("")}
               </div>
               <div class="images">
-                ${currentImages.join('')}
+                ${currentImages.join("")}
               </div>
-              ${imagesAfterLastHeading.length > 0 ? `<div class="images-row">${imagesAfterLastHeading.join('')}</div>` : ''}
+              ${
+                imagesAfterLastHeading.length > 0
+                  ? `<div class="images-row">${imagesAfterLastHeading.join(
+                      ""
+                    )}</div>`
+                  : ""
+              }
             </div>`
           );
           currentContent = [];
           currentImages = [];
           imagesAfterLastHeading = [];
-          isRowReverse = !isRowReverse; 
+          isRowReverse = !isRowReverse;
         }
       }
     } catch (error) {
       console.error("Error processing block:", block, error);
-      currentContent.push("<p style='margin-bottom: 14px;'>Error processing block</p>");
+      currentContent.push(
+        "<p style='margin-bottom: 14px;'>Error processing block</p>"
+      );
     }
   });
 
   return [
-    `<div style="width: 100%;  ">${contentGroupHtml.join('')}</div>`,
+    `<div style="width: 100%;  ">${contentGroupHtml.join("")}</div>`,
     `<style>
       @media (max-width: 768px) {
         .content-images-container {
@@ -149,10 +175,9 @@ export function extractRichText(blocks: any[]): string[] {
         flex-direction: column;
         gap: 15px;
       }
-    </style>`
+    </style>`,
   ];
 }
-
 
 function getFontSizeForHeading(type: string): string {
   switch (type) {
@@ -196,6 +221,3 @@ function getDynamicImageClass(heading: string): string {
       return "responsive-image";
   }
 }
-
-
-
