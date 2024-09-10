@@ -51,7 +51,7 @@ export default function Page({ params }: PageProps) {
         whoWeAreText={"Explore Our portfolios"}
       />
       <Column
-      px={["s","l"]}
+        px={["s", "l"]}
         mt={"xlg"}
         flexDirection={"column"}
         alignItems={"center"}
@@ -75,37 +75,38 @@ export default function Page({ params }: PageProps) {
           </Column>
           {product.imageUrl && (
             <Column
-               width={["360px", "600px"]}
-              position={"relative"}
-              height={["330px", "400px"]}
-              overflow={"hidden"}
+              width={["100%", "900px"]}
+              position="relative"
+              height={["250px", "380px"]}
+              overflow="hidden"
             >
               <Image
                 src={product.imageUrl}
                 alt={product.productName}
-                width={600}
-                height={400}
-                style={{ borderRadius: "20px", 
-                 }}
+                width={370}
+                height={300}
+                style={{
+                  borderRadius: "20px",
+                  objectPosition: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
               />
             </Column>
           )}
         </Row>
         <CenterBox
-        mt={["m","xxxl"]}
-        borderRadius={"xl"}
-        py={"xxxl"}
-    gap={"xl"}
-    width={["100%","80%"]}
-    // border={"4px solid green"}
-    style={{ boxShadow: "0px 4px 12px rgba(128, 0, 128, 0.5)" }}
-    
-    >
-
-        <Text
-          variant="body"
-          dangerouslySetInnerHTML={{ __html: product.productDesc1 || "" }}
-        />
+          mt={["m", "xxxl"]}
+          borderRadius={"xl"}
+          py={"xxxl"}
+          gap={"xl"}
+          // width={["100%", "85%"]}
+          style={{ boxShadow: "0px 4px 12px rgba(128, 0, 128, 0.5)" }}
+        >
+          <Text
+            variant="body"
+            dangerouslySetInnerHTML={{ __html: product.productDesc1 || "" }}
+          />
         </CenterBox>
       </Column>
     </>

@@ -1,75 +1,172 @@
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
-  let images: string[] = [];
+  let contentGroupHtml: string[] = [];
+  let currentContent: string[] = [];
+  let currentImages: string[] = [];
+  let imagesAfterLastHeading: string[] = [];
+  let isRowReverse = false; // Flag for row-reverse layout
 
-  return blocks
-    .map((block) => {
-      try {
-        switch (block.type) {
-          case "heading_1":
-            lastHeading = processRichText(block.heading_1.rich_text);
-            console.log("Heading 1 captured:", lastHeading);
-            return `<h1 style="font-size: 28px; padding-left: 20px;">${lastHeading}</h1>`;
+  blocks.forEach((block, index) => {
+    try {
+      switch (block.type) {
+        case "heading_1":
+        case "heading_2":
+        case "heading_3":
+          lastHeading = processRichText(block[block.type].rich_text);
+          const headingLevel = block.type.replace("heading_", "h");
 
-          case "heading_2":
-            lastHeading = processRichText(block.heading_2.rich_text);
-            console.log("Heading 2 captured:", lastHeading);
-            return `<h2 style="font-size: 24px; font-weight: bold; padding-left: 20px;">${lastHeading}</h2>`;
+          currentContent.push(
+            `<${headingLevel} style="font-size: ${getFontSizeForHeading(block.type)}; padding-left: 10px; margin: 0; ; ">${lastHeading}</${headingLevel}>`
+          );
+       
+          if (index === blocks.length - 1) {
+            contentGroupHtml.push(
+              `<div class="content-images-container ${isRowReverse ? 'row-reverse' : ''}">
+                <div class="content">
+                  ${currentContent.join('')}
+                </div>
+                <div class="images">
+                  ${currentImages.join('')}
+                </div>
+                ${imagesAfterLastHeading.length > 0 ? `<div class="images-row">${imagesAfterLastHeading.join('')}</div>` : ''}
+              </div>`
+            );
+            currentContent = [];
+            currentImages = [];
+            imagesAfterLastHeading = [];
+            isRowReverse = !isRowReverse; 
+          }
+          break;
 
-          case "heading_3":
-            lastHeading = processRichText(block.heading_3.rich_text);
-            console.log("Heading 3 captured:", lastHeading);
-            return `<h3 style="font-size: 20px; font-weight: bold; padding-left: 20px;">${lastHeading}</h3>`;
+        case "paragraph":
+          const paragraphText = processRichText(block.paragraph.rich_text);
+          currentContent.push(
+            `<p style="font-size: 18px; text-align: left; padding-left: 10px;  margin: 0; ">${paragraphText}</p>`
+          );
+          break;
 
-          case "paragraph":
-            const paragraphText = processRichText(block.paragraph.rich_text);
-            return paragraphText
-              ? `<p style="font-size: 18px; text-align: center; padding-left: 10px; padding-right: 10px; font-family: 'QuicksandSemiBold', sans-serif;">${paragraphText}</p>`
-              : "";
+        case "image":
+          const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+          const imageClass = getDynamicImageClass(lastHeading);
+      
 
-          case "image":
-            const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
-
-            // Keep the original image class logic based on lastHeading
-            const imageClass = getDynamicImageClass(lastHeading);
-
-            // Append the image for the "Technologies And Tools" section
-            if (lastHeading === "Technologies And Tools") {
-              if (imageUrl) {
-                images.push(
-                  `<img src="${imageUrl}" alt="Image" class="${imageClass}" />`
-                );
-              }
-              return "";
-            } 
-            // Always return an image inside a center-aligned div for other cases
-            else {
-              return imageUrl
-                ? `<div style="text-align: center; padding-top: 30px; padding-bottom: 20px;"><img src="${imageUrl}" alt="Image" class="${imageClass}" style="margin-bottom: 10px;" /></div>`
-                : "";
+          if (imageUrl) {
+            if (index === blocks.length - 1) {
+              imagesAfterLastHeading.push(
+                `<img src="${imageUrl}" alt="Image"  style="margin: 5px; max-width: 30%; height: auto; "/>`
+              );
+            } else {
+              currentImages.push(
+                `<img src="${imageUrl}" alt="Image"  style="margin-bottom: 10px; max-width: 100%; height: auto; "/>`
+              );
             }
+          }
+          break;
 
-          case "embed":
-          case "url":
-            const embedUrl = block[block.type]?.url || "";
-            return embedUrl
+        case "embed":
+        case "url":
+          const embedUrl = block[block.type]?.url || "";
+          currentContent.push(
+            embedUrl
               ? `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer" style="margin-bottom: 14px; display: block; color: blue; text-decoration: underline;">${embedUrl}</a>`
-              : "";
+              : ""
+          );
+          break;
 
-          default:
-            return `<p style='color: red;'>Unsupported block type: ${block.type}</p>`;
-        }
-      } catch (error) {
-        console.error("Error processing block:", block, error);
-        return "<p style='margin-bottom: 14px;'>Error processing block</p>";
+        default:
+          currentContent.push(`<p style='color: red;'>Unsupported block type: ${block.type}</p>`);
       }
-    })
-    .concat(
-      images.length > 0
-        ? [`<div style="padding: 30px 0px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">${images.join('')}</div>`]
-        : []
-    );
+
+      if (block.type === "image" || index === blocks.length - 1) {
+        if (currentContent.length > 0 || currentImages.length > 0 || imagesAfterLastHeading.length > 0) {
+          contentGroupHtml.push(
+            `<div class="content-images-container ${isRowReverse ? 'row-reverse' : ''}">
+              <div class="content">
+                ${currentContent.join('')}
+              </div>
+              <div class="images">
+                ${currentImages.join('')}
+              </div>
+              ${imagesAfterLastHeading.length > 0 ? `<div class="images-row">${imagesAfterLastHeading.join('')}</div>` : ''}
+            </div>`
+          );
+          currentContent = [];
+          currentImages = [];
+          imagesAfterLastHeading = [];
+          isRowReverse = !isRowReverse; 
+        }
+      }
+    } catch (error) {
+      console.error("Error processing block:", block, error);
+      currentContent.push("<p style='margin-bottom: 14px;'>Error processing block</p>");
+    }
+  });
+
+  return [
+    `<div style="width: 100%;  ">${contentGroupHtml.join('')}</div>`,
+    `<style>
+      @media (max-width: 768px) {
+        .content-images-container {
+         
+          display: flex;
+          flex-direction: column;
+        }
+        .content, .images {
+          width: 100%;
+          margin: 20px 0;
+        
+         
+        }
+        .images-row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+         
+        }
+      }
+      @media (min-width: 769px) {
+        .content-images-container {
+          display: flex;
+          flex-direction: row;
+          gap: 20px; 
+        }
+        .row-reverse {
+          flex-direction: row-reverse; 
+        }
+        .content, .images {
+          width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px 0;
+
+         
+        }
+      }
+      .content {
+       
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    </style>`
+  ];
 }
+
+
+function getFontSizeForHeading(type: string): string {
+  switch (type) {
+    case "heading_1":
+      return "35px";
+    case "heading_2":
+      return "25px";
+    case "heading_3":
+      return "20px";
+    default:
+      return "16px";
+  }
+}
+
 function processRichText(richTextArray: any[]): string {
   return richTextArray
     .map((text) => {
@@ -87,31 +184,18 @@ function processRichText(richTextArray: any[]): string {
     .join(" ");
 }
 
-// Helper function to dynamically assign an image class based on heading or other factors
 function getDynamicImageClass(heading: string): string {
-  // Retain the original class logic for "responsive-image" and "responsive-image2"
-  if (heading === "Technologies And Tools") {
-    return "responsive-image2";
-  } else if (heading === "Technical Expertise" || heading === "Market Impact") {
-    return "responsive-image";
-  } else if (heading === "Key Achievements" || heading === "Non-Invasive Testing") {
-    return "responsive-image";
-  } else {
-    return "responsive-image";
+  switch (heading) {
+    case "Technologies And Tools":
+    case "Technical Expertise":
+    case "Market Impact":
+    case "Key Achievements":
+    case "Non-Invasive Testing":
+      return "responsive-image";
+    default:
+      return "responsive-image";
   }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
