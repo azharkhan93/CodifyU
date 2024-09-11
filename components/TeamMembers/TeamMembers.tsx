@@ -4,9 +4,9 @@ import { TeamCards } from "./components/TeamCards";
 
 export const TeamMembers = () => {
   return (
-    <Column alignItems={"center"} width={"100%"} py={["xl","header"]} px={"m"} >
+    <Column alignItems={"center"} width={"100%"} py={["xl", "header"]} px={"m"}>
       <Column
-      py={"xl"}
+        py={"xl"}
         gap={"xxl"}
         justifyContent={"center"}
         alignItems={"flex-start"}
@@ -19,22 +19,19 @@ export const TeamMembers = () => {
           Transformation priorities.{" "}
         </Text>
       </Column>
-      
 
       <Row
-      flexWrap={"wrap"}
-         width={"100%"}
-        py={["l","xl"]}
+        flexWrap={"wrap"}
+        width={"100%"}
+        py={["l", "xl"]}
         gap={["xl", "xl"]}
         flexDirection={["column", "row"]}
         alignItems={"center"}
         justifyContent={"center"}
-        // justifyContent={"space-between"}
       >
         {teamMembers.map((member) => (
           <TeamCards key={member.name} member={member} />
         ))}
-        
       </Row>
     </Column>
   );

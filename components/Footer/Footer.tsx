@@ -45,11 +45,11 @@ export const Footer = () => {
           left={0}
           width={"100%"}
           height={"100%"}
-          bg={"modalOverlayBg"} 
-          zIndex={-1} 
+          bg={"modalOverlayBg"}
+          zIndex={-1}
         />
         <CenterBox
-          zIndex={1} 
+          zIndex={1}
           borderBottom={"2px solid white"}
           py={["xxxl", "xxl"]}
           flexDirection={["column", "column"]}
@@ -131,7 +131,13 @@ export const Footer = () => {
                 Contact Us
               </Text>
             </Box>
-            <Row flexDirection={"row"} gap={"xxxl"} width={"100%"} alignItems={"center"} flexWrap={["wrap","nowrap"]}>
+            <Row
+              flexDirection={"row"}
+              gap={"xxxl"}
+              width={"100%"}
+              alignItems={"center"}
+              flexWrap={["wrap", "nowrap"]}
+            >
               <Text variant={"body"} color="white">
                 <a
                   href="tel:+917006168185"
@@ -179,7 +185,7 @@ export const Footer = () => {
             </Row>
           </Box>
         </Box>
-        <CenterBox py={"l"} zIndex={1} >
+        <CenterBox py={"l"} zIndex={1}>
           <Text variant={"body"} color="white">
             © 2024 CodiFyU. All Rights Reserved
           </Text>
@@ -188,4 +194,3 @@ export const Footer = () => {
     </>
   );
 };
-

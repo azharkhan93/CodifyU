@@ -7,13 +7,10 @@ import {
 
 export const BASE_BUTTON_VARIANTS = {
   primary: {
-    backgroundColor: BASE_COLORS.primary,
     color: "white",
     border: "none",
-    // borderRadius: BASE_BORDER_RADII.xs,
-    // padding: "5px",
     fontSize: BASE_SPACING.l,
-    font: BASE_FONTS.body,
+    font: BASE_FONTS.subHeading,
     fontWeights: "500",
   },
   outline: {

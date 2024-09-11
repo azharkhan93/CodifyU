@@ -5,9 +5,7 @@ import { Column, Box, CenterBox, Text, Floki } from "../styled";
 export const ReviewsSection = () => {
   return (
     <Column
-      // bg={"primary"}
       flexDirection={["column", "row"]}
-      // border={"2px solid green"}
       py={["xxl", "header"]}
     >
       <Box
