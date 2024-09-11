@@ -100,7 +100,6 @@ export default function Page({ params }: PageProps) {
           borderRadius={"xl"}
           py={"xxxl"}
           gap={"xl"}
-          // width={["100%", "85%"]}
           style={{ boxShadow: "0px 4px 12px rgba(128, 0, 128, 0.5)" }}
         >
           <Text

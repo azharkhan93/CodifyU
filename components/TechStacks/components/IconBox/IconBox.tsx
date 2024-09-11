@@ -7,12 +7,11 @@ export const IconBox: React.FC<IconBoxProps> = ({ iconData }) => {
   return (
     <Box
       py={"xl"}
-      bg={"primary"}
       px={"xl"}
       borderRadius={"m"}
       style={{
         boxShadow:
-          "0px -4px 10px 0px darkblue, 0px 4px 10px 0px darkblue, -4px 0px 10px 0px black, 4px 0px 10px 0px darkblue",
+          "0px -4px 10px 0px black, 0px 4px 10px 0px black, -4px 0px 10px 0px black, 4px 0px 10px 0px black",
       }}
     >
       <IconComponent size={size} fill={color} />
