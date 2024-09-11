@@ -13,8 +13,10 @@ export const StyledLink = styled.a<StyledLinkProps>`
   text-decoration: none;
   font-family: "DMSansRegular";
   font-size: 0.9;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
   font-weight: 400;
-  color: #ADFF2F;
+  color: white;
   ${typography}
   ${color}
   position: relative;

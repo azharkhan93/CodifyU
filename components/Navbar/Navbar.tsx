@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* Navbar Header */}
+      
       <Row
         flexDirection={["row", "row"]}
         px={["m", "xl"]}
@@ -49,7 +49,6 @@ export const Navbar: React.FC = () => {
             "0px 4px 8px rgba(0, 255, 0, 0.7), 0px 4px 8px rgba(0, 0, 255, 0.7)",
         }}
       >
-        {/* Logo */}
         <CenterBox>
           <Image
             src="/images/logo.png"
@@ -82,7 +81,8 @@ export const Navbar: React.FC = () => {
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
             px={"xxl"}
-            bg={"primary"}
+            bg={"bluegradient"}
+            // bg={"primary"}
           >
             {`Let's Talk`}
           </Button>
@@ -165,7 +165,7 @@ export const Navbar: React.FC = () => {
                 borderTopLeftRadius={"xxl"}
                 display={["block", "none"]}
                 variant={"primary"}
-                bg={"grey"}
+                bg={"bluegradient"}
                 py={"m"}
                 px={"xl"}
                 borderRadius={"m"}

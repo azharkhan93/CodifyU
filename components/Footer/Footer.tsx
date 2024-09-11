@@ -3,8 +3,6 @@ import {
   Button,
   CenterBox,
   Column,
-  Modal,
-  ModalContent,
   Row,
   StyledLink,
   Text,
@@ -26,10 +24,32 @@ export const Footer = () => {
     router.push(link);
     setIsOpen(false);
   };
+
   return (
     <>
-      <Box width={"100%"} bg={"secondary"}>
+      <Box
+        width={"100%"}
+        bg={"secondary"}
+        style={{
+          backgroundImage: "url('/images/ml.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative", // Make sure this is relative
+          height: "auto", // Ensure height adjusts based on content
+        }}
+      >
+        <Box
+          position="absolute"
+          top={0}
+          left={0}
+          width={"100%"}
+          height={"100%"}
+          bg={"modalOverlayBg"} 
+          zIndex={-1} 
+        />
         <CenterBox
+          zIndex={1} 
           borderBottom={"2px solid white"}
           py={["xxxl", "xxl"]}
           flexDirection={["column", "column"]}
@@ -148,7 +168,7 @@ export const Footer = () => {
             </Text>
             <Row flexDirection={"row"} gap={"xl"}>
               <Text variant="body" color="white">
-                LinkdIn
+                LinkedIn
               </Text>
               <Text variant="body" color="white">
                 Instagram
@@ -159,13 +179,13 @@ export const Footer = () => {
             </Row>
           </Box>
         </Box>
+        <CenterBox py={"l"} zIndex={1} >
+          <Text variant={"body"} color="white">
+            © 2024 CodiFyU. All Rights Reserved
+          </Text>
+        </CenterBox>
       </Box>
-
-      <CenterBox py={"l"} bg={"secondary"}>
-        <Text variant={"body"} color={"white"}>
-          © 2024 CodiFyU. All Rights Reserved
-        </Text>
-      </CenterBox>
     </>
   );
 };
+

@@ -33,10 +33,10 @@ export const TechStacks = () => {
         width={["100%", "60%"]}
         px={["s", "header"]}
       >
-        <Text variant={["heading","footerHeading"]} color="blue600">
+        <Text variant={["heading","footerHeading"]} >
           Tools And Technologies
         </Text>
-        <Text variant={"body"} color="blue600">
+        <Text variant={"body"} >
           We employ best practice processes and development methodologies as a
           foundation for rapid building of cutting-edge technology solutions in
           a structured and methodical way.

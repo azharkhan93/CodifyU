@@ -33,8 +33,8 @@ export const HighlightSection = () => {
         width={["100%", "80%"]}
         px={["s","header"]}
       >
-        <Text variant={["heading","footerHeading"]} color="blue600">Intelligent Software Solutions</Text>
-        <Text variant={"body"} color="blue600">
+        <Text variant={["heading","footerHeading"]} >Intelligent Software Solutions</Text>
+        <Text variant={"body"} >
           We employ best practice processes and development methodologies as a
           foundation for rapid building of cutting-edge technology solutions in
           a structured and methodical way.
