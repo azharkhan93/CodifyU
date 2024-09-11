@@ -5,7 +5,7 @@ import { Column, Box, CenterBox, Text, Floki } from "../styled";
 export const ReviewsSection = () => {
   return (
     <Column
-      bg={"primary"}
+      // bg={"primary"}
       flexDirection={["column", "row"]}
       // border={"2px solid green"}
       py={["xxl", "header"]}
@@ -18,7 +18,7 @@ export const ReviewsSection = () => {
         py={"l"}
       >
         <Column gap={["xl", "m"]}>
-          <Text color={"secondary"} variant={"heading"} fontWeight={"bold"}>
+          <Text  variant={["heading","footerHeading"]} >
             Testimonial
           </Text>
           <Box
@@ -28,13 +28,13 @@ export const ReviewsSection = () => {
             ml={"header"}
             borderRadius={"circle"}
           ></Box>
-          <Text color={"secondary"} variant={"subHeading"}>
+          <Text  variant={["subHeading","heading"]}>
             What Our Clients Say
           </Text>
         </Column>
 
         <CenterBox width={["100%", "450px"]}>
-          <Text color={"secondary"} variant={"body"}>
+          <Text  variant={"body"}>
             Discover how our services have positively impacted our clients
             experiences. Read their testimonials below to learn more.
           </Text>

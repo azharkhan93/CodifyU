@@ -7,12 +7,10 @@ export const ReviewsCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
     <Box
       border={"4px solid #454545"}
-      bg={"secondary"}
+      bg={"primary"}
       borderRadius={"lg"}
       py={"xxl"}
-      // boxShadow={"0 4px 8px rgba(0, 0, 0, 0.1)"}
       width={"320px"}
-      // flexDirection={"column"}
       gap={"xl"}
       position="relative"
       px={"s"}

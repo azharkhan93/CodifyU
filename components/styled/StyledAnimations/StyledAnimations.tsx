@@ -59,6 +59,28 @@ export const waveAnimation = keyframes`
   100% { background-position: 0% 50%; }
 `;
 
+export const slideIn = keyframes`
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+export const slideOut = keyframes`
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+`;
+
 
 // const rotate = keyframes`
 //   0% {

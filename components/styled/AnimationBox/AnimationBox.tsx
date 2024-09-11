@@ -5,6 +5,8 @@ import {
   blinkCaret,
   scrollLogos,
   scrolling,
+  slideIn,
+  slideOut,
   typewriter,
   waveAnimation,
 } from "../StyledAnimations";
@@ -68,4 +70,8 @@ export const AnimatedColumn = styled(Column)`
   &::after {
     bottom: 0;
   }
+`;
+
+export const AnimatedBox = styled(Box)<{ isOpen: boolean }>`
+  animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.5s ease forwards;
 `;
