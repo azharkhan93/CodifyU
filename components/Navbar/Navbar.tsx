@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   AnimatedBox,
@@ -21,10 +21,28 @@ import Image from "next/image";
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+     
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navigateTo = (link: string) => {
     router.push(link);
@@ -42,11 +60,10 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={"modalOverlayBg"}
+        bg={isScrolled ? "white" : "transparent"} 
         style={{
           zIndex: "100",
-          boxShadow:
-            "0px 4px 8px rgba(0, 255, 0, 0.7), 0px 4px 8px rgba(0, 0, 255, 0.7)",
+          transition: "background-color 0.3s ease", 
         }}
       >
         <CenterBox>
@@ -75,13 +92,13 @@ export const Navbar: React.FC = () => {
 
         <Box display={["none", "flex"]} flexDirection={"row"} gap={"xl"}>
           <Button
-            variant={"primary"}
+            variant="primary"
             display={["none", "block"]}
             py={"m"}
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
             px={"xxl"}
-            bg={"bluegradient"}
+            bg={"black"}
             // bg={"primary"}
           >
             {`Let's Talk`}
@@ -179,5 +196,5 @@ export const Navbar: React.FC = () => {
     </>
   );
 };
-;
+
 

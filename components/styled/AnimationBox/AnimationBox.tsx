@@ -15,12 +15,13 @@ import { Column } from "../Column";
 
 
 export const TypewriterText = styled.span`
+color: #FB9C42;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid transparent;
   animation: ${typewriter} 4s steps(40, end) infinite,
-    ${blinkCaret} 500ms steps(40, end) infinite;
+    ${blinkCaret} 100ms steps(40, end) infinite;
 `;
 
 export const Flock = styled(Row)`

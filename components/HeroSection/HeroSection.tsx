@@ -12,6 +12,8 @@ import {
 export const HeroSection = () => {
   return (
     <Box
+    bg={"lightYellow"}
+    // border={"2px solid green"}
       position="relative"
       alignItems={"center"}
       justifyContent={"center"}
@@ -21,41 +23,14 @@ export const HeroSection = () => {
       gap={"l"}
       px={["m", "xxxxl"]}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          transform: "translate(-50%, -50%)",
-          //  zIndex: -1,
-        }}
-      >
-        <source src="/images/z.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        width={"100%"}
-        height={"100%"}
-        bg={"modalOverlayBg"}
-        zIndex={-1}
-      />
-
-      <Column
+      
+  <Column
+      // border={"4px solid red"}
         py={"m"}
         gap={"xxxl"}
         width={"100%"}
-        alignItems={"flex-start"}
-        mt={"xlg"}
+        alignItems={"center"}
+        // mt={"xlg"}
         zIndex={1}
       >
         <Row
@@ -64,29 +39,21 @@ export const HeroSection = () => {
           width={"100%"}
           gap={"s"}
         >
-          <Box
-            height={"3px"}
-            bg={"gradientBold"}
-            width={["40%", "20%"]}
-            borderRadius={"circle"}
-          ></Box>
         </Row>
 
         <Text
           variant={["heading", "footerHeading"]}
-          color="white"
-          width={["100%", "700px"]}
-          textAlign={"center"}
+          width={["100%", "1000px"]}
+          textAlign={["start","center"]}
         >
-          Welcome To{" "}
-          <span style={{ color: "orange", fontSize: "40px" }}>CodefyU</span>{" "}
+          {/* Welcome To{" "} */}
+          <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "}
           Where Innovation Meets <TypewriterText>Execution</TypewriterText>
         </Text>
         <Text
         px={"s"}
           variant="body"
-          color="white"
-          width={["100%", "550px"]}
+          width={["100%", "600px"]}
           textAlign={["start", "center"]}
           
         >
@@ -107,12 +74,13 @@ export const HeroSection = () => {
             View Work
           </Button>
           <Button
+          
             variant={"primary"}
             py={"m"}
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
             px={"xxxxl"}
-            bg={"primary"}
+            style={{backgroundColor: "black"}}
           >
             {`Lets' Talk`}
           </Button>

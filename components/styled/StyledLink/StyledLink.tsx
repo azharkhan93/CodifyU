@@ -11,12 +11,12 @@ export const StyledLink = styled.a<StyledLinkProps>`
   width: fit-content;
   cursor: pointer;
   text-decoration: none;
-  font-family: "DMSansRegular";
+  font-family: "DMSansBold";
   font-size: 0.9;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   font-weight: 400;
-  color: white;
+  color: black;
   ${typography}
   ${color}
   position: relative;
