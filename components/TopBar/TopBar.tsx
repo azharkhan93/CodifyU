@@ -23,25 +23,25 @@ export const TopBar: React.FC<TopNavBarProps> = ({
         <Row alignItems={"flex-start"} gap={"m"}>
           <Box
             height={"3px"}
-            bg={"greenish"}
+          
             width={["45%", "13%"]}
             borderRadius={"circle"}
           ></Box>
           <Text
             variant={"footerHeading"}
-            color="greenish"
+         
             fontWeight={"extraBold"}
           >
             {aboutText}
           </Text>
         </Row>
         <Row alignItems={"flex-start"} gap={"m"}>
-          <Text variant={"heading"} color="greenish" fontWeight={"bold"}>
+          <Text variant={"heading"}  fontWeight={"bold"}>
             {whoWeAreText}
           </Text>
           <Box
             height={"3px"}
-            bg={"greenish"}
+        
             width={["35%", "8%"]}
             borderRadius={"circle"}
             ml={"xlg"}

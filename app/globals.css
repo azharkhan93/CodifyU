@@ -2,6 +2,39 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
+  /* background-color: #eec4c815; */
+  background-color: #eec4c815 !important;
+  /* background-color: rgba(251, 156, 66, 1); */
+  /* background-color: rgba(251, 156, 66, 0.6); */
+  /* background-color: rgba(251, 156, 66, 0.2); */
+  /* background-color: rgba(251, 156, 66, 0.1); */
+/* background: #FB9C42;     */
+
+ /* background: #facb60;  */
+
+ /* background-color: rgba(250, 203, 96, 1);  */
+ /* background-color: rgba(250, 203, 96, 0.6); */
+ /* background-color: rgba(250, 203, 96, 0.2); */
+ /* background-color: rgba(250, 203, 96, 0.1); */
+  /* background: #FF7F50;   */
+  /* background: rgba(255, 127, 80, 0.1); */
+  /* background-color: rgba(255, 127, 80, 0.33);   */
+  /* background-color: rgba(106, 13, 145, 0.25); */
+
+  /* background: linear-gradient(
+  to right,
+  #FF7F50 0%,    
+  #FF7F50 10%,   
+
+  #FF7F50 20%,   
+  #FF7F50 50%   
+); */
+
+
+
+
+
 }
 
 @keyframes wave {

@@ -13,8 +13,8 @@ export default function Home() {
     <OurValues />
     <HighlightSection />
     <TechStacks />
-    <ReviewsSection />
-    <TeamMembers />
+    {/* <ReviewsSection /> */}
+    {/* <TeamMembers /> */}
 
     <ParallaxSection />
     

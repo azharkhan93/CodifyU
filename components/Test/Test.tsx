@@ -76,7 +76,7 @@ Test: React.FC<UpdateComponentProps> = ({
                 borderRadius={"m"}
                
                 
-                bg={"greenish"}
+                // bg={"greenish"}
               >
                 <Box paddingY={"s"}>
                   <Text variant={"subHeading"} color={"primary"}>

@@ -29,15 +29,15 @@ export const Footer = () => {
     <>
       <Box
         width={"100%"}
-        bg={"secondary"}
-        style={{
-          backgroundImage: "url('/images/ml.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          position: "relative", // Make sure this is relative
-          height: "auto", // Ensure height adjusts based on content
-        }}
+        // bg={"secondary"}
+        // style={{
+        //   backgroundImage: "url('/images/ml.jpg')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        //   position: "relative", 
+        //   height: "auto", 
+        // }}
       >
         <Box
           position="absolute"
@@ -62,7 +62,6 @@ export const Footer = () => {
             <Text
               textAlign={"center"}
               variant={["heading", "footerHeading"]}
-              color={"white"}
               width={["100%", "530px"]}
             >
               Have Any Project Idea! {`Lets's Talk With Us`}
@@ -72,7 +71,6 @@ export const Footer = () => {
             alignItems={"flex-start"}
             justifyContent={"start"}
             position={"relative"}
-            bg={"white"}
             py={"s"}
             width={"170px"}
             px={"s"}
@@ -114,7 +112,7 @@ export const Footer = () => {
             alignItems={["flex-start", "flex-start"]}
             flexDirection={"column"}
           >
-            <Text variant="subHeading" color="white">
+            <Text variant="subHeading" >
               Quick Links
             </Text>
             <Row flexDirection={"row"} gap={"xl"}>
@@ -127,7 +125,7 @@ export const Footer = () => {
           </Box>
           <Box gap={"xxxl"}>
             <Box alignItems={["flex-start", "flex-start"]}>
-              <Text variant={"subHeading"} color={"white"}>
+              <Text variant={"subHeading"} >
                 Contact Us
               </Text>
             </Box>
@@ -138,10 +136,10 @@ export const Footer = () => {
               alignItems={"center"}
               flexWrap={["wrap", "nowrap"]}
             >
-              <Text variant={"body"} color="white">
+              <Text variant={"body"} >
                 <a
                   href="tel:+917006168185"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{ color: "black", textDecoration: "none" }}
                 >
                   +91 7006168185
                 </a>
@@ -149,7 +147,7 @@ export const Footer = () => {
               <Text variant={"body"}>
                 <a
                   href="tel:+917006569557"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{ color: "black", textDecoration: "none" }}
                 >
                   +91 7006569557
                 </a>
@@ -157,7 +155,7 @@ export const Footer = () => {
               <Text variant={"body"}>
                 <a
                   href="mailto:info@codefyu.com"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{ color: "black", textDecoration: "none" }}
                 >
                   info@codefyu.com
                 </a>
@@ -169,24 +167,24 @@ export const Footer = () => {
             alignItems={["flex-start", "flex-start"]}
             flexDirection={"column"}
           >
-            <Text variant="subHeading" color="white">
+            <Text variant="subHeading" >
               Follow Us
             </Text>
             <Row flexDirection={"row"} gap={"xl"}>
-              <Text variant="body" color="white">
+              <Text variant="body" >
                 LinkedIn
               </Text>
-              <Text variant="body" color="white">
+              <Text variant="body" >
                 Instagram
               </Text>
-              <Text variant="body" color="white">
+              <Text variant="body" >
                 Facebook
               </Text>
             </Row>
           </Box>
         </Box>
         <CenterBox py={"l"} zIndex={1}>
-          <Text variant={"body"} color="white">
+          <Text variant={"body"} >
             © 2024 CodiFyU. All Rights Reserved
           </Text>
         </CenterBox>

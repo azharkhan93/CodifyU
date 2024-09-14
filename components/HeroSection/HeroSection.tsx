@@ -12,7 +12,7 @@ import {
 export const HeroSection = () => {
   return (
     <Box
-    bg={"lightYellow"}
+    //  bg={"lightYellow"}
     // border={"2px solid green"}
       position="relative"
       alignItems={"center"}
@@ -91,11 +91,4 @@ export const HeroSection = () => {
 };
 
 
-// #fff
-// #2181FF
 
-// -e-global-color-primary3: #FFFFFF;
-//     --e-global-color-Black: #000000;
-//     --e-global-color-Hover: #00439B;
-//     --e-global-color-GradiantShades: linear-gradient(180deg, #69AAFF 0%, #0F3566 100%);
-//     --e-global-color-LightShade: linear-gradient(123.62deg, #F5FAFF 0.37%, #FDF1F1 100%)
