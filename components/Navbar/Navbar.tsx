@@ -60,7 +60,7 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={isScrolled ? "white" : "transparent"} 
+        bg={isScrolled ? "offWhite" : "transparent"} 
         style={{
           zIndex: "100",
           transition: "background-color 0.3s ease", 
@@ -123,7 +123,7 @@ export const Navbar: React.FC = () => {
         ) : (
           <CgMenuGridO
             size={34}
-            color="white"
+            color="black"
             style={{ cursor: "pointer" }}
           />
         )}
@@ -141,7 +141,7 @@ export const Navbar: React.FC = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          style={{ background: "rgba(0, 0, 0, 0.3)" }}
+          // style={{ background: "rgba(0, 0, 0, 0.3)" }}
         >
           <AnimatedBox
             isOpen={isOpen}

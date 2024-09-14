@@ -15,7 +15,7 @@ export const HighlightSection = () => {
     //   backgroundPosition: "center", 
     // }}
      >
-        <Box
+        {/* <Box
         position="absolute"
         top={0}
         left={0}
@@ -23,7 +23,7 @@ export const HighlightSection = () => {
         height={"100%"}
         bg={"modalOverlayBg"}
         zIndex={-1}
-      />
+      /> */}
       <Column
       zIndex={2}
         py={"xxxl"}

@@ -82,6 +82,7 @@ export const slideOut = keyframes`
 `;
 
 
+
 // const rotate = keyframes`
 //   0% {
 //     transform: rotate(0deg);

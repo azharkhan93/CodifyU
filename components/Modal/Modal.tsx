@@ -21,7 +21,7 @@ export const Modal: React.FC<ModalProps> = ({
       position={"fixed"}
       top={"0"}
       left={"0"}
-      bg={"modalOverlayBg"}
+      // bg={"modalOverlayBg"}
     >
       <StyledModal
         mt={["xlg", "none"]}
@@ -29,7 +29,7 @@ export const Modal: React.FC<ModalProps> = ({
         width={["97%", "45%"]}
         borderRadius={"xs"}
         position={"relative"}
-        boxShadow={BASE_COLORS.modalShadow}
+        // boxShadow={BASE_COLORS.modalShadow}
         height="70%"
         overflowY={"scroll"}
       >

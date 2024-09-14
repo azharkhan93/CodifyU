@@ -4,7 +4,7 @@ html, body {
   overflow-x: hidden;
 
   /* background-color: #eec4c815; */
-  background-color: #eec4c815 !important;
+  background-color: #eec4c815 ;
   /* background-color: rgba(251, 156, 66, 1); */
   /* background-color: rgba(251, 156, 66, 0.6); */
   /* background-color: rgba(251, 156, 66, 0.2); */
@@ -53,45 +53,7 @@ html, body {
   animation: wave 1.5s infinite linear;
 }
 
-/* Add these styles in your global CSS file or styled-component */
 
-/* .responsive-image {
-  width: 400px !important;
-  height: 300px !important;
-  border-radius: 20px !important;
-}
-.responsive-image2 {
-  width: 100px !important;
-  height: 100px !important;
-  border-radius: 20px !important;
-}
-
-
-@media (min-width: 768px) {
-  .responsive-image {
-    width: 60px !important;
-    height: 100px !important;
-    border-radius: 20px !important;
-  }
-  .responsive-image2 {
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 20px !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .responsive-image {
-    width: 550px !important;
-    height: 400px !important;
-    border-radius: 20px !important;
-  }
-  .responsive-image2 {
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 20px !important;
-  }
-} */
 
 
 

@@ -3,6 +3,7 @@ import styled, { keyframes, css } from "styled-components";
 import { Box, CenterBox } from "../Box";
 import {
   blinkCaret,
+
   scrollLogos,
   scrolling,
   slideIn,
@@ -76,3 +77,4 @@ export const AnimatedColumn = styled(Column)`
 export const AnimatedBox = styled(Box)<{ isOpen: boolean }>`
   animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.5s ease forwards;
 `;
+

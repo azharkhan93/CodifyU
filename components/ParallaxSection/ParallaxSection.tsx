@@ -4,13 +4,15 @@ import { Box, Button, CenterBox, Row, Text } from "../styled";
 export const ParallaxSection = () => {
   return (
     <CenterBox
-      py={"xxl"}
+    
+    //  mx={"xxl"}
+      py={"xxxxl"}
       px={"s"}
       position={"sticky"}
       top={0}
       zIndex={10}
       height={["100%", "450px"]}
-      width={"100%"}
+      // width={"100%"}
       color={"white"}
       justifyContent={"space-between"}
       flexDirection={["column", "row"]}
@@ -27,8 +29,9 @@ export const ParallaxSection = () => {
         left={0}
         width={"100%"}
         height={"100%"}
-        bg={"modalOverlayBg"}
+        bg={"Overlay"}
         zIndex={-1}
+        // style={{background:  "rgba(0,0,0.6)"}}
       />
       <Row
         flexDirection={["column", "column"]}
@@ -41,7 +44,7 @@ export const ParallaxSection = () => {
           textAlign={["start", "center"]}
         >
           
-          {`It's 2024 And Your Still Juggling Multilple Technology Stacks struggling With Market Entry Searching For Scable Solutions`}
+          {` Market Entry Searching For Scable Solutions`}
         </Text>
         <Text variant="body" textAlign={"center"}>
         <span style={{ color: "orange", fontSize: "20px" }}>Got A Project In Mind?</span>

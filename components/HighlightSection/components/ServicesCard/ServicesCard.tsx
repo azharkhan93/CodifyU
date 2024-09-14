@@ -29,17 +29,9 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ service }) => {
       borderRadius={"s"}
       px={"m"}
       width={"400px"}
-      bg={"gradientBold"}
+      // bg={"gradientBold"}
     >
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        width={"100%"}
-        height={"100%"}
-        bg={"modalOverlayBg"}
-        zIndex={-1}
-      />
+      
       <Row
         flexDirection={"row"}
         alignItems={"center"}

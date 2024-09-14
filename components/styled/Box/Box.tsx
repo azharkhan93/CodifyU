@@ -89,7 +89,7 @@ export const CenterBox = styled(Box)`
 
 export const HoverBox = styled(CenterBox)<BoxProps>`
   &:hover {
-    background-color: ${BASE_COLORS.greyLight};
+    background-color: ${BASE_COLORS.textColor};
   }
   cursor: pointer;
 `;

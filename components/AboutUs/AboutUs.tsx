@@ -15,12 +15,12 @@ export const AboutUs = () => {
           <Text
             textAlign={["center","center"]}
             variant={["heading", "footerHeading"]}
-            color="blue600"
+            // color="blue600"
           >
             {`We Don’t Just Deliver Solutions! We Tailor Them To Your Vision. Your
             Success Is Our Mission`}
           </Text>
-          <Text textAlign={["start","center"]} variant={"body"} color="slate800">
+          <Text textAlign={["start","center"]} variant={"body"} >
             In The Fast-Paced World Of Startups, Complexity Is The Enemy Of
             Execution.At <span style={{ color: "orange", fontSize: "22px" }}>CodefyU</span>{" "}, We Streamline Your Path To Success, Making
             Startup Growth Not Just Possible But Predictable.
