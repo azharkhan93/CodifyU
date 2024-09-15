@@ -9,60 +9,63 @@ export const WorkCards: React.FC<WorkCardProps> = ({
 }) => {
   return (
     <Column
-    borderRight={"4px solid green"}
-    borderLeft={"4px solid blue"}
-      py={"xxl"}
-      width={["355px","400px"]}
-      alignItems={"center"}
-      bg={"gradient"}
-      borderTopRightRadius={["xl","xl"]}
-      borderTopLeftRadius={["xl","xl"]}
-      px={["s","m"]}
-      
+      // bg="white"
+      justifyContent="center"
+      py="xxl"
+      width={["355px", "350px"]}
+      alignItems="center"
+      px={["s", "l"]}
     >
-      <Column position="relative" alignItems={"center"}
-      
-      >
-        <Box
+      <Column
+        position="relative"
+        alignItems="center"
+        borderRadius="m"
         style={{
-          boxShadow:
-            "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5)",
+          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
         }}
-          position="relative"
-           bg={"primary"}
-          gap={"xl"}
-          width={"60px"}
-          height={"40px"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          borderRadius={"circle"}
-        >
-          <Icon size={25} fill="white" />
-        </Box>
-
+      >
+       
         <Text
-          borderRadius={"circle"}
-          bg="primary"
-          px={"s"}
-          textAlign={"center"}
-          width={"60px"}
-          variant={"body"}
+          borderRadius="m"
+          bg="textColor"
+          textAlign="center"
+          py={"m"}
+          px= {'l'}
+        
+          variant="body"
           color="white"
           style={{
+            left: "55px",
             position: "absolute",
-            top: "110%",
+            top: "-20px", 
             zIndex: 10,
           }}
         >
-          Step {step}
+           {step}
         </Text>
+
+        {/* Icon box */}
+        <Box
+          borderRadius="m"
+          position="relative"
+          bg="white"
+          gap="xl"
+          width="80px"
+          height="80px"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Icon size={35} fill="#FB9C42" />
+        </Box>
       </Column>
-      <Text mt={"xxxl"} variant={"subHeading"}>
+
+      <Text mt="xxxl" variant="subHeading" textAlign="center">
         {title}
       </Text>
-      <Text variant={"body"} textAlign={"center"} mt={"m"}>
+      <Text variant="body" textAlign="center" mt="m">
         {description}
       </Text>
     </Column>
   );
 };
+

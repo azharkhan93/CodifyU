@@ -117,13 +117,13 @@ export const Navbar: React.FC = () => {
         {isOpen ? (
           <FaTimes
             size={34}
-            color="white"
+            color="#FB9C42"
             style={{ cursor: "pointer" }}
           />
         ) : (
           <CgMenuGridO
             size={34}
-            color="black"
+            color="#FB9C42"
             style={{ cursor: "pointer" }}
           />
         )}

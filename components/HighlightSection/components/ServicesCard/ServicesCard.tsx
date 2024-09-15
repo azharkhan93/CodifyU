@@ -15,10 +15,7 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ service }) => {
 
   return (
     <AnimatedColumn
-    style={{
-      boxShadow:
-        "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5), 0px 5px 15px rgba(0, 0, 0, 0.5)"
-    }}
+   
     
     bg={"lightYellow"}
   

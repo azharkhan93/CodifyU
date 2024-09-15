@@ -6,7 +6,7 @@ export const WorkApproach = () => {
   return (
     <Column py={"xl"} gap={["xl", "xxxl"]}>
       <CenterBox gap={"xl"}  data-aos="fade-left">
-        <Text variant={"heading"}>Our work Process</Text>
+        {/* <Text variant={"heading"}>Our work Process</Text> */}
         <Text variant={["subHeading", "footerHeading"]}>
           Our Working Process
         </Text>
@@ -16,7 +16,7 @@ export const WorkApproach = () => {
         data-aos="fade-up"
         flexDirection={["column", "row"]}
         width={"100%"}
-        gap={["xxxxl", "xxxl"]}
+        gap={["xxxxl", "header"]}
         alignItems={"center"}
         justifyContent={"center"}
         py={"xl"}

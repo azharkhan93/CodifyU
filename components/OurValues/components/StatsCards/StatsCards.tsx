@@ -12,9 +12,9 @@ export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
       borderRight={"2px dotted red"}
       width={["250px", "300px"]}
       gap={"s"}
-      style={{
-        boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.5)",
-      }}
+      // style={{
+      //   boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.5)",
+      // }}
       
     >
       <Text variant={"heading"}>
