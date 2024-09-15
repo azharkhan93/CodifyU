@@ -6,58 +6,58 @@ import { MdFormatQuote } from "react-icons/md";
 export const ReviewsCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
     <Box
-      border={"4px solid #454545"}
-      bg={"primary"}
+      borderTop={"3px solid #FB9C42"}
+      borderBottom={"3px solid #FB9C42"}
+      bg={"lightYellow"}
       borderRadius={"lg"}
-      py={"xxl"}
-      width={"320px"}
-      gap={"xl"}
+      alignItems={"center"}
+      justifyContent={"start"}
+      // py={"xxxxl"}
+      width={"350px"}
+      // gap={"xl"}
       position="relative"
-      px={"s"}
+      flexDirection={"column-reverse"}
       
     >
-      <Box
-        position="absolute"
-        top="2px"
-        left="10px"
-        bg={"white"}
-        borderRadius={"circle"}
-      >
-        <MdFormatQuote size={35} fill="black" />
-      </Box>
+      
 
-      <Text variant={"body"} color={"white"} mt={"xl"}>
+      <Text variant={"body"} mt={"m"}  >
         {review.text}
       </Text>
+     
 
       <Box
         position="absolute"
-        bottom="10px"
-        right="10px"
+        // top={"10px"}
+        bottom="65px"
+        right="5px"
         bg={"white"}
         borderRadius={"circle"}
       >
-        <MdFormatQuote size={40} fill="black" />
+        <MdFormatQuote size={40} fill="#FB9C42" />
       </Box>
 
-      <Box flexDirection={"row"} alignItems={"center"} gap={"m"}>
+      <Box flexDirection={"column"}  gap={"m"} >
         <Box
-          borderRadius={"circle"}
+           borderRadius={"m"}
           overflow={"hidden"}
-          width={"50px"}
-          height={"50px"}
+          width={"335px"}
+          height={"200px"}
           border={"2px solid white"}
         >
-          <Image src={review.image} alt={review.alt} width={55} height={55} />
+          <Image src={review.image} alt={review.alt} width={335} height={200} />
         </Box>
-        <Box flexDirection={"column"}>
-          <Text variant={"body"} color={"white"}>
+        <Box flexDirection={"column"} 
+      
+        >
+          <Text variant={"body"} >
             {review.name}
-          </Text>
-          <Text variant={"body"} color={"white"}>
+          </Text> 
+           <Text variant={"body"} >
             {review.title}
           </Text>
         </Box>
+        
       </Box>
     </Box>
   );
