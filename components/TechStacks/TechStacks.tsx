@@ -26,7 +26,7 @@ export const TechStacks = () => {
         width={["100%", "75%"]}     
         gap={"xl"}
         overflow={"hidden"}
-        border={"3px solid red"}
+        // border={"3px solid red"}
         style={{margin: "0 auto"}}
       >
         <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
