@@ -274,4 +274,19 @@ export const iconData = [
 ]
  export const API_URL = "/api/blogpost";
 
+ export const TECH_IMAGES = [
+  { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker.png", alt: "Docker Logo" },
+  { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker.png", alt: "Docker Logo" },
+  { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker.png", alt: "Docker Logo" },
+  { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker.png", alt: "Docker Logo" },
+  { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker.png", alt: "Docker Logo" },
+  { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker.png", alt: "Docker Logo" },
+];
+
 

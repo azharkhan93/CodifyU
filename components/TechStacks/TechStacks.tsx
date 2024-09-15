@@ -1,101 +1,43 @@
 "use client";
-import React, { useState } from "react";
-import { Column, Row, Text } from "@/components";
-import { iconData, techSections } from "@/constants";
-import { IconBox } from "./components/IconBox";
-import { Stacks } from "./components/Stacks";
+import { CenterBox, Column, Flock, Text } from "@/components";
+import { TechImages } from "./components/TecImages";
+import { TECH_IMAGES } from "@/constants";
 
 export const TechStacks = () => {
-  
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  const defaultCategories = [
-    "Cloud",
-    "AI/ML",
-    "Languages",
-    "Utilities",
-  ];
-
-  const filteredIcons = iconData.filter((icon) =>
-    selectedCategory
-      ? icon.category === selectedCategory
-      : defaultCategories.includes(icon.category)
-  );
-
   return (
-    <Column width={"100%"}>
+    <>
       <Column
         zIndex={2}
         py={"xxxl"}
         gap={"xxl"}
         justifyContent={"center"}
-        alignItems={"flex-start"}
-        width={["100%", "60%"]}
-        px={["s", "header"]}
+        alignItems={"center"}
+        // width={["100%", "100%"]}
+        // px={["s", "header"]}
       >
-        <Text variant={["heading","footerHeading"]} >
+        <Text variant={["heading", "footerHeading"]}>
           Tools And Technologies
         </Text>
-        <Text variant={"body"} >
-          We employ best practice processes and development methodologies as a
-          foundation for rapid building of cutting-edge technology solutions in
-          a structured and methodical way.
-        </Text>
       </Column>
-      <Row
+      
+      <CenterBox
+      py={"xl"}
         flexDirection={["column", "row"]}
-        width={"100%"}
+        width={["100%", "75%"]}     
         gap={"xl"}
-        justifyContent={"space-between"}
-        px={["none", "header"]}
+        overflow={"hidden"}
+        border={"3px solid red"}
+        style={{margin: "0 auto"}}
       >
-        <Row
-          flexDirection={["row", "column"]}
-          gap={"xl"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          flexWrap={"wrap"}
-        >
-          <Row
-            py={"xl"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            gap={["m", "xxxl"]}
-            bg={"white"}
-            px={["none", "xxxl"]}
-            flexDirection={["row", "column"]}
-            flexWrap={"wrap"}
-          >
-            {techSections.map((section, index) => (
-              <Stacks
-                key={index}
-                title3={section.title}
-                onClick={() =>
-                  setSelectedCategory(
-                    selectedCategory === section.title ? null : section.title
-                  )
-                }
-              />
-            ))}
-          </Row>
-        </Row>
-
-        <Column gap={"xl"} bg={"white"} py={"xl"}>
-          <Row
-            width={["100%", "800px"]}
-            border={"4px solid white"}
-            flexWrap={"wrap"}
-            gap={"xxxxl"}
-            flexDirection={"row"}
-            alignItems={"center"}
-            justifyContent={"center"}
-          >
-            {filteredIcons.map((data, index) => (
-              <IconBox key={index} iconData={data} />
-            ))}
-          </Row>
-        </Column>
-      </Row>
-    </Column>
+        <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
+          {TECH_IMAGES.map((image, index) => (
+            <TechImages key={index} src={image.src} alt={image.alt} />
+          ))}
+        </Flock>
+      </CenterBox>
+    </>
   );
 };
+
+
+
