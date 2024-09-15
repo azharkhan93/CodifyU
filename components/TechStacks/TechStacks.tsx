@@ -23,11 +23,10 @@ export const TechStacks = () => {
       <CenterBox
       py={"xl"}
         flexDirection={["column", "row"]}
-        width={["100%", "75%"]}     
+        width={["100%", "100%"]}     
         gap={"xl"}
         overflow={"hidden"}
         // border={"3px solid red"}
-        style={{margin: "0 auto"}}
       >
         <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
           {TECH_IMAGES.map((image, index) => (

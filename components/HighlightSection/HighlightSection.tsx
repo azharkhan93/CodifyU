@@ -10,21 +10,8 @@ export const HighlightSection = () => {
     // bg={"white"}
     py= {"header"}
     
-    // style={{ 
-    //   backgroundImage: "url('/images/bg.jpeg')", 
-    //   backgroundSize: "cover", 
-    //   backgroundPosition: "center", 
-    // }}
+   
      >
-        {/* <Box
-        position="absolute"
-        top={0}
-        left={0}
-        width={"100%"}
-        height={"100%"}
-        bg={"modalOverlayBg"}
-        zIndex={-1}
-      /> */}
       <Column
       zIndex={2}
         py={"xxxl"}
@@ -32,10 +19,10 @@ export const HighlightSection = () => {
         justifyContent={"center"}
         alignItems={"flex-start"}
         width={["100%", "80%"]}
-        px={["s","header"]}
+        px={["s","xl"]}
       >
         <Text variant={["heading","footerHeading"]} >Intelligent Software Solutions</Text>
-        <Text variant={"body"} lineHeight={"1.5"}>
+        <Text variant={"body"} lineHeight={"1.5"} width={["100%","700px"]} textAlign={["start","center"]}>
           We employ best practice processes and development methodologies as a
           foundation for rapid building of cutting-edge technology solutions in
           a structured and methodical way.

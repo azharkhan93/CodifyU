@@ -24,8 +24,8 @@ export const OurValues = () => {
           alignItems={"flex-start"}
           width={["100%", "43%"]}
         >
-          <Text variant={["heading", "footerHeading"]} >Why <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span>?</Text>
-          <Text variant={"body"} lineHeight={"1.5"}>
+          <Text variant={["heading", "footerHeading"]} textAlign={["start","center"]} >Why <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span>?</Text>
+          <Text variant={"body"} lineHeight={"1.5"} textAlign={["start","center"]}>
             We have succcessfully delivered over 200 projects over the last
             8years collectively generating a value of <span style={{color: "orange", fontSize: "20px"}}>$200million</span>. High-Quality
             tech solutions without high costs.{" "}
@@ -33,6 +33,7 @@ export const OurValues = () => {
           <Text
           variant={"body"}
           lineHeight={"1.5"}
+          textAlign={["start","center"]}
           >
             Our startup accelator program is your launchpad to
             success. Fast-Track your market entry and expansion with our proven
@@ -71,7 +72,7 @@ export const OurValues = () => {
       </Row>
       <Box
         data-aos="fade-up"
-        width={["100%", "90%"]}
+        width={["100%", "100%"]}
         flexDirection={["column", "row"]}
         gap={["xxxxl", "xlg"]}
         py={"xxxl"}
@@ -87,22 +88,6 @@ export const OurValues = () => {
         ))}
       </Box>
 
-      <CenterBox py={"xxxl"}
-      style={{opacity: 0}}
-   
-      >
-        <Text
-          bg="secondary"
-          variant={"subHeading"}
-          px={"xl"}
-          py={"m"}
-          borderRadius={"s"}
-          style={{ cursor: "pointer" }}
-        >
-          Share Your Project Requirements
-        </Text>
-       
-      </CenterBox>
     </>
   );
 };
