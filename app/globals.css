@@ -3,8 +3,11 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 
-  /* background-color: #eec4c815; */
-  background-color: #eec4c815 ;
+  background-color: #eec4c815;
+  /* background-color: #FFE6CC; */
+  /* background-color: rgb(255, 191, 0.5); */
+
+  /* background-color: #FFFFF0; */
   /* background-color: rgba(251, 156, 66, 1); */
   /* background-color: rgba(251, 156, 66, 0.6); */
   /* background-color: rgba(251, 156, 66, 0.2); */

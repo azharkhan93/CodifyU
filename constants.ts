@@ -26,22 +26,27 @@ export const STATS_DATA = [
 export const VALUES_DATA = [
   {
     id: 1,
-    title: "Accountability",
+    title: "Native Performance",
+    title2: "Unified development strategy - still delivering a bare metal native performance.",
+    // Unified development strategy - still delivering a bare metal native performance.
     icon: FiCheckCircle,
   },
   {
     id: 2,
     title: "Quality",
+    title2: "Unified development strategy - still delivering a bare metal native performance.",
     icon: FiCheckCircle,
   },
   {
     id: 3,
+    title2: "Unified development strategy - still delivering a bare metal native performance.",
     title: "Proactivity",
     icon: FiCheckCircle,
   },
   {
     id: 4,
     title: "Agility",
+    title2: "Unified development strategy - still delivering a bare metal native performance.",
     icon: FiCheckCircle,
   },
 ];
@@ -120,13 +125,13 @@ export const reviews23 = [
   },
 ];
 export const services = [
-  {
-    title: "Full-Stack Development",
-    description:
-      "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
-      icon: MdCode,
-    linkText: "Learn more",
-  },
+  // {
+  //   title: "Full-Stack Development",
+  //   description:
+  //     "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
+  //     icon: MdCode,
+  //   linkText: "Learn more",
+  // },
   {
     title: "AI/Ml",
     description:

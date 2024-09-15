@@ -60,7 +60,7 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={isScrolled ? "offWhite" : "transparent"} 
+        bg={isScrolled ? "white" : "transparent"} 
         style={{
           zIndex: "100",
           transition: "background-color 0.3s ease", 
@@ -77,14 +77,14 @@ export const Navbar: React.FC = () => {
 
         <Box
           display={["none", "flex"]}
-          flex={1}
           flexDirection="row"
           alignItems="center"
           justifyContent="center"
-          gap="xxl"
+          gap="xxxxl"
         >
           {NavbarData.map((item, index) => (
             <StyledLink key={index} onClick={() => navigateTo(item.link)}>
+            
               {item.title}
             </StyledLink>
           ))}

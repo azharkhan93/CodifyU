@@ -13,6 +13,7 @@ export type LogoProps = {
   export type ValueCardProps = {
     title: string;
     icon: IconType;
+    title2: string;
   };
 
   export type Review = {

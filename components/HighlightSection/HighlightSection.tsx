@@ -1,13 +1,14 @@
 "use client";
 import { services } from "@/constants";
-import { Box, Column, Row, Text } from "../styled";
+import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 import { ServicesCard } from "./components/ServicesCard";
 
 export const HighlightSection = () => {
   return (
     <Column width={"100%"}
     position={"relative"}
-    bg={"white"}
+    // bg={"white"}
+    py= {"header"}
     
     // style={{ 
     //   backgroundImage: "url('/images/bg.jpeg')", 
@@ -34,11 +35,16 @@ export const HighlightSection = () => {
         px={["s","header"]}
       >
         <Text variant={["heading","footerHeading"]} >Intelligent Software Solutions</Text>
-        <Text variant={"body"} >
+        <Text variant={"body"} lineHeight={"1.5"}>
           We employ best practice processes and development methodologies as a
           foundation for rapid building of cutting-edge technology solutions in
           a structured and methodical way.
         </Text>
+        {/* <Text variant={"body"} >
+          We employ best practice processes and development methodologies as a
+          foundation for rapid building of cutting-edge technology solutions in
+          a structured and methodical way.
+        </Text> */}
       </Column>
 
       <Row
@@ -55,6 +61,18 @@ export const HighlightSection = () => {
           <ServicesCard key={index} service={service} />
         ))}
       </Row>
+      <CenterBox width={"100%"} py={"m"} >
+          <Button
+            borderTopLeftRadius={"xxl"}
+            variant={"primary"}
+            bg={"primary"}
+            py={"m"}
+            px={"header"}
+            borderRadius={"m"}
+          >
+            {`Exlpore Our Services`}
+          </Button>
+        </CenterBox>
     </Column>
   );
 };

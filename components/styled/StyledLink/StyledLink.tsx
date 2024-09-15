@@ -13,8 +13,8 @@ export const StyledLink = styled.a<StyledLinkProps>`
   text-decoration: none;
   font-family: "DMSansBold";
   font-size: 0.9;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  // border-top: 2px solid black;
+  // border-bottom: 2px solid black;
   font-weight: 400;
   color: black;
   ${typography}

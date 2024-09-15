@@ -52,6 +52,7 @@ export const HeroSection = () => {
             variant="body"
             width={["100%", "600px"]}
             textAlign={["start", "center"]}
+            lineHeight={"1.5"}
           >
             We are your partners in transforming business operations through
             cutting-edge technology. Our expertise in AI, Machine Learning, and Generative AI equips you with customized solutions designed to boost efficiency, scalability, and profitability.

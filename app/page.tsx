@@ -9,12 +9,14 @@ export default function Home() {
     <>
     
     <HeroSection />
-    <Partners />
+    
     <OurValues />
     <HighlightSection />
     <TechStacks />
     {/* <ReviewsSection /> */}
     {/* <TeamMembers /> */}
+
+    <Partners />
 
     <ParallaxSection />
     
