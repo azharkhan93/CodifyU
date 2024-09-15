@@ -26,6 +26,7 @@ export * from "./ParallaxSection"
 export * from "./ProjectCards"
 export * from "./PortfolioSection"
 export * from "./AnimateCircle"
+export * from "./TechSolutions"
 
 
 

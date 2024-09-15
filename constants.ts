@@ -227,6 +227,25 @@ export const teamMembers = [
   },
 ];
 
+export const CRD_ST = [
+  {
+    ItemsTitle: "Tailored software development", 
+  },
+  {
+    ItemsTitle: "Software consulting services",
+  },
+  {
+    ItemsTitle: "Mobile app development",
+  },
+  {
+    ItemsTitle: "Business automation company",
+  },
+];
+
+
+
+
+
 // export const techSections = [
 //   { title: "AI/ML" },
 //   { title: "Front-End" },

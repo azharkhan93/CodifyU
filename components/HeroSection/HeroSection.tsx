@@ -1,6 +1,5 @@
 "use client";
-import { AnimateCircle } from "../AnimateCircle";
-import { motion } from "framer-motion"; // Import Framer Motion
+
 import {
   Box,
   Button,
@@ -25,7 +24,7 @@ export const HeroSection = () => {
       gap={"l"}
       px={["m", "xxxxl"]}
     >
-      <AnimateCircle />
+      {/* <AnimateCircle /> */}
       <Column
         py={"l"}
         gap={"xxxl"}
