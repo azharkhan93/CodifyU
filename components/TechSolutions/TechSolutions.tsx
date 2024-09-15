@@ -24,6 +24,7 @@ export const TechSolutions = () => {
       width="100%"
       alignItems="center"
       justifyContent="center"
+      px={["none","xl"]}
     >
       <Column  px="xl" gap="xxxl" py="xl"
       >
@@ -51,7 +52,7 @@ export const TechSolutions = () => {
         px="m"
         py="xlg"
         position="relative"
-        width={["98%", "870px"]}
+        width={["98%", "890px"]}
         height={["250px", "400px"]} 
       >
         <AnimateCircle />
@@ -69,7 +70,6 @@ export const TechSolutions = () => {
           style={{
             position: "absolute",
             top: "5%",
-            
             width: "100%",
             height: "100%",
           }}
@@ -80,7 +80,7 @@ export const TechSolutions = () => {
             fill
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
-              position: "absolute",
+              // position: "absolute",
               objectFit: "cover", 
               borderRadius: "8px"
             }}
