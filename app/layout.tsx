@@ -49,7 +49,7 @@ export default function RootLayout({
             <Navbar />
             <GlobalStyle />
             <Box
-            px={"l"}
+            px={["m", "l"]}
             >
             {children}
             </Box>
