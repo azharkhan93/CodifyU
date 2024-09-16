@@ -57,7 +57,7 @@ export const HeroSection = () => {
           efficiency, scalability, and profitability.
         </Text>
 
-        <CenterBox flexDirection={"row"} gap={["xl","xxxl"]}>
+        <CenterBox flexDirection={"row"} gap={["xxxl","xxxl"]}>
           <Button
             variant={"primary"}
             py={"m"}
