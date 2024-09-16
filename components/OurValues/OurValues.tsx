@@ -31,7 +31,7 @@ export const OurValues = () => {
             width={["100%", "43%"]}
           >
             <Text
-              variant={["heading", "footerHeading"]}
+              variant={["heading", "heading"]}
               textAlign={["start", "center"]}
             >
               Why{" "}

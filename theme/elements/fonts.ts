@@ -1,8 +1,8 @@
 export const BASE_FONTS: Record<AppThemeFonts, string> = {
-  heading: "MontserratBold",
+  heading: "PlayfairBold",
   subHeading: "MontserratMedium",
-  body: "MontserratRegular",
-  ftHeading: "MontserratExtraBold"
+  body: "PlayfairRegular",
+  ftHeading: "PlayfairBlack"
 };
 
 export type AppThemeFonts = "heading" | "subHeading" | "body" | "ftHeading";

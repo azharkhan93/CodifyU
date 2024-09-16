@@ -117,6 +117,30 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-display: swap;
     }
+    @font-face {
+        font-family: 'PlayfairBlack';
+        src: url('/assets/fonts/PlayfairDisplaySC-Black.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'PlayfairBold';
+        src: url('/assets/fonts/PlayfairDisplaySC-Bold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "PlayfairRegular";
+        src: url('/assets/fonts/PlayfairDisplay-Regular.ttf') format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
 
     * {
     font-family: "DMSansRegular"; 

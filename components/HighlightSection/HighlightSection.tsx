@@ -18,7 +18,7 @@ export const HighlightSection = () => {
         alignItems={"flex-start"}
         width={["100%", "100%"]}
       >
-        <Text variant={["heading", "footerHeading"]}>
+        <Text variant={["heading", "heading"]}>
           Intelligent Software Solutions
         </Text>
         <Text

@@ -24,11 +24,11 @@ export const TechSolutions = () => {
       width="100%"
       alignItems="center"
       justifyContent="center"
-       px={["none","m"]}
+      //  px={["none","m"]}
     >
       <Column   gap="xxxl" py="xl"
       >
-        <Text variant={["heading", "footerHeading"]}>
+        <Text variant="heading" >
           Bring your app idea to life with{" "}
           <span style={{ color: "#FB9C42", fontSize: "43px" }}>
             industry experts

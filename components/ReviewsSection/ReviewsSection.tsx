@@ -11,7 +11,7 @@ export const ReviewsSection = () => {
     >
       
         <Column gap={["xl", "m"]}>
-          <Text  variant={["heading","footerHeading"]} >
+          <Text  variant="heading" >
           What Our Clients Say
           </Text>
           <Text  variant={"body"} width={["100%", "460px"]} lineHeight={"1.5"} textAlign={["start", "center"]}>

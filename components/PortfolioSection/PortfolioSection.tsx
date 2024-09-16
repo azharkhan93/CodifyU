@@ -13,7 +13,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
   return (
     <>
       <Row
-        data-aos="fade-up"
+        
         // px={["m", "xxl"]}
         width={"100%"}
         flexDirection={["column", "row"]}
@@ -26,7 +26,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
           alignItems={"flex-start"}
           width={["100%", "45%"]}
         >
-          <Text variant={["footerHeading", "footerHeading"]}>
+          <Text variant="heading" >
             Our{" "}
             Work
           </Text>

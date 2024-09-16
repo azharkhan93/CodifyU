@@ -7,7 +7,7 @@ export const TechStacks = () => {
   return (
     <>
       <Column zIndex={2} py={"xxxxl"} gap={"xxl"}>
-        <Text variant={["heading", "footerHeading"]} textAlign={"start"}>
+        <Text variant="heading" textAlign={"start"}>
           Tools And Technologies
         </Text>
       </Column>

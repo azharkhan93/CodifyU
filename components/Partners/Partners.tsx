@@ -18,7 +18,7 @@ export const Partners = () => {
       
 
       >
-        <Text variant={["heading","footerHeading"]}>Our Partners</Text>
+        <Text variant={"heading"}>Our Partners</Text>
         <Text variant={"body"}>
           We are proud to collaborate with some of the most innovative and
           esteemed companies in the industry.

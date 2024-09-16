@@ -7,7 +7,7 @@ export const WorkApproach = () => {
     <Column py={"xl"} gap={["xl", "xxxl"]}>
       <Column gap={"xl"}>
         {/* <Text variant={"heading"}>Our work Process</Text> */}
-        <Text variant={["heading", "footerHeading"]} textAlign={"start"}>
+        <Text variant="heading"  textAlign={"start"}>
           Our Working Process
         </Text>
       </Column>
