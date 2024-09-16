@@ -1,20 +1,23 @@
 "use client";
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Box, Column, Row, Text } from "../styled";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
+import { useFadeInLeft, useFadeInRight, useScaleIn } from "@/hooks/useAnimations";
+
+
 
 export const OurValues = () => {
+  const fadeInLeftProps = useFadeInLeft();
+  const fadeInRightProps = useFadeInRight();
+  const scaleInProps = useScaleIn();
+
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 0.1 }}
-        viewport={{ once: false }}
-      >
+      <motion.div {...fadeInLeftProps}>
         <Row
           width={"100%"}
           flexDirection={["column", "row"]}
@@ -58,12 +61,7 @@ export const OurValues = () => {
             </Text>
           </Column>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2, ease: "easeOut", delay: 0.1 }}
-            viewport={{ once: false }}
-          >
+          <motion.div {...fadeInRightProps}>
             <Column
               alignItems={"center"}
               justifyContent={"center"}
@@ -92,12 +90,7 @@ export const OurValues = () => {
         </Row>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 0.1 }}
-        viewport={{ once: false }}
-      >
+      <motion.div {...scaleInProps}>
         <Box
           width={["100%", "100%"]}
           flexDirection={["column", "row"]}
@@ -118,3 +111,4 @@ export const OurValues = () => {
     </>
   );
 };
+

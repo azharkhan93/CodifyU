@@ -5,7 +5,7 @@ import { WorkCards } from "./components/WorkCards";
 export const WorkApproach = () => {
   return (
     <Column py={"xl"} gap={["xl", "xxxl"]}>
-      <Column gap={"xl"}  data-aos="fade-left">
+      <Column gap={"xl"}>
         {/* <Text variant={"heading"}>Our work Process</Text> */}
         <Text variant={["heading", "footerHeading"]} textAlign={"start"}>
           Our Working Process
@@ -13,7 +13,7 @@ export const WorkApproach = () => {
       </Column>
 
       <Row
-        data-aos="fade-up"
+       
         flexDirection={["column", "row"]}
         width={"100%"}
         gap={["xxxxl", "header"]}
