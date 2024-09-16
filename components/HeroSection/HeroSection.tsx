@@ -57,13 +57,13 @@ export const HeroSection = () => {
           efficiency, scalability, and profitability.
         </Text>
 
-        <CenterBox flexDirection={"row"} gap={["m","xxxl"]}>
+        <CenterBox flexDirection={"row"} gap={["xl","xxxl"]}>
           <Button
             variant={"primary"}
             py={"m"}
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
-            px={["m","xxxxl"]}
+            px={["xxxl","xxxxl"]}
             bg={"primary"}
           >
             View Work
@@ -73,7 +73,7 @@ export const HeroSection = () => {
             py={"m"}
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
-            px={["m","xxxxl"]}
+            px={["xxxl","xxxxl"]}
             style={{ backgroundColor: "black" }}
           >
             {`Let's Talk`}
