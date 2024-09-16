@@ -1,3 +1,8 @@
+
+function lazyLoadImage(url: string) {
+  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" />`;
+}
+
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
   let contentGroupHtml: string[] = [];
@@ -18,56 +23,32 @@ export function extractRichText(blocks: any[]): string[] {
           currentContent.push(
             `<${headingLevel} style="font-size: ${getFontSizeForHeading(
               block.type
-            )}; padding-left: 10px; margin: 0; ; ">${lastHeading}</${headingLevel}>`
+            )}; padding-left: 10px; margin: 0;">${lastHeading}</${headingLevel}>`
           );
 
           if (index === blocks.length - 1) {
             contentGroupHtml.push(
-              `<div class="content-images-container ${
-                isRowReverse ? "row-reverse" : ""
-              }">
-                <div class="content">
-                  ${currentContent.join("")}
-                </div>
-                <div class="images">
-                  ${currentImages.join("")}
-                </div>
-                ${
-                  imagesAfterLastHeading.length > 0
-                    ? `<div class="images-row">${imagesAfterLastHeading.join(
-                        ""
-                      )}</div>`
-                    : ""
-                }
-              </div>`
+              buildContentImageHtml(currentContent, currentImages, imagesAfterLastHeading, isRowReverse)
             );
-            currentContent = [];
-            currentImages = [];
-            imagesAfterLastHeading = [];
-            isRowReverse = !isRowReverse;
+            resetState();
           }
           break;
 
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           currentContent.push(
-            `<p style="font-size: 18px; text-align: left; padding-left: 10px;  margin: 0; ">${paragraphText}</p>`
+            `<p style="font-size: 18px; text-align: left; padding-left: 10px; margin: 0;">${paragraphText}</p>`
           );
           break;
 
         case "image":
-          const imageUrl =
-            block.image?.file?.url || block.image?.external?.url || "";
-
+          const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
           if (imageUrl) {
+            const lazyImageHtml = lazyLoadImage(imageUrl);
             if (index === blocks.length - 1) {
-              imagesAfterLastHeading.push(
-                `<img src="${imageUrl}" alt="Image"  style="margin: 5px; max-width: 30%; height: auto; "/>`
-              );
+              imagesAfterLastHeading.push(lazyImageHtml);
             } else {
-              currentImages.push(
-                `<img src="${imageUrl}" alt="Image"  style="margin-bottom: 10px; max-width: 100%; height: auto; "/>`
-              );
+              currentImages.push(lazyImageHtml);
             }
           }
           break;
@@ -75,11 +56,11 @@ export function extractRichText(blocks: any[]): string[] {
         case "embed":
         case "url":
           const embedUrl = block[block.type]?.url || "";
-          currentContent.push(
-            embedUrl
-              ? `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer" style="margin-bottom: 14px; display: block; color: blue; text-decoration: underline;">${embedUrl}</a>`
-              : ""
-          );
+          if (embedUrl) {
+            currentContent.push(
+              `<a href="${embedUrl}" target="_blank" rel="noopener noreferrer" style="margin-bottom: 14px; display: block; color: blue; text-decoration: underline;">${embedUrl}</a>`
+            );
+          }
           break;
 
         default:
@@ -89,91 +70,43 @@ export function extractRichText(blocks: any[]): string[] {
       }
 
       if (block.type === "image" || index === blocks.length - 1) {
-        if (
-          currentContent.length > 0 ||
-          currentImages.length > 0 ||
-          imagesAfterLastHeading.length > 0
-        ) {
+        if (currentContent.length > 0 || currentImages.length > 0 || imagesAfterLastHeading.length > 0) {
           contentGroupHtml.push(
-            `<div class="content-images-container ${
-              isRowReverse ? "row-reverse" : ""
-            }">
-              <div class="content">
-                ${currentContent.join("")}
-              </div>
-              <div class="images">
-                ${currentImages.join("")}
-              </div>
-              ${
-                imagesAfterLastHeading.length > 0
-                  ? `<div class="images-row">${imagesAfterLastHeading.join(
-                      ""
-                    )}</div>`
-                  : ""
-              }
-            </div>`
+            buildContentImageHtml(currentContent, currentImages, imagesAfterLastHeading, isRowReverse)
           );
-          currentContent = [];
-          currentImages = [];
-          imagesAfterLastHeading = [];
-          isRowReverse = !isRowReverse;
+          resetState();
         }
       }
     } catch (error) {
       console.error("Error processing block:", block, error);
-      currentContent.push(
-        "<p style='margin-bottom: 14px;'>Error processing block</p>"
-      );
+      currentContent.push("<p style='margin-bottom: 14px;'>Error processing block</p>");
     }
   });
 
   return [
-    `<div style="width: 100%;  ">${contentGroupHtml.join("")}</div>`,
-    `<style>
-      @media (max-width: 768px) {
-        .content-images-container {
-         display: flex;
-          flex-direction: column;
-        }
-        .content, .images {
-          width: 100%;
-          margin: 20px 0;
-        
-         
-        }
-        .images-row {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-         
-        }
-      }
-      @media (min-width: 769px) {
-        .content-images-container {
-          display: flex;
-          flex-direction: row;
-          gap: 20px; 
-        }
-        .row-reverse {
-          flex-direction: row-reverse; 
-        }
-        .content, .images {
-          width: 80%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 20px 0;
-
-         
-        }
-      }
-      .content {
-      display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-    </style>`,
+    `<div class="content-wrapper">${contentGroupHtml.join("")}</div>`,
+    getStyles()
   ];
+
+  function resetState() {
+    currentContent = [];
+    currentImages = [];
+    imagesAfterLastHeading = [];
+    isRowReverse = !isRowReverse;
+  }
+}
+
+// Helper function to build the HTML structure for content and images
+function buildContentImageHtml(content: string[], images: string[], imagesAfter: string[], isReversed: boolean): string {
+  return `<div class="content-images-container ${isReversed ? "row-reverse" : ""}">
+            <div class="content">${content.join("")}</div>
+            <div class="images">${images.join("")}</div>
+            ${
+              imagesAfter.length > 0
+                ? `<div class="images-row">${imagesAfter.join("")}</div>`
+                : ""
+            }
+          </div>`;
 }
 
 function getFontSizeForHeading(type: string): string {
@@ -204,6 +137,49 @@ function processRichText(richTextArray: any[]): string {
       return "";
     })
     .join(" ");
+}
+
+function getStyles(): string {
+  return `<style>
+    .lazy-image {
+      margin-bottom: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      .content-images-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .content, .images {
+        width: 100%;
+        margin: 20px 0;
+      }
+      .images-row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    @media (min-width: 769px) {
+      .content-images-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+      .row-reverse {
+        flex-direction: row-reverse;
+      }
+      .content, .images {
+        width: 80%;
+        margin: 20px 0;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  </style>`;
 }
 
 

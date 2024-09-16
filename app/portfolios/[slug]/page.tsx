@@ -1,32 +1,27 @@
-"use client";
+"use client"; 
+import useSWR from "swr";
 import axios from "axios";
 import { Box, CenterBox, Column, Row, Text, TopBar } from "@/components";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 import { PageProps, Product } from "@/types";
 
+
+const fetcher = (url: string) => axios.get(url).then(res => res.data);
+
 export default function Page({ params }: PageProps) {
-  const [product, setProduct] = useState<Product | null>(null);
-  const [loading, setLoading] = useState(true);
   const { slug } = params;
 
-  useEffect(() => {
-    async function fetchProduct() {
-      try {
-        const response = await axios.get(`/api/blogpost?slug=${slug}`);
-        setProduct(response.data);
-      } catch (error) {
-        console.error("Failed to fetch product:", error);
-      } finally {
-        setLoading(false);
-      }
+  const { data: product, error, isLoading } = useSWR(
+    `/api/blogpost?slug=${slug}`, 
+    fetcher,
+    {
+      refreshInterval: 30000,
+      revalidateOnFocus: true, 
     }
+  );
 
-    fetchProduct();
-  }, [slug]);
-
-  if (loading) {
+  if (isLoading) {
     return (
       <Box
         flexDirection="column"
@@ -39,15 +34,24 @@ export default function Page({ params }: PageProps) {
     );
   }
 
-  if (!product) {
-    return null;
+  if (error || !product) {
+    return (
+      <Box
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        height="100vh"
+      >
+        <Text variant="body">Product not found</Text>
+      </Box>
+    );
   }
 
   return (
     <>
       <TopBar
         backgroundImage={"/images/bg.jpeg"}
-        aboutText={"PortFolios"}
+        aboutText={"Portfolios"}
         whoWeAreText={"Explore Our portfolios"}
       />
       <Column
@@ -100,7 +104,7 @@ export default function Page({ params }: PageProps) {
           borderRadius={"xl"}
           py={"xxxl"}
           gap={"xl"}
-          style={{ boxShadow: "0px 4px 12px rgba(128, 0, 128, 0.5)" }}
+          // style={{ boxShadow: "0px 4px 12px rgba(128, 0, 128, 0.5)" }}
         >
           <Text
             variant="body"
