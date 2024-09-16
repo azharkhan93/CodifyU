@@ -53,6 +53,8 @@ export const Navbar: React.FC = () => {
     <>
       
       <Row
+      py={"m"}
+      
         flexDirection={["row", "row"]}
         px={["m", "xl"]}
         position="fixed"
@@ -66,14 +68,16 @@ export const Navbar: React.FC = () => {
           transition: "background-color 0.3s ease", 
         }}
       >
-        <CenterBox>
+       
+    
           <Image
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="Logo Missing"
-            width={80}
-            height={80}
+            width={200}
+            height={55}
+            // style={{ objectFit: 'contain' }}
           />
-        </CenterBox>
+
 
         <Box
           display={["none", "flex"]}
