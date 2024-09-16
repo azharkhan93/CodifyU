@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/about.jpg"}
+        backgroundImage={""}
         aboutText={"About Us"}
         whoWeAreText={"Who We Are"}
       />
 
       <AboutUs />
 
-      <Faq items={faqItems} />
+      {/* <Faq items={faqItems} /> */}
       <WorkApproach />
     </>
   );

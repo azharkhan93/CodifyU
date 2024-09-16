@@ -95,6 +95,29 @@ export const GlobalStyle = createGlobalStyle`
         font-display: swap;
     }
 
+
+    @font-face {
+        font-family: 'MontserratExtraBold';
+        src: url('/assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'MontserratRegular';
+        src: url('/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'MontserratMedium';
+        src: url('/assets/fonts/Montserrat-Medium.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
     * {
     font-family: "DMSansRegular"; 
     font-family: 'Quicksand', sans-serif;

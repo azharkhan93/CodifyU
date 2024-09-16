@@ -2,9 +2,8 @@
 import Image from "next/image";
 import { Box, Button,  Column, Row, Text } from "@/components";
 import { useEffect} from "react";
-import { Post, ProjectCardsProps } from "@/types";
+import { ProjectCardsProps } from "@/types";
 import { useRouter } from "next/navigation";
-import { CgBox } from "react-icons/cg";
 
 export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
   const router = useRouter();
@@ -30,28 +29,22 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
           width={"97%"}
           key={product.slug + index}
           py={"xxxl"}
-          // px={["s", "xl"]}
           flexDirection={["column-reverse", "row"]}
           alignItems={"center"}
           justifyContent={"center"}
           gap={"l"}
-          style={{
-            boxShadow:
-              "0px -10px 30px rgba(82, 0, 174, 0.5), 0px 10px 30px rgba(64, 98, 187, 0.5)",
-          }}
+          
         >
           <Column gap={["xl", "xl"]} width={["100%", "700px"]} 
           pl={["s","m"]}
           >
             <Text
-              color={"primary"}
               variant={["heading", "footerHeading"]}
               fontWeight={"bold"}
             >
               {product.productName}
             </Text>
             <Text
-              color={"secondary"}
               variant={"body"}
               width={["100%", "600px"]}
             >
@@ -80,7 +73,8 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
                 borderRight={"3px solid black"}
                 py={"m"}
                 px={"s"}
-                bg={"grey"}
+                bg={"primary"}
+                style={{color: "white"}}
                 onClick={() => handleViewMore(product.slug)}
               >
                 View Case Study
@@ -88,12 +82,8 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
             </Box>
           </Column>
           <Box width={["363px", "700px"]} 
-          //  height={"300px"}
-          //  border={"2px solid green"}
            position={"relative"}
           >
-            
-          
             <Image
               src={product.imageUrl}
               alt={product.productName}

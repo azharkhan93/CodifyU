@@ -13,15 +13,15 @@ const ModalContext = createContext<ModalContextProps | undefined>(undefined);
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    const showModalTimer = setTimeout(() => setIsModalOpen(true), 5000);
-    const hideModalTimer = setTimeout(() => setIsModalOpen(false), 1000);
+  // useEffect(() => {
+  //   const showModalTimer = setTimeout(() => setIsModalOpen(true), 5000);
+  //   const hideModalTimer = setTimeout(() => setIsModalOpen(false), 1000);
 
-    return () => {
-      clearTimeout(showModalTimer);
-      clearTimeout(hideModalTimer);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(showModalTimer);
+  //     clearTimeout(hideModalTimer);
+  //   };
+  // }, []);
 
   const toggleModal = (state: boolean) => () => setIsModalOpen(state);
 

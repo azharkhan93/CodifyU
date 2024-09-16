@@ -15,17 +15,17 @@ export const ContactSection = () => {
         px={"xl"}
       >
         <Column gap={["xl", "m"]}>
-          <Text color={"secondary"} variant={["heading", "footerHeading"]} >
+          <Text  variant={["heading", "footerHeading"]} >
             Any Queries Talk To Us?
           </Text>
 
-          <Text color={"secondary"} variant={["subHeading","heading"]} textAlign={["center","center"]}>
+          <Text  variant={["subHeading","heading"]} textAlign={["center","center"]}>
             Have a question to our team or need help with your project?
           </Text>
         </Column>
 
         <CenterBox width={["100%", "450px"]}>
-          <Text color={"secondary"} variant={"body"}>
+          <Text variant={"body"}>
             Our Team model offers a proven pathway to success, Our team is ready
             to provide client references, estimate your project, or answer any
             other question related to your IT initiative.
@@ -43,7 +43,7 @@ export const ContactSection = () => {
         <Box
           data-aos="fade-right"
           mt={["l", "header"]}
-          bg={"grey"}
+          // bg={"grey"}
           alignItems={"center"}
           gap={"xxxl"}
           py={"header"}
@@ -63,7 +63,7 @@ export const ContactSection = () => {
                   <Text variant={"body"}>
                     <a
                       href="tel:+917006168185"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "black", textDecoration: "none" }}
                     >
                       Phone: +91 7006168185
                     </a>
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                   <Text variant={"body"}>
                     <a
                       href="tel:+917006569557"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "black", textDecoration: "none" }}
                     >
                       Phone: +91 7006569557
                     </a>
@@ -79,7 +79,7 @@ export const ContactSection = () => {
                   <Text variant={"body"}>
                     <a
                       href="mailto:info@codefyu.com"
-                      style={{ color: "white", textDecoration: "none" }}
+                      style={{ color: "black", textDecoration: "none" }}
                     >
                       Email: info@codefyu.com
                     </a>

@@ -1,8 +1,7 @@
 import { FiCheckCircle } from "react-icons/fi";
-import { MdCode, MdOutlineDeveloperMode, } from "react-icons/md";
-import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, FaCogs, FaBootstrap, FaReact, FaJs, FaNodeJs, FaWordpress, FaAws, FaGitAlt, FaJava, FaPython  } from "react-icons/fa";
-import { AiOutlineRobot } from "react-icons/ai";
-import { SiNhl, SiOpenai, SiTensorflow, SiPython, SiDocker, SiMlflow, SiNextdotjs, SiExpress, SiDatabricks, SiMongodb, SiMysql, SiHive, SiGooglecloud, SiMicrosoftazure, SiKubernetes, SiCplusplus, SiCsharp, SiDotnet } from "react-icons/si";
+import { MdOutlineDeveloperMode, } from "react-icons/md";
+import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, } from "react-icons/fa";
+
 
 
 
@@ -295,17 +294,24 @@ export const CRD_ST = [
 
  export const TECH_IMAGES = [
   { src: "/images/python.png", alt: "Python Logo" },
+  { src: "/images/docker1.png", alt: "Docker Logo" },
+  { src: "/images/website.png", alt: "Net Logo" },
+  { src: "/images/web.png", alt: "Logo" },
+  { src: "/images/ml.png", alt: " Logo" },
+  { src: "/images/c-.png", alt: "Logo" },
+  { src: "/images/c-sharp.png", alt: "Logo" },
+  { src: "/images/googlecloud.png", alt: "Logo" },
+  { src: "/images/azure1.png", alt: "Logo" },
+  { src: "/images/monodb.png", alt: "Logo" },
+  { src: "/images/java.png", alt: "Python Logo" },
   { src: "/images/docker.png", alt: "Docker Logo" },
-  { src: "/images/python.png", alt: "Python Logo" },
-  { src: "/images/docker.png", alt: "Docker Logo" },
-  { src: "/images/python.png", alt: "Python Logo" },
-  { src: "/images/docker.png", alt: "Docker Logo" },
-  { src: "/images/python.png", alt: "Python Logo" },
-  { src: "/images/docker.png", alt: "Docker Logo" },
-  { src: "/images/python.png", alt: "Python Logo" },
-  { src: "/images/docker.png", alt: "Docker Logo" },
-  { src: "/images/python.png", alt: "Python Logo" },
-  { src: "/images/docker.png", alt: "Docker Logo" },
+  { src: "/images/gpt.png", alt: "Docker Logo" },
+  { src: "/images/gitlab.png", alt: "Docker Logo" },
+  { src: "/images/node.png", alt: "Docker Logo" },
+  { src: "/images/express.png", alt: "Docker Logo" },
+  { src: "/images/javscript.png", alt: "Docker Logo" },
+  { src: "/images/databricks.png", alt: "Docker Logo" },
+  { src: "/images/mysql.png", alt: "Docker Logo" },
 ];
 
 
