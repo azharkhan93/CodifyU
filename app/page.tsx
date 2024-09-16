@@ -1,18 +1,25 @@
-"use client"
-import { motion } from 'framer-motion';
-import { HeroSection, HighlightSection, OurValues, ParallaxSection, ReviewsSection, TechSolutions, TechStacks, WorkApproach } from "@/components";
+"use client";
+import { motion } from "framer-motion";
+import {
+  HeroSection,
+  HighlightSection,
+  OurValues,
+  ParallaxSection,
+  ReviewsSection,
+  TechSolutions,
+  TechStacks,
+  WorkApproach,
+} from "@/components";
 import { Partners } from "@/components/Partners/Partners";
-import { useFadeInUp } from '@/hooks/useAnimations';
+import { useFadeInUp } from "@/hooks/useAnimations";
 
 export default function Home() {
   const fadeInUpProps = useFadeInUp();
   return (
     <>
-     
-        <HeroSection />
-  
-      
-        <motion.div {...fadeInUpProps}>
+      <HeroSection />
+
+      <motion.div {...fadeInUpProps}>
         <OurValues />
       </motion.div>
 
@@ -35,18 +42,12 @@ export default function Home() {
       <motion.div {...fadeInUpProps}>
         <WorkApproach />
       </motion.div>
-      
+
       <Partners />
-      
+
       <motion.div {...fadeInUpProps}>
         <ParallaxSection />
       </motion.div>
     </>
   );
 }
-
-
-
-
-
-
