@@ -24,9 +24,9 @@ export const TechSolutions = () => {
       width="100%"
       alignItems="center"
       justifyContent="center"
-      px={["none","xl"]}
+       px={["none","m"]}
     >
-      <Column  px="xl" gap="xxxl" py="xl"
+      <Column   gap="xxxl" py="xl"
       >
         <Text variant={["heading", "footerHeading"]}>
           Bring your app idea to life with{" "}
@@ -80,7 +80,6 @@ export const TechSolutions = () => {
             fill
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
-              // position: "absolute",
               objectFit: "cover", 
               borderRadius: "8px"
             }}

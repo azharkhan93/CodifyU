@@ -8,7 +8,6 @@ export const ReviewsSection = () => {
       flexDirection={["column", "row"]}
       py={["xxl", "header"]}
       gap={"l"}
-        px={"xl"}
     >
       
         <Column gap={["xl", "m"]}>

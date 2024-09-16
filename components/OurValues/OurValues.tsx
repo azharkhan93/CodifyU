@@ -1,23 +1,19 @@
-import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
+import { Box,Column, Row, Text } from "../styled";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
-// import MySvg from '../../public/assets/svgs/tg.svg';
 
 export const OurValues = () => {
   return (
     <>
       <Row
         data-aos="fade-up"
-        px={["m", "xxl"]}
         width={"100%"}
-        // border={"2px solid red"}
+        
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
       >
         <Column
-          // ref={refColumn}
-          // isInView={isInViewColumn}
           py={"xl"}
           gap={"xxl"}
           justifyContent={"center"}
@@ -91,4 +87,3 @@ export const OurValues = () => {
     </>
   );
 };
-{/* <MySvg width={390} height={400} /> */}

@@ -1,78 +1,60 @@
 "use client";
-import { Box, Button, CenterBox, Row, Text } from "../styled";
+import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 
 export const ParallaxSection = () => {
   return (
-    <CenterBox
-    
-    //  mx={"xxl"}
-      py={"xxxxl"}
-      px={"s"}
-      position={"sticky"}
-      top={0}
-      zIndex={10}
-      height={["100%", "450px"]}
-      // width={"100%"}
-      color={"white"}
-      justifyContent={"space-between"}
-      flexDirection={["column", "row"]}
-      style={{
-        backgroundImage: "url('/images/p4.jpeg')",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        backgroundPosition: "center",
-      }}
-    >
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        width={"100%"}
-        height={"100%"}
-        bg={"Overlay"}
-        zIndex={-1}
-        // style={{background:  "rgba(0,0,0.6)"}}
-      />
+  <>
       <Row
-        flexDirection={["column", "column"]}
-        width={["100%", "57%"]}
-        gap={"xl"}
+      color="white"
+      borderRadius={"m"}
+      bg={"primary"}
+      flexDirection={["column", "row"]}
+      width={["100%", "100%"]}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      gap={"xl"}
+    >
+      <Column
+      py={"xxxl"}
+      alignItems={"center"}
+      gap={"xl"}
       >
-        <Text
-
-          variant={["subHeading","heading"]}
-          textAlign={["start", "center"]}
+      <Text
+        variant={["subHeading", "heading"]}
+        textAlign={["center", "center"]}
+      >
+        {` Market Entry Searching For Scable Solutions`}
+      </Text>
+      <Text variant="body" textAlign={"center"} lineHeight={"1.5"} >
+        <span style={{ color: "orange", fontSize: "20px" }}>
+          Got A Project In Mind?
+        </span>
+        Worried About The Delivery Of Scablable , High-Quality Solutions
+        without Sacrifying Speed?
+      </Text>
+      <CenterBox width={"100%"} mt={"xl"}>
+        <Button
+          borderTopLeftRadius={"xxl"}
+          variant={"primary"}
+          bg={"textColor"}
+          py={"m"}
+          px={"xxxl"}
+          borderRadius={"m"}
         >
-          
-          {` Market Entry Searching For Scable Solutions`}
-        </Text>
-        <Text variant="body" textAlign={"center"}>
-        <span style={{ color: "orange", fontSize: "20px" }}>Got A Project In Mind?</span>
-          Worried About The Delivery Of Scablable , High-Quality Solutions
-          without Sacrifying Speed?
-        </Text>
-        <CenterBox width={"100%"} mt={"xl"}>
-          <Button
-            borderTopLeftRadius={"xxl"}
-            variant={"primary"}
-            bg={"grey"}
-            py={"m"}
-            px={"xxxl"}
-            borderRadius={"m"}
-          >
-            {`Let'S Work Together`}
-          </Button>
-        </CenterBox>
-      </Row>
-
-      <CenterBox
-      position={"relative"}
-      >
+          {`Let'S Work Together`}
+        </Button>
+      </CenterBox>
+      </Column>
+    
+    
+    <CenterBox position={"relative"}>
         <iframe
           src="https://lottie.host/embed/28ff5dcf-904e-4e22-a52f-71caaf13a838/AW9QvY1gDf.json"
           style={{ width: "500px", height: "390px", border: "none" }}
         ></iframe>
       </CenterBox>
-    </CenterBox>
+      </Row>
+      </>
+    
   );
 };

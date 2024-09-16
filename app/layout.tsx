@@ -1,5 +1,5 @@
 "use client";
-import {  GlobalStyle, } from "@/components";
+import {  Box, GlobalStyle, } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { useEffect } from "react";
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>CodeFyU</title> 
+        <title>codeFyU</title> 
         <meta name="description" content="one stop for all sofware solutions" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" /> 
@@ -48,7 +48,11 @@ export default function RootLayout({
           <StyleSheetManager shouldForwardProp={isPropValid}>
             <Navbar />
             <GlobalStyle />
+            <Box
+            px={"l"}
+            >
             {children}
+            </Box>
             <Footer />
             </StyleSheetManager>
             </ModalProvider>

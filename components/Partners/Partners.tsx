@@ -10,12 +10,11 @@ export const Partners = () => {
     <Column
     mt={"l"}
     width={"100%"}
-    //  bg={"newcolor1"}
   >
     
     
     
-      <Column px={["s", "xl"]} py={"xl"} gap={"xl"} width={["100%","900px"]}
+      <Column  py={"xl"} gap={"xl"} width={["100%","900px"]}
       
 
       >

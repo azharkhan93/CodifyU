@@ -14,9 +14,9 @@ export default function Home() {
     <HighlightSection />
     <TechSolutions />
     <TechStacks />
+    <ReviewsSection /> 
     <WorkApproach /> 
-     <ReviewsSection /> 
-    {/* <TeamMembers /> */}
+     
 
     <Partners />
 

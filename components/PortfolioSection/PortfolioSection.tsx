@@ -14,7 +14,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
     <>
       <Row
         data-aos="fade-up"
-        px={["m", "xxl"]}
+        // px={["m", "xxl"]}
         width={"100%"}
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}

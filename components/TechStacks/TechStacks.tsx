@@ -6,27 +6,18 @@ import { TECH_IMAGES } from "@/constants";
 export const TechStacks = () => {
   return (
     <>
-      <Column
-        zIndex={2}
-        py={"xxxl"}
-        gap={"xxl"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        // width={["100%", "100%"]}
-        // px={["s", "header"]}
-      >
-        <Text variant={["heading", "footerHeading"]}>
+      <Column zIndex={2} py={"xxxxl"} gap={"xxl"}>
+        <Text variant={["heading", "footerHeading"]} textAlign={"start"}>
           Tools And Technologies
         </Text>
       </Column>
-      
+
       <CenterBox
-      py={"xl"}
+        py={"xxxl"}
         flexDirection={["column", "row"]}
-        width={["100%", "100%"]}     
+        width={["100%", "100%"]}
         gap={"xl"}
         overflow={"hidden"}
-        // border={"3px solid red"}
       >
         <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
           {TECH_IMAGES.map((image, index) => (
@@ -37,6 +28,3 @@ export const TechStacks = () => {
     </>
   );
 };
-
-
-

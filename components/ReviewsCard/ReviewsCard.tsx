@@ -12,23 +12,16 @@ export const ReviewsCard: React.FC<ReviewCardProps> = ({ review }) => {
       borderRadius={"lg"}
       alignItems={"center"}
       justifyContent={"start"}
-      // py={"xxxxl"}
       width={"350px"}
-      // gap={"xl"}
       position="relative"
       flexDirection={"column-reverse"}
-      
     >
-      
-
-      <Text variant={"body"} mt={"m"}  >
+      <Text variant={"body"} mt={"m"} lineHeight={"1.5"}>
         {review.text}
       </Text>
-     
 
       <Box
         position="absolute"
-        // top={"10px"}
         bottom="65px"
         right="5px"
         bg={"white"}
@@ -37,9 +30,9 @@ export const ReviewsCard: React.FC<ReviewCardProps> = ({ review }) => {
         <MdFormatQuote size={40} fill="#FB9C42" />
       </Box>
 
-      <Box flexDirection={"column"}  gap={"m"} >
+      <Box flexDirection={"column"} gap={"m"}>
         <Box
-           borderRadius={"m"}
+          borderRadius={"m"}
           overflow={"hidden"}
           width={"335px"}
           height={"200px"}
@@ -47,17 +40,10 @@ export const ReviewsCard: React.FC<ReviewCardProps> = ({ review }) => {
         >
           <Image src={review.image} alt={review.alt} width={335} height={200} />
         </Box>
-        <Box flexDirection={"column"} 
-      
-        >
-          <Text variant={"body"} >
-            {review.name}
-          </Text> 
-           <Text variant={"body"} >
-            {review.title}
-          </Text>
+        <Box flexDirection={"column"}>
+          <Text variant={"body"}>{review.name}</Text>
+          <Text variant={"body"}>{review.title}</Text>
         </Box>
-        
       </Box>
     </Box>
   );
