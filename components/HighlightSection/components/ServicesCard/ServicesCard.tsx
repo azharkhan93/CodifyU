@@ -25,7 +25,7 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ service }) => {
       py={"xxxl"}
       borderRadius={"s"}
       px={"m"}
-      width={"400px"}
+      width={"370px"}
     >
       
       <Row

@@ -57,9 +57,8 @@ export const AnimatedColumn = styled(Column)`
     height: 6px;
     background: linear-gradient(
       to right,
-      black,
-      #d84797,
-      green
+      #FB9C42,
+      #facb60
     );
     background-size: 200% 100%; 
     animation: ${waveAnimation} 3s linear infinite; 
