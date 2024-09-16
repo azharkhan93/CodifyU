@@ -113,7 +113,7 @@ export const Navbar: React.FC = () => {
       <Box
         display={["block", "none"]}
         position="fixed"
-        top={20}
+        top={25}
         right={20}
         zIndex={9999}
         onClick={handleToggle}

@@ -39,7 +39,7 @@ export default function RootLayout({
         <title>codeFyU</title> 
         <meta name="description" content="one stop for all sofware solutions" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" /> 
+        <link rel="icon" href="/images/logo.svg" /> 
       </Head>
       <body>
         <AppThemeProvider>
