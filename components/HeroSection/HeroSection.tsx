@@ -19,7 +19,7 @@ export const HeroSection = () => {
       height={"100vh"}
       flexDirection={"column"}
       gap={"l"}
-      px={["m", "xxxxl"]}
+      // px={["m", "xxxxl"]}
     >
       <Column
         py={"l"}
@@ -45,7 +45,7 @@ export const HeroSection = () => {
         </Text>
 
         <Text
-          px={"s"}
+          // px={"s"}
           variant="body"
           width={["100%", "600px"]}
           textAlign={["start", "center"]}
