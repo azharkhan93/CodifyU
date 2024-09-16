@@ -13,6 +13,7 @@ export const ParallaxSection = () => {
       justifyContent={"space-between"}
       alignItems={"center"}
       gap={"xl"}
+      px={["xl", "m"]}
     >
       <Column
       py={"xxxl"}
