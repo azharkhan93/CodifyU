@@ -50,12 +50,15 @@ export const ParallaxSection = () => {
     
     <CenterBox position={"relative"}>
         <iframe
-          src="https://lottie.host/embed/28ff5dcf-904e-4e22-a52f-71caaf13a838/AW9QvY1gDf.json"
+          src="https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json"
           style={{ width: "500px", height: "390px", border: "none" }}
         ></iframe>
       </CenterBox>
       </Row>
       </>
+
+      
+    
     
   );
 };

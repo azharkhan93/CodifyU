@@ -6,8 +6,10 @@ export const BASE_COLORS = {
    orange: "#FF7F50",
    lightYellow: "#eec4c815",
    offWhite: "#F2F0EF",
+
+    
   
-  textColor: "#FB9C42",
+  textColor: "#fb9c42",
   background: "#facb60",
    transparent: "",
   white: "#ffffff",

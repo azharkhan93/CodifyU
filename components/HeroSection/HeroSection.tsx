@@ -28,21 +28,30 @@ export const HeroSection = () => {
         alignItems={"center"}
         zIndex={1}
       >
-        <Row
-          flexDirection={["row", "row"]}
-          alignItems={"center"}
-          width={"100%"}
-          gap={"s"}
-        ></Row>
+        <Text variant={"footerHeading"} color="textColor"
+        style={{textTransform: "none"}}
+        >
+          codefyU
+          {/* <span style={{ color: "#fb9c42", fontSize: "50px" }}>codefyU</span>{" "} */}
+        </Text>
 
         <Text
+          px={"xxxxl"}
           variant={["heading", "footerHeading"]}
-          width={["100%", "1000px"]}
+          width={["100%", "1100px"]}
           textAlign={["start", "center"]}
         >
-          <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "}
-          Where Innovation Meets <TypewriterText>Execution</TypewriterText>
+          {/* <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "} */}
+          Startup Accelerator Seamless Tech Solutions that Scale
+           
         </Text>
+        {/* <Text
+        textAlign={["start","center"]}
+        width={["100%","670px"]}
+        variant={["subHeading","heading"]}
+        >
+        We integrate the latest advancements <TypewriterText>Execution</TypewriterText> 
+        </Text> */}
 
         <Text
           // px={"s"}
@@ -51,19 +60,20 @@ export const HeroSection = () => {
           textAlign={["start", "center"]}
           lineHeight={"1.5"}
         >
-          We are your partners in transforming business operations through
-          cutting-edge technology. Our expertise in AI, Machine Learning, and
-          Generative AI equips you with customized solutions designed to boost
-          efficiency, scalability, and profitability.
+          codefyU delivers advanced customized tech solutions worldwide. We
+          solve complex challenges with precision offering efficient, scalable
+          results that drive business growth. By merging innovation with
+          impactful strategies, we help businesses thrive in todays dynamic
+          digital landscape
         </Text>
 
-        <CenterBox flexDirection={"row"} gap={["xxxl","xxxl"]}>
+        <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
           <Button
             variant={"primary"}
             py={"m"}
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
-            px={["xxxl","xxxxl"]}
+            px={["xxxl", "xxxxl"]}
             bg={"primary"}
           >
             View Work
@@ -73,7 +83,7 @@ export const HeroSection = () => {
             py={"m"}
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
-            px={["xxxl","xxxxl"]}
+            px={["xxxl", "xxxxl"]}
             style={{ backgroundColor: "black" }}
           >
             {`Let's Talk`}

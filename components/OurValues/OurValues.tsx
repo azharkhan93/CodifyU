@@ -20,7 +20,6 @@ export const OurValues = () => {
       <motion.div {...fadeInLeftProps}>
         <Row
       
-        border={"4px solid red"}
           width={"100%"}
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}

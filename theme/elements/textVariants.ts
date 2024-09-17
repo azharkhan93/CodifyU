@@ -8,7 +8,7 @@ export const BASE_TEXT_VARIANTS = {
     fontFamily: BASE_FONTS.heading,
   },
   footerHeading: {
-    fontSize: 50,
+    fontSize: 47,
     fontFamily: BASE_FONTS.ftHeading,
   },
   subHeading: {

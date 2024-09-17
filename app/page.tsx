@@ -18,10 +18,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-
-      <motion.div {...fadeInUpProps}>
         <OurValues />
-      </motion.div>
+      
 
       <motion.div {...fadeInUpProps}>
         <HighlightSection />
