@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/p2.jpg"}
+        backgroundImage={""}
         aboutText={"Contact Us"}
         whoWeAreText={"Reach Us"}
       />

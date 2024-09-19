@@ -43,6 +43,7 @@ export const HeroSection = () => {
         >
           {/* <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "} */}
           Startup Accelerator Seamless Tech Solutions that Scale
+           {/* <strong style={{fontWeight: "bold", fontFamily: "PlayfairBold", fontSize: "60px"}}>(Startup Accelerator)</strong> Seamless Tech Solutions that Scale  */}
            
         </Text>
         {/* <Text
@@ -84,7 +85,8 @@ export const HeroSection = () => {
             borderTopRightRadius={"m"}
             borderBottomLeftRadius={"m"}
             px={["xxxl", "xxxxl"]}
-            style={{ backgroundColor: "black" }}
+            bg={"primary"}
+            
           >
             {`Let's Talk`}
           </Button>

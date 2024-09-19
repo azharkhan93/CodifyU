@@ -6,10 +6,10 @@ import { LogoProps } from "@/types";
 export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
   return (
     <Box width={["220px", "220px"]}
-    // border={"1px solid red"}
     alignItems={"center"}
     justifyContent={"center"}
     height={["150px","150px"]}
+    
     
     >
       <Image
@@ -17,7 +17,7 @@ export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
         alt={alt}
         width={size}
         height={size}
-        style={{ borderRadius: "10px" }}
+        style={{ borderRadius: "10px", mixBlendMode: "multiply" }}
       />
     </Box>
   );

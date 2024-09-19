@@ -50,7 +50,7 @@ export default function Page({ params }: PageProps) {
   return (
     <>
       <TopBar
-        backgroundImage={"/images/bg.jpeg"}
+        backgroundImage={""}
         aboutText={"Portfolios"}
         whoWeAreText={"Explore Our portfolios"}
       />

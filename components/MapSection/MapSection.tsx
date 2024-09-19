@@ -8,6 +8,7 @@ export const Mapsection = () => {
         width="full"
         height="500"
         loading="lazy"
+        style={{border: "none", mixBlendMode: "screen"}}
       ></iframe>
     </Box>
   );
