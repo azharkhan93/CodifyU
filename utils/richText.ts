@@ -1,7 +1,9 @@
 import { BASE_TEXT_VARIANTS } from "@/theme";
 
 function lazyLoadImage(url: string, width?: number, height?: number) {
-  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" style="border-radius: 8px; ${width ? `width: ${width}px;` : ''} ${height ? `height: ${height}px;` : ''}" />`;
+  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" style="border-radius: 8px; ${
+    width ? `width: ${width}px;` : ""
+  } ${height ? `height: ${height}px;` : ""}" />`;
 }
 
 export function extractRichText(blocks: any[]): string[] {
@@ -27,18 +29,11 @@ export function extractRichText(blocks: any[]): string[] {
           );
 
           if (index === blocks.length - 1) {
-
             if (imagesAfterLastHeading.length > 0) {
-              contentGroupHtml.push(
-                buildImagesRowHtml(imagesAfterLastHeading)
-              );
+              contentGroupHtml.push(buildImagesRowHtml(imagesAfterLastHeading));
             }
             contentGroupHtml.push(
-              buildContentImageHtml(
-                currentContent,
-                currentImages,
-                isRowReverse
-              )
+              buildContentImageHtml(currentContent, currentImages, isRowReverse)
             );
             resetState();
           }
@@ -87,16 +82,11 @@ export function extractRichText(blocks: any[]): string[] {
           imagesAfterLastHeading.length > 0
         ) {
           contentGroupHtml.push(
-            buildContentImageHtml(
-              currentContent,
-              currentImages,
-              isRowReverse
-            )
+            buildContentImageHtml(currentContent, currentImages, isRowReverse)
           );
           resetState();
         }
       }
-
     } catch (error) {
       console.error("Error processing block:", block, error);
       currentContent.push(
@@ -226,5 +216,3 @@ function getStyles(): string {
     }
   </style>`;
 }
-
-
