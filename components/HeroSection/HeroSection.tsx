@@ -28,12 +28,12 @@ export const HeroSection = () => {
         alignItems={"center"}
         zIndex={1}
       >
-        <Text variant={"footerHeading"} color="textColor"
+        {/* <Text variant={"footerHeading"} color="textColor"
         style={{textTransform: "none"}}
         >
           codefyU
-          {/* <span style={{ color: "#fb9c42", fontSize: "50px" }}>codefyU</span>{" "} */}
-        </Text>
+          <span style={{ color: "#fb9c42", fontSize: "50px" }}>codefyU</span>{" "}
+        </Text> */}
 
         <Text
           px={"xxxxl"}
@@ -46,13 +46,13 @@ export const HeroSection = () => {
            {/* <strong style={{fontWeight: "bold", fontFamily: "PlayfairBold", fontSize: "60px"}}>(Startup Accelerator)</strong> Seamless Tech Solutions that Scale  */}
            
         </Text>
-        {/* <Text
+        <Text
         textAlign={["start","center"]}
         width={["100%","670px"]}
         variant={["subHeading","heading"]}
         >
         We integrate the latest advancements <TypewriterText>Execution</TypewriterText> 
-        </Text> */}
+        </Text>
 
         <Text
           // px={"s"}
@@ -88,7 +88,7 @@ export const HeroSection = () => {
             bg={"primary"}
             
           >
-            {`Let's Talk`}
+            {`Let'sTalk`}
           </Button>
         </CenterBox>
       </Column>

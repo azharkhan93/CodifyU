@@ -47,9 +47,9 @@ export const OurValues = () => {
             >
               We have successfully delivered over 200 projects over the last 8
               years, collectively generating a value of{" "}
-              <span style={{ color: "orange", fontSize: "20px" }}>
+              {/* <span style={{ color: "orange", fontSize: "20px" }}> */}
                 $200 million
-              </span>
+              {/* </span> */}
               . High-Quality tech solutions without high costs.{" "}
             </Text>
             <Text
@@ -57,7 +57,7 @@ export const OurValues = () => {
               lineHeight={"1.5"}
               textAlign={["start", "center"]}
             >
-              Our startup accelerator program is your launchpad to success.
+              Our Startup Accelerator program is your launchpad to success.
               Fast-Track your market entry and expansion with our proven
               strategies.
             </Text>
