@@ -1,14 +1,15 @@
 "use client";
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Box, Column, Row, Text } from "../styled";
 import { StatsCards } from "./components/StatsCards";
 import { STATS_DATA, VALUES_DATA } from "@/constants";
 import { ValueCards } from "./components/ValueCards";
-import { useFadeInLeft, useFadeInRight, useScaleIn } from "@/hooks/useAnimations";
-
-
+import {
+  useFadeInLeft,
+  useFadeInRight,
+  useScaleIn,
+} from "@/hooks/useAnimations";
 
 export const OurValues = () => {
   const fadeInLeftProps = useFadeInLeft();
@@ -19,16 +20,14 @@ export const OurValues = () => {
     <>
       <motion.div {...fadeInLeftProps}>
         <Row
-      
           width={"100%"}
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
         >
           <Column
-          
             py={"xl"}
             gap={"xxl"}
-            justifyContent={["start","center"]}
+            justifyContent={["start", "center"]}
             alignItems={"flex-start"}
             width={["100%", "43%"]}
           >
@@ -48,9 +47,8 @@ export const OurValues = () => {
               We have successfully delivered over 200 projects over the last 8
               years, collectively generating a value of{" "}
               {/* <span style={{ color: "orange", fontSize: "20px" }}> */}
-                $200 million
-              {/* </span> */}
-              . High-Quality tech solutions without high costs.{" "}
+              $200 million
+              {/* </span> */}. High-Quality tech solutions without high costs.{" "}
             </Text>
             <Text
               variant={"body"}
@@ -113,4 +111,3 @@ export const OurValues = () => {
     </>
   );
 };
-

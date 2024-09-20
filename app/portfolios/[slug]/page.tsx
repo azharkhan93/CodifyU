@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import useSWR from "swr";
 import axios from "axios";
 import { Box, CenterBox, Column, Row, Text, TopBar } from "@/components";
@@ -6,20 +6,19 @@ import Image from "next/image";
 import { FaSpinner } from "react-icons/fa";
 import { PageProps, Product } from "@/types";
 
-
-const fetcher = (url: string) => axios.get(url).then(res => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export default function Page({ params }: PageProps) {
   const { slug } = params;
 
-  const { data: product, error, isLoading } = useSWR(
-    `/api/blogpost?slug=${slug}`, 
-    fetcher,
-    {
-      refreshInterval: 30000,
-      revalidateOnFocus: true, 
-    }
-  );
+  const {
+    data: product,
+    error,
+    isLoading,
+  } = useSWR(`/api/blogpost?slug=${slug}`, fetcher, {
+    refreshInterval: 1000,
+    revalidateOnFocus: true,
+  });
 
   if (isLoading) {
     return (

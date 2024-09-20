@@ -43,15 +43,15 @@ export const HeroSection = () => {
         >
           {/* <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "} */}
           Startup Accelerator Seamless Tech Solutions that Scale
-           {/* <strong style={{fontWeight: "bold", fontFamily: "PlayfairBold", fontSize: "60px"}}>(Startup Accelerator)</strong> Seamless Tech Solutions that Scale  */}
-           
+          {/* <strong style={{fontWeight: "bold", fontFamily: "PlayfairBold", fontSize: "60px"}}>(Startup Accelerator)</strong> Seamless Tech Solutions that Scale  */}
         </Text>
         <Text
-        textAlign={["start","center"]}
-        width={["100%","670px"]}
-        variant={["subHeading","heading"]}
+          textAlign={["start", "center"]}
+          width={["100%", "670px"]}
+          variant={["subHeading", "heading"]}
         >
-        We integrate the latest advancements <TypewriterText>Execution</TypewriterText> 
+          We integrate the latest advancements{" "}
+          <TypewriterText>Execution</TypewriterText>
         </Text>
 
         <Text
@@ -86,7 +86,6 @@ export const HeroSection = () => {
             borderBottomLeftRadius={"m"}
             px={["xxxl", "xxxxl"]}
             bg={"primary"}
-            
           >
             {`Let'sTalk`}
           </Button>

@@ -9,8 +9,8 @@ export default function Home() {
         whoWeAreText={"Reach Us"}
       />
 
-<ContactSection />
-<Mapsection />
+      <ContactSection />
+      <Mapsection />
     </>
   );
 }
