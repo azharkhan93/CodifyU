@@ -10,6 +10,10 @@ export const WorkApproach = () => {
         <Text variant="heading"  textAlign={"start"}>
           Our Working Process
         </Text>
+        <Text variant={"body"}>
+            We are proud to collaborate with some of the most innovative and
+            esteemed companies in the industry.
+          </Text>
       </Column>
 
       <Row

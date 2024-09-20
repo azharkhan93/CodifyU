@@ -32,12 +32,12 @@ export const OurValues = () => {
             width={["100%", "43%"]}
           >
             <Text
-              variant={["heading", "heading"]}
+              variant="heading"
               textAlign={["start", "center"]}
             >
-              Why{" "}
-              <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span>
-              ?
+              Why{" "}codefyU?
+              {/* <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span> */}
+              
             </Text>
             <Text
               variant={"body"}

@@ -15,6 +15,10 @@ export const TechStacks = () => {
         <Text variant="heading" textAlign={"start"}>
           Tools And Technologies
         </Text>
+        <Text variant={"body"}>
+          We are proud to collaborate with some of the most innovative and
+          esteemed companies in the industry.
+        </Text>
       </Column>
 
       <CenterBox py={"xxxl"} flexDirection={["column", "row"]} gap={"xl"}>

@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { MdOutlineDeveloperMode, } from "react-icons/md";
-import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, } from "react-icons/fa";
+import { FaBrain, FaCode, FaCog, FaLightbulb, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, } from "react-icons/fa";
 
 
 
@@ -8,45 +8,44 @@ import { FaBrain, FaCode, FaLightbulb, FaRobot, FaSearch, } from "react-icons/fa
 export const STATS_DATA = [
   {
     id: 1,
-    heading: "7+years",
+    heading: "8+years",
     subHeading: "In Business",
   },
   {
     id: 2,
-    heading: "300+",
+    heading: "150+",
     subHeading: "Global Clients",
   },
   {
     id: 3,
-    heading: "200+",
-    subHeading: "Digital Experts",
+    heading: "$200+",
+    subHeading: "Million Value Generation",
   },
 ];
 export const VALUES_DATA = [
   {
     id: 1,
-    title: "Native Performance",
+    title: "Empowering Startups",
     title2: "Unified development strategy - still delivering a bare metal native performance.",
-    // Unified development strategy - still delivering a bare metal native performance.
-    icon: FiCheckCircle,
+    icon: FaRocket, 
   },
   {
     id: 2,
-    title: "Quality",
-    title2: "Unified development strategy - still delivering a bare metal native performance.",
-    icon: FiCheckCircle,
+    title: "Prime Excellence with Cost Effectiveness",
+    title2: "Delivering high-quality solutions at competitive prices.",
+    icon: FaStar, 
   },
   {
     id: 3,
+    title: "Accelerated Growth",
     title2: "Unified development strategy - still delivering a bare metal native performance.",
-    title: "Proactivity",
-    icon: FiCheckCircle,
+    icon: FaCog, 
   },
   {
     id: 4,
-    title: "Agility",
-    title2: "Unified development strategy - still delivering a bare metal native performance.",
-    icon: FiCheckCircle,
+    title: "Trusted Partner",
+    title2: "Quick responses to market changes and customer needs.",
+    icon: FaRegHandPaper, 
   },
 ];
 
@@ -259,16 +258,16 @@ export const teamMembers = [
 
 export const CRD_ST = [
   {
-    ItemsTitle: "Tailored software development", 
+    ItemsTitle: "Transform your vision with CodefyU.", 
   },
   {
-    ItemsTitle: "Software consulting services",
+    ItemsTitle: "Improve your customer interactions with advanced LLMs.",
   },
   {
-    ItemsTitle: "Mobile app development",
+    ItemsTitle: "Make smarter decisions with real-time insights and predictive analytics.",
   },
   {
-    ItemsTitle: "Business automation company",
+    ItemsTitle: "Streamline your development and deployment processes.",
   },
 ];
 

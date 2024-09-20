@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { AnimateCircle, Box, Column, Row, Text } from "@/components";
 import { CRD_ST } from "@/constants";
@@ -21,22 +21,21 @@ export const TechSolutions = () => {
   return (
     <Row
       flexDirection={["column", "row"]}
-      width="100%"
-      alignItems="center"
-      justifyContent="center"
-      //  px={["none","m"]}
+      width={"100%"}
+      alignItems={"center"}
+      justifyContent={"center"}
     >
-      <Column   gap="xxxl" py="xl"
-      >
-        <Text variant="heading" >
-          Bring your app idea to life with{" "}
-          <span style={{ color: "#FB9C42", fontSize: "43px" }}>
+      <Column gap="xxxl" py="xl" alignItems={"flex-start"} justifyContent={"center"} width={["100%","700px"]}>
+        <Text variant="heading">
+        Unlock the power of AI/ML and data-driven solutions with CodefyU
+          {/* Bring your app idea to life with{" "} */}
+          {/* <span style={{ color: "#FB9C42", fontSize: "43px" }}>
             industry experts
-          </span>
+          </span> */}
         </Text>
-        <Text variant="body" lineHeight={"1.5"}>
+        <Text variant={"subHeading"} lineHeight={"1.5"}>
           Streamline your business needs and automate your infrastructure with
-          Eonyx.
+          codefyU.
         </Text>
 
         <Column gap="xxxl">
@@ -48,12 +47,11 @@ export const TechSolutions = () => {
 
       <Box
         alignItems="center"
-        
         px="m"
         py="xlg"
         position="relative"
         width={["98%", "890px"]}
-        height={["250px", "400px"]} 
+        height={["250px", "400px"]}
       >
         <AnimateCircle />
 
@@ -80,8 +78,8 @@ export const TechSolutions = () => {
             fill
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
-              objectFit: "cover", 
-              borderRadius: "8px"
+              objectFit: "cover",
+              borderRadius: "8px",
             }}
           />
         </motion.div>
@@ -89,6 +87,3 @@ export const TechSolutions = () => {
     </Row>
   );
 };
-
-
-

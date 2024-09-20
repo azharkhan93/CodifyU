@@ -4,11 +4,7 @@ import { ValueCardProps } from "@/types";
 export const ValueCards: React.FC<ValueCardProps> = ({ title, icon: Icon, title2, }) => {
   return (
     <Column
-    // border={"2px solid green"}
-   
-      gap={"xl"}
-      borderTop={"1px solid black"}
-      borderBottom={"1px solid black"}
+   gap={"xl"}
       width={["300px","300px"]}
        alignItems={["center","center"]}
       justifyContent={"center"}

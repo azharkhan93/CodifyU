@@ -9,15 +9,12 @@ export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
     <Column
     py={"m"}
       alignItems={"center"}
-      borderRight={"2px dotted red"}
-      width={["250px", "300px"]}
+      borderRight={"3px dotted #fb9c42"}
+      width={["90%", "350px"]}
       gap={"s"}
-      // style={{
-      //   boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.5)",
-      // }}
       
     >
-      <Text variant={"heading"}>
+      <Text variant={["heading", "footerHeading"]}>
         {isNumber.test(heading) ? (
           <CountUp
             start={0}
