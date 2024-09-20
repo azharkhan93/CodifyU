@@ -17,15 +17,12 @@ export const ParallaxSection = () => {
       >
         <Column py={"xxxl"} alignItems={"center"} gap={"xl"}>
           <Text
-            variant={["subHeading", "heading"]}
-            textAlign={["center", "center"]}
+            variant={"heading"}
+            textAlign={["start", "center"]}
           >
-            {` Market Entry Searching For Scable Solutions`}
+            {` Got A Project In Mind?`}
           </Text>
-          <Text variant="body" textAlign={"center"} lineHeight={"1.5"}>
-            <span style={{ color: "orange", fontSize: "20px" }}>
-              Got A Project In Mind?
-            </span>
+          <Text variant="body" textAlign={["start","center"]} lineHeight={"1.5"}>
             Worried About The Delivery Of Scablable , High-Quality Solutions
             without Sacrifying Speed?
           </Text>

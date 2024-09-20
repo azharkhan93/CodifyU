@@ -1,7 +1,10 @@
+import { BASE_TEXT_VARIANTS } from "@/theme";
 
 function lazyLoadImage(url: string) {
-  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" />`;
+  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" style="border-radius: 8px;" />`;
 }
+
+
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
   let contentGroupHtml: string[] = [];
@@ -18,16 +21,20 @@ export function extractRichText(blocks: any[]): string[] {
         case "heading_3":
           lastHeading = processRichText(block[block.type].rich_text);
           const headingLevel = block.type.replace("heading_", "h");
+          const headingStyle = getHeadingStyle(block.type);
 
           currentContent.push(
-            `<${headingLevel} style="font-size: ${getFontSizeForHeading(
-              block.type
-            )}; padding-left: 10px; margin: 0;">${lastHeading}</${headingLevel}>`
+            `<${headingLevel} style="${headingStyle} padding-left: 10px; margin: 0;">${lastHeading}</${headingLevel}>`
           );
 
           if (index === blocks.length - 1) {
             contentGroupHtml.push(
-              buildContentImageHtml(currentContent, currentImages, imagesAfterLastHeading, isRowReverse)
+              buildContentImageHtml(
+                currentContent,
+                currentImages,
+                imagesAfterLastHeading,
+                isRowReverse
+              )
             );
             resetState();
           }
@@ -36,12 +43,13 @@ export function extractRichText(blocks: any[]): string[] {
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           currentContent.push(
-            `<p style="font-size: 18px; text-align: left; padding-left: 10px; margin: 0;">${paragraphText}</p>`
+            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5; text-align: left; padding-left: 10px; margin: 0;">${paragraphText}</p>`
           );
           break;
 
         case "image":
-          const imageUrl = block.image?.file?.url || block.image?.external?.url || "";
+          const imageUrl =
+            block.image?.file?.url || block.image?.external?.url || "";
           if (imageUrl) {
             const lazyImageHtml = lazyLoadImage(imageUrl);
             if (index === blocks.length - 1) {
@@ -69,22 +77,33 @@ export function extractRichText(blocks: any[]): string[] {
       }
 
       if (block.type === "image" || index === blocks.length - 1) {
-        if (currentContent.length > 0 || currentImages.length > 0 || imagesAfterLastHeading.length > 0) {
+        if (
+          currentContent.length > 0 ||
+          currentImages.length > 0 ||
+          imagesAfterLastHeading.length > 0
+        ) {
           contentGroupHtml.push(
-            buildContentImageHtml(currentContent, currentImages, imagesAfterLastHeading, isRowReverse)
+            buildContentImageHtml(
+              currentContent,
+              currentImages,
+              imagesAfterLastHeading,
+              isRowReverse
+            )
           );
           resetState();
         }
       }
     } catch (error) {
       console.error("Error processing block:", block, error);
-      currentContent.push("<p style='margin-bottom: 14px;'>Error processing block</p>");
+      currentContent.push(
+        "<p style='margin-bottom: 14px;'>Error processing block</p>"
+      );
     }
   });
 
   return [
     `<div class="content-wrapper">${contentGroupHtml.join("")}</div>`,
-    getStyles()
+    getStyles(),
   ];
 
   function resetState() {
@@ -93,10 +112,30 @@ export function extractRichText(blocks: any[]): string[] {
     imagesAfterLastHeading = [];
     isRowReverse = !isRowReverse;
   }
+
+  function getHeadingStyle(type: string): string {
+    switch (type) {
+      case "heading_1":
+        return `font-size: ${BASE_TEXT_VARIANTS.heading.fontSize}px; font-family: ${BASE_TEXT_VARIANTS.heading.fontFamily};`;
+      case "heading_2":
+        return `font-size: ${BASE_TEXT_VARIANTS.subHeading.fontSize}px; font-family: ${BASE_TEXT_VARIANTS.subHeading.fontFamily};`;
+      case "heading_3":
+        return `font-size: ${BASE_TEXT_VARIANTS.subHeading.fontSize}px; font-family: ${BASE_TEXT_VARIANTS.subHeading.fontFamily};`;
+      default:
+        return "";
+    }
+  }
 }
 
-function buildContentImageHtml(content: string[], images: string[], imagesAfter: string[], isReversed: boolean): string {
-  return `<div class="content-images-container ${isReversed ? "row-reverse" : ""}">
+function buildContentImageHtml(
+  content: string[],
+  images: string[],
+  imagesAfter: string[],
+  isReversed: boolean
+): string {
+  return `<div class="content-images-container ${
+    isReversed ? "row-reverse" : ""
+  }">
             <div class="content">${content.join("")}</div>
             <div class="images">${images.join("")}</div>
             ${
@@ -105,19 +144,6 @@ function buildContentImageHtml(content: string[], images: string[], imagesAfter:
                 : ""
             }
           </div>`;
-}
-
-function getFontSizeForHeading(type: string): string {
-  switch (type) {
-    case "heading_1":
-      return "35px";
-    case "heading_2":
-      return "25px";
-    case "heading_3":
-      return "20px";
-    default:
-      return "16px";
-  }
 }
 
 function processRichText(richTextArray: any[]): string {
@@ -179,5 +205,3 @@ function getStyles(): string {
     }
   </style>`;
 }
-
-
