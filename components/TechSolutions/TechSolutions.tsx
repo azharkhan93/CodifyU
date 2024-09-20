@@ -25,7 +25,7 @@ export const TechSolutions = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
-      <Column gap="xxxl" py="xl" alignItems={"flex-start"} justifyContent={"center"} width={["100%","700px"]}>
+      <Column gap="xxxl" py="xl" alignItems={"flex-start"} justifyContent={"center"} width={["100%","800px"]}>
         <Text variant="heading">
         Unlock the power of AI/ML and data-driven solutions with CodefyU
           {/* Bring your app idea to life with{" "} */}
