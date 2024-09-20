@@ -1,9 +1,8 @@
 import { BASE_TEXT_VARIANTS } from "@/theme";
 
-function lazyLoadImage(url: string) {
-  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" style="border-radius: 8px;" />`;
+function lazyLoadImage(url: string, width?: number, height?: number) {
+  return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" style="border-radius: 8px; ${width ? `width: ${width}px;` : ''} ${height ? `height: ${height}px;` : ''}" />`;
 }
-
 
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
@@ -24,15 +23,20 @@ export function extractRichText(blocks: any[]): string[] {
           const headingStyle = getHeadingStyle(block.type);
 
           currentContent.push(
-            `<${headingLevel} style="${headingStyle} padding-left: 10px; margin: 0;">${lastHeading}</${headingLevel}>`
+            `<${headingLevel} style="${headingStyle}">${lastHeading}</${headingLevel}>`
           );
 
           if (index === blocks.length - 1) {
+
+            if (imagesAfterLastHeading.length > 0) {
+              contentGroupHtml.push(
+                buildImagesRowHtml(imagesAfterLastHeading)
+              );
+            }
             contentGroupHtml.push(
               buildContentImageHtml(
                 currentContent,
                 currentImages,
-                imagesAfterLastHeading,
                 isRowReverse
               )
             );
@@ -43,7 +47,7 @@ export function extractRichText(blocks: any[]): string[] {
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           currentContent.push(
-            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5; text-align: left; padding-left: 10px; margin: 0;">${paragraphText}</p>`
+            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5;">${paragraphText}</p>`
           );
           break;
 
@@ -86,13 +90,13 @@ export function extractRichText(blocks: any[]): string[] {
             buildContentImageHtml(
               currentContent,
               currentImages,
-              imagesAfterLastHeading,
               isRowReverse
             )
           );
           resetState();
         }
       }
+
     } catch (error) {
       console.error("Error processing block:", block, error);
       currentContent.push(
@@ -130,7 +134,6 @@ export function extractRichText(blocks: any[]): string[] {
 function buildContentImageHtml(
   content: string[],
   images: string[],
-  imagesAfter: string[],
   isReversed: boolean
 ): string {
   return `<div class="content-images-container ${
@@ -138,11 +141,12 @@ function buildContentImageHtml(
   }">
             <div class="content">${content.join("")}</div>
             <div class="images">${images.join("")}</div>
-            ${
-              imagesAfter.length > 0
-                ? `<div class="images-row">${imagesAfter.join("")}</div>`
-                : ""
-            }
+          </div>`;
+}
+
+function buildImagesRowHtml(images: string[]): string {
+  return `<div class="images-row">
+            ${images.join("")}
           </div>`;
 }
 
@@ -170,18 +174,31 @@ function getStyles(): string {
       max-width: 100%;
       height: auto;
     }
+    .images-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; 
+    }
+    .images-row img {
+      width: 500px;
+      height: 500px; 
+    }
     @media (max-width: 768px) {
       .content-images-container {
         display: flex;
         flex-direction: column;
+        gap: 10px;
       }
       .content, .images {
         width: 100%;
         margin: 20px 0;
       }
-      .images-row {
+      .content {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
       }
     }
     @media (min-width: 769px) {
@@ -196,12 +213,19 @@ function getStyles(): string {
       .content, .images {
         width: 80%;
         margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
     .content {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 15px;
     }
   </style>`;
 }
+
+

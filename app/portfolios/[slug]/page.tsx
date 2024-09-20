@@ -1,26 +1,33 @@
-"use client";
-import useSWR from "swr";
+"use client"
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Box, CenterBox, Column, Row, Text, TopBar } from "@/components";
 import Image from "next/image";
 import { FaSpinner } from "react-icons/fa";
 import { PageProps, Product } from "@/types";
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
-
 export default function Page({ params }: PageProps) {
   const { slug } = params;
+  const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const {
-    data: product,
-    error,
-    isLoading,
-  } = useSWR(`/api/blogpost?slug=${slug}`, fetcher, {
-    refreshInterval: 1000,
-    revalidateOnFocus: true,
-  });
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(`/api/blogpost?slug=${slug}`);
+        setProduct(response.data);
+      } catch (err) {
+        setError("Product not found");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (isLoading) {
+    fetchProduct();
+  }, [slug]);
+
+  if (loading) {
     return (
       <Box
         flexDirection="column"
@@ -41,7 +48,7 @@ export default function Page({ params }: PageProps) {
         justifyContent="center"
         height="100vh"
       >
-        <Text variant="body">Product not found</Text>
+        <Text variant="body">{error}</Text>
       </Box>
     );
   }
@@ -106,7 +113,6 @@ export default function Page({ params }: PageProps) {
           borderRadius={"xl"}
           py={"xxxl"}
           gap={"xl"}
-          // style={{ boxShadow: "0px 4px 12px rgba(128, 0, 128, 0.5)" }}
         >
           <Text
             variant="body"
@@ -117,3 +123,4 @@ export default function Page({ params }: PageProps) {
     </>
   );
 }
+
