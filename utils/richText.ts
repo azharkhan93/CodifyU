@@ -23,7 +23,7 @@ export function extractRichText(blocks: any[]): string[] {
           const headingStyle = getHeadingStyle(block.type);
 
           currentContent.push(
-            `<${headingLevel} style="${headingStyle}">${lastHeading}</${headingLevel}>`
+            `<${headingLevel} style="${headingStyle}  margin: 0;">${lastHeading}</${headingLevel}>`
           );
 
           if (index === blocks.length - 1) {
@@ -47,7 +47,7 @@ export function extractRichText(blocks: any[]): string[] {
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           currentContent.push(
-            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5;">${paragraphText}</p>`
+            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5;  margin: 0;">${paragraphText}</p>`
           );
           break;
 
@@ -187,7 +187,6 @@ function getStyles(): string {
       .content-images-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
       }
       .content, .images {
         width: 100%;
