@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Box } from "@/components/styled";
 import { LogoProps } from "@/types";
-
-export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
+export const Logos: React.FC<LogoProps> = ({ src, alt }) => {
   return (
     <Box
       width={["220px", "220px"]}
@@ -14,10 +13,11 @@ export const Logos: React.FC<LogoProps> = ({ src, alt, size }) => {
       <Image
         src={src}
         alt={alt}
-        width={size}
-        height={size}
+        width={150}
+        height={150}
         style={{ borderRadius: "10px", mixBlendMode: "multiply" }}
       />
     </Box>
   );
 };
+

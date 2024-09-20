@@ -1,9 +1,10 @@
 import { IconType } from "react-icons";
 
 export type LogoProps = {
+
     src: string;
     alt: string;
-    size: number;
+  
   };
 
   export type StatCardProps = {
@@ -135,3 +136,11 @@ export type LogoProps = {
   export type ProjectCardsProps  = {
     products: Post[];
   }
+
+  export type TechImageProps = {
+    src: string;
+    alt?: string;
+    width?: number;
+    height?: number;
+    priority?: boolean;
+  };

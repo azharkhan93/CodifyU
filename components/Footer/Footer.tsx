@@ -27,22 +27,10 @@ export const Footer = () => {
 
   return (
     <>
-      <Box
-        width={"100%"}
-        // bg={"secondary"}
-        // style={{
-        //   backgroundImage: "url('/images/ml.jpg')",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   backgroundRepeat: "no-repeat",
-        //   position: "relative", 
-        //   height: "auto", 
-        // }}
-      >
-       
+      <Box width={"100%"}>
         <CenterBox
           zIndex={1}
-          borderBottom={"2px solid white"}
+          borderBottom={"2px solid #fb9c42"}
           py={["xxxl", "xxl"]}
           flexDirection={["column", "column"]}
           px={["s", "xxxl"]}
@@ -54,7 +42,7 @@ export const Footer = () => {
             <Text
               textAlign={"center"}
               variant={["heading", "footerHeading"]}
-              width={["100%", "530px"]}
+              width={["100%", "690px"]}
             >
               Have Any Project Idea! {`Lets's Talk With Us`}
             </Text>
@@ -99,15 +87,9 @@ export const Footer = () => {
           px={"l"}
           borderBottom={"2px solid white"}
         >
-          <Box
-            gap={"xxl"}
-            alignItems={["flex-start", "flex-start"]}
-            flexDirection={"column"}
-          >
-            <Text variant="subHeading" >
-              Quick Links
-            </Text>
-            <Row flexDirection={"row"} gap={"xl"}>
+          <Box gap={"xxl"} alignItems={"flex-start"}>
+            <Text variant="subHeading">Quick Links</Text>
+            <Row flexDirection={"row"} gap={"xl"} flexWrap={"wrap"}>
               {NavbarData.map((item, index) => (
                 <StyledLink key={index} onClick={() => navigateTo(item.link)}>
                   {item.title}
@@ -117,9 +99,7 @@ export const Footer = () => {
           </Box>
           <Box gap={"xxxl"}>
             <Box alignItems={["flex-start", "flex-start"]}>
-              <Text variant={"subHeading"} >
-                Contact Us
-              </Text>
+              <Text variant={"subHeading"}>Contact Us</Text>
             </Box>
             <Row
               flexDirection={"row"}
@@ -128,7 +108,7 @@ export const Footer = () => {
               alignItems={"center"}
               flexWrap={["wrap", "nowrap"]}
             >
-              <Text variant={"body"} >
+              <Text variant={"body"}>
                 <a
                   href="tel:+917006168185"
                   style={{ color: "black", textDecoration: "none" }}
@@ -159,26 +139,16 @@ export const Footer = () => {
             alignItems={["flex-start", "flex-start"]}
             flexDirection={"column"}
           >
-            <Text variant="subHeading" >
-              Follow Us
-            </Text>
+            <Text variant="subHeading">Follow Us</Text>
             <Row flexDirection={"row"} gap={"xl"}>
-              <Text variant="body" >
-                LinkedIn
-              </Text>
-              <Text variant="body" >
-                Instagram
-              </Text>
-              <Text variant="body" >
-                Facebook
-              </Text>
+              <Text variant="body">LinkedIn</Text>
+              <Text variant="body">Instagram</Text>
+              <Text variant="body">Facebook</Text>
             </Row>
           </Box>
         </Box>
         <CenterBox py={"l"} zIndex={1}>
-          <Text variant={"body"} >
-            © 2024 CodiFyU. All Rights Reserved
-          </Text>
+          <Text variant={"body"}>© 2024 CodiFyU. All Rights Reserved</Text>
         </CenterBox>
       </Box>
     </>

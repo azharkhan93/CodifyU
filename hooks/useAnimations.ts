@@ -53,3 +53,17 @@ export const useScaleIn = () => {
     viewport: { once: false },
   };
 };
+
+export const useLogos = () => {
+  return {
+    animate: {
+      x: ["0%", "-45%"], 
+    },
+    transition: {
+      repeat: Infinity,   
+      ease: "linear",     
+      duration: 40,       
+    },
+  };
+};
+

@@ -38,21 +38,21 @@ export const HeroSection = () => {
         <Text
           px={"xxxxl"}
           variant={["heading", "footerHeading"]}
-          width={["100%", "1100px"]}
+          width={["100%", "980px"]}
           textAlign={["start", "center"]}
         >
           {/* <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "} */}
           Startup Accelerator Seamless Tech Solutions that Scale
           {/* <strong style={{fontWeight: "bold", fontFamily: "PlayfairBold", fontSize: "60px"}}>(Startup Accelerator)</strong> Seamless Tech Solutions that Scale  */}
         </Text>
-        <Text
+        {/* <Text
           textAlign={["start", "center"]}
           width={["100%", "670px"]}
           variant={["subHeading", "heading"]}
         >
           We integrate the latest advancements{" "}
           <TypewriterText>Execution</TypewriterText>
-        </Text>
+        </Text> */}
 
         <Text
           // px={"s"}

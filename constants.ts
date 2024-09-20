@@ -79,19 +79,56 @@ export const featureItems = [
   "Digital Marketing",
 ];
 export const PARTNER_LOGOS = [
-  { src: "/clientlogos/g23.webp", alt: "Logo 6", size: 200 },
-{ src: "/clientlogos/airlines.webp", alt: "Logo 2", size: 200 },
-  { src: "/clientlogos/tint.png", alt: "Logo 3", size: 160 },
-  { src: "/clientlogos/mgm1.jpg", alt: "Logo 4", size: 130 },
-  { src: "/clientlogos/LogoMain.png", alt: "Logo 5", size: 170 },
-  { src: "/clientlogos/zurich.jpg", alt: "Logo 6", size: 200 },
-  { src: "/clientlogos/its.jpg", alt: "Logo 6", size: 150 },
-  { src: "/clientlogos/john.png", alt: "Logo 6", size: 220 },
-  { src: "/clientlogos/mindgeek.jpg", alt: "Logo 6", size: 150 },
-  { src: "/clientlogos/square.jpg", alt: "Logo 6", size: 140 },
-  { src: "/clientlogos/start.jpg", alt: "Logo 6", size: 130 },
-  { src: "/clientlogos/ad.webp", alt: "Logo 1", size: 160 },
+  {
+    src: "/clientlogos/g23.webp",
+    alt: "Logo 1",
+  },
+  {
+    src: "/clientlogos/airlines.webp",
+    alt: "Logo 2",
+  },
+{
+  src: "/clientlogos/tint.png",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/mgm1.jpg",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/LogoMain.png",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/zurich.jpg",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/its.jpg",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/john.png",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/mindgeek.jpg",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/square.jpg",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/start.jpg",
+   alt: "Logo 3"
+},
+{
+  src: "/clientlogos/ad.webp",
+   alt: "Logo 3"
+},
 ];
+
 
 export const reviews23 = [
   {
@@ -115,13 +152,7 @@ export const reviews23 = [
     image: "/images/dg.jpg",
     alt: "#1157 picture",
   },
-  // {
-  //   text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-  //   name: "#1157",
-  //   title: " LittleSnippets.net",
-  //   image: "/images/dg.jpg",
-  //   alt: "#1157 picture",
-  // },
+
 ];
 export const services = [
   // {
@@ -241,55 +272,6 @@ export const CRD_ST = [
   },
 ];
 
-
-
-
-
-// export const techSections = [
-//   { title: "AI/ML" },
-//   { title: "Front-End" },
-//   { title: "Back-End" },
-//   { title: "Database" },
-//   { title: "Cloud" },
-//   { title: "Languages" },
-//   { title: "Utilities" },
-// ];
-
-// export const iconData = [
-//   { IconComponent: AiOutlineRobot, size: 40, color: "back", category: "AI/ML" },
-//   { IconComponent: SiNhl, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: SiOpenai, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: FaBrain, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: FaCogs, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: SiTensorflow, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: SiPython, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: SiDocker, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: SiMlflow, size: 40, color: "black", category: "AI/ML" },
-//   { IconComponent: FaBootstrap, size: 40, color: "black", category: "Front-End" },
-//   { IconComponent: FaReact , size: 40, color: "black", category: "Front-End" },
-//   { IconComponent: SiNextdotjs , size: 40, color: "black", category: "Front-End" },
-//   { IconComponent: FaJs , size: 40, color: "black", category: "Front-End" },
-//   { IconComponent: SiExpress , size: 40, color: "black", category: "Back-End" },
-//   { IconComponent: SiExpress , size: 40, color: "black", category: "Back-End" },
-//   { IconComponent: FaNodeJs , size: 40, color: "black", category: "Back-End" },
-//   { IconComponent: FaWordpress , size: 40, color: "black", category: "Back-End" },
-//   { IconComponent: SiDatabricks , size: 40, color: "black", category: "Database" },
-//   { IconComponent: SiHive, size: 40, color: "black", category: "Database" },
-//   { IconComponent: SiMongodb , size: 40, color: "black", category: "Database" },
-//   { IconComponent: SiMysql , size: 40, color: "black", category: "Database" },
-//   { IconComponent: FaAws, size: 40, color: "black", category: "Cloud" },
-//   { IconComponent: SiMicrosoftazure , size: 40, color: "black", category: "Cloud" },
-//   { IconComponent: SiGooglecloud  , size: 40, color: "black", category: "Cloud" },
-//   { IconComponent: FaGitAlt, size: 40, color: "black", category: "Utilities" },
-//   { IconComponent: SiDocker , size: 40, color: "black", category: "Utilities" },
-//   { IconComponent: SiKubernetes  , size: 40, color: "black", category: "Utilities" },
-//   { IconComponent: FaPython, size: 40, color: "black", category: "Languages" },
-//   { IconComponent: FaJava , size: 40, color: "black", category: "Languages" },
-//   { IconComponent: SiCsharp  , size: 40, color: "black", category: "Languages" },
-//   { IconComponent: SiCplusplus , size: 40, color: "black", category: "Languages" },
-//   { IconComponent: SiDotnet  , size: 40, color: "black", category: "Languages" },
-  
-// ]
  export const API_URL = "/api/blogpost";
 
  export const TECH_IMAGES = [

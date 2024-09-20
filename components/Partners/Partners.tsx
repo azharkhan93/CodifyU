@@ -1,9 +1,15 @@
 "use client";
-import { Row, Box, CenterBox, Text, Column, Flock } from "../styled";
+import { useLogos } from "@/hooks/useAnimations";
+import { Row, Box, CenterBox, Column, Text } from "../styled";
 import { Logos } from "./components/Logos";
 import { PARTNER_LOGOS } from "@/constants";
+import { motion } from "framer-motion";
+
+const MotionRow = motion.create(Row);
 
 export const Partners = () => {
+  const logosAnimation = useLogos();
+
   return (
     <>
       <Column mt={"l"} width={"100%"}>
@@ -26,16 +32,15 @@ export const Partners = () => {
             gap={"xl"}
             overflow={"hidden"}
           >
-            <Flock flexDirection={["row", "row"]} gap={["xxxxl", "xxxl"]}>
+            <MotionRow
+              flexDirection={["row", "row"]}
+              gap={["xxxxl", "xxxl"]}
+              {...logosAnimation}
+            >
               {PARTNER_LOGOS.concat(PARTNER_LOGOS).map((logo, index) => (
-                <Logos
-                  key={index}
-                  src={logo.src}
-                  alt={logo.alt}
-                  size={logo.size}
-                />
+                <Logos key={index} src={logo.src} alt={logo.alt} />
               ))}
-            </Flock>
+            </MotionRow>
           </CenterBox>
         </Row>
       </Column>
