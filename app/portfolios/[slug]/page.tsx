@@ -28,7 +28,7 @@ export default function Page({ params }: PageProps) {
         justifyContent="center"
         height="100vh"
       >
-        <FaSpinner className="animate-spin" size={50} color="black" />
+        <FaSpinner className="animate-spin" size={50} color="#fb9c42" />
       </Box>
     );
   }
@@ -69,10 +69,13 @@ export default function Page({ params }: PageProps) {
           width={"100%"}
         >
           <Column gap={"xl"} width={["100%", "700px"]}>
-            <Text variant={"footerHeading"} textAlign={["center", "center"]}>
+            <Text variant={"heading"} textAlign={["start", "center"]}>
               {product.productName}
             </Text>
-            <Text variant={["body", "subHeading"]} textAlign={"center"}>
+            <Text
+              variant={["body", "subHeading"]}
+              textAlign={["start", "center"]}
+            >
               {product.productDesc}
             </Text>
           </Column>

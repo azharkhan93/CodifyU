@@ -38,7 +38,7 @@ export default function  Portfolio() {
         height="100vh"
         width={"100%"}
       >
-        <FaSpinner className="animate-spin" size={60} color="black" />
+        <FaSpinner className="animate-spin" size={60} color="#fb9c42" />
        
       </CenterBox>
     );

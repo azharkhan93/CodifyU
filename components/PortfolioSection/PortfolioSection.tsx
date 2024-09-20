@@ -14,7 +14,6 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
     <>
       <Row
         
-        // px={["m", "xxl"]}
         width={"100%"}
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
@@ -30,7 +29,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
             Our{" "}
             Work
           </Text>
-          <Text variant={["subHeading","heading"]} textAlign={["start","start"]}>
+          <Text variant={"body"} textAlign={"start"} >
           Some Highlights Of Our favorite Projects We Have Done For Forward Thinking Clients.
             
           </Text>

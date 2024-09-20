@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Box, Button,  Column, Row, Text } from "@/components";
-import { useEffect} from "react";
+import { Box, Button, Column, Row, Text } from "@/components";
+import { useEffect } from "react";
 import { ProjectCardsProps } from "@/types";
 import { useRouter } from "next/navigation";
 
@@ -33,21 +33,12 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
           alignItems={"center"}
           justifyContent={"center"}
           gap={"l"}
-          
         >
-          <Column gap={["xl", "xl"]} width={["100%", "700px"]} 
-          pl={["s","m"]}
-          >
-            <Text
-              variant={["heading", "footerHeading"]}
-              fontWeight={"bold"}
-            >
+          <Column gap={["xl", "xl"]} width={["100%", "700px"]} pl={["s", "m"]}>
+            <Text variant={"heading"} fontWeight={"bold"}>
               {product.productName}
             </Text>
-            <Text
-              variant={"body"}
-              width={["100%", "600px"]}
-            >
+            <Text variant={"body"} width={["100%", "530px"]}>
               {product.productDesc ? product.productDesc : "No Description"}
             </Text>
             <Text variant={"heading"}>Technology And Tools</Text>
@@ -74,30 +65,24 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
                 py={"m"}
                 px={"s"}
                 bg={"primary"}
-                style={{color: "white"}}
+                style={{ color: "white" }}
                 onClick={() => handleViewMore(product.slug)}
               >
                 View Case Study
               </Button>
             </Box>
           </Column>
-          <Box width={["363px", "700px"]} 
-           position={"relative"}
-          >
+          <Box width={["363px", "700px"]} position={"relative"}>
             <Image
               src={product.imageUrl}
               alt={product.productName}
-               layout="responsive"
+              layout="responsive"
               width={650}
               height={450}
               style={{ borderRadius: "8px" }}
             />
-            </Box>
-      
-           
-            </Box>
-       
-        
+          </Box>
+        </Box>
       ))}
     </Column>
   );

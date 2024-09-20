@@ -2,7 +2,6 @@
 function lazyLoadImage(url: string) {
   return `<img src="${url}" alt="Image" loading="lazy" class="lazy-image" />`;
 }
-
 export function extractRichText(blocks: any[]): string[] {
   let lastHeading = "";
   let contentGroupHtml: string[] = [];
@@ -96,7 +95,6 @@ export function extractRichText(blocks: any[]): string[] {
   }
 }
 
-// Helper function to build the HTML structure for content and images
 function buildContentImageHtml(content: string[], images: string[], imagesAfter: string[], isReversed: boolean): string {
   return `<div class="content-images-container ${isReversed ? "row-reverse" : ""}">
             <div class="content">${content.join("")}</div>
