@@ -150,3 +150,10 @@ export type LogoProps = {
     icon: IconType; 
     text: string;
   }
+
+  export type  FeatureCardProps = {
+    icon: IconType;
+    title: string;
+    description: string;
+  }
+  

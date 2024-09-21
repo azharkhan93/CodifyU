@@ -1,6 +1,8 @@
 import { Box, Button, CenterBox, Column, Row, Text } from "@/components/styled";
 import Image from "next/image";
 import {FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
+import { FeaturedCards } from "../FeaturedCards";
+import { featuredData } from "@/constants";
 
 export const AboutCards = () => {
   return (
@@ -54,41 +56,9 @@ export const AboutCards = () => {
           here is what you can expect
         </Text>
 
-        <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <FaUsers size={28} fill="#fb9c42" />
-          <Text variant={["subHeading", "heading"]}>
-            Client-Centric Approach
-          </Text>
-        </Row>
-        <Column>
-          <Text variant={"body"} width={["100%", "600px"]}>
-            {`We don’t just deliver solutions! We tailor them to your vision. Your
-            success is our mission For our clients, we break the mold!`}
-          </Text>
-        </Column>
-        <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <FaDollarSign size={28} fill="#fb9c42" />
-          <Text variant={["subHeading", "heading"]}>Quality and Savings</Text>
-        </Row>
-        <Column>
-          <Text variant={"body"} width={["100%", "600px"]}>
-            Imagine! Getting high-quality tech services without breaking the
-            bank. We offer premium services at a fraction of the cost of
-            in-house teams.
-          </Text>
-        </Column>
-        <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <FaTools size={28} fill="#fb9c42" />
-          <Text variant={["subHeading", "heading"]}>
-            End-to-End Development
-          </Text>
-        </Row>
-        <Column>
-          <Text variant={"body"} width={["100%", "600px"]}>
-            From the initial idea to the final product, we handle it all. Enjoy
-            seamless execution with our comprehensive solution
-          </Text>
-        </Column>
+{featuredData.map(({ id, icon, title, description }) => (
+          <FeaturedCards key={id} icon={icon} title={title} description={description} />
+        ))}
         <CenterBox width={["100%", "30%"]}>
           <Button
             variant={"primary"}

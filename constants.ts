@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { MdOutlineDeveloperMode, } from "react-icons/md";
-import { FaBrain, FaCode, FaCog, FaEnvelope, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, } from "react-icons/fa";
+import { FaBrain, FaCode, FaCog, FaDollarSign, FaEnvelope, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 
 
 
@@ -316,5 +316,29 @@ export const contactData = [
     id: 4,
     icon: FaMapMarkerAlt,
     text: "RajBagh Near Hurriyat Office, Srinagar",
+  },
+];
+
+export const featuredData = [
+  {
+    id: 1,
+    icon: FaUsers,
+    title: "Client-Centric Approach",
+    description: `We don’t just deliver solutions! We tailor them to your vision. Your
+    success is our mission. For our clients, we break the mold!`,
+  },
+  {
+    id: 2,
+    icon: FaDollarSign,
+    title: "Quality and Savings",
+    description: `Imagine! Getting high-quality tech services without breaking the
+    bank. We offer premium services at a fraction of the cost of in-house teams.`,
+  },
+  {
+    id: 3,
+    icon: FaTools,
+    title: "End-to-End Development",
+    description: `From the initial idea to the final product, we handle it all. Enjoy
+    seamless execution with our comprehensive solution.`,
   },
 ];
