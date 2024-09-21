@@ -55,11 +55,11 @@ export default function Page({ params }: PageProps) {
 
   return (
     <>
-      <TopBar
+      {/* <TopBar
         backgroundImage={""}
         aboutText={"Portfolios"}
         whoWeAreText={"Explore Our portfolios"}
-      />
+      /> */}
       <Column
         px={["s", "l"]}
         mt={"xlg"}

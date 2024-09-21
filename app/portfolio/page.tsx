@@ -47,10 +47,7 @@ export default function  Portfolio() {
 
   return(
   <>
-  <TopBar
-    backgroundImage={""}
-    aboutText={"Our PortFolio"}
-    whoWeAreText={"explore Variety Of Our Project We Have Created"} />
+
     <PortfolioSection products={products} /></>
   );
 };

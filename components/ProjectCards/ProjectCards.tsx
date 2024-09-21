@@ -26,7 +26,7 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
         <Box
           borderTopRightRadius={"xl"}
           borderTopLeftRadius={"xl"}
-          width={"97%"}
+          width={"100%"}
           key={product.slug + index}
           py={"xxxl"}
           flexDirection={["column-reverse", "row"]}

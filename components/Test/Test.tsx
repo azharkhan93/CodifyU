@@ -1,5 +1,14 @@
-"use client"
-import { Box, Button, CenterBox, Column, Row, Text, TextArea, UpdateForm } from "@/components";
+"use client";
+import {
+  Box,
+  Button,
+  CenterBox,
+  Column,
+  Row,
+  Text,
+  TextArea,
+  UpdateForm,
+} from "@/components";
 import { Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,8 +37,7 @@ const FormSchema = Yup.object({
   message: Yup.string().required("Message is Required"),
 });
 
-export const 
-Test: React.FC<UpdateComponentProps> = ({
+export const Test: React.FC<UpdateComponentProps> = ({
   data,
   onActionComplete,
 }) => {
@@ -44,14 +52,12 @@ Test: React.FC<UpdateComponentProps> = ({
     values: UpdateFormValues,
     { setSubmitting }: FormikHelpers<UpdateFormValues>
   ) => {
-    
     setSubmitting(false);
     onActionComplete();
   };
 
   return (
     <>
-      
       <Formik<UpdateFormValues>
         initialValues={initialValues}
         validationSchema={FormSchema}
@@ -64,54 +70,61 @@ Test: React.FC<UpdateComponentProps> = ({
               height: "100%",
             }}
           >
-            <CenterBox width={"100%"} height={"100%"}
-            data-aos="fade-up"
-            >
+            <CenterBox width={"100%"} height={"100%"}>
               <Column
-                width={["96%","70%"]}
+              style={{
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"
+              }}
+                width={["100%", "85%"]}
                 gap={"xl"}
-
                 py={"l"}
                 px={"xxl"}
                 borderRadius={"m"}
-               
-                
-                // bg={"greenish"}
               >
                 <Box paddingY={"s"}>
-                  <Text variant={"subHeading"} color={"primary"}>
+                  <Text variant={["subHeading","heading"]} color={"primary"} textAlign={["start","center"]}>
                     Enter Your Details
                   </Text>
                 </Box>
                 <Row
-                // width={"100%"}
-                flexDirection={"row"}
-                alignItems={"center"}
-                gap={"xxxl"}
-                // justifyContent={"spa"}
+                  flexDirection={["column","row"]}
+                  alignItems={"center"}
+                  gap={"xxxl"}
+                  
                 >
-                <UpdateForm name={"name"} placeholder={"Name"} label={"Name"} />
-                <UpdateForm name={"name"} placeholder={"LastName"} label={"LastName"} />
+                  <UpdateForm
+                    name={"name"}
+                    placeholder={"Name"}
+                    label={"Name"}
+                  />
+                  <UpdateForm
+                    name={"name"}
+                    placeholder={"LastName"}
+                    label={"LastName"}
+                  />
                 </Row>
                 <Row
-                // width={"100%"}
-                flexDirection={"row"}
-                alignItems={"center"}
-                gap={"xxxl"}
-                // justifyContent={"spa"}
+                  flexDirection={["column","row"]}
+                  alignItems={"center"}
+                  gap={"xxxl"}
+                
                 >
-                <UpdateForm
-                  name={"email"}
-                  placeholder={"Email"}
-                  label={"Email"}
-                />
-                <UpdateForm
-                  name={"phone"}
-                  placeholder={"Phone Number"}
-                  label={"Phone Number"}
-                />
+                  <UpdateForm
+                    name={"email"}
+                    placeholder={"Email"}
+                    label={"Email"}
+                  />
+                  <UpdateForm
+                    name={"phone"}
+                    placeholder={"Phone Number"}
+                    label={"Phone Number"}
+                  />
                 </Row>
-                <UpdateForm name={"name"} placeholder={"Subject"} label={"Subject"} />
+                <UpdateForm
+                  name={"name"}
+                  placeholder={"Subject"}
+                  label={"Subject"}
+                />
                 <TextArea
                   name={"message"}
                   placeholder={"Message"}
@@ -119,12 +132,13 @@ Test: React.FC<UpdateComponentProps> = ({
                 />
                 <CenterBox width={"100%"} paddingY={"s"}>
                   <Button
-                  borderRadius={"s"}
+                    borderRadius={"s"}
                     py={"m"}
                     width={"70%"}
                     variant={isSubmitting ? `disabled` : "primary"}
                     type="submit"
                     disabled={isSubmitting}
+                    bg={"primary"}
                   >
                     {isSubmitting ? (
                       <FontAwesomeIcon icon={faSpinner} className="fa-spin" />
@@ -137,7 +151,6 @@ Test: React.FC<UpdateComponentProps> = ({
           </Form>
         )}
       </Formik>
-      
     </>
   );
 };

@@ -1,109 +1,68 @@
 "use client";
 import { Test } from "../Test";
 import { Column, Box, CenterBox, Text, Row } from "../styled";
-import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-import { ContactDetailsCards } from "./components/ContactDetailsCard/ContactDetailsCards";
+import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 
 export const ContactSection = () => {
   return (
-    <Column flexDirection={["column", "row"]} py={["xxl", "header"]}>
+    <Column flexDirection={["column", "row"]}>
       <Box
+        mt={"xlg"}
         py={"xxxl"}
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
         gap={"l"}
-        px={"xl"}
       >
         <Column gap={["xl", "m"]}>
-          <Text  variant={["heading", "footerHeading"]} >
-            Any Queries Talk To Us?
+          <Text variant={"heading"}>
+            Any Queries? Talk To Us!
+          </Text>
+          <Text variant={"body"} width={["100%", "670px"]} lineHeight={"1.5"}>
+            Our Team model offers a proven pathway to success. Our team is ready
+            to provide client references, estimate your project, or answer any
+            other queries.
           </Text>
 
-          <Text  variant={["subHeading","heading"]} textAlign={["center","center"]}>
-            Have a question to our team or need help with your project?
-          </Text>
+          <Column py={"xxxl"} gap={"xxxxl"}>
+            {/* Phone Number */}
+            <Row gap="xl" alignItems="center" flexDirection={"row"}>
+              <FaPhoneAlt size={25} fill="#fb9c42" />
+              <Text variant={"subHeading"}>+91 6005493028</Text>
+            </Row>
+            <Row gap="xl" alignItems="center" flexDirection={"row"}>
+              <FaPhoneAlt size={25} fill="#fb9c42" />
+              <Text variant={"subHeading"}>+91 60058990</Text>
+            </Row>
+
+            {/* Email */}
+            <Row gap="xl" alignItems="center" flexDirection={"row"}>
+              <FaEnvelope size={25} fill="#fb9c42" />
+              <Text variant={"subHeading"}>hellocodefyU@gmail.com</Text>
+            </Row>
+
+            {/* Location */}
+            <Row gap="xl" alignItems="center" flexDirection={"row"}>
+              <FaMapMarkerAlt size={25} fill="#fb9c42" />
+              <Text variant={"subHeading"}>RajBagh Near Hurriyat Office, Srinagar</Text>
+            </Row>
+
+            {/* Social Icons */}
+            <CenterBox>
+              <Row gap={"xl"} flexDirection={"row"}>
+                <FaFacebook size={24} fill="#fb9c42" />
+                <FaInstagram size={24} fill="#fb9c42" />
+                <FaLinkedin size={24} fill="#fb9c42" />
+                <FaGithub size={24} fill="#fb9c42" />
+              </Row>
+            </CenterBox>
+          </Column>
         </Column>
 
-        <CenterBox width={["100%", "450px"]}>
-          <Text variant={"body"}>
-            Our Team model offers a proven pathway to success, Our team is ready
-            to provide client references, estimate your project, or answer any
-            other question related to your IT initiative.
-          </Text>
-        </CenterBox>
-      </Box>
-
-      <CenterBox
-        py={"xxxxl"}
-        flexDirection={["column", "row"]}
-        width={["100%", "90%"]}
-        px={["none", "xxxxl"]}
-      >
+        {/* Form Component */}
         <Test onActionComplete={() => console.log("Form submitted!")} />
-        <Box
-          data-aos="fade-right"
-          mt={["l", "header"]}
-          // bg={"grey"}
-          alignItems={"center"}
-          gap={"xxxl"}
-          py={"header"}
-          px={"m"}
-          borderRadius={"m"}
-          width={["97%", "700px"]}
-        >
-          <ContactDetailsCards
-            title="Address"
-            content="Rajbagh Near Hurriyat Office Kursoo Rajbagh Srinagar Jammu and Kashmir 190008 India"
-          />
-          <ContactDetailsCards
-            title="Contact"
-            content={
-              <>
-                <Column gap={"s"}>
-                  <Text variant={"body"}>
-                    <a
-                      href="tel:+917006168185"
-                      style={{ color: "black", textDecoration: "none" }}
-                    >
-                      Phone: +91 7006168185
-                    </a>
-                  </Text>
-                  <Text variant={"body"}>
-                    <a
-                      href="tel:+917006569557"
-                      style={{ color: "black", textDecoration: "none" }}
-                    >
-                      Phone: +91 7006569557
-                    </a>
-                  </Text>
-                  <Text variant={"body"}>
-                    <a
-                      href="mailto:info@codefyu.com"
-                      style={{ color: "black", textDecoration: "none" }}
-                    >
-                      Email: info@codefyu.com
-                    </a>
-                  </Text>
-                </Column>
-              </>
-            }
-          />
-          <ContactDetailsCards
-            title="Open Time"
-            content="Mon-Sat 09:00AM To 05:00PM"
-          />
-
-          <Column gap={"m"} width={"100%"}>
-            <Text variant={"subHeading"}>Stay Connected</Text>
-            <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-              <FaFacebook size={24} />
-              <FaInstagram size={24} />
-              <FaLinkedin size={24} />
-              <FaGithub size={24} />
-            </Row>
-          </Column>
-        </Box>
-      </CenterBox>
+      </Box>
     </Column>
   );
 };
+

@@ -5,11 +5,11 @@ import { faqItems } from "@/constants";
 export default function Home() {
   return (
     <>
-      <TopBar
+      {/* <TopBar
         backgroundImage={""}
         aboutText={"About Us"}
         whoWeAreText={"Who We Are"}
-      />
+      /> */}
 
       <AboutUs />
 

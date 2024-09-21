@@ -1,6 +1,6 @@
 import { Box, Button, CenterBox, Column, Row, Text } from "@/components/styled";
 import Image from "next/image";
-import { FaAward, FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
+import {FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
 
 export const AboutCards = () => {
   return (
@@ -10,31 +10,30 @@ export const AboutCards = () => {
       alignItems={"center"}
     >
       <CenterBox
-  data-aos="fade-up"
-  bg="secondary"
-  width={["400px", "460px"]}
-  height={["400px", "550px"]}
-  position="relative"
->
-  <Box
-    width={["350px","500px"]}
-    height={["300px", "400px"]}
-    position="absolute"
-    top="12%"
-    left={["7%","16%"]}
-    alignItems={"center"}
-    justifyContent={"center"}
-    borderRadius="s"
-    overflow="hidden"
-  >
-    <Image
-      src="/images/bg.jpeg"
-      alt="no image"
-      width={500}
-      height={400}
-    />
-  </Box>
-</CenterBox>
+        bg="secondary"
+        width={["400px", "460px"]}
+        height={["400px", "550px"]}
+        position="relative"
+      >
+        <Box
+          width={["350px", "500px"]}
+          height={["300px", "400px"]}
+          position="absolute"
+          top="12%"
+          left={["7%", "16%"]}
+          alignItems={"center"}
+          justifyContent={"center"}
+          borderRadius="s"
+          overflow="hidden"
+        >
+          <Image
+            src="/images/bg.jpeg"
+            alt="no image"
+            width={500}
+            height={400}
+          />
+        </Box>
+      </CenterBox>
       <Column
         py={"xxxxl"}
         gap={"xxl"}
@@ -42,13 +41,12 @@ export const AboutCards = () => {
         px={["s", "xl"]}
         data-aos="fade-right"
       >
-        <Text variant={"footerHeading"}>About Us</Text>
-        <Text variant={["heading","heading"]} width={["100%", "600px"]}>
+        <Text variant={["heading","footerHeading"]}>About Us</Text>
+        <Text variant={["subHeading", "heading"]} width={["100%", "600px"]}>
           Beyond Technology Your Competitive Edge for Growth
         </Text>
         <Text variant={"body"} width={["100%", "600px"]}>
-          At <span style={{ color: "orange", fontSize: "22px" }}>CodefyU</span>,
-          we dont just deliver technology we forge strategic partnerships that
+          At CodefyU  we dont just deliver technology we forge strategic partnerships that
           advance your business. Our client-centric solutions are tailored to
           your vision, ensuring swift, reliable outcomes. Leveraging Indias top
           talent, we provide cutting-edge services that save you time and
@@ -57,8 +55,10 @@ export const AboutCards = () => {
         </Text>
 
         <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <FaUsers size={28} fill="black" />
-          <Text variant={["subHeading", "heading"]}>Client-Centric Approach</Text>
+          <FaUsers size={28} fill="#fb9c42" />
+          <Text variant={["subHeading", "heading"]}>
+            Client-Centric Approach
+          </Text>
         </Row>
         <Column>
           <Text variant={"body"} width={["100%", "600px"]}>
@@ -67,8 +67,8 @@ export const AboutCards = () => {
           </Text>
         </Column>
         <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <FaDollarSign size={28} fill="black" />
-          <Text variant={["subHeading", "heading"]} >Quality and Savings</Text>
+          <FaDollarSign size={28} fill="#fb9c42" />
+          <Text variant={["subHeading", "heading"]}>Quality and Savings</Text>
         </Row>
         <Column>
           <Text variant={"body"} width={["100%", "600px"]}>
@@ -78,8 +78,10 @@ export const AboutCards = () => {
           </Text>
         </Column>
         <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <FaTools size={28} fill="black" />
-          <Text variant={["subHeading", "heading"]} >End-to-End Development</Text>
+          <FaTools size={28} fill="#fb9c42" />
+          <Text variant={["subHeading", "heading"]}>
+            End-to-End Development
+          </Text>
         </Row>
         <Column>
           <Text variant={"body"} width={["100%", "600px"]}>

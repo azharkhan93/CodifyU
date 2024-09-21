@@ -4,16 +4,15 @@ import { AboutCards } from "./components/AboutCards";
 export const AboutUs = () => {
   return (
     <>
-      <CenterBox py={["xxxxl", "xxxl"]} width={"100%"}>
+      <CenterBox py={["xxxxl", "xxxl"]} width={"100%"} mt={"xlg"}>
         <Column
           gap={"xl"}
           alignItems={"center"}
           width={["100%", "900px"]}
           px={["s", "xl"]}
-          data-aos="fade-right"
         >
           <Text
-            textAlign={["center","center"]}
+            textAlign={["start","center"]}
             variant={["heading", "footerHeading"]}
             // color="blue600"
           >

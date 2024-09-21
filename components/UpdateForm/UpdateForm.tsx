@@ -44,7 +44,7 @@ export const UpdateForm: React.FC<UpdateFormInputBoxProps> = ({
         </Text>
       </Box>
       <Box 
-      width={["98%","100%"]}
+      width={["100%","100%"]}
       >
         <InputBox
           handleOnChange={onChange}
