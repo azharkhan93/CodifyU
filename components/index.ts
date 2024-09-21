@@ -27,6 +27,7 @@ export * from "./ProjectCards"
 export * from "./PortfolioSection"
 export * from "./AnimateCircle"
 export * from "./TechSolutions"
+// export * from "./PageTranstions"
 // export * from "./OurMission"
 
 

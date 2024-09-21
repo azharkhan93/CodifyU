@@ -1,5 +1,6 @@
 "use client";
-import {  Box, GlobalStyle, } from "@/components";
+
+import { Box, GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { Navbar } from "@/components/Navbar";
@@ -8,49 +9,36 @@ import Head from "next/head";
 import { ModalProvider } from "@/contexts";
 import { StyleSheetManager } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
+import Template from "./template";
 
-
-
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
- 
-
-
- 
-
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <Head>
-        <title>codefyU</title> 
-        <meta name="description" content="one stop for all sofware solutions" /> 
+        <title>codefyU</title>
+        <meta name="description" content="one stop for all software solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/logo.svg" /> 
+        <link rel="icon" href="/images/logo.svg" />
       </Head>
       <body>
         <AppThemeProvider>
-         
           <ModalProvider>
-          <StyleSheetManager shouldForwardProp={isPropValid}>
-            <Navbar />
-            <GlobalStyle />
-            <Box
-            px={["m", "l"]}
-            >
-            {children}
-            </Box>
-            <Footer />
+            <StyleSheetManager shouldForwardProp={isPropValid}>
+              <Navbar />
+              <GlobalStyle />
+
+              <Template>
+                <Box px={["m", "l"]}>{children}</Box>
+              </Template>
+
+              <Footer />
             </StyleSheetManager>
-            </ModalProvider>
-           
-         
+          </ModalProvider>
         </AppThemeProvider>
       </body>
     </html>
   );
 }
+
 
 
