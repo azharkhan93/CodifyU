@@ -48,6 +48,7 @@ export const Footer = () => {
             </Text>
           </Column>
           <Box
+          bg={"primary"}
             alignItems={"flex-start"}
             justifyContent={"start"}
             position={"relative"}
@@ -59,6 +60,7 @@ export const Footer = () => {
           >
             <FaArrowRight
               style={{
+                color: "#fb9c42",
                 position: "absolute",
                 right: "10px",
                 top: "50%",
@@ -68,10 +70,12 @@ export const Footer = () => {
             />
 
             <Button
+            variant="primary"
               borderRadius={"circle"}
               py={"s"}
               px={"xl"}
               onClick={openModal}
+              bg={"textColor"}
             >
               Get In Touch
             </Button>
