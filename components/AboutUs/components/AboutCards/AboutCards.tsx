@@ -1,6 +1,6 @@
 import { Box, Button, CenterBox, Column, Row, Text } from "@/components/styled";
 import Image from "next/image";
-import {FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
+import { FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
 import { FeaturedCards } from "../FeaturedCards";
 import { featuredData } from "@/constants";
 
@@ -43,21 +43,26 @@ export const AboutCards = () => {
         px={["s", "xl"]}
         data-aos="fade-right"
       >
-        <Text variant={["heading","footerHeading"]}>About Us</Text>
+        <Text variant={["heading", "footerHeading"]}>About Us</Text>
         <Text variant={["subHeading", "heading"]} width={["100%", "600px"]}>
           Beyond Technology Your Competitive Edge for Growth
         </Text>
         <Text variant={"body"} width={["100%", "600px"]}>
-          At CodefyU  we dont just deliver technology we forge strategic partnerships that
-          advance your business. Our client-centric solutions are tailored to
-          your vision, ensuring swift, reliable outcomes. Leveraging Indias top
-          talent, we provide cutting-edge services that save you time and
-          resources, offering end-to-end development for seamless execution,
-          here is what you can expect
+          At CodefyU we dont just deliver technology we forge strategic
+          partnerships that advance your business. Our client-centric solutions
+          are tailored to your vision, ensuring swift, reliable outcomes.
+          Leveraging Indias top talent, we provide cutting-edge services that
+          save you time and resources, offering end-to-end development for
+          seamless execution, here is what you can expect
         </Text>
 
-{featuredData.map(({ id, icon, title, description }) => (
-          <FeaturedCards key={id} icon={icon} title={title} description={description} />
+        {featuredData.map(({ id, icon, title, description }) => (
+          <FeaturedCards
+            key={id}
+            icon={icon}
+            title={title}
+            description={description}
+          />
         ))}
         <CenterBox width={["100%", "30%"]}>
           <Button

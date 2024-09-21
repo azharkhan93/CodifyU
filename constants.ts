@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { MdOutlineDeveloperMode, } from "react-icons/md";
-import { FaBrain, FaCode, FaCog, FaDollarSign, FaEnvelope, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { FaBrain, FaCode, FaCog, FaDollarSign, FaDoorOpen, FaEnvelope, FaHandsHelping, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 
 
 
@@ -340,5 +340,26 @@ export const featuredData = [
     title: "End-to-End Development",
     description: `From the initial idea to the final product, we handle it all. Enjoy
     seamless execution with our comprehensive solution.`,
+  },
+];
+
+export const workSpaceData = [
+  {
+    heading: "Availability",
+    description:
+      "Our teams are fully focused on delivering true value to help our global clients succeed in a challenging business environment.",
+    icon: FaRocket,
+  },
+  {
+    heading: "Open Doors",
+    description:
+      "Our managers always have an open door, so employees feel free to provide input on decision-making and production processes or seek guidance.",
+    icon: FaDoorOpen,
+  },
+  {
+    heading: "Teamwork",
+    description:
+      "We recognize that a cohesive team is greater than the sum of its parts. Our employees collaborate closely to deliver high-quality services.",
+    icon: FaHandsHelping,
   },
 ];

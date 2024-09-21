@@ -1,5 +1,7 @@
 import { CenterBox, Column, Row, Text } from "../styled";
 import { AboutCards } from "./components/AboutCards";
+import { OurMission } from "./components/OurMission";
+import { OurWorkSpaceSection } from "./components/WorkSpaceSection";
 
 export const AboutUs = () => {
   return (
@@ -26,6 +28,8 @@ export const AboutUs = () => {
         </Column>
       </CenterBox>
       <AboutCards />
+      <OurMission />
+      <OurWorkSpaceSection />
     </>
   );
 };

@@ -156,4 +156,10 @@ export type LogoProps = {
     title: string;
     description: string;
   }
+
+  export type WorkSpaceSection = {
+    heading: string;
+    description: string;
+    icon: IconType;
+  }
   
