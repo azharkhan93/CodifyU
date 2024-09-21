@@ -1,1 +1,1 @@
-export * from "./Featuredcards"
+export * from "./FeaturedCards"
