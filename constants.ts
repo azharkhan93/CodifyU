@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { MdOutlineDeveloperMode, } from "react-icons/md";
-import { FaBrain, FaCode, FaCog, FaLightbulb, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, } from "react-icons/fa";
+import { FaBrain, FaCode, FaCog, FaEnvelope, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, } from "react-icons/fa";
 
 
 
@@ -296,3 +296,25 @@ export const CRD_ST = [
 ];
 
 
+export const contactData = [
+  {
+    id: 1,
+    icon: FaPhoneAlt, 
+    text: "+91 6005493028",
+  },
+  {
+    id: 2,
+    icon: FaPhoneAlt,
+    text: "+91 60058990",
+  },
+  {
+    id: 3,
+    icon: FaEnvelope,
+    text: "hellocodefyU@gmail.com",
+  },
+  {
+    id: 4,
+    icon: FaMapMarkerAlt,
+    text: "RajBagh Near Hurriyat Office, Srinagar",
+  },
+];

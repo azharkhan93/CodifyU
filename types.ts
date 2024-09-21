@@ -144,3 +144,9 @@ export type LogoProps = {
     height?: number;
     priority?: boolean;
   };
+
+
+  export type ContactItemProps = {
+    icon: IconType; 
+    text: string;
+  }

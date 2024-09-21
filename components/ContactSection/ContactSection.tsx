@@ -2,13 +2,15 @@
 import { Test } from "../Test";
 import { Column, Box, CenterBox, Text, Row } from "../styled";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { ContactItems } from "./components/ContactItems";
+import { contactData } from "@/constants";
 
 
 export const ContactSection = () => {
   return (
-    <Column flexDirection={["column", "row"]}>
+    <Column flexDirection={["column", "row"]}  mt={"xlg"}>
       <Box
-        mt={"xlg"}
+       
         py={"xxxl"}
         flexDirection={["column", "row"]}
         justifyContent={"space-between"}
@@ -25,41 +27,34 @@ export const ContactSection = () => {
           </Text>
 
           <Column py={"xxxl"} gap={"xxxxl"}>
-            {/* Phone Number */}
-            <Row gap="xl" alignItems="center" flexDirection={"row"}>
-              <FaPhoneAlt size={25} fill="#fb9c42" />
-              <Text variant={"subHeading"}>+91 6005493028</Text>
-            </Row>
-            <Row gap="xl" alignItems="center" flexDirection={"row"}>
-              <FaPhoneAlt size={25} fill="#fb9c42" />
-              <Text variant={"subHeading"}>+91 60058990</Text>
-            </Row>
+          {contactData.map(({ id, icon, text }) => (
+            <ContactItems key={id} icon={icon} text={text} />
+          ))}
 
-            {/* Email */}
-            <Row gap="xl" alignItems="center" flexDirection={"row"}>
-              <FaEnvelope size={25} fill="#fb9c42" />
-              <Text variant={"subHeading"}>hellocodefyU@gmail.com</Text>
-            </Row>
+            <CenterBox
+            borderRadius={"circle"}
+            py={"l"}
+            width={"100%"}
+            borderTop={"1.8px solid #fb9c42 "}
+            gap={"xl"}
+            >
+              <Text
+              variant={"subHeading"}
+              >
 
-            {/* Location */}
-            <Row gap="xl" alignItems="center" flexDirection={"row"}>
-              <FaMapMarkerAlt size={25} fill="#fb9c42" />
-              <Text variant={"subHeading"}>RajBagh Near Hurriyat Office, Srinagar</Text>
-            </Row>
+                Follow Us On
 
-            {/* Social Icons */}
-            <CenterBox>
+              </Text>
               <Row gap={"xl"} flexDirection={"row"}>
-                <FaFacebook size={24} fill="#fb9c42" />
-                <FaInstagram size={24} fill="#fb9c42" />
-                <FaLinkedin size={24} fill="#fb9c42" />
-                <FaGithub size={24} fill="#fb9c42" />
+                <FaFacebook size={32} fill="#fb9c42" />
+                <FaInstagram size={32} fill="#fb9c42" />
+                <FaLinkedin size={32} fill="#fb9c42" />
+                <FaGithub size={32} fill="#fb9c42" />
               </Row>
             </CenterBox>
           </Column>
         </Column>
 
-        {/* Form Component */}
         <Test onActionComplete={() => console.log("Form submitted!")} />
       </Box>
     </Column>

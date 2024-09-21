@@ -72,25 +72,28 @@ export const Test: React.FC<UpdateComponentProps> = ({
           >
             <CenterBox width={"100%"} height={"100%"}>
               <Column
-              style={{
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)"
-              }}
-                width={["100%", "85%"]}
+                style={{
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+                }}
+                width={["100%", "90%"]}
                 gap={"xl"}
                 py={"l"}
                 px={"xxl"}
                 borderRadius={"m"}
               >
                 <Box paddingY={"s"}>
-                  <Text variant={["subHeading","heading"]} color={"primary"} textAlign={["start","center"]}>
+                  <Text
+                    variant={["subHeading", "heading"]}
+                    color={"primary"}
+                    textAlign={["start", "center"]}
+                  >
                     Enter Your Details
                   </Text>
                 </Box>
                 <Row
-                  flexDirection={["column","row"]}
+                  flexDirection={["column", "row"]}
                   alignItems={"center"}
                   gap={"xxxl"}
-                  
                 >
                   <UpdateForm
                     name={"name"}
@@ -104,10 +107,9 @@ export const Test: React.FC<UpdateComponentProps> = ({
                   />
                 </Row>
                 <Row
-                  flexDirection={["column","row"]}
+                  flexDirection={["column", "row"]}
                   alignItems={"center"}
                   gap={"xxxl"}
-                
                 >
                   <UpdateForm
                     name={"email"}
