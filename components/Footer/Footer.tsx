@@ -48,7 +48,7 @@ export const Footer = () => {
             </Text>
           </Column>
           <Box
-          bg={"primary"}
+            bg={"primary"}
             alignItems={"flex-start"}
             justifyContent={"start"}
             position={"relative"}
@@ -70,7 +70,7 @@ export const Footer = () => {
             />
 
             <Button
-            variant="primary"
+              variant="primary"
               borderRadius={"circle"}
               py={"s"}
               px={"xl"}

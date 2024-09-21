@@ -13,7 +13,12 @@ interface ContentBoxProps {
   reverse?: boolean;
 }
 
-export const AboutContents: React.FC<ContentBoxProps> = ({ title, description, imageSrc, reverse }) => {
+export const AboutContents: React.FC<ContentBoxProps> = ({
+  title,
+  description,
+  imageSrc,
+  reverse,
+}) => {
   return (
     <Box
       flexDirection={reverse ? "column-reverse" : "column"}
@@ -40,7 +45,27 @@ export const AboutContents: React.FC<ContentBoxProps> = ({ title, description, i
       <Text variant={"body"} lineHeight={"1.5"}>
         {description}
       </Text>
-      <Image src={imageSrc} alt="no image" width={500} height={300} />
+      
+      <Box
+        width={["341px", "500px"]}  
+        height={["270px", "300px"]} 
+        position="relative"
+        overflow="hidden" 
+      >
+        <Image 
+          src={imageSrc} 
+          alt="no image" 
+          width={500} 
+          height={300} 
+          style={{
+            width: "100%",
+            height: "100%",
+            borderRadius: "10px", 
+            objectFit: "cover", 
+          }} 
+        />
+      </Box>
     </Box>
   );
 };
+
