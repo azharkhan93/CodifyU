@@ -378,3 +378,23 @@ export const workSpaceData = [
     icon: FaHandsHelping,
   },
 ];
+
+
+export const aiAdvantages = [
+  {
+    description:
+      "Automate highly detailed, repetitive, and even physically strenuous tasks without requiring human intervention.",
+  },
+  {
+    description:
+      "Improve decision-making processes by analyzing large volumes of data and providing actionable insights.",
+  },
+  {
+    description:
+      "Enhance productivity by freeing up human workers to focus on complex, creative, or higher-value tasks.",
+  },
+  {
+    description:
+      "Increase accuracy and reduce errors in tasks such as data entry, diagnosis, and predictive analytics.",
+  },
+];

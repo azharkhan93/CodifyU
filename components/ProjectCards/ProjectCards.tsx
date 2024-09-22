@@ -60,12 +60,12 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
             <Box width={["60%", "30%"]}>
               <Button
                 border={"none"}
-                borderLeft={"3px solid green"}
-                borderRight={"3px solid black"}
+                borderLeft={"3px solid #fb9c42"}
+                borderRight={"3px solid #fb9c42"}
                 py={"m"}
                 px={"s"}
                 bg={"primary"}
-                style={{ color: "white" }}
+                style={{ color: "white", cursor: "pointer" }}
                 onClick={() => handleViewMore(product.slug)}
               >
                 View Case Study

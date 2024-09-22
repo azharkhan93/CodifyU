@@ -162,4 +162,6 @@ export type LogoProps = {
     description: string;
     icon: IconType;
   }
-  
+  export type AiAdvantagesProps = {
+    description: string;
+  };

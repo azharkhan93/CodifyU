@@ -179,113 +179,131 @@ export const Navbar: React.FC = () => {
 
       
       {isOpen ? (
+        <>
         <Box
           position="fixed"
           top={0}
           left={0}
           width="100vw"
           height="100vh"
-          zIndex={9998}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <AnimatedBox
-            isOpen={isOpen}
-            borderRadius={"m"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            width={"100%"}
-            height={"80vh"}
-            zIndex={9999}
-            display={["flex", "none"]}
+          zIndex={9997}
+          bg={"Overlay"} 
+          />
+          <Box
             position="fixed"
-            top={10}
+            top={0}
             left={0}
-            gap={"xxl"}
-            style={{
-              background: "linear-gradient(147deg, #4d4855 0%, #000000 74%)",
-            }}
+            width="100vw"
+            height="100vh"
+            zIndex={9998}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Column
+            <AnimatedBox
+              isOpen={isOpen}
+              borderRadius={"m"}
               alignItems={"center"}
-              gap={"xxxl"}
               justifyContent={"center"}
+              width={"100%"}
+              height={"80vh"}
+              zIndex={9999}
+              display={["flex", "none"]}
+              position="fixed"
+              top={10}
+              left={0}
+              gap={"xxl"}
+              style={{
+                background: "linear-gradient(147deg, #4d4855 0%, #000000 74%)",
+              }}
             >
-              {NavbarData.map((item, index) => (
-                <Box key={index} gap={"l"}  flexDirection={"row"}
-                position={"relative"} 
-                >
-                  <StyledLink onClick={() => navigateTo(item.link)}>
-                    <Text variant={"body"} color={"white"}>
-                      {item.title}
-                    </Text>
-                  </StyledLink>
-
-                  {item.dropdown ? (
-                    <>
-                      <Box
-                      alignItems={"center"}
-                      flexDirection={"row"}
-                     
-                        onClick={() => handleDropdownToggle(index)}
-                        position={"relative"}
-                        style={{ cursor: "pointer" }}
-                      >
-                        {dropdownOpen === index ? (
-                          <FaMinus size={17} fill="#fb9c42" />
-                        ) : (
-                          <FaPlus size={17} fill="#fb9c42" />
-                        )}
-                      </Box>
-
-                      {dropdownOpen === index ? (
-                        <Column  position={"absolute"} 
-                        borderRadius={"m"}
-                        px={"m"}
-                        py={'xl'}
-                        width={'250px'}
-                        top={40} 
-                        left={-40} 
-                        bg={"white"} 
-                        
-                        zIndex={9999} 
-                        gap={"xl"}
-                        
-                        >
-                          {item.dropdown.map((subItem, subIndex) => (
-                            <StyledLink
-                              key={subIndex}
-                              style={{ color: "black" }}
-                              onClick={() => navigateTo(subItem.link)}
-                            >
-                              {subItem.title}
-                            </StyledLink>
-                          ))}
-                        </Column>
-                      ): null}
-                    </>
-                  ): null}
-                </Box>
-              ))}
-            </Column>
-
-            <CenterBox width={"100%"} mt={"xl"}>
-              <Button
-                borderTopLeftRadius={"xxl"}
-                display={["block", "none"]}
-                variant={"primary"}
-                bg={"bluegradient"}
-                py={"m"}
-                px={"xl"}
-                borderRadius={"m"}
+              <Column
+                alignItems={"center"}
+                gap={"xxxl"}
+                justifyContent={"center"}
               >
-                Enquire Now
-              </Button>
-            </CenterBox>
-          </AnimatedBox>
-        </Box>
+                {NavbarData.map((item, index) => (
+                  <Box key={index} gap={"l"} flexDirection={"row"}
+                    position={"relative"}
+                  >
+                    <StyledLink onClick={() => navigateTo(item.link)}>
+                      <Text variant={"body"} color={"white"}>
+                        {item.title}
+                      </Text>
+                    </StyledLink>
+
+                    {item.dropdown ? (
+                      <>
+                        <Box
+                          alignItems={"center"}
+                          flexDirection={"row"}
+
+                          onClick={() => handleDropdownToggle(index)}
+                          position={"relative"}
+                          style={{ cursor: "pointer" }}
+                        >
+                          {dropdownOpen === index ? (
+                            <FaMinus size={17} fill="#fb9c42" />
+                          ) : (
+                            <FaPlus size={17} fill="#fb9c42" />
+                          )}
+                        </Box>
+
+                        {dropdownOpen === index ? (
+                          <Column position={"absolute"}
+                            borderRadius={"m"}
+                            px={"m"}
+                            py={'xl'}
+                            width={'250px'}
+                            top={40}
+                            left={-40}
+                            bg={"white"}
+
+                            zIndex={9999}
+                            gap={"xl"}
+
+                          >
+                            {item.dropdown.map((subItem, subIndex) => (
+                              <StyledLink
+                                key={subIndex}
+                                style={{ color: "black" }}
+                                onClick={() => navigateTo(subItem.link)}
+                              >
+                                {subItem.title}
+                              </StyledLink>
+                            ))}
+                          </Column>
+                        ) : null}
+                      </>
+                    ) : null}
+                  </Box>
+                ))}
+              </Column>
+
+              <CenterBox width={"100%"} position={"absolute"} bottom={5} bg={"textColor"} py={"m"}
+                borderRadius={"m"}
+                style={{
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)"
+                }}
+              >
+                <Button
+                  borderTopLeftRadius={"xxl"}
+                  display={["block", "none"]}
+                  variant={"primary"}
+                  bg={"primary"}
+                  py={"m"}
+                  width={"60%"}
+                  borderRadius={"m"}
+                >
+                  Enquire Now
+                </Button>
+              </CenterBox>
+            </AnimatedBox>
+
+          </Box></>
+        
       ) : null}
+      
     </>
   );
 };

@@ -24,14 +24,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <AppThemeProvider>
           <ModalProvider>
             <StyleSheetManager shouldForwardProp={isPropValid}>
+            <Template>
               <Navbar />
               <GlobalStyle />
-
-              <Template>
                 {children}
-              </Template>
-
               <Footer />
+              </Template>
             </StyleSheetManager>
           </ModalProvider>
         </AppThemeProvider>
