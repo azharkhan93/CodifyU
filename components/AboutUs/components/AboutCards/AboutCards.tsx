@@ -1,6 +1,5 @@
 import { Box, Button, CenterBox, Column, Row, Text } from "@/components/styled";
 import Image from "next/image";
-import { FaUsers, FaDollarSign, FaTools } from "react-icons/fa";
 import { FeaturedCards } from "../FeaturedCards";
 import { featuredData } from "@/constants";
 
@@ -12,7 +11,7 @@ export const AboutCards = () => {
       alignItems={"center"}
     >
       <CenterBox
-        bg="secondary"
+        bg="primary"
         width={["400px", "460px"]}
         height={["400px", "550px"]}
         position="relative"
@@ -41,7 +40,7 @@ export const AboutCards = () => {
         gap={"xxl"}
         width={["100%", "700px"]}
         px={["s", "xl"]}
-        data-aos="fade-right"
+
       >
         <Text variant={["heading", "footerHeading"]}>About Us</Text>
         <Text variant={["subHeading", "heading"]} width={["100%", "600px"]}>

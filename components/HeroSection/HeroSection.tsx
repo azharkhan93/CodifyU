@@ -68,7 +68,7 @@ export const HeroSection = () => {
           digital landscape
         </Text>
 
-        <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
+        <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]} >
           <Button
             variant={"primary"}
             py={"m"}

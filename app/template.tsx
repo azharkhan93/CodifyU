@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 const opacity = {
   initial: { opacity: 0 },
-  enter: { opacity: 1, transition: { duration: 0.8 } },
-  exit: { opacity: 0, transition: { duration: 0.8 } },
+  enter: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
 };
 
 const expand = {
@@ -18,7 +18,7 @@ const expand = {
       top: isRightSide ? "100vh" : "0",
       opacity: 1,
       transition: {
-        duration: 1.2,
+        duration: 0.5,
         delay: 0.2 * i,
         ease: [0.5, 0.05, 0.1, 0.3],
       },
@@ -32,7 +32,7 @@ const expand = {
       top: isRightSide ? "0" : "100vh",
       opacity: 0,
       transition: {
-        duration: 1.2,
+        duration: 0.5,
         delay: 0.2 * i,
         ease: [0.5, 0.05, 0.1, 0.3],
       },
@@ -44,28 +44,15 @@ const MotionBox = motion.create(Box);
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const nbOfColumns = 6;
-  const [showLogo, setShowLogo] = useState(false);
+
   const [showOverlay, setShowOverlay] = useState(true);
 
   useEffect(() => {
-    setShowLogo(true);
-    const timer = setTimeout(() => {
-      setShowLogo(false);
-      setShowOverlay(false); // Hide overlay after animations
-    }, 2000); // Adjust the duration as needed
+const timer = setTimeout(() => {
+      setShowOverlay(false); 
+    }, 1000); 
     return () => clearTimeout(timer);
   }, [children]);
-
-  useEffect(() => {
-    if (showOverlay) {
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
-    } else {
-      document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-    return () => {
-      document.body.style.overflow = 'auto'; // Clean up on unmount
-    };
-  }, [showOverlay]);
 
   return (
     <MotionBox
@@ -77,26 +64,28 @@ export default function Template({ children }: { children: React.ReactNode }) {
       position="relative"
       height="100%"
       width="100%"
-      style={{ overflow: "hidden" }} // Prevent scrolling
+      
+      style={{ overflow: "hidden" }} 
     >
-      {showOverlay && (
+      {showOverlay ?(
         <MotionBox
           position="absolute"
           top={0}
           left={0}
           height="100%"
           width="100%"
+          zIndex={10}
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.8 } }}
+          exit={{ opacity: 0, transition: { duration: 0 } }}
           style={{ background: "rgba(0, 0, 0, 1)" }}
         />
-      )}
+      ): null}
       <MotionBox
         flexDirection="row"
         height="100%"
         width="100%"
         position="absolute"
-        zIndex={4}
+        zIndex={20}
       >
         {[...Array(nbOfColumns)].map((_, i) => (
           <MotionBox
@@ -110,30 +99,15 @@ export default function Template({ children }: { children: React.ReactNode }) {
             exit="exit"
             variants={expand}
             custom={i}
-            zIndex={102}
           />
         ))}
       </MotionBox>
-      {showLogo ? (
-        <MotionBox
-          position="absolute"
-          top="50%" // Center vertically
-          left="50%" // Center horizontally
-          alignItems={"center"}
-          justifyContent={"center"}
-          zIndex={50}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.5 } }}
-          exit={{ opacity: 0, transition: { duration: 0.5 } }}
-          style={{ transform: 'translate(-50%, -50%)' }} // Centering transform
-        >
-          <Image src="/images/logo.svg" alt="Logo" width={200} height={200} />
-        </MotionBox>
-      ) : null}
+   
       {children}
     </MotionBox>
   );
 }
+
 
 
 
