@@ -20,14 +20,14 @@ export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); 
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleDropdownToggle = () => {
-    setDropdownOpen(!dropdownOpen); // Toggle dropdown open/close
+  const handleDropdownToggle = (index: number) => {
+    setDropdownOpen(dropdownOpen === index ? null : index); 
   };
 
   useEffect(() => {
@@ -48,7 +48,8 @@ export const Navbar: React.FC = () => {
 
   const navigateTo = (link: string) => {
     router.push(link);
-    setIsOpen(false);
+    setIsOpen(false); 
+    setDropdownOpen(null); 
   };
 
   return (
@@ -97,19 +98,18 @@ export const Navbar: React.FC = () => {
               {item.dropdown ? (
                 <>
                   <Box
-                    
                     alignItems={"center"}
-                    onClick={handleDropdownToggle}
+                    onClick={() => handleDropdownToggle(index)}
                     style={{ cursor: "pointer" }}
                   >
-                    {dropdownOpen ? (
+                    {dropdownOpen === index ? (
                       <FaMinus size={17} fill="#fb9c42" />
                     ) : (
                       <FaPlus size={17} fill="#fb9c42" />
                     )}
                   </Box>
 
-                  {dropdownOpen ? (
+                  {dropdownOpen === index ? (
                     <Row
                       justifyContent={"center"}
                       alignItems={"center"}
@@ -135,12 +135,13 @@ export const Navbar: React.FC = () => {
                         </StyledLink>
                       ))}
                     </Row>
-                  ) : null}
+                  ): null}
                 </>
-              ): null}
+              ) : null}
             </Row>
           ))}
         </Box>
+
         <Box display={["none", "flex"]} flexDirection={"row"} gap={"xl"}>
           <Button
             variant="primary"
@@ -156,6 +157,7 @@ export const Navbar: React.FC = () => {
         </Box>
       </Row>
 
+      
       <Box
         display={["block", "none"]}
         position="fixed"
@@ -175,6 +177,7 @@ export const Navbar: React.FC = () => {
         )}
       </Box>
 
+      
       {isOpen ? (
         <Box
           position="fixed"
@@ -210,11 +213,60 @@ export const Navbar: React.FC = () => {
               justifyContent={"center"}
             >
               {NavbarData.map((item, index) => (
-                <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-                  <Text variant={"body"} color={"white"}>
-                    {item.title}
-                  </Text>
-                </StyledLink>
+                <Box key={index} gap={"l"}  flexDirection={"row"}
+                position={"relative"} 
+                >
+                  <StyledLink onClick={() => navigateTo(item.link)}>
+                    <Text variant={"body"} color={"white"}>
+                      {item.title}
+                    </Text>
+                  </StyledLink>
+
+                  {item.dropdown ? (
+                    <>
+                      <Box
+                      alignItems={"center"}
+                      flexDirection={"row"}
+                     
+                        onClick={() => handleDropdownToggle(index)}
+                        position={"relative"}
+                        style={{ cursor: "pointer" }}
+                      >
+                        {dropdownOpen === index ? (
+                          <FaMinus size={17} fill="#fb9c42" />
+                        ) : (
+                          <FaPlus size={17} fill="#fb9c42" />
+                        )}
+                      </Box>
+
+                      {dropdownOpen === index ? (
+                        <Column  position={"absolute"} 
+                        borderRadius={"m"}
+                        px={"m"}
+                        py={'xl'}
+                        width={'250px'}
+                        top={40} 
+                        left={-40} 
+                        bg={"white"} 
+                        
+                        zIndex={9999} 
+                        gap={"xl"}
+                        
+                        >
+                          {item.dropdown.map((subItem, subIndex) => (
+                            <StyledLink
+                              key={subIndex}
+                              style={{ color: "black" }}
+                              onClick={() => navigateTo(subItem.link)}
+                            >
+                              {subItem.title}
+                            </StyledLink>
+                          ))}
+                        </Column>
+                      ): null}
+                    </>
+                  ): null}
+                </Box>
               ))}
             </Column>
 
@@ -237,3 +289,4 @@ export const Navbar: React.FC = () => {
     </>
   );
 };
+
