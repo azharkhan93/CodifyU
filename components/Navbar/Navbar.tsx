@@ -12,23 +12,26 @@ import {
   Text,
 } from "@/components";
 import { CgMenuGridO } from "react-icons/cg";
-import { FaTimes } from "react-icons/fa";
+import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
-
-
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen); // Toggle dropdown open/close
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-     
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
@@ -38,7 +41,6 @@ export const Navbar: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -51,10 +53,8 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      
       <Row
-      py={"m"}
-      
+        py={"m"}
         flexDirection={["row", "row"]}
         px={["m", "xl"]}
         position="fixed"
@@ -62,22 +62,18 @@ export const Navbar: React.FC = () => {
         width={["100%", "100%"]}
         justifyContent={"space-between"}
         alignItems={"center"}
-        bg={isScrolled ? "white" : "transparent"} 
+        bg={isScrolled ? "white" : "transparent"}
         style={{
           zIndex: "100",
-          transition: "background-color 0.3s ease", 
+          transition: "background-color 0.3s ease",
         }}
       >
-       
-    
-          <Image
-            src="/images/logo.svg"
-            alt="Logo Missing"
-            width={200}
-            height={55}
-            // style={{ objectFit: 'contain' }}
-          />
-
+        <Image
+          src="/images/logo.svg"
+          alt="Logo Missing"
+          width={200}
+          height={55}
+        />
 
         <Box
           display={["none", "flex"]}
@@ -87,13 +83,64 @@ export const Navbar: React.FC = () => {
           gap="xxxxl"
         >
           {NavbarData.map((item, index) => (
-            <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-            
-              {item.title}
-            </StyledLink>
+            <Row
+              key={index}
+              position="relative"
+              flexDirection="row"
+              gap={"m"}
+              alignItems="center"
+            >
+              <StyledLink onClick={() => navigateTo(item.link)}>
+                {item.title}
+              </StyledLink>
+
+              {item.dropdown ? (
+                <>
+                  <Box
+                    
+                    alignItems={"center"}
+                    onClick={handleDropdownToggle}
+                    style={{ cursor: "pointer" }}
+                  >
+                    {dropdownOpen ? (
+                      <FaMinus size={17} fill="#fb9c42" />
+                    ) : (
+                      <FaPlus size={17} fill="#fb9c42" />
+                    )}
+                  </Box>
+
+                  {dropdownOpen ? (
+                    <Row
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      gap={"xl"}
+                      flexWrap={"wrap"}
+                      py={"xl"}
+                      width={"400px"}
+                      flexDirection={"row"}
+                      position="absolute"
+                      top={45}
+                      left={-150}
+                      bg={"primary"}
+                      borderRadius={"m"}
+                      zIndex={999}
+                    >
+                      {item.dropdown.map((subItem, subIndex) => (
+                        <StyledLink
+                          key={subIndex}
+                          style={{ color: "white" }}
+                          onClick={() => navigateTo(subItem.link)}
+                        >
+                          {subItem.title}
+                        </StyledLink>
+                      ))}
+                    </Row>
+                  ) : null}
+                </>
+              ): null}
+            </Row>
           ))}
         </Box>
-
         <Box display={["none", "flex"]} flexDirection={"row"} gap={"xl"}>
           <Button
             variant="primary"
@@ -103,7 +150,6 @@ export const Navbar: React.FC = () => {
             borderBottomLeftRadius={"m"}
             px={"xxl"}
             bg={"black"}
-            // bg={"primary"}
           >
             {`Let's Talk`}
           </Button>
@@ -119,11 +165,7 @@ export const Navbar: React.FC = () => {
         onClick={handleToggle}
       >
         {isOpen ? (
-          <FaTimes
-            size={34}
-            color="#FB9C42"
-            style={{ cursor: "pointer" }}
-          />
+          <FaTimes size={34} color="#FB9C42" style={{ cursor: "pointer" }} />
         ) : (
           <CgMenuGridO
             size={34}
@@ -133,7 +175,6 @@ export const Navbar: React.FC = () => {
         )}
       </Box>
 
-     
       {isOpen ? (
         <Box
           position="fixed"
@@ -145,7 +186,6 @@ export const Navbar: React.FC = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          // style={{ background: "rgba(0, 0, 0, 0.3)" }}
         >
           <AnimatedBox
             isOpen={isOpen}
@@ -164,8 +204,6 @@ export const Navbar: React.FC = () => {
               background: "linear-gradient(147deg, #4d4855 0%, #000000 74%)",
             }}
           >
-          
-
             <Column
               alignItems={"center"}
               gap={"xxxl"}
@@ -180,7 +218,6 @@ export const Navbar: React.FC = () => {
               ))}
             </Column>
 
-            
             <CenterBox width={"100%"} mt={"xl"}>
               <Button
                 borderTopLeftRadius={"xxl"}
@@ -196,9 +233,7 @@ export const Navbar: React.FC = () => {
             </CenterBox>
           </AnimatedBox>
         </Box>
-      ): null}
+      ) : null}
     </>
   );
 };
-
-

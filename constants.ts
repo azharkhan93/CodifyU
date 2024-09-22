@@ -69,8 +69,23 @@ export const NavbarData = [
   {
     title: "Services",
     link: "/services",
+    dropdown: [
+      {
+        title: "AI and Machine Learning",
+        link: "/services",
+      },
+      {
+        title: "Data Analytics",
+        link: "/services/data-analytics",
+      },
+      {
+        title: "Cloud Computing",
+        link: "/services/cloud-computing",
+      },
+    ],
   },
 ];
+
 export const featureItems = [
   "Mobile App Development",
   "Website Development",
