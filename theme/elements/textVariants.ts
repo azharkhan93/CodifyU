@@ -12,7 +12,7 @@ export const BASE_TEXT_VARIANTS = {
     fontFamily: BASE_FONTS.ftHeading,
   },
   subHeading: {
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: BASE_FONTS.subHeading,
   },
   body: {

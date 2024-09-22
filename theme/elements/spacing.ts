@@ -12,6 +12,7 @@ export const BASE_SPACING = {
   xlg: 80,
   xxlg: 120,
   header: 80,
+  xxxlg: 200,
  
 };
 

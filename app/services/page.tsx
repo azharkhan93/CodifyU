@@ -1,4 +1,4 @@
-import { AboutUs, Column, WorkApproach } from "@/components";
+import { AboutUs, ArtificialIntelligence, Column, WorkApproach } from "@/components";
 
 
 export default function Services() {
@@ -7,7 +7,7 @@ export default function Services() {
      <Column
     px={["m", "l"]}
     >
-      <AboutUs />
+     <ArtificialIntelligence />
       
       </Column>
     </>
