@@ -68,7 +68,7 @@ export const NavbarData = [
   },
   {
     title: "Services",
-    link: "/portfolio",
+    link: "/services",
   },
 ];
 export const featureItems = [
