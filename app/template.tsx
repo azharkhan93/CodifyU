@@ -64,7 +64,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       exit="exit"
       variants={opacity}
       position="relative"
-      height="100%"
+      height="100vh"
       width="100%"
     >
       {showOverlay && (
@@ -72,12 +72,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
           position="absolute"
           top={0}
           left={0}
-          height="100%"
-          width="100%"
-          // bg="rgba(0, 0, 0, 1)" 
+          height="100vh"
+          width="100%" 
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.8 } }}
-          // zIndex={100} 
+           zIndex={10} 
           style={{background: "rgba(0, 0, 0, 1)",}}
         />
       )}
@@ -86,7 +85,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         height="100%"
         width="100%"
         position="absolute"
-        // zIndex={101} // Higher z-index for columns
+        zIndex={10} 
       >
         {[...Array(nbOfColumns)].map((_, i) => (
           <MotionBox
@@ -107,8 +106,8 @@ export default function Template({ children }: { children: React.ReactNode }) {
       {showLogo ? (
         <MotionBox
           position="absolute"
-          top="45%"
-          left="55%"
+          top="40%"
+          left="60%"
           alignItems={"center"}
           justifyContent={"center"}
           zIndex={200} 
@@ -116,7 +115,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
           animate={{ opacity: 1, transition: { duration: 0.5 } }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
-          <Image src="/images/logo.svg" alt="Logo" width={200} height={200} />
+          <Image src="/images/logo.svg" alt="Logo" width={200} height={200} style={{overflow: "hidden"}} />
         </MotionBox>
       ): null}
       {children}
