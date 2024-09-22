@@ -56,6 +56,17 @@ export default function Template({ children }: { children: React.ReactNode }) {
     return () => clearTimeout(timer);
   }, [children]);
 
+  useEffect(() => {
+    if (showOverlay) {
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+    return () => {
+      document.body.style.overflow = 'auto'; // Clean up on unmount
+    };
+  }, [showOverlay]);
+
   return (
     <MotionBox
       key={children ? children.toString() : "no-children"}
@@ -66,6 +77,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       position="relative"
       height="100%"
       width="100%"
+      style={{ overflow: "hidden" }} // Prevent scrolling
     >
       {showOverlay && (
         <MotionBox
@@ -76,8 +88,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
           width="100%"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.8 } }}
-          style={{background: "rgba(0, 0, 0, 1)"}}
-          // zIndex={5} 
+          style={{ background: "rgba(0, 0, 0, 1)" }}
         />
       )}
       <MotionBox
@@ -85,7 +96,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         height="100%"
         width="100%"
         position="absolute"
-        zIndex={4} 
+        zIndex={4}
       >
         {[...Array(nbOfColumns)].map((_, i) => (
           <MotionBox
@@ -99,27 +110,30 @@ export default function Template({ children }: { children: React.ReactNode }) {
             exit="exit"
             variants={expand}
             custom={i}
-            zIndex={102} 
+            zIndex={102}
           />
         ))}
       </MotionBox>
       {showLogo ? (
         <MotionBox
           position="absolute"
-          top="10%"
-          left="50%"
+          top="50%" // Center vertically
+          left="50%" // Center horizontally
           alignItems={"center"}
           justifyContent={"center"}
-          zIndex={50} 
+          zIndex={50}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.5 } }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
+          style={{ transform: 'translate(-50%, -50%)' }} // Centering transform
         >
           <Image src="/images/logo.svg" alt="Logo" width={200} height={200} />
         </MotionBox>
-      ): null}
+      ) : null}
       {children}
     </MotionBox>
   );
 }
+
+
 
