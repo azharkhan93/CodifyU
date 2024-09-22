@@ -55,13 +55,10 @@ export default function Page({ params }: PageProps) {
 
   return (
     <>
-      {/* <TopBar
-        backgroundImage={""}
-        aboutText={"Portfolios"}
-        whoWeAreText={"Explore Our portfolios"}
-      /> */}
+     
       <Column
-        px={["s", "l"]}
+      px={["m", "l"]}
+
         mt={"xlg"}
         flexDirection={"column"}
         alignItems={"center"}

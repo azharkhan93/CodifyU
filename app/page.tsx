@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import {
+  Column,
   HeroSection,
   HighlightSection,
   OurValues,
@@ -17,6 +18,9 @@ export default function Home() {
   const fadeInUpProps = useFadeInUp();
   return (
     <>
+    <Column
+    px={["m", "l"]}
+    >
       <HeroSection />
         <OurValues />
       
@@ -46,6 +50,8 @@ export default function Home() {
       <motion.div {...fadeInUpProps}>
         <ParallaxSection />
       </motion.div>
+
+      </Column>
     </>
   );
 }

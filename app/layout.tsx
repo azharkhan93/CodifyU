@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <GlobalStyle />
 
               <Template>
-                <Box px={["m", "l"]}>{children}</Box>
+                {children}
               </Template>
 
               <Footer />

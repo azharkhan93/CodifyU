@@ -1,16 +1,16 @@
-import { ContactSection, Mapsection, TopBar } from "@/components";
+import { Column, ContactSection, Mapsection, TopBar } from "@/components";
 
 export default function Home() {
   return (
     <>
-      {/* <TopBar
-        backgroundImage={""}
-        aboutText={"Contact Us"}
-        whoWeAreText={"Reach Us"}
-      /> */}
+     <Column
+    px={["m", "l"]}
+    >
 
       <ContactSection />
       <Mapsection />
+      </Column>
     </>
+    
   );
 }

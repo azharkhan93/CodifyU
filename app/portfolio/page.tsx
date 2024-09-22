@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "@/constants";
 import { Post } from "@/types";
-import { CenterBox, TopBar } from "@/components";
+import { CenterBox, Column, TopBar } from "@/components";
 import { FaSpinner } from "react-icons/fa";
 
 
@@ -47,8 +47,14 @@ export default function  Portfolio() {
 
   return(
   <>
+   <Column
+    px={["m", "l"]}
+    >
+  
 
-    <PortfolioSection products={products} /></>
+    <PortfolioSection products={products} />
+    </Column>
+    </>
   );
 };
 
