@@ -99,15 +99,15 @@ export default function Template({ children }: { children: React.ReactNode }) {
             exit="exit"
             variants={expand}
             custom={i}
-            zIndex={102} // Higher z-index for individual columns
+            zIndex={102} 
           />
         ))}
       </MotionBox>
-      {showLogo && (
+      {showLogo ? (
         <MotionBox
           position="absolute"
-          top="8%"
-          left="45%"
+          top="10%"
+          left="50%"
           alignItems={"center"}
           justifyContent={"center"}
           zIndex={50} 
@@ -117,7 +117,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         >
           <Image src="/images/logo.svg" alt="Logo" width={200} height={200} />
         </MotionBox>
-      )}
+      ): null}
       {children}
     </MotionBox>
   );
