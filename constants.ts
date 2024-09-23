@@ -23,28 +23,30 @@ export const STATS_DATA = [
   },
 ];
 export const VALUES_DATA = [
+  
   {
     id: 1,
     title: "Empowering Startups",
-    title2: "Unified development strategy - still delivering a bare metal native performance.",
+    title2: "Our startup accelerator program is your launchpad to success",
     icon: FaRocket, 
   },
   {
     id: 2,
     title: "Prime Excellence with Cost Effectiveness",
-    title2: "Delivering high-quality solutions at competitive prices.",
+    title2: "High-quality tech solutions without the high costs.",
     icon: FaStar, 
   },
   {
     id: 3,
     title: "Accelerated Growth",
-    title2: "Unified development strategy - still delivering a bare metal native performance.",
+    title2: "Fast-track your market entry and expansion with our proven strategies",
     icon: FaCog, 
   },
+  
   {
     id: 4,
-    title: "Trusted Partner",
-    title2: "Quick responses to market changes and customer needs.",
+    title: "Quality and Savings",
+    title2: "Getting high-quality tech services without breaking thebank. We offer PREMIUM services at a fraction of the cost of in-house teams.",
     icon: FaRegHandPaper, 
   },
 ];
