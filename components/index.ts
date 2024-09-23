@@ -28,6 +28,7 @@ export * from "./PortfolioSection"
 export * from "./AnimateCircle"
 export * from "./TechSolutions"
 export * from "./ArtificialIntelligence"
+export * from "./AiServices"
 
 
 
