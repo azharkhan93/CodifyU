@@ -12,6 +12,7 @@ export const BASE_COLORS = {
   white: "#ffffff",
   gradient: "linear-gradient(147deg, #923cb5 50%, #000000 74%)",
     Overlay: "rgba(0,0,0,0.7)",
+    whiteOverLay: "rgba(255, 255, 255, 0.3)",
  
 };
 

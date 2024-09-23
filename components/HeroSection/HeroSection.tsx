@@ -19,7 +19,6 @@ export const HeroSection = () => {
       height={"100vh"}
       flexDirection={"column"}
       gap={"l"}
-      // px={["m", "xxxxl"]}
     >
       <Column
         py={"l"}
