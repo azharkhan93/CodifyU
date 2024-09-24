@@ -35,9 +35,9 @@ export const WorkCards: React.FC<WorkCardProps> = ({
           variant="body"
           color="white"
           style={{
-            left: "55px",
+            left: "-10px",
             position: "absolute",
-            top: "-20px", 
+            top: "-28px", 
             zIndex: 10,
           }}
         >

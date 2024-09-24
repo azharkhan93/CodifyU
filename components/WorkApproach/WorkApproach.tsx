@@ -6,9 +6,9 @@ export const WorkApproach = () => {
   return (
     <Column py={"xl"} gap={["xl", "xxxl"]}>
       <Column gap={"xl"}>
-        {/* <Text variant={"heading"}>Our work Process</Text> */}
+      
         <Text variant="heading"  textAlign={"start"}>
-          Our Working Process
+        codefyU Working Process
         </Text>
         <Text variant={"body"}>
             We are proud to collaborate with some of the most innovative and

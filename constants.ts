@@ -225,23 +225,23 @@ export const faqItems = [
 export const workCardItems = [
   {
     step: 1,
-    title: "Research and Discovery",
+    title: "Discovery and Strategy",
     description:
-      "In this phase, we conduct extensive research to understand the project requirements.",
+      "We begin by conducting a comprehensive analysis of your business objectives and challenges, developing a tailored strategy to maximize the impact of our services.",
     icon: FaSearch,
   },
   {
     step: 2,
-    title: "Planning and Strategy",
+    title: "Solution Design and Development",
     description:
-      "Based on our research, we develop a strategic plan that outlines the project scope.",
+      "Our team expertly crafts and rigorously tests scalable, high-performance solutions, ensuring they are precisely aligned with your specific needs and strategic goals.",
     icon: FaLightbulb,
   },
   {
     step: 3,
-    title: "Design and Development",
+    title: "Seamless Deployment and Continuous Support",
     description:
-      "Our design and development team collaborates to create visually appealing solutions.",
+      "We ensure smooth integration of the solution into your operations, backed by continuous monitoring, optimization, and support to guarantee sustained performance and business success.",
     icon: FaCode,
   },
 ];
