@@ -29,13 +29,13 @@ export const OurMission = () => {
           width={["100%", "43%"]}
         >
           <Text variant="heading" textAlign={["start", "center"]}>
-            Mission And Vision
+          Mission & Vision
           </Text>
           <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
-            Orient Software is a professional software development firm and a valuable partner to you by rapidly producing software solutions.
+          CodefyU is a specialized technology partner, focused on delivering rapid and scalable solutions that drive succes.
           </Text>
           <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
-            We have three fundamental tenets - Innovation, Transparency, and Agility – central to our staff-client interactions.
+          Our core principles—Innovation, Partnership, and Efficiency—shape our commitment to empowering your business with pioneering technology tailored to your needs.
           </Text>
         </Column>
       </Row>
@@ -48,13 +48,13 @@ export const OurMission = () => {
           gap={["xxxl", "header"]}
         >
           <AboutContents
-            title="Vision"
-            description="To provide exceptional software services to the world. We attract and develop talent to become tech thought leaders by fostering a culture of collaboration, openness, and lifelong learning."
-            imageSrc={"/images/bg.jpeg"} />
+            title="Vision Statement"
+            description="Our vision is to redefine the startup journey by creating an ecosystem where innovation seamlessly meets execution. We aspire to be the global leader in providing AI-driven solutions, transforming challenges into opportunities for growth, and helping startups scale efficiently with unparalleled technical expertise."
+            imageSrc={"/images/visionimg.jpg"} />
           <AboutContents
-            title="Mission"
-            description="To be an internationally recognized corporation that leverages technology to provide innovative solutions, brought by first-class experts."
-            imageSrc={"/images/bg.jpeg"}
+            title="Mission Statement"
+            description="At CodefyU, we are committed to enabling startups to achieve their fullest potential. Through our expertise in AI, Machine Learning, and Generative AI, we deliver customized solutions that streamline operations, accelerate growth, and ensure your success. Our mission is to turn your visionary ideas into reality by simplifying the complex and guiding your business toward predictable success."
+            imageSrc={"/images/missionimg.jpg"}
             reverse={true} />
         </CenterBox>
       </motion.div>

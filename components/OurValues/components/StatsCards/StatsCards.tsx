@@ -14,7 +14,7 @@ export const StatsCards = ({ heading, subHeading }: StatCardProps) => {
       width={["90%", "350px"]}
       gap={"s"}
       style={{
-        background: `url('/images/statsimg.jpg') no-repeat center center`,
+        background: `url('/images/statsimg1.jpg') no-repeat center center`,
         backgroundSize: 'cover',
         borderRadius: "8px",
         position: 'relative', 

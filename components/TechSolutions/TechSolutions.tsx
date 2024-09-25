@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export const TechSolutions = () => {
-  const images = ["/images/bg.jpeg", "/images/home.webp", "/images/about.jpg"];
+  const images = ["/images/img4.jpg", "/images/img4.jpg", "/images/img4.jpg"];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

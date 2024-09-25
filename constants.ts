@@ -362,21 +362,21 @@ export const featuredData = [
 
 export const workSpaceData = [
   {
-    heading: "Availability",
+    heading: "Collaboration",
     description:
-      "Our teams are fully focused on delivering true value to help our global clients succeed in a challenging business environment.",
+      "We foster a culture where teamwork and open communication are essential. Every voice matters, and we believe that shared success is the key to achieving great results.",
     icon: FaRocket,
   },
   {
-    heading: "Open Doors",
+    heading: "Innovation",
     description:
-      "Our managers always have an open door, so employees feel free to provide input on decision-making and production processes or seek guidance.",
+      "We encourage bold thinking and creative problem-solving. Our team has the freedom to explore new ideas, take ownership, and drive meaningful impact.",
     icon: FaDoorOpen,
   },
   {
-    heading: "Teamwork",
+    heading: "Well-Being",
     description:
-      "We recognize that a cohesive team is greater than the sum of its parts. Our employees collaborate closely to deliver high-quality services.",
+      "We prioritize a healthy work-life balance and the growth of every employee. At CodefyU, we ensure that everyone feels valued and supported in both their personal and professional journey.",
     icon: FaHandsHelping,
   },
 ];

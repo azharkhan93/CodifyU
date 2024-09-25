@@ -14,10 +14,9 @@ export const Partners = () => {
     <>
       <Column mt={"l"} width={"100%"}>
         <Column py={"xl"} gap={"xl"} width={["100%", "900px"]}>
-          <Text variant={"heading"}>Our Partners</Text>
+          <Text variant={"heading"}>Collaboration with Industry Leaders</Text>
           <Text variant={"body"}>
-            We are proud to collaborate with some of the most innovative and
-            esteemed companies in the industry.
+          {`We are honored to have worked with some of the industry's most distinguished and innovative companies.`}
           </Text>
         </Column>
         <Row

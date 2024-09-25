@@ -32,10 +32,7 @@ export const OurWorkSpaceSection = () => {
               lineHeight={"1.5"}
               textAlign={["start", "center"]}
             >
-              We demonstrate a total commitment to our employees’ satisfaction
-              and wellbeing, and they reciprocate with unparalleled dedication
-              to our team and our clients. Hence, we have developed a unique,
-              rewarding corporate culture based on nine fundamental principles.
+              At CodefyU, we know that our success is built on the strength and well-being of our people. Our values guide how we create an inclusive, innovative, and supportive environment for every team member to thrive.
             </Text>
           </Column>
         </Row>
