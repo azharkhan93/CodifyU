@@ -165,3 +165,10 @@ export type LogoProps = {
   export type AiAdvantagesProps = {
     description: string;
   };
+ export type CardProps = {
+    heading: string;
+    body: string;
+    benefitsTitle: string;
+    benefits: string[];
+    imageUrl: string; 
+  }

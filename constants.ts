@@ -400,3 +400,33 @@ export const aiAdvantages = [
       "Increase accuracy and reduce errors in tasks such as data entry, diagnosis, and predictive analytics.",
   },
 ];
+
+
+
+export const AiBenefitsCardData = [
+  {
+    heading: "AI Strategy",
+    body:
+      "Today AI should be part of a business's digital transformation strategy. If you are looking to add AI capabilities to your business but don't know where to start, we can help. codefyU Software will work with you to develop a tailored AI strategy and implementation plan that meets your specific needs and goals.",
+    benefitsTitle: "Your benefits:",
+    benefits: [
+      "Gain a competitive advantage.",
+      "Stay ahead of the curve in today's rapidly changing digital landscape.",
+      "Incorporate AI into your products and processes for increased efficiency and effectiveness.",
+    ],
+    imageUrl: "/images/img4.jpg", 
+  },
+  {
+    heading: "AI Development & Integration",
+    body:
+      "We can develop custom AI applications for your business. Our team has extensive experience with AI software development and technologies, including machine learning, natural language processing, and computer vision. We can also help you integrate AI into your existing systems and processes.",
+    benefitsTitle: "What you get:",
+    benefits: [
+      "Custom AI applications that meet your specific needs.",
+      "Integration of AI into your existing systems and processes.",
+      "Support for all aspects of the development process, from design to deployment.",
+    ],
+    imageUrl: "/images/img4.jpg", 
+  },
+];
+
