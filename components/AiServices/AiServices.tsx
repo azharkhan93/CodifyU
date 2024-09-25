@@ -139,9 +139,9 @@ export const AiServices = () => {
           <Text variant="heading" textAlign="center">
             {showFirstRow ? "Generative AI 1" : "Generative AI 2"}
           </Text>
-          <Text variant="body" textAlign="center">
+          <Text variant="body" textAlign="start">
             {showFirstRow
-              ? "A custom underwriting system automates risk assessment, insurance pricing, policy administration, task management, and compliance control. The new software helped increase underwriter productivity."
+              ? "Our Software provides a variety of AI solutions. We can help you incorporate AI into your existing products, start from the ground up with a new product, or integrate AI into your business processes"
               : "This is the second description for Generative AI 2. It provides additional insights and information about the updated features."}
           </Text>
           <Button variant="primary" mt="l">
