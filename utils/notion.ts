@@ -8,8 +8,9 @@ export async function getBlogPosts() {
     });
 
     const blogPosts = await Promise.all(
-      response.results.map(async (page: any) => {
-        // console.log("Raw Page Data:", page);
+      response.results.map(async (page: any, index: number) => {
+        // Log raw page data to inspect structure
+        console.log(`Raw Page Data (Index ${index}):`, page);
 
         const slug = page.properties["slug"]?.rich_text?.[0]?.plain_text || "";
 
@@ -48,7 +49,12 @@ export async function getBlogPosts() {
       })
     );
 
-    return blogPosts;
+    // Reverse the order of blogPosts to display the last one first
+    const reversedBlogPosts = blogPosts.reverse();
+
+    console.log("Blog Posts (Reversed Order):", reversedBlogPosts);
+
+    return reversedBlogPosts; // Returning blog posts in reverse order
   } catch (error) {
     console.error("Failed to fetch blog posts:", error);
     throw new Error("Failed to fetch blog posts.");
@@ -68,7 +74,7 @@ async function getPageContent(pageId: string) {
     cursor = next_cursor ?? undefined;
   } while (cursor);
 
-  // console.log("Page Content Blocks:", blocks);
-
   return blocks;
 }
+
+

@@ -1,6 +1,7 @@
 import { reviews23 } from "@/constants";
 import { ReviewsCard } from "../ReviewsCard";
 import { Column, Box, CenterBox, Text, Floki, Row } from "../styled";
+import Image from "next/image";
 
 export const ReviewsSection = () => {
   return (
@@ -24,12 +25,34 @@ export const ReviewsSection = () => {
         
     
 
-      <CenterBox py={["xxxl", "xxxxl"]} flexDirection={["column", "row"]}>
-        <Row flexDirection={"row"} gap={"xl"}>
+      <CenterBox py={["xxxl", "xxxxl"]} flexDirection={["column", "row"]} gap={"xxxxl"}>
+
+        <Image
+        src={"/Testimonial/1.png"}
+        alt="no img"
+        width={400}
+        height={360}
+        style={{borderRadius: "10px"}}
+         />
+         <Image
+        src={"/Testimonial/2.png"}
+        alt="no img"
+        width={400}
+        height={360}
+        style={{borderRadius: "10px"}}
+         />
+         <Image
+        src={"/Testimonial/3.png"}
+        alt="no img"
+        width={400}
+        height={360}
+        style={{borderRadius: "10px"}}
+         />
+        {/* <Row flexDirection={"row"} gap={"xl"}>
           {reviews23.map((review, index) => (
             <ReviewsCard key={index} review={review} />
           ))}
-        </Row>
+        </Row> */}
       </CenterBox>
     </Column>
   );
