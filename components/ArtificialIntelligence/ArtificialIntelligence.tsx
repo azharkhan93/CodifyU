@@ -26,9 +26,9 @@ export const ArtificialIntelligence = () => {
         height={["auto", "600px"]}
       >
         <Image
-          src={"/images/tech6.png"}
+          src={"/images/ai23.png"}
           alt="no image"
-          width={720}
+          width={800}
           height={600}
           style={{
             width: "100%",

@@ -54,7 +54,7 @@ export const OurMission = () => {
           <AboutContents
             title="Mission Statement"
             description="At CodefyU, we are committed to enabling startups to achieve their fullest potential. Through our expertise in AI, Machine Learning, and Generative AI, we deliver customized solutions that streamline operations, accelerate growth, and ensure your success. Our mission is to turn your visionary ideas into reality by simplifying the complex and guiding your business toward predictable success."
-            imageSrc={"/images/missionimg.jpg"}
+            imageSrc={"/images/mision2.jpg"}
             reverse={true} />
         </CenterBox>
       </motion.div>

@@ -38,9 +38,9 @@ export const ReviewsSection = () => {
       style={{
         mixBlendMode: "multiply",
         borderRadius: "20px",
-        objectFit: "cover", // Ensures the image covers the box without stretching
-        width: "100%",      // Image width adjusts to container width
-        height: "100%",     // Image height adjusts to container height
+        objectFit: "cover", 
+        width: "100%",      
+        height: "100%",     
       }}
       // style={{
       //   mixBlendMode: "multiply",
