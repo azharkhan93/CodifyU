@@ -29,13 +29,26 @@ export const ReviewsSection = () => {
       
       >
 
-        <Image
-        src={"/Testimonial/t1.png"}
-        alt="no img"
-        width={400}
-        height={360}
-        style={{borderBottomRightRadius: "100px", mixBlendMode: "multiply", borderTop: "4px solid #fb9c42", borderBottom: "4px solid #fb9c42", borderRadius: "50px",}}
-         />
+<Box position="relative" width={["355px","400px"]} height={360} >
+    <Image
+      src={"/Testimonial/t1.png"}
+      alt="no img"
+      width={400}
+      height={360}
+      style={{
+        mixBlendMode: "multiply",
+        borderRadius: "20px",
+        objectFit: "cover", // Ensures the image covers the box without stretching
+        width: "100%",      // Image width adjusts to container width
+        height: "100%",     // Image height adjusts to container height
+      }}
+      // style={{
+      //   mixBlendMode: "multiply",
+      //   borderRadius: "20px",
+                 
+      // }}
+    />
+  </Box>
          <Image
         src={"/Testimonial/2.png"}
         alt="no img"
