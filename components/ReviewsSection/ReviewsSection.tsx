@@ -25,28 +25,30 @@ export const ReviewsSection = () => {
         
     
 
-      <CenterBox py={["xxxl", "xxxxl"]} flexDirection={["column", "row"]} gap={"xxxxl"}>
+      <CenterBox py={["xxxl", "xxxxl"]} flexDirection={["column", "row"]} gap={"xxxxl"} bg={"white"} borderRadius={"m"}
+      
+      >
 
         <Image
-        src={"/Testimonial/1.png"}
+        src={"/Testimonial/t1.png"}
         alt="no img"
         width={400}
         height={360}
-        style={{borderRadius: "10px"}}
+        style={{borderBottomRightRadius: "100px", mixBlendMode: "multiply", borderTop: "4px solid #fb9c42", borderBottom: "4px solid #fb9c42", borderRadius: "50px",}}
          />
          <Image
         src={"/Testimonial/2.png"}
         alt="no img"
         width={400}
         height={360}
-        style={{borderRadius: "10px"}}
+        style={{borderRadius: "20px"}}
          />
          <Image
         src={"/Testimonial/3.png"}
         alt="no img"
         width={400}
         height={360}
-        style={{borderRadius: "10px"}}
+        style={{borderRadius: "20px"}}
          />
         {/* <Row flexDirection={"row"} gap={"xl"}>
           {reviews23.map((review, index) => (
