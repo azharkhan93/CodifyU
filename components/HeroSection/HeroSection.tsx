@@ -4,10 +4,9 @@ import {
   Button,
   CenterBox,
   Column,
-  Row,
   Text,
-  TypewriterText,
 } from "../styled";
+import { Typewriter } from "react-simple-typewriter";
 
 export const HeroSection = () => {
   return (
@@ -27,47 +26,55 @@ export const HeroSection = () => {
         alignItems={"center"}
         zIndex={1}
       >
-        {/* <Text variant={"footerHeading"} color="textColor"
-        style={{textTransform: "none"}}
-        >
-          codefyU
-          <span style={{ color: "#fb9c42", fontSize: "50px" }}>codefyU</span>{" "}
-        </Text> */}
-
-        <Text
-          px={"xxxxl"}
-          variant={["heading", "footerHeading"]}
-          width={["100%", "980px"]}
+        
+        <CenterBox
+          flexDirection="column"
+          alignItems={"center"}
+          justifyContent={"center"}
+          gap={"m"}
+          width={["100%", "900px"]}
           textAlign={["start", "center"]}
         >
-          {/* <span style={{ color: "orange", fontSize: "50px" }}>codefyU</span>{" "} */}
-          Startup Accelerator Seamless Tech Solutions that Scale
-          {/* <strong style={{fontWeight: "bold", fontFamily: "PlayfairBold", fontSize: "60px"}}>(Startup Accelerator)</strong> Seamless Tech Solutions that Scale  */}
-        </Text>
-        {/* <Text
-          textAlign={["start", "center"]}
-          width={["100%", "670px"]}
-          variant={["subHeading", "heading"]}
-        >
-          We integrate the latest advancements{" "}
-          <TypewriterText>Execution</TypewriterText>
-        </Text> */}
+          
+          <Text
+            variant={["heading", "footerHeading"]}
+            textAlign={["start", "center"]}
+          >
+            Startup Accelerator Seamless
+          </Text>
+
+    
+          <Text variant={["heading", "footerHeading"]} color="textColor">
+            <Typewriter
+              words={[
+                "Tech Solutions",
+                "That Scale",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </Text>
+        </CenterBox>
 
         <Text
-          // px={"s"}
           variant="body"
           width={["100%", "600px"]}
           textAlign={["start", "center"]}
           lineHeight={"1.5"}
         >
           codefyU delivers advanced customized tech solutions worldwide. We
-          solve complex challenges with precision offering efficient, scalable
+          solve complex challenges with precision, offering efficient, scalable
           results that drive business growth. By merging innovation with
           impactful strategies, we help businesses thrive in todays dynamic
-          digital landscape
+          digital landscape.
         </Text>
 
-        <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]} >
+        {/* Buttons */}
+        <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
           <Button
             variant={"primary"}
             py={"m"}
@@ -86,10 +93,11 @@ export const HeroSection = () => {
             px={["xxxl", "xxxxl"]}
             bg={"primary"}
           >
-            {`Let'sTalk`}
+            {`Let's Talk`}
           </Button>
         </CenterBox>
       </Column>
     </Box>
   );
 };
+
