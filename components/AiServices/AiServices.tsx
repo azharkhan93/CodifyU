@@ -62,6 +62,19 @@ export const AiServices = () => {
       py={"header"}
       flexDirection={"row"}
     >
+      <Column>
+      <Text
+      variant={"heading"}
+      >
+      Our AI Expertise
+      </Text>
+      <Text
+      variant={"body"}
+      >
+      Our Software has provided AI development services since the industrys early days. We have experience in many of the fields of AI.
+      </Text>
+
+      </Column>
       <Column
         py={"header"}
         border={"4px solid red"}
