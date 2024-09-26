@@ -1,14 +1,28 @@
 "use client";
-import {
-  Box,
-  Button,
-  CenterBox,
-  Column,
-  Text,
-} from "../styled";
-import { Typewriter } from "react-simple-typewriter";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Box, Button, CenterBox, Column, Text } from "../styled";
+
+const texts = ["Tech Solutions", "That Scale"];
 
 export const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+  const [showText, setShowText] = useState(texts[index]);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        setShowText(texts[(index + 1) % texts.length]);
+        setIsVisible(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [index]);
+
   return (
     <Box
       position="relative"
@@ -26,7 +40,6 @@ export const HeroSection = () => {
         alignItems={"center"}
         zIndex={1}
       >
-        
         <CenterBox
           flexDirection="column"
           alignItems={"center"}
@@ -35,7 +48,6 @@ export const HeroSection = () => {
           width={["100%", "900px"]}
           textAlign={["start", "center"]}
         >
-          
           <Text
             variant={["heading", "footerHeading"]}
             textAlign={["start", "center"]}
@@ -43,21 +55,18 @@ export const HeroSection = () => {
             Startup Accelerator Seamless
           </Text>
 
-    
-          <Text variant={["heading", "footerHeading"]} color="textColor">
-            <Typewriter
-              words={[
-                "Tech Solutions",
-                "That Scale",
-              ]}
-              loop={true}
-              cursor
-              cursorStyle="_"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </Text>
+          <motion.div
+            key={showText}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            style={{ minHeight: "1.5em" }}
+          >
+            <Text variant={["heading", "footerHeading"]} color="textColor">
+              {showText}
+            </Text>
+          </motion.div>
         </CenterBox>
 
         <Text
@@ -73,7 +82,6 @@ export const HeroSection = () => {
           digital landscape.
         </Text>
 
-        {/* Buttons */}
         <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
           <Button
             variant={"primary"}
@@ -100,4 +108,3 @@ export const HeroSection = () => {
     </Box>
   );
 };
-
