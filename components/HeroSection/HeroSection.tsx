@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Button, CenterBox, Column, Text } from "../styled";
 
-const texts = ["Tech Solutions", "That Scale"];
+const texts = ["Generative AI", "AI/ML", "Large Language Models"];
 
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -45,14 +45,14 @@ export const HeroSection = () => {
           alignItems={"center"}
           justifyContent={"center"}
           gap={"m"}
-          width={["100%", "900px"]}
+          width={["100%", "1000px"]}
           textAlign={["start", "center"]}
         >
           <Text
             variant={["heading", "footerHeading"]}
             textAlign={["start", "center"]}
           >
-            Startup Accelerator Seamless
+            Growth Fueled By Expertise
           </Text>
 
           <motion.div
