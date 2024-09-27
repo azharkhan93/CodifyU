@@ -49,12 +49,12 @@ export async function getBlogPosts() {
       })
     );
 
-    // Reverse the order of blogPosts to display the last one first
+
     const reversedBlogPosts = blogPosts.reverse();
 
-    console.log("Blog Posts (Reversed Order):", reversedBlogPosts);
+    // console.log("Blog Posts (Reversed Order):", reversedBlogPosts);
 
-    return reversedBlogPosts; // Returning blog posts in reverse order
+    return reversedBlogPosts; 
   } catch (error) {
     console.error("Failed to fetch blog posts:", error);
     throw new Error("Failed to fetch blog posts.");

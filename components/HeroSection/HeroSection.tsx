@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Button, CenterBox, Column, Text } from "../styled";
 
-const texts = ["Generative AI", "AI/ML", "Large Language Models"];
+const texts = [ "AI/ML", "Gen AI", "LLMs"];
 
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -75,11 +75,7 @@ export const HeroSection = () => {
           textAlign={["start", "center"]}
           lineHeight={"1.5"}
         >
-          codefyU delivers advanced customized tech solutions worldwide. We
-          solve complex challenges with precision, offering efficient, scalable
-          results that drive business growth. By merging innovation with
-          impactful strategies, we help businesses thrive in todays dynamic
-          digital landscape.
+          At codefyU, we craft tailored tech solutions to solve complex challenges with precision. Our innovative, scalable strategies drive business growth, empowering companies to thrive in today’s fast-paced digital world
         </Text>
 
         <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
