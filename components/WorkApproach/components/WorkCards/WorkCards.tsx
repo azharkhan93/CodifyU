@@ -9,7 +9,6 @@ export const WorkCards: React.FC<WorkCardProps> = ({
 }) => {
   return (
     <Column
-      // bg="white"
       justifyContent="center"
       py="xxl"
       width={["355px", "350px"]}

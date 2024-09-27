@@ -1,6 +1,6 @@
 export const BASE_FONTS: Record<AppThemeFonts, string> = {
   heading: "ComfortaaBold",
-  subHeading: "MontserratMedium",
+  subHeading: "ComfortaaMedium",
   body: "ComfortaaRegular",
   ftHeading: "ComfortaaBold"
 };

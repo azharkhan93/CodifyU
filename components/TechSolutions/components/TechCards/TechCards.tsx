@@ -8,7 +8,7 @@ type NewProps = {
 export const TechCards: React.FC<NewProps> = ({ ItemsTitle }) => {
   return (
     <Row
-      flexDirection="row"
+      flexDirection={"row"}
       alignItems={["flex-start", "center"]}
       gap={["m", "xl"]}
 
@@ -18,7 +18,8 @@ export const TechCards: React.FC<NewProps> = ({ ItemsTitle }) => {
         bg={"white"}
         py={"m"}
         px={"m"}
-        alignSelf={"center"}
+        alignItems={"center"}
+       
       >
         <FaCheck size={25} fill="#FB9C42" />
       </Box>

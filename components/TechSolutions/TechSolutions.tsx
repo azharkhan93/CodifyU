@@ -38,7 +38,7 @@ export const TechSolutions = () => {
           codefyU.
         </Text>
 
-        <Column gap="xxxl">
+        <Column gap="xxxl" border={"4px solid red"}>
           {CRD_ST.map((feature, index) => (
             <TechCards key={index} ItemsTitle={feature.ItemsTitle} />
           ))}
