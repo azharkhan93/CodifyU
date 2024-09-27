@@ -72,6 +72,10 @@ export const NavbarData = [
     link: "/portfolio",
   },
   {
+    title: "Testimonials",
+    link: "/testimonials",
+  },
+  {
     title: "Services",
     link: "/services",
     dropdown: [
@@ -182,23 +186,23 @@ export const services = [
   //   linkText: "Learn more",
   // },
   {
-    title: "AI/Ml",
+    title: "AI/ML Solutions",
     description:
-      "Empower your business with intelligent automation technologies and use our expertise in AI/ML to boost your companys efficiency, agility, and profitability",
+      "Harness the power of AI and Machine Learning to automate and optimize processes, improving efficiency and scaling your operations seamlessly.",
     icon: FaBrain,
     linkText: "Learn more",
   },
   {
     title: "Geneartive AI",
     description:
-      "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
+      "Tap into the potential of Generative AI for automated content creation and tailored solutions that keep your business ahead of the curve.",
       icon: FaRobot,
     linkText: "Learn more",
   },
   {
-    title: "Machine Learning",
+    title: "Large Language Models (LLMs)",
     description:
-      "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
+      "Our LLM expertise helps enhance customer experiences and streamline workflows with intelligent, customizable models across various domains.",
       icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
   },
@@ -228,23 +232,23 @@ export const faqItems = [
 export const workCardItems = [
   {
     step: 1,
-    title: "Discovery and Strategy",
+    title: "Discovery & Strategy",
     description:
-      "We begin by conducting a comprehensive analysis of your business objectives and challenges, developing a tailored strategy to maximize the impact of our services.",
+      "We thoroughly analyze your business goals and challenges to develop a customized strategy that maximizes impact.",
     icon: FaSearch,
   },
   {
     step: 2,
-    title: "Solution Design and Development",
+    title: "Design & Development",
     description:
-      "Our team expertly crafts and rigorously tests scalable, high-performance solutions, ensuring they are precisely aligned with your specific needs and strategic goals.",
+      "Our team designs and tests scalable, high-performance solutions tailored to your needs and strategic objectives.",
     icon: FaLightbulb,
   },
   {
     step: 3,
-    title: "Seamless Deployment and Continuous Support",
+    title: "Deployment & Support",
     description:
-      "We ensure smooth integration of the solution into your operations, backed by continuous monitoring, optimization, and support to guarantee sustained performance and business success.",
+      "We ensure smooth integration with ongoing monitoring and optimization, driving continuous success for your business.",
     icon: FaCode,
   },
 ];
@@ -368,19 +372,20 @@ export const workSpaceData = [
     heading: "Collaboration",
     description:
       "We foster a culture where teamwork and open communication are essential. Every voice matters, and we believe that shared success is the key to achieving great results.",
-    icon: FaRocket,
+      workImage: "/websiteimages/15.png",
+  },
+  
+  {
+    heading: "Well-Being",
+    description:
+      "We prioritize a healthy work-life balance and the growth of every employee. At CodefyU, we ensure that everyone feels valued and supported in both their personal and professional journey.",
+      workImage: "/websiteimages/17.png",
   },
   {
     heading: "Innovation",
     description:
       "We encourage bold thinking and creative problem-solving. Our team has the freedom to explore new ideas, take ownership, and drive meaningful impact.",
-    icon: FaDoorOpen,
-  },
-  {
-    heading: "Well-Being",
-    description:
-      "We prioritize a healthy work-life balance and the growth of every employee. At CodefyU, we ensure that everyone feels valued and supported in both their personal and professional journey.",
-    icon: FaHandsHelping,
+      workImage: "/websiteimages/16.png",
   },
 ];
 

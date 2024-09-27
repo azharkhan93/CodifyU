@@ -161,7 +161,7 @@ export type LogoProps = {
   export type WorkSpaceSection = {
     heading: string;
     description: string;
-    icon: IconType;
+    workImage: string;
   }
   export type AiAdvantagesProps = {
     description: string;

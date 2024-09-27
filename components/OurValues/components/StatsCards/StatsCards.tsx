@@ -22,7 +22,7 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
         overflow: 'hidden',
       }}
     >
-      <Box
+      {/* <Box
         position={"absolute"}
         top={0}
         left={0}
@@ -30,7 +30,7 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
         right={0}
         zIndex={1}
         bg={"whiteOverLay"}
-      />
+      /> */}
       <Text variant={["heading", "footerHeading"]} position={"relative"} zIndex={2}>
         {isNumber.test(heading) ? (
           <CountUp

@@ -31,7 +31,7 @@ export const ReviewsSection = () => {
 
 <Box position="relative" width={["355px","400px"]} height={360} >
     <Image
-      src={"/Testimonial/t1.png"}
+      src={"/testimonialHome/1.png"}
       alt="no img"
       width={400}
       height={360}
@@ -42,33 +42,51 @@ export const ReviewsSection = () => {
         width: "100%",      
         height: "100%",     
       }}
-      // style={{
-      //   mixBlendMode: "multiply",
-      //   borderRadius: "20px",
-                 
-      // }}
+      
     />
   </Box>
-         <Image
-        src={"/Testimonial/2.png"}
-        alt="no img"
-        width={400}
-        height={360}
-        style={{borderRadius: "20px"}}
-         />
-         <Image
-        src={"/Testimonial/3.png"}
-        alt="no img"
-        width={400}
-        height={360}
-        style={{borderRadius: "20px"}}
-         />
-        {/* <Row flexDirection={"row"} gap={"xl"}>
-          {reviews23.map((review, index) => (
-            <ReviewsCard key={index} review={review} />
-          ))}
-        </Row> */}
+  <Box position="relative" width={["355px","400px"]} height={360} >
+    <Image
+      src={"/testimonialHome/2.png"}
+      alt="no img"
+      width={400}
+      height={360}
+      style={{
+        mixBlendMode: "multiply",
+        borderRadius: "20px",
+        objectFit: "cover", 
+        width: "100%",      
+        height: "100%",     
+      }}
+      
+    />
+  </Box>
+        
+  <Box position="relative" width={["355px","400px"]} height={360} >
+    <Image
+      src={"/testimonialHome/3.png"}
+      alt="no img"
+      width={400}
+      height={360}
+      style={{
+        mixBlendMode: "multiply",
+        borderRadius: "20px",
+        objectFit: "cover", 
+        width: "100%",      
+        height: "100%",     
+      }}
+      
+    />
+  </Box>
+        
       </CenterBox>
     </Column>
   );
 };
+
+
+{/* <Row flexDirection={"row"} gap={"xl"}>
+          {reviews23.map((review, index) => (
+            <ReviewsCard key={index} review={review} />
+          ))}
+        </Row> */}

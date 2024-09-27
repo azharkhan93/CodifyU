@@ -19,7 +19,7 @@ export const HighlightSection = () => {
         width={["100%", "100%"]}
       >
         <Text variant={["heading", "heading"]}>
-          Intelligent Software Solutions
+        Driving Unmatched Efficiency Through Intelligent Solutions
         </Text>
         <Text
           variant={"body"}
@@ -27,9 +27,7 @@ export const HighlightSection = () => {
           width={["100%", "700px"]}
           textAlign={["start", "center"]}
         >
-          We employ best practice processes and development methodologies as a
-          foundation for rapid building of cutting-edge technology solutions in
-          a structured and methodical way.
+          At CodefyU, we specialize in delivering transformative solutions that drive growth and innovation. Our core services—AI/ML, Generative AI, and Large Language Models (LLMs)—form the backbone of our offerings, but we provide much more to elevate your business.
         </Text>
       </Column>
 

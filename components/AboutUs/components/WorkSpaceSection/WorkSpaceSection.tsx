@@ -5,6 +5,7 @@ import { Row, Column, CenterBox, Text, Box } from "@/components/styled";
 import { useFadeInLeft } from "@/hooks/useAnimations";
 import { workSpaceData } from "@/constants";
 import { WorkSpaceSection } from "@/types";
+import Image from "next/image";
 
 export const OurWorkSpaceSection = () => {
   const fadeInLeftProps = useFadeInLeft();
@@ -32,7 +33,10 @@ export const OurWorkSpaceSection = () => {
               lineHeight={"1.5"}
               textAlign={["start", "center"]}
             >
-              At CodefyU, we know that our success is built on the strength and well-being of our people. Our values guide how we create an inclusive, innovative, and supportive environment for every team member to thrive.
+              At CodefyU, we know that our success is built on the strength and
+              well-being of our people. Our values guide how we create an
+              inclusive, innovative, and supportive environment for every team
+              member to thrive.
             </Text>
           </Column>
         </Row>
@@ -57,15 +61,20 @@ export const OurWorkSpaceSection = () => {
                 background: "linear-gradient(147deg, #4d4855 0%, #b1b1b1 100%)",
               }}
             >
+              
               <Box
                 borderRadius={"circle"}
-                py={"m"}
-                px={"m"}
                 bg={"white"}
-                style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}
-              >
-                <item.icon size={45} color="#fb9c42" />
-              </Box>
+                style={{
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                  backgroundImage: `url(${item.workImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  width: "80px",
+                  height: "80px",
+                }}
+              />
+
               <Text
                 p={"s"}
                 borderLeft={"3px solid #fb9c42"}
