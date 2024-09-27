@@ -10,6 +10,7 @@ export type LogoProps = {
   export type StatCardProps = {
     heading: string;
     subHeading: string;
+    statsImg: string;
   }
   export type ValueCardProps = {
     title: string;

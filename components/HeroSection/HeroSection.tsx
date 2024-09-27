@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Button, CenterBox, Column, Text } from "../styled";
 
-const texts = [ "AI/ML", "Gen AI", "LLMs"];
+const texts = ["AI/ML", "Gen AI", "LLMs"];
 
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);

@@ -1,4 +1,3 @@
-import { FiCheckCircle } from "react-icons/fi";
 import { MdOutlineDeveloperMode, } from "react-icons/md";
 import { FaBrain, FaCode, FaCog, FaDollarSign, FaDoorOpen, FaEnvelope, FaHandsHelping, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 
@@ -10,18 +9,22 @@ export const STATS_DATA = [
     id: 1,
     heading: "8+years",
     subHeading: "In Business",
+    image: "/websiteimages/6.png", 
   },
   {
     id: 2,
     heading: "150+",
     subHeading: "Global Clients",
+    image: "/websiteimages/7.png", 
   },
   {
     id: 3,
     heading: "200+",
     subHeading: "Million Value Generation",
+    image: "/websiteimages/8.png",
   },
 ];
+
 export const VALUES_DATA = [
   
   {

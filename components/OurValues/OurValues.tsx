@@ -99,13 +99,14 @@ export const OurValues = () => {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          {STATS_DATA.map((stat) => (
-            <StatsCards
-              key={stat.id}
-              heading={stat.heading}
-              subHeading={stat.subHeading}
-            />
-          ))}
+         {STATS_DATA.map((stat) => (
+  <StatsCards 
+    key={stat.id} 
+    heading={stat.heading} 
+    subHeading={stat.subHeading} 
+    statsImg={stat.image} 
+  />
+))}
         </Box>
       </motion.div>
     </>
