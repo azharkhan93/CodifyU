@@ -28,17 +28,14 @@ export const TechSolutions = () => {
       <Column gap="xxxl" py="xl" alignItems={"flex-start"} justifyContent={"center"} width={["100%","800px"]}>
         <Text variant="heading">
         Unlock the power of AI/ML and data-driven solutions with CodefyU
-          {/* Bring your app idea to life with{" "} */}
-          {/* <span style={{ color: "#FB9C42", fontSize: "43px" }}>
-            industry experts
-          </span> */}
+          
         </Text>
         <Text variant={"subHeading"} lineHeight={"1.5"}>
           Streamline your business needs and automate your infrastructure with
           codefyU.
         </Text>
 
-        <Column gap="xxxl" border={"4px solid red"}>
+        <Column gap="xxxl" >
           {CRD_ST.map((feature, index) => (
             <TechCards key={index} ItemsTitle={feature.ItemsTitle} />
           ))}

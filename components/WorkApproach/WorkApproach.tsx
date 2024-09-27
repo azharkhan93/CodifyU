@@ -10,7 +10,7 @@ export const WorkApproach = () => {
         <Text variant="heading"  textAlign={"start"}>
         codefyU Working Process
         </Text>
-        <Text variant={"body"}>
+        <Text variant={"body"} lineHeight={"1.5"}>
             We are proud to collaborate with some of the most innovative and
             esteemed companies in the industry.
           </Text>

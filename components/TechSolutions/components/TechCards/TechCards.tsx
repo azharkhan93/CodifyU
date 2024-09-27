@@ -11,7 +11,6 @@ export const TechCards: React.FC<NewProps> = ({ ItemsTitle }) => {
       flexDirection={"row"}
       alignItems={["flex-start", "center"]}
       gap={["m", "xl"]}
-
     >
       <Box
         borderRadius={"m"}
@@ -19,11 +18,10 @@ export const TechCards: React.FC<NewProps> = ({ ItemsTitle }) => {
         py={"m"}
         px={"m"}
         alignItems={"center"}
-       
       >
         <FaCheck size={25} fill="#FB9C42" />
       </Box>
-      <Text variant={["body","subHeading"]}>{ItemsTitle}</Text>
+      <Text variant={["body", "subHeading"]}>{ItemsTitle}</Text>
     </Row>
   );
 };

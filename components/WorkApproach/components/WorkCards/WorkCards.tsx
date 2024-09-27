@@ -61,7 +61,7 @@ export const WorkCards: React.FC<WorkCardProps> = ({
       <Text mt="xxxl" variant="subHeading" textAlign="center">
         {title}
       </Text>
-      <Text variant="body" textAlign="center" mt="m">
+      <Text variant="body" textAlign="center" mt="m" lineHeight={"1.5"}>
         {description}
       </Text>
     </Column>
