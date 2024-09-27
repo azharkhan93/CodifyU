@@ -75,7 +75,7 @@ export const HeroSection = () => {
           textAlign={["start", "center"]}
           lineHeight={"1.5"}
         >
-          At codefyU, we craft tailored tech solutions to solve complex challenges with precision. Our innovative, scalable strategies drive business growth, empowering companies to thrive in today’s fast-paced digital world
+          {`At codefyU, we craft tailored tech solutions to solve complex challenges with precision. Our innovative, scalable strategies drive business growth, empowering companies to thrive in today’s fast-paced digital world`}
         </Text>
 
         <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
