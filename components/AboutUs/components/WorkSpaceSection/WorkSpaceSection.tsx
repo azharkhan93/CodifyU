@@ -5,7 +5,6 @@ import { Row, Column, CenterBox, Text, Box } from "@/components/styled";
 import { useFadeInLeft } from "@/hooks/useAnimations";
 import { workSpaceData } from "@/constants";
 import { WorkSpaceSection } from "@/types";
-import Image from "next/image";
 
 export const OurWorkSpaceSection = () => {
   const fadeInLeftProps = useFadeInLeft();
@@ -94,17 +93,5 @@ export const OurWorkSpaceSection = () => {
 
 
 
-// const rotateAnimation = {
-//   animate: {
-//     rotateX: [0, 10, 0], 
-//     rotateZ: [0, -6, 0], 
-//     scale: [1, 1.02, 1], 
-//     transition: {
-//       duration: 15, 
-//       ease: "easeInOut",
-//       repeat: Infinity, 
-//       repeatType: "loop", 
-//     },
-//   },
-// };
+
 

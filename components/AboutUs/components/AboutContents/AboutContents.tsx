@@ -48,7 +48,7 @@ export const AboutContents: React.FC<ContentBoxProps> = ({
       
       <Box
         width={["341px", "500px"]}  
-        height={["270px", "300px"]} 
+        height={["210px", "300px"]} 
         position="relative"
         overflow="hidden" 
       >
