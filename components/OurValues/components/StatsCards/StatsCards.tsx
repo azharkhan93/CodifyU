@@ -1,5 +1,5 @@
 "use client";
-import { Box, Column, Text } from "@/components/styled";
+import { Column, Text } from "@/components/styled";
 import { StatCardProps } from "@/types";
 import CountUp from "react-countup";
 
@@ -31,7 +31,8 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
         zIndex={1}
         bg={"whiteOverLay"}
       /> */}
-      <Text variant={["heading", "footerHeading"]} position={"relative"} zIndex={2}>
+      <Text variant={["heading", "footerHeading"]} position={"relative"} zIndex={2} 
+      style={{fontFamily: "ComfortaaBold"}}>
         {isNumber.test(heading) ? (
           <CountUp
             start={0}
@@ -43,7 +44,7 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
           heading
         )}
       </Text>
-      <Text variant={"subHeading"} position={"relative"} zIndex={2}>
+      <Text variant={"subHeading"} position={"relative"} zIndex={2} fontFamily={"ComfortaaMedium"}>
         {subHeading}
       </Text>
     </Column>

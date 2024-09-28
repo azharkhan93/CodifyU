@@ -1,3 +1,4 @@
+import { fontFamily } from "styled-system";
 import {
   BASE_COLORS,
   BASE_BORDER_RADII,
@@ -12,6 +13,7 @@ export const BASE_BUTTON_VARIANTS = {
     fontSize: BASE_SPACING.l,
     font: BASE_FONTS.subHeading,
     fontWeights: "500",
+    fontFamily: "ComfortaaMedium",
   },
   outline: {
     backgroundColor: "white",

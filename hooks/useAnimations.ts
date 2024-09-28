@@ -69,28 +69,4 @@ export const useLogos = () => {
 
 
 
-// export const expand = {
-//   initial: { height: 0 },
-//   animate: (i: number) => ({
-//     height: "100vh",
-//     transition: {
-//       duration: 0.4,
-//       delay: 0.05 * i,
-//       ease: [0.215, 0.61, 0.355, 1],
-//     },
-//   }),
-//   exit: (i) => ({
-//     height: 0,
-//     transition: {
-//       duration: 0.4,
-//       delay: 0.05 * i,
-//       ease: [0.215, 0.61, 0.355, 1],
-//     },
-//   }),
-// };
 
-// export const opacity = {
-//   initial: { opacity: 0 },
-//   animate: { opacity: 1 },
-//   exit: { opacity: 0 },
-// };

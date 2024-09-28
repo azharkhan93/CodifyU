@@ -95,12 +95,7 @@ export const NavbarData = [
   },
 ];
 
-export const featureItems = [
-  "Mobile App Development",
-  "Website Development",
-  "Graphic Design",
-  "Digital Marketing",
-];
+
 export const PARTNER_LOGOS = [
   {
     src: "/clientlogos/g23.webp",
@@ -153,30 +148,6 @@ export const PARTNER_LOGOS = [
 ];
 
 
-export const reviews23 = [
-  {
-    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-    name: "#1157",
-    title: " LittleSnippets.net",
-    image: "/images/dg.jpg",
-    alt: "#1157 picture",
-  },
-  {
-    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-    name: "#1157",
-    title: " LittleSnippets.net",
-    image: "/images/dg.jpg",
-    alt: "#1157 picture",
-  },
-  {
-    text: "My behavior is addictive functioning in a disease process of toxic co-dependency...",
-    name: "#1157",
-    title: " LittleSnippets.net",
-    image: "/images/dg.jpg",
-    alt: "#1157 picture",
-  },
-
-];
 export const services = [
   // {
   //   title: "Full-Stack Development",

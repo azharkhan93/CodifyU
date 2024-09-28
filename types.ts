@@ -1,175 +1,178 @@
 import { IconType } from "react-icons";
 
 export type LogoProps = {
+  src: string;
+  alt: string;
+};
 
-    src: string;
-    alt: string;
-  
-  };
+export type StatCardProps = {
+  heading: string;
+  subHeading: string;
+  statsImg: string;
+};
+export type ValueCardProps = {
+  title: string;
+  icon: IconType;
+  title2: string;
+};
 
-  export type StatCardProps = {
-    heading: string;
-    subHeading: string;
-    statsImg: string;
-  }
-  export type ValueCardProps = {
-    title: string;
-    icon: IconType;
-    title2: string;
-  };
+export type Review = {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  name: string;
+};
+export type ServicesCardProps = {
+  service: Service;
+};
+export type ReviewCardProps = {
+  review: Review;
+};
 
-  export type Review = {
-    title: string;
-    text: string;
-    image: string;
-    alt: string;
-    name: string;
-  };
-  export type ServicesCardProps = {
-    service: Service;
-  };
-  export type ReviewCardProps = {
-    review: Review;
-  };
+export type Service = {
+  title: string;
+  description: string;
+  icon: IconType;
+  linkText: string;
+};
 
-  export type Service = {
-    title: string;
-    description: string;
-    icon: IconType; 
-    linkText: string;
-  };
+export type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  component: React.FC<{ onClose: () => void }>;
+};
 
-  export type ModalProps = {
-    isOpen: boolean;
-    onClose: () => void;
-    component: React.FC<{ onClose: () => void }>;
-  };
+export type TextAreaProps = {
+  name: string;
+  handleOnChange?: (value: string) => void;
+  placeholder: string;
+  type?: "text";
+  // value: string ;
+  onBlur?: () => void;
+  label?: string;
+};
 
-  export type TextAreaProps = {
-    name: string;
-    handleOnChange?: (value: string) => void; 
-    placeholder: string;
-     type?: "text"; 
-    // value: string ; 
-    onBlur?: () => void;
-    label?: string; 
-  };
+export type ModalContextProps = {
+  isModalOpen: boolean;
+  openModal: () => void;
+  closeModal: () => void;
+};
 
-  export type ModalContextProps = {
-    isModalOpen: boolean;
-    openModal: () => void;
-    closeModal: () => void;
-  }
+export type InfoSectionProps = {
+  title: string;
+  content: React.ReactNode;
+};
+export type TopNavBarProps = {
+  backgroundImage: string;
+  aboutText: string;
+  whoWeAreText: string;
+};
+export type FAQItemProps = {
+  question: string;
+  answer: string;
+};
 
-  export type InfoSectionProps = {
-    title: string;
-    content: React.ReactNode;
-  };
-  export type TopNavBarProps = {
-    backgroundImage: string;
-    aboutText: string;
-    whoWeAreText: string;
-  }
-  export type FAQItemProps = {
-    question: string;
-    answer: string;
-  }
+export type FAQProps = {
+  items: FAQItemProps[];
+};
+export type WorkCardProps = {
+  step: number;
+  title: string;
+  description: string;
+  icon: IconType;
+};
+export type TeamMember = {
+  name: string;
+  role: string;
+  imageUrl: string;
+  instagramUrl: string;
+  linkedinUrl: string;
+  facebookUrl: string;
+};
+export type TeamCardsProps = {
+  member: TeamMember;
+};
+export type TechSectionType = {
+  title3: string;
+};
 
-  
-  export type FAQProps = {
-    items: FAQItemProps[];
-  }
-  export type WorkCardProps = {
-    step: number;
-    title: string;
-    description: string;
-    icon: IconType;
-  }
-  export type TeamMember = {
-    name: string;
-    role: string;
-    imageUrl: string;
-    instagramUrl: string;
-    linkedinUrl: string;
-    facebookUrl: string;
-  }
-  export type TeamCardsProps = {
-    member: TeamMember;
-  }
-  export type TechSectionType = {
-    title3: string;
-  };
+export type IconData = {
+  IconComponent: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }>;
+  size: number;
+  color: string;
+};
 
-  export type IconData = {
-    IconComponent: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }>;
-    size: number;
-    color: string;
-  };
-  
-  export type IconBoxProps = {
-    iconData: IconData;
-  };
-  export type  Post = {
+export type IconBoxProps = {
+  iconData: IconData;
+};
+export type Post = {
+  slug: string;
+  id: string;
+  imageUrl: string;
+  productName: string;
+  productDesc: string;
+  iconUrls: string[];
+};
+
+export type PageProps = {
+  params: {
     slug: string;
-    id: string;
-    imageUrl: string;
-    productName: string;
-    productDesc: string;
-    iconUrls: string[];
-  }
-
-  export type PageProps = {
-    params: {
-      slug: string;
-    };
-  }
-
-  export type Product = {
-    slug: string;
-    id: string;
-    imageUrl: string;
-    productName: string;
-    productDesc: string;
-    productDesc1: string;
-    iconUrls: string[];
   };
+};
 
-  export type ProjectCardsProps  = {
-    products: Post[];
-  }
+export type Product = {
+  slug: string;
+  id: string;
+  imageUrl: string;
+  productName: string;
+  productDesc: string;
+  productDesc1: string;
+  iconUrls: string[];
+};
 
-  export type TechImageProps = {
-    src: string;
-    alt?: string;
-    width?: number;
-    height?: number;
-    priority?: boolean;
-  };
+export type ProjectCardsProps = {
+  products: Post[];
+};
 
+export type TechImageProps = {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+};
 
-  export type ContactItemProps = {
-    icon: IconType; 
-    text: string;
-  }
+export type ContactItemProps = {
+  icon: IconType;
+  text: string;
+};
 
-  export type  FeatureCardProps = {
-    icon: IconType;
-    title: string;
-    description: string;
-  }
+export type FeatureCardProps = {
+  icon: IconType;
+  title: string;
+  description: string;
+};
 
-  export type WorkSpaceSection = {
-    heading: string;
-    description: string;
-    workImage: string;
-  }
-  export type AiAdvantagesProps = {
-    description: string;
-  };
- export type CardProps = {
-    heading: string;
-    body: string;
-    benefitsTitle: string;
-    benefits: string[];
-    imageUrl: string; 
-  }
+export type WorkSpaceSection = {
+  heading: string;
+  description: string;
+  workImage: string;
+};
+export type AiAdvantagesProps = {
+  description: string;
+};
+export type CardProps = {
+  heading: string;
+  body: string;
+  benefitsTitle: string;
+  benefits: string[];
+  imageUrl: string;
+};
+
+export type ContentBoxProps = {
+  title: string;
+  description: string;
+  imageSrc: string;
+  reverse?: boolean;
+};

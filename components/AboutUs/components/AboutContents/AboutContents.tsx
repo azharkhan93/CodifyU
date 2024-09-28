@@ -1,17 +1,10 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { useFadeInLeft } from "@/hooks/useAnimations";
 import { FaRocket } from "react-icons/fa";
-import { Row, Column, CenterBox, Text, Box } from "@/components/styled";
+import {Text, Box } from "@/components/styled";
+import { ContentBoxProps } from "@/types";
 
-interface ContentBoxProps {
-  title: string;
-  description: string;
-  imageSrc: string;
-  reverse?: boolean;
-}
 
 export const AboutContents: React.FC<ContentBoxProps> = ({
   title,

@@ -11,7 +11,7 @@ export const StyledLink = styled.a<StyledLinkProps>`
   width: fit-content;
   cursor: pointer;
   text-decoration: none;
-  font-family: "DMSansBold";
+  font-family: "ComfortaaBold";
   font-size: 0.9;
   // border-top: 2px solid black;
   // border-bottom: 2px solid black;
@@ -34,7 +34,7 @@ export const StyledLink = styled.a<StyledLinkProps>`
         ? "#5809A3"
         : props.$UnderlineColor === "secondary"
         ? "#D93922"
-        : "white"};
+        : "#fb9c42"};
     transition: width 0.2s ease-in-out;
   }
 

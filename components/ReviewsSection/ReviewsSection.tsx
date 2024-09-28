@@ -1,6 +1,4 @@
-import { reviews23 } from "@/constants";
-import { ReviewsCard } from "../ReviewsCard";
-import { Column, Box, CenterBox, Text, Floki, Row } from "../styled";
+import { Column, Box, CenterBox, Text,} from "../styled";
 import Image from "next/image";
 
 export const ReviewsSection = () => {
@@ -85,8 +83,4 @@ export const ReviewsSection = () => {
 };
 
 
-{/* <Row flexDirection={"row"} gap={"xl"}>
-          {reviews23.map((review, index) => (
-            <ReviewsCard key={index} review={review} />
-          ))}
-        </Row> */}
+

@@ -16,7 +16,7 @@ export const AnimateCircle = () => (
     }}
   >
     <defs>
-      <filter id="blur" x="0" y="0" width="100%" height="100%">
+      <filter id="blur" x="0" y="0" width="100%" height="auto">
         <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
       </filter>
     </defs>
