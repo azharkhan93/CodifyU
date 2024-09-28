@@ -90,3 +90,21 @@ export const OurWorkSpaceSection = () => {
     </>
   );
 };
+
+
+
+
+// const rotateAnimation = {
+//   animate: {
+//     rotateX: [0, 10, 0], 
+//     rotateZ: [0, -6, 0], 
+//     scale: [1, 1.02, 1], 
+//     transition: {
+//       duration: 15, 
+//       ease: "easeInOut",
+//       repeat: Infinity, 
+//       repeatType: "loop", 
+//     },
+//   },
+// };
+

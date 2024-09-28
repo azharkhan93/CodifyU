@@ -1,41 +1,51 @@
 "use client";
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
 import { AnimateCircle, Box, Column, Row, Text } from "@/components";
 import { CRD_ST } from "@/constants";
 import { TechCards } from "./components/TechCards";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect } from "react"; 
 
 export const TechSolutions = () => {
-  const images = ["/images/img4.jpg", "/images/img4.jpg", "/images/img4.jpg"];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const controls = useAnimation();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
+    controls.start({
+      rotateX: [0, 10, 0],
+      rotateZ: [0, -10, 0],
+      scale: [1, 1.02, 1],
+      transition: {
+        duration: 10,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "loop",
+      },
+    });
+  }, [controls]);
 
   return (
     <Row
       flexDirection={["column", "row"]}
       width={"100%"}
       alignItems={"center"}
-      justifyContent={"center"}
+      justifyContent={"space-between"}
+      gap={"xxxl"}
     >
-      <Column gap="xxxl" py="xl" alignItems={"flex-start"} justifyContent={"center"} width={["100%","800px"]}>
+      <Column
+        gap="xxxl"
+        py="xl"
+        alignItems={"flex-start"}
+        justifyContent={"center"}
+        width={["100%", "630px"]}
+      >
         <Text variant="heading">
-        Unlock the power of AI/ML and data-driven solutions with CodefyU
-          
+          Unlock the power of AI/ML and data-driven solutions with CodefyU
         </Text>
         <Text variant={"subHeading"} lineHeight={"1.5"}>
-          Streamline your business needs and automate your infrastructure with
-          codefyU.
+          Streamline your business needs and automate your infrastructure with CodefyU.
         </Text>
 
-        <Column gap="xxxl" >
+        <Column gap="xxxl">
           {CRD_ST.map((feature, index) => (
             <TechCards key={index} ItemsTitle={feature.ItemsTitle} />
           ))}
@@ -43,44 +53,74 @@ export const TechSolutions = () => {
       </Column>
 
       <Box
-        alignItems="center"
-        px="m"
-        py="xlg"
+        px={["none", "xxxl"]}
+        ml={["none", "header"]}
+        py={"xxxl"}
+        alignItems={["center", "flex-end"]}
+        justifyContent={"center"}
         position="relative"
-        width={["98%", "890px"]}
-        height={["250px", "400px"]}
+        width={["100%", "890px"]}
+        height={["600px", "590px"]}
+        flex={["column", "row"]}
       >
         <AnimateCircle />
 
-        <motion.div
-          animate={{
-            y: [0, -50, 0],
-            x: [0, 5, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{
-            position: "absolute",
-            top: "5%",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <Image
-            src={images[currentImageIndex]}
-            alt="Dynamic image"
-            fill
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{
-              objectFit: "cover",
-              borderRadius: "8px",
-            }}
-          />
+        <motion.div animate={controls} style={{ position: 'relative' }}>
+          <Box
+            width={["364px", "500px"]}
+            height={["280px", "400px"]}
+            overflow="hidden"
+          >
+            <Image
+              src="/images/img4.jpg"
+              alt="Static image"
+              width={500}
+              height={300}
+              style={{ objectFit: "cover", borderRadius: "10px" }}
+            />
+          </Box>
         </motion.div>
+
+        <Box position="absolute" left={["5px", "-40px"]} bottom={[5, 200]} top={[-2, 250]}>
+          <motion.div animate={controls}>
+            <Box
+              width={["200px", "250px"]}
+              height={["110px", "180px"]}
+              position="relative"
+            >
+              <Image
+                src="/websiteimages/4.png"
+                alt="Smaller image 1"
+                width={250}
+                height={150}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+              />
+            </Box>
+          </motion.div>
+        </Box>
+
+        <Box position="absolute" top={[450, 450]} left={[8, 120]} bottom="0">
+          <motion.div animate={controls}>
+            <Box
+              width={["150px", "250px"]}
+              height={["100px", "180px"]}
+              position="relative"
+            >
+              <Image
+                src="/websiteimages/3.png"
+                alt="Smaller image 2"
+                width={250}
+                height={150}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+              />
+            </Box>
+          </motion.div>
+        </Box>
       </Box>
     </Row>
   );
 };
+
+
+
+
