@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const TestiomonialsSection = () => {
   return (
-    <Column flexDirection={["column", "row"]} py={["xxl", "header"]} gap={"l"}>
+    <Column flexDirection={["column", "row"]} py={["xxl", "header"]} gap={"l"} mt={"xlg"}>
       <Column gap={["xl", "m"]}>
         <Text variant="heading">What Our Clients Say</Text>
         <Text
