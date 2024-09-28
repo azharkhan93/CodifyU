@@ -152,7 +152,7 @@ export const Footer = () => {
           </Box>
         </Box>
         <CenterBox py={"l"} zIndex={1}>
-          <Text variant={"body"}>© 2024 CodiFyU. All Rights Reserved</Text>
+          <Text variant={"body"}>© 2024 codefyU. All Rights Reserved</Text>
         </CenterBox>
       </Box>
     </>
