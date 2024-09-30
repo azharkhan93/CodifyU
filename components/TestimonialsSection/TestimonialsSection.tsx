@@ -16,7 +16,7 @@ export const TestimonialsSection: React.FC<Testimonial>= () => {
           lineHeight={"1.5"}
           textAlign={["start", "center"]}
         >
-          {`Discover how our services have positively impacted our clients'
+          {`Discover how our services have positively impacted our client's
           experiences. Read their testimonials below to learn more.`}
         </Text>
       </Column>

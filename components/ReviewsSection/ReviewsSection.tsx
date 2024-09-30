@@ -28,7 +28,7 @@ export const ReviewsSection = () => {
         <Text variant="heading">What Our Clients Say</Text>
         <Text
           variant={"body"}
-          width="100%"
+          width={["100%","460px"]}
           lineHeight={"1.5"}
           textAlign={["start", "center"]}
         >
