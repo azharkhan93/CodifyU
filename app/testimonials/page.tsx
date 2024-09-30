@@ -1,4 +1,4 @@
-import { Column, ContactSection, Mapsection, TestiomonialsSection, TopBar } from "@/components";
+import { Column, ContactSection, Mapsection,  TestimonialsSection,  TopBar } from "@/components";
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
     px={["m", "l"]}
     >
 
-      <TestiomonialsSection />
+      <TestimonialsSection id={0} imageSrc={""} altText={""} />
     
       </Column>
     </>

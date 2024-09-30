@@ -1,7 +1,11 @@
+import React from "react";
 import { Column, Box, CenterBox, Text } from "../styled";
 import Image from "next/image";
+import { testimonials } from "@/constants";
+import { Testimonial } from "@/types";
 
-export const TestiomonialsSection = () => {
+
+export const TestimonialsSection: React.FC<Testimonial>= () => {
   return (
     <Column flexDirection={["column", "row"]} py={["xxl", "header"]} gap={"l"} mt={"xlg"}>
       <Column gap={["xl", "m"]}>
@@ -12,8 +16,8 @@ export const TestiomonialsSection = () => {
           lineHeight={"1.5"}
           textAlign={["start", "center"]}
         >
-          Discover how our services have positively impacted our clients
-          experiences. Read their testimonials below to learn more.
+          {`Discover how our services have positively impacted our clients'
+          experiences. Read their testimonials below to learn more.`}
         </Text>
       </Column>
 
@@ -23,54 +27,28 @@ export const TestiomonialsSection = () => {
         gap={"xxxxl"}
         bg={"white"}
         borderRadius={"m"}
+        width={"100%"}
+        flexWrap={"wrap"}
       >
-        <Box position="relative" width={["355px", "400px"]} height={360}>
-          <Image
-            src={"/testimonialHome/1.png"}
-            alt="no img"
-            width={400}
-            height={360}
-            style={{
-              mixBlendMode: "multiply",
-              borderRadius: "20px",
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-            }}
-          />
-        </Box>
-        <Box position="relative" width={["355px", "400px"]} height={360}>
-          <Image
-            src={"/testimonialHome/2.png"}
-            alt="no img"
-            width={400}
-            height={360}
-            style={{
-              mixBlendMode: "multiply",
-              borderRadius: "20px",
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-            }}
-          />
-        </Box>
-
-        <Box position="relative" width={["355px", "400px"]} height={360}>
-          <Image
-            src={"/testimonialHome/3.png"}
-            alt="no img"
-            width={400}
-            height={360}
-            style={{
-              mixBlendMode: "multiply",
-              borderRadius: "20px",
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-            }}
-          />
-        </Box>
+        {testimonials.map((testimonial) => (
+          <Box key={testimonial.id} position="relative" width={["355px", "400px"]} height={360}>
+            <Image
+              src={testimonial.imageSrc}
+              alt={testimonial.altText}
+              width={400}
+              height={360}
+              style={{
+                mixBlendMode: "multiply",
+                borderRadius: "20px",
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </Box>
+        ))}
       </CenterBox>
     </Column>
   );
 };
+

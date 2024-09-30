@@ -409,3 +409,19 @@ export const AiBenefitsCardData = [
   },
 ];
 
+
+
+
+export const testimonials = [
+  { id: 1, imageSrc: "/testimonialHome/1.png", altText: "Testimonial 1" },
+  { id: 2, imageSrc: "/testimonialHome/2.png", altText: "Testimonial 2" },
+  { id: 3, imageSrc: "/testimonialHome/3.png", altText: "Testimonial 3" },
+  { id: 4, imageSrc: "/testimonialHome/4.png", altText: "Testimonial 4" },
+  { id: 5, imageSrc: "/testimonialHome/5.png", altText: "Testimonial 5" },
+  { id: 6, imageSrc: "/testimonialHome/6.png", altText: "Testimonial 6" },
+  { id: 7, imageSrc: "/testimonialHome/7.png", altText: "Testimonial 7" },
+  { id: 8, imageSrc: "/testimonialHome/8.png", altText: "Testimonial 8" },
+  { id: 9, imageSrc: "/testimonialHome/9.png", altText: "Testimonial 9" },
+];
+
+

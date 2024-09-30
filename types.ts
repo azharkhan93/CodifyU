@@ -176,3 +176,9 @@ export type ContentBoxProps = {
   imageSrc: string;
   reverse?: boolean;
 };
+
+export type Testimonial = {
+  id: number;
+  imageSrc: string;
+  altText: string;
+};
