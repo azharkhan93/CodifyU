@@ -67,6 +67,29 @@ export const useLogos = () => {
   };
 };
 
+// const slideVariants: Variants = {
+//   hidden: { x: "100%", opacity: 0 },
+//   visible: {
+//     x: "0%",
+//     opacity: 1,
+//     transition: { duration: 1, ease: "easeInOut" },
+//   },
+//   exit: {
+//     x: "100%",
+//     opacity: 0,
+//     transition: { duration: 1, ease: "easeInOut" },
+//   },
+// };
+
+// export const useSlideVariants = () => {
+//   return {
+//     initial: "hidden",
+//     animate: "visible",
+//     exit: "exit",
+//     variants: slideVariants,
+//   };
+// };
+
 
 
 

@@ -31,13 +31,9 @@ export const OurValues = () => {
             alignItems={"flex-start"}
             width={["100%", "43%"]}
           >
-            <Text
-              variant="heading"
-              textAlign={["start", "center"]}
-            >
-              Why{" "}codefyU?
+            <Text variant="heading" textAlign={["start", "center"]}>
+              Why codefyU?
               {/* <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span> */}
-              
             </Text>
             <Text
               variant={"body"}
@@ -99,14 +95,14 @@ export const OurValues = () => {
           alignItems={"center"}
           justifyContent={"center"}
         >
-         {STATS_DATA.map((stat) => (
-  <StatsCards 
-    key={stat.id} 
-    heading={stat.heading} 
-    subHeading={stat.subHeading} 
-    statsImg={stat.image} 
-  />
-))}
+          {STATS_DATA.map((stat) => (
+            <StatsCards
+              key={stat.id}
+              heading={stat.heading}
+              subHeading={stat.subHeading}
+              statsImg={stat.image}
+            />
+          ))}
         </Box>
       </motion.div>
     </>

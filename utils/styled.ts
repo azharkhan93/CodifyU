@@ -16,7 +16,7 @@ const acceptedDOMProps = [
   "cols",
   "rows",
   "placeholder",
-  "zIndex",
+  // "zIndex",
   "cursor",
   "dangerouslySetInnerHTML",
   "disabled",
