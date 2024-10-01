@@ -53,8 +53,8 @@ export const Footer = () => {
             justifyContent={"start"}
             position={"relative"}
             py={"s"}
-            width={"170px"}
-            px={"s"}
+            width={"180px"}
+            px={"m"}
             borderRadius={"circle"}
             onClick={openModal}
           >
@@ -62,10 +62,10 @@ export const Footer = () => {
               style={{
                 color: "#fb9c42",
                 position: "absolute",
-                right: "10px",
+                right: "2px",
                 top: "50%",
                 transform: "translateY(-50%)",
-                fontSize: "20px",
+                fontSize: "23px",
               }}
             />
 
@@ -89,7 +89,7 @@ export const Footer = () => {
           py={"xxxxl"}
           gap={"xxl"}
           px={"l"}
-          borderBottom={"2px solid white"}
+          borderBottom={"2px solid #fb9c42"}
         >
           <Box gap={"xxl"} alignItems={"flex-start"}>
             <Text variant="subHeading">Quick Links</Text>
