@@ -9,19 +9,19 @@ export const STATS_DATA = [
     id: 1,
     heading: "8+years",
     subHeading: "In Business",
-    image: "/websiteimages/6.png", 
+    image: "/websiteimages/25.png", 
   },
   {
     id: 2,
     heading: "150+",
     subHeading: "Global Clients",
-    image: "/websiteimages/7.png", 
+    image: "/websiteimages/26.png", 
   },
   {
     id: 3,
     heading: "200+",
     subHeading: "Million Value Generation",
-    image: "/websiteimages/8.png",
+    image: "/websiteimages/27.png",
   },
 ];
 

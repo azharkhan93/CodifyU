@@ -1,7 +1,8 @@
 "use client";
-import { Column, Text } from "@/components/styled";
+import { Box, Column, Text } from "@/components/styled";
 import { StatCardProps } from "@/types";
 import CountUp from "react-countup";
+import Image from "next/image";
 
 export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => {
   const isNumber = /\d+/g;
@@ -14,23 +15,27 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
       width={["90%", "350px"]}
       
       gap={"s"}
-      style={{
-        background: `url(${statsImg}) center center`,
-        backgroundSize: 'cover',
-        borderRadius: "8px",
-        position: 'relative',
-        overflow: 'hidden',
-      }}
+      
     >
-      {/* <Box
-        position={"absolute"}
-        top={0}
-        left={0}
-        bottom={0}
-        right={0}
-        zIndex={1}
-        bg={"whiteOverLay"}
-      /> */}
+      <Box
+      alignItems={"center"}
+      justifyContent={"center"}
+        // bg={"primary"}
+      
+        width={"150px"}  
+        height={"50px"} 
+      >
+        <Image 
+          src={statsImg} 
+          alt="Stats Image" 
+          width={300}  
+          height={150}
+          style={{ borderRadius: "8px", objectFit: 'cover', mixBlendMode: 'multiply' }} 
+        />
+      </Box>
+     
+       
+   
       <Text variant={["heading", "footerHeading"]} position={"relative"} zIndex={2} 
       style={{fontFamily: "ComfortaaBold"}}>
         {isNumber.test(heading) ? (
