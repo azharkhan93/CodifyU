@@ -31,17 +31,21 @@ export const TestimonialsSection: React.FC<Testimonial> = () => {
         {testimonials.map((testimonial) => (
           <Box 
             key={testimonial.id} 
-            position="relative" 
-            border={"3px solid red"} 
-            borderRadius="m"
+            width={["390px", "600px"]} 
+                  height={["290px", "360px"]} 
+                  overflow="hidden"
+                  position="relative" 
            >
             <Image
               src={testimonial.imageSrc}
               alt={testimonial.altText}
-              width={590}
-              height={360}
-              style={{
-                borderRadius: "20px",
+              width={700} 
+                    height={500} 
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "20px",
+                      width: "100%", 
+                      height: "100%", 
                
                 
                 
