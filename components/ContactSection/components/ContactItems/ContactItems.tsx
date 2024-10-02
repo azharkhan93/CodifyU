@@ -9,7 +9,25 @@ export const ContactItems: React.FC<ContactItemProps> = ({
   return (
     <Row gap={"xl"} alignItems={"center"} flexDirection={"row"}>
       <Icon size={30} fill="#fb9c42" />
-      <Text variant={"subHeading"}>{text}</Text>
+      <Text variant={"subHeading"}>
+        {text.startsWith("+") ? (
+          <a
+            href={`tel:${text}`}
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            {text}
+          </a>
+        ) : text.includes("@") ? (
+          <a
+            href={`mailto:${text}`}
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            {text}
+          </a>
+        ) : (
+          text
+        )}
+      </Text>
     </Row>
   );
 };

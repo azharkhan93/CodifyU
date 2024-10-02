@@ -295,17 +295,17 @@ export const contactData = [
   {
     id: 1,
     icon: FaPhoneAlt, 
-    text: "+91 6005493028",
+    text: "+91 7006168185",
   },
   {
     id: 2,
     icon: FaPhoneAlt,
-    text: "+91 60058990",
+    text: "+91 7006569557",
   },
   {
     id: 3,
     icon: FaEnvelope,
-    text: "hellocodefyU@gmail.com",
+    text: "info@codefyu.com",
   },
   {
     id: 4,

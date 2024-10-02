@@ -79,6 +79,7 @@ export default function Page({ params }: PageProps) {
               {product.productName}
             </Text>
             <Text
+            width={["100%","790px"]}
               variant={["body", "subHeading"]}
               textAlign={["start", "center"]}
             >
