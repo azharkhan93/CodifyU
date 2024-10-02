@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Column, CenterBox, Row, Text } from "../styled"; 
+import { Column, CenterBox, Row, Text, Box } from "../styled"; 
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-
 
 const MotionRow = motion.create(Row);
 
@@ -27,7 +26,7 @@ export const ReviewsSection = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 5000);
+    }, 4000); 
 
     return () => clearTimeout(timer);
   }, [currentIndex]);
@@ -51,7 +50,6 @@ export const ReviewsSection = () => {
         py={["xxxl", "xxxxl"]}
         flexDirection={["column", "row"]}
         gap={"xxxxl"}
-        bg={"white"}
         borderRadius={"m"}
       >
         <AnimatePresence mode="wait">
@@ -69,24 +67,30 @@ export const ReviewsSection = () => {
                 animate="visible"
                 exit="exit"
                 variants={slideVariants}
-                style={{
-                  width: "600px",
-                  height: 360,
-                  // border: "4px solid green"
-                  
-                }}
+                width={["100%","40%"]} 
+                
               >
-                <Image
-                  src={src}
-                  alt={`Review ${index + 1}`} 
-                  width={700}
-                  height={500}
-                  style={{
-                    objectFit: "cover",
-                    borderRadius: "20px",
-                    // border: "4px solid red"
-                  }}
-                />
+                <Box 
+                  width={["390px", "600px"]} 
+                  height={["290px", "360px"]} 
+                  overflow="hidden"
+                  position="relative" 
+                >
+                  <Image
+                    src={src}
+                    alt={`Review ${index + 1}`} 
+                    width={700} 
+                    height={500} 
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "20px",
+                      width: "100%", 
+                      height: "100%", 
+                     
+                      
+                    }}
+                  />
+                </Box>
               </MotionRow>
             ) : null;
           })}

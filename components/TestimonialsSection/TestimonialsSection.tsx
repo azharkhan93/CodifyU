@@ -4,8 +4,7 @@ import Image from "next/image";
 import { testimonials } from "@/constants";
 import { Testimonial } from "@/types";
 
-
-export const TestimonialsSection: React.FC<Testimonial>= () => {
+export const TestimonialsSection: React.FC<Testimonial> = () => {
   return (
     <Column flexDirection={["column", "row"]} py={["xxl", "header"]} gap={"l"} mt={"xlg"}>
       <Column gap={["xl", "m"]}>
@@ -25,24 +24,27 @@ export const TestimonialsSection: React.FC<Testimonial>= () => {
         py={["xxxl", "xxxxl"]}
         flexDirection={["column", "row"]}
         gap={"xxxxl"}
-        bg={"white"}
         borderRadius={"m"}
         width={"100%"}
         flexWrap={"wrap"}
       >
         {testimonials.map((testimonial) => (
-          <Box key={testimonial.id} position="relative" width={["355px", "400px"]} height={360}>
+          <Box 
+            key={testimonial.id} 
+            position="relative" 
+            border={"3px solid red"} 
+            borderRadius="m"
+           >
             <Image
               src={testimonial.imageSrc}
               alt={testimonial.altText}
-              width={400}
+              width={590}
               height={360}
               style={{
-                mixBlendMode: "multiply",
                 borderRadius: "20px",
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
+               
+                
+                
               }}
             />
           </Box>
@@ -51,4 +53,5 @@ export const TestimonialsSection: React.FC<Testimonial>= () => {
     </Column>
   );
 };
+
 
