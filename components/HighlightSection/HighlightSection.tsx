@@ -46,12 +46,13 @@ export const HighlightSection = () => {
       </Row>
       <CenterBox width={"100%"} py={"m"}>
         <Button
-          borderTopLeftRadius={"xxl"}
+            borderTopLeftRadius={"xxl"}
           variant={"primary"}
           bg={"primary"}
           py={"m"}
           px={"header"}
           borderRadius={"m"}
+          style={{borderTopLeftRadius: "50px", }}
         >
           {`Exlpore Our Services`}
         </Button>
