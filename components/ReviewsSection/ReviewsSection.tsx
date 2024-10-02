@@ -70,19 +70,21 @@ export const ReviewsSection = () => {
                 exit="exit"
                 variants={slideVariants}
                 style={{
-                  width: "400px",
+                  width: "600px",
                   height: 360,
+                  // border: "4px solid green"
                   
                 }}
               >
                 <Image
                   src={src}
                   alt={`Review ${index + 1}`} 
-                  width={400}
-                  height={360}
+                  width={700}
+                  height={500}
                   style={{
                     objectFit: "cover",
                     borderRadius: "20px",
+                    // border: "4px solid red"
                   }}
                 />
               </MotionRow>
