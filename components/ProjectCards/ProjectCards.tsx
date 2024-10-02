@@ -34,7 +34,7 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
           justifyContent={"center"}
           gap={"l"}
         >
-          <Column gap={["xl", "xl"]} width={["100%", "700px"]} pl={["s", "m"]}>
+          <Column gap={["xxl", "xxxl"]} width={["100%", "700px"]} pl={["s", "m"]}>
             <Text variant={"heading"} fontWeight={"bold"}>
               {product.productName}
             </Text>

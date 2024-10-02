@@ -45,11 +45,7 @@ export const TestimonialsSection: React.FC<Testimonial> = () => {
                       objectFit: "cover",
                       borderRadius: "20px",
                       width: "100%", 
-                      height: "100%", 
-               
-                
-                
-              }}
+                      height: "100%",}}
             />
           </Box>
         ))}

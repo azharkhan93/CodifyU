@@ -1,8 +1,7 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Box, CenterBox, Column, Row, Text, TopBar } from "@/components";
-import Image from "next/image";
+import { Box, CenterBox, Column, Row, Text, } from "@/components";
 import { FaSpinner } from "react-icons/fa";
 import { PageProps, Product } from "@/types";
 
@@ -55,10 +54,8 @@ export default function Page({ params }: PageProps) {
 
   return (
     <>
-     
       <Column
-      px={["m", "l"]}
-
+        px={["m", "l"]}
         mt={"xlg"}
         flexDirection={"column"}
         alignItems={"center"}
@@ -72,7 +69,12 @@ export default function Page({ params }: PageProps) {
           justifyContent={"space-between"}
           width={"100%"}
         >
-          <Column gap={"xl"} width={["100%", "700px"]}>
+          <CenterBox
+            gap={"xxxl"}
+            width={"100%"}
+            flexDirection={"column"}
+            py={"xxxxl"}
+          >
             <Text variant={"heading"} textAlign={["start", "center"]}>
               {product.productName}
             </Text>
@@ -82,8 +84,8 @@ export default function Page({ params }: PageProps) {
             >
               {product.productDesc}
             </Text>
-          </Column>
-          {product.imageUrl && (
+          </CenterBox>
+          {/* {product.imageUrl && (
             <Column
               width={["100%", "900px"]}
               position="relative"
@@ -103,7 +105,7 @@ export default function Page({ params }: PageProps) {
                 }}
               />
             </Column>
-          )}
+          )} */}
         </Row>
         <CenterBox
           mt={["m", "xxxl"]}
@@ -120,4 +122,3 @@ export default function Page({ params }: PageProps) {
     </>
   );
 }
-
