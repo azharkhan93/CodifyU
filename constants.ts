@@ -425,3 +425,12 @@ export const testimonials = [
 ];
 
 
+export const REVIEW_SLIDES = [
+  "/testimonialHome/1.png",
+  "/testimonialHome/2.png",
+  "/testimonialHome/3.png",
+  "/testimonialHome/4.png",
+  "/testimonialHome/5.png",
+];
+
+

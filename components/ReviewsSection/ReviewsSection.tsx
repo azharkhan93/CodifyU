@@ -7,16 +7,10 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { REVIEW_SLIDES } from "@/constants";
+
 
 export const ReviewsSection = () => {
-  const slides = [
-    "/testimonialHome/1.png",
-    "/testimonialHome/2.png",
-    "/testimonialHome/3.png",
-    "/testimonialHome/4.png",
-    "/testimonialHome/5.png",
-  ];
-
   return (
     <Column flexDirection={["column", "row"]} py={["xxl", "header"]} gap={"l"}>
       <Column gap={["xl", "m"]}>
@@ -58,7 +52,7 @@ export const ReviewsSection = () => {
             },
           }}
         >
-          {slides.map((src, index) => (
+          {REVIEW_SLIDES.map((src, index) => (
             <SwiperSlide key={index}>
               <Row flexDirection={"row"} width={"100%"} alignItems={"center"}>
                 <Box
