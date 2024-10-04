@@ -32,8 +32,8 @@ export const OurValues = () => {
             width={["100%", "43%"]}
           >
             <Text variant="heading" textAlign={["start", "center"]}>
-              Why codefyU?
-              {/* <span style={{ color: "orange", fontSize: "42px" }}>CodefyU</span> */}
+              Why <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span>?
+              
             </Text>
             <Text
               variant={"body"}
@@ -42,7 +42,7 @@ export const OurValues = () => {
             >
               We have successfully delivered over 200 projects over the last 8
               years, collectively generating a value of{" "}
-              {/* <span style={{ color: "orange", fontSize: "20px" }}> */}
+        
               $200 million
               {/* </span> */}. High-Quality tech solutions without high costs.{" "}
             </Text>

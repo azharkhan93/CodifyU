@@ -32,7 +32,7 @@ export const OurWorkSpaceSection = () => {
               lineHeight={"1.5"}
               textAlign={["start", "center"]}
             >
-              At CodefyU, we know that our success is built on the strength and
+              At <span style={{ color: "#fb9c42", fontSize: "22px" }}>codefyU</span>, we know that our success is built on the strength and
               well-being of our people. Our values guide how we create an
               inclusive, innovative, and supportive environment for every team
               member to thrive.

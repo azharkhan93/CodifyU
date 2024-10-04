@@ -8,7 +8,7 @@ export const WorkApproach = () => {
       <Column gap={"xl"}>
       
         <Text variant="heading"  textAlign={"start"}>
-        codefyU Working Process
+        <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span> Working Process
         </Text>
         <Text variant={"body"} lineHeight={"1.5"}>
             We are proud to collaborate with some of the most innovative and

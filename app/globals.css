@@ -1,25 +1,21 @@
-html, body {
+html,
+body {
   margin: 0;
-   padding: 0; 
-  /* padding: 0 1rem; */
+  padding: 0;
   overflow-x: hidden;
-  /* background: #e1e; */
-/* background: #eec4c815;    */
-background: #eae9fd; 
-/* background: #d9d9d9;  */
-/* background: #d3e6ff;  */
-/* background: #ffefd8;  */
-/* background: #f8edc1;  */
-/* background: #f4eded;  */
+  background: #eae9fd;
 
-/* background: #f4eded; */
-/* background: #ffefd8; */
-/* background: #e5fbff; */
+  .swiper {
+    height: 100%;
+    width: 100%;
+    --swiper-navigation-color: #fb9c42;
+    --swiper-navigation-size: 45px;
+  }
 
-
-
-
-
+  .swiper .swiper-pagination-bullet-active {
+    transform: scale(2);
+    transform-origin: center;
+  }
 }
 
 @keyframes wave {
@@ -37,22 +33,3 @@ background: #eae9fd;
 .animate-spin {
   animation: wave 1.5s infinite linear;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

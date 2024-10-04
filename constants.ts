@@ -253,7 +253,7 @@ export const teamMembers = [
 
 export const CRD_ST = [
   {
-    ItemsTitle: "Transform your vision with CodefyU.", 
+    ItemsTitle: "Transform your vision with codefyU.", 
   },
   {
     ItemsTitle: "Improve your customer interactions with advanced LLMs.",

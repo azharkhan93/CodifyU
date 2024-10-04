@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { IconType } from "react-icons";
 
 export type LogoProps = {
@@ -172,7 +173,7 @@ export type CardProps = {
 
 export type ContentBoxProps = {
   title: string;
-  description: string;
+  description: ReactNode; 
   imageSrc: string;
   reverse?: boolean;
 };

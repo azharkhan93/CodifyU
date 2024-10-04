@@ -2,46 +2,16 @@
 import styled, { keyframes, css } from "styled-components";
 import { Box, CenterBox } from "../Box";
 import {
-  blinkCaret,
-
-  scrollLogos,
-  scrolling,
   slideIn,
   slideOut,
-  typewriter,
   waveAnimation,
 } from "../StyledAnimations";
 import { Row } from "../Row";
 import { Column } from "../Column";
 
 
-export const TypewriterText = styled.span`
-color: #FB9C42;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid transparent;
-  animation: ${typewriter} 4s steps(40, end) infinite,
-    ${blinkCaret} 100ms steps(40, end) infinite;
-`;
 
-export const Flock = styled(Row)`
-  white-space: nowrap;
-  animation: ${scrollLogos} 30s linear infinite;
 
-  &:hover {
-    animation-play-state: paused;
-  }
-
-  & > * {
-    flex: 0 0 auto;
-    // min-width: 220px;
-  }
-`;
-export const Floki = styled(CenterBox)`
-  display: flex;
-  animation: ${scrolling} 40s linear infinite;
-`;
 
 
 export const AnimatedColumn = styled(Column)`

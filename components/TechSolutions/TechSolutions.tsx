@@ -39,10 +39,10 @@ export const TechSolutions = () => {
         width={["100%", "630px"]}
       >
         <Text variant="heading">
-          Unlock the power of AI/ML and data-driven solutions with CodefyU
+          Unlock the power of AI/ML and data-driven solutions with <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span>
         </Text>
         <Text variant={"subHeading"} lineHeight={"1.5"}>
-          Streamline your business needs and automate your infrastructure with CodefyU.
+          Streamline your business needs and automate your infrastructure with <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>codefyU</span>.
         </Text>
 
         <Column gap="xxxl">

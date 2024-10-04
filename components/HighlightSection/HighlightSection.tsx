@@ -27,7 +27,7 @@ export const HighlightSection = () => {
           width={["100%", "700px"]}
           textAlign={["start", "center"]}
         >
-          At CodefyU, we specialize in delivering transformative solutions that drive growth and innovation. Our core services—AI/ML, Generative AI, and Large Language Models (LLMs)—form the backbone of our offerings, but we provide much more to elevate your business.
+          At <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>codefyU</span>, we specialize in delivering transformative solutions that drive growth and innovation. Our core services—AI/ML, Generative AI, and Large Language Models (LLMs)—form the backbone of our offerings, but we provide much more to elevate your business.
         </Text>
       </Column>
 

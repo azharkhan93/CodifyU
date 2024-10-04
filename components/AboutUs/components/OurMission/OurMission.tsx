@@ -32,7 +32,7 @@ export const OurMission = () => {
           Mission & Vision
           </Text>
           <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
-          CodefyU is a specialized technology partner, focused on delivering rapid and scalable solutions that drive succes.
+          <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>codefyU</span>. is a specialized technology partner, focused on delivering rapid and scalable solutions that drive succes.
           </Text>
           <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
           Our core principles—Innovation, Partnership, and Efficiency—shape our commitment to empowering your business with pioneering technology tailored to your needs.
@@ -53,7 +53,14 @@ export const OurMission = () => {
             imageSrc={"/websiteimages/12.png"} />
           <AboutContents
             title="Mission Statement"
-            description="At CodefyU, we are committed to enabling startups to achieve their fullest potential. Through our expertise in AI, Machine Learning, and Generative AI, we deliver customized solutions that streamline operations, accelerate growth, and ensure your success. Our mission is to turn your visionary ideas into reality by simplifying the complex and guiding your business toward predictable success."
+            description={
+              <>
+                At <span style={{ color: "#fb9c42", fontSize: "22px" }}>codefyU</span>, we are committed to enabling startups to achieve their fullest potential. 
+                Through our expertise in AI, Machine Learning, and Generative AI, we deliver customized solutions that streamline operations, 
+                accelerate growth, and ensure your success. Our mission is to turn your visionary ideas into reality by simplifying the complex 
+                and guiding your business toward predictable success.
+              </>
+            }
             imageSrc={"/websiteimages/2.png"}
             reverse={true} />
         </CenterBox>
