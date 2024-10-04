@@ -81,7 +81,7 @@ export const TechSolutions = () => {
           </Box>
         </motion.div>
 
-        <Box position="absolute" left={["5px", "-40px"]} bottom={[5, 200]} top={[-2, 250]}>
+        <Box position="absolute" left={["5px", "120px"]} bottom={[5, 200]} top={[100, 350]}>
           <motion.div animate={controls}>
             <Box
               width={["200px", "250px"]}
@@ -89,17 +89,17 @@ export const TechSolutions = () => {
               position="relative"
             >
               <Image
-                src="/websiteimages/4.png"
+                src="/websiteimages/42.png"
                 alt="Smaller image 1"
                 width={250}
                 height={150}
-                style={{ objectFit: "cover", borderRadius: "10px" }}
+                style={{  borderRadius: "10px" }}
               />
             </Box>
           </motion.div>
         </Box>
 
-        <Box position="absolute" top={[450, 450]} left={[8, 120]} bottom="0">
+        <Box position="absolute" top={[450, 340]} left={[8, 500]} bottom="0">
           <motion.div animate={controls}>
             <Box
               width={["150px", "250px"]}
@@ -107,11 +107,11 @@ export const TechSolutions = () => {
               position="relative"
             >
               <Image
-                src="/websiteimages/3.png"
+                src="/websiteimages/3c.png"
                 alt="Smaller image 2"
                 width={250}
-                height={150}
-                style={{ objectFit: "cover", borderRadius: "10px" }}
+                height={170}
+                style={{ borderRadius: "10px" }}
               />
             </Box>
           </motion.div>

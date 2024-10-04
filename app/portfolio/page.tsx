@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -7,9 +7,7 @@ import { Post } from "@/types";
 import { CenterBox, Column, ParallaxSection, TopBar } from "@/components";
 import { FaSpinner } from "react-icons/fa";
 
-
-
-export default function  Portfolio() {
+export default function Portfolio() {
   const [products, setProducts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -39,30 +37,21 @@ export default function  Portfolio() {
         width={"100%"}
       >
         <FaSpinner className="animate-spin" size={60} color="#fb9c42" />
-       
       </CenterBox>
     );
   }
 
-
-  return(
-  <>
-   <Column
-    px={["m", "l"]}
-    >
-  
-
-    <PortfolioSection products={products} />
-    <ParallaxSection
-  heading="Any Queries React Out To Us"
-  body="React out to us we got your project got covered."
-  buttonText="Start Collaborating"
-  animationSrc="https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json"
-/>
-
-    </Column>
-
+  return (
+    <>
+      <Column px={["m", "l"]}>
+        <PortfolioSection products={products} />
+        <ParallaxSection
+          heading="Any Queries React Out To Us"
+          body="React out to us we got your project got covered."
+          buttonText="Start Collaborating"
+          animationSrc="https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json"
+        />
+      </Column>
     </>
   );
-};
-
+}

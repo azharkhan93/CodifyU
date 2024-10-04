@@ -4,7 +4,11 @@ import { StatCardProps } from "@/types";
 import CountUp from "react-countup";
 import Image from "next/image";
 
-export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => {
+export const StatsCards = ({
+  heading,
+  subHeading,
+  statsImg,
+}: StatCardProps) => {
   const isNumber = /\d+/g;
   return (
     <Column
@@ -13,31 +17,33 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
       alignItems={"center"}
       borderRight={"3px dotted #fb9c42"}
       width={["90%", "350px"]}
-      
       gap={"s"}
-      
     >
       <Box
-      alignItems={"center"}
-      justifyContent={"center"}
-        // bg={"primary"}
-      
-        width={"150px"}  
-        height={"50px"} 
+        alignItems={"center"}
+        justifyContent={"center"}
+        width={"150px"}
+        height={"50px"}
       >
-        <Image 
-          src={statsImg} 
-          alt="Stats Image" 
-          width={300}  
+        <Image
+          src={statsImg}
+          alt="Stats Image"
+          width={300}
           height={150}
-          style={{ borderRadius: "8px", objectFit: 'cover', mixBlendMode: 'multiply' }} 
+          style={{
+            borderRadius: "8px",
+            objectFit: "cover",
+            mixBlendMode: "multiply",
+          }}
         />
       </Box>
-     
-       
-   
-      <Text variant={["heading", "footerHeading"]} position={"relative"} zIndex={2} 
-      style={{fontFamily: "ComfortaaBold"}}>
+
+      <Text
+        variant={["heading", "footerHeading"]}
+        position={"relative"}
+        zIndex={2}
+        // style={{fontFamily: "ComfortaaBold"}}
+      >
         {isNumber.test(heading) ? (
           <CountUp
             start={0}
@@ -49,10 +55,14 @@ export const StatsCards = ({ heading, subHeading, statsImg }: StatCardProps) => 
           heading
         )}
       </Text>
-      <Text variant={"subHeading"} position={"relative"} zIndex={2} fontFamily={"ComfortaaMedium"}>
+      <Text
+        variant={"subHeading"}
+        position={"relative"}
+        zIndex={2}
+        fontFamily={"ComfortaaMedium"}
+      >
         {subHeading}
       </Text>
     </Column>
   );
 };
-
