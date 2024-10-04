@@ -3,7 +3,12 @@ import { services } from "@/constants";
 import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 import { ServicesCard } from "./components/ServicesCard";
 
-export const HighlightSection = () => {
+interface HighlightSectionProps {
+  cardLimit?: number; 
+  showButton?: boolean; 
+}
+
+export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 3, showButton = true }) => {
   return (
     <Column
       width={"100%"}
@@ -19,7 +24,7 @@ export const HighlightSection = () => {
         width={["100%", "100%"]}
       >
         <Text variant={["heading", "heading"]}>
-        Driving Unmatched Efficiency Through Intelligent Solutions
+          Driving Unmatched Efficiency Through Intelligent Solutions
         </Text>
         <Text
           variant={"body"}
@@ -40,23 +45,26 @@ export const HighlightSection = () => {
         gap={["xl", "xl"]}
         py={["xxxxl", "xxxl"]}
       >
-        {services.map((service, index) => (
+        {services.slice(0, cardLimit).map((service, index) => (
           <ServicesCard key={index} service={service} />
         ))}
       </Row>
-      <CenterBox width={"100%"} py={"m"}>
-        <Button
+      {showButton ? ( 
+        <CenterBox width={"100%"} py={"m"}>
+          <Button
             borderTopLeftRadius={"xxl"}
-          variant={"primary"}
-          bg={"primary"}
-          py={"m"}
-          px={"header"}
-          borderRadius={"m"}
-          style={{borderTopLeftRadius: "50px", }}
-        >
-          {`Exlpore Our Services`}
-        </Button>
-      </CenterBox>
+            variant={"primary"}
+            bg={"primary"}
+            py={"m"}
+            px={"header"}
+            borderRadius={"m"}
+            style={{ borderTopLeftRadius: "50px" }}
+          >
+            {`Explore Our Services`}
+          </Button>
+        </CenterBox>
+      ): null}
     </Column>
   );
 };
+

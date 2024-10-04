@@ -12,7 +12,7 @@ import {
   Text,
 } from "@/components";
 import { CgMenuGridO } from "react-icons/cg";
-import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 
@@ -81,7 +81,7 @@ export const Navbar: React.FC = () => {
           flexDirection="row"
           alignItems="center"
           justifyContent="center"
-          gap="xxxxl"
+          gap={"xxxxl"}
         >
           {NavbarData.map((item, index) => (
             <Row
@@ -103,26 +103,27 @@ export const Navbar: React.FC = () => {
                     style={{ cursor: "pointer" }}
                   >
                     {dropdownOpen === index ? (
-                      <FaMinus size={17} fill="#fb9c42" />
+                      <FaChevronUp size={17} fill="#fb9c42" />
                     ) : (
-                      <FaPlus size={17} fill="#fb9c42" />
+                      <FaChevronDown  size={17} fill="#fb9c42" />
                     )}
                   </Box>
 
                   {dropdownOpen === index ? (
                     <Row
                       justifyContent={"center"}
-                      alignItems={"center"}
+                      alignItems={"flex-start"}
                       gap={"xl"}
                       flexWrap={"wrap"}
                       py={"xl"}
-                      width={"400px"}
-                      flexDirection={"row"}
+                      width={"340px"}
+                      flexDirection={"column"}
                       position="absolute"
                       top={45}
                       left={-150}
-                      bg={"primary"}
+                      bg={"textColor"}
                       borderRadius={"m"}
+                      px={"xl"}
                       zIndex={999}
                     >
                       {item.dropdown.map((subItem, subIndex) => (

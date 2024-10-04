@@ -7,7 +7,7 @@ export const BASE_COLORS = {
    lightYellow: "#eec4c815",
    offWhite: "#F2F0EF",
    textColor: "#fb9c42",
-  background: "#eec4c815",
+  background: "#eae9fd",
    transparent: "",
   white: "#ffffff",
   gradient: "linear-gradient(147deg, #923cb5 50%, #000000 74%)",

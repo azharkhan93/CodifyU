@@ -1,5 +1,7 @@
 import { MdOutlineDeveloperMode, } from "react-icons/md";
-import { FaBrain, FaCode, FaCog, FaDollarSign, FaDoorOpen, FaEnvelope, FaHandsHelping, FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { FaBrain, FaCode, FaCog, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { AiFillApi } from "react-icons/ai"; 
+
 
 
 
@@ -81,14 +83,18 @@ export const NavbarData = [
     dropdown: [
       {
         title: "AI and Machine Learning",
-        link: "/services",
+        link: "/services/ai-ml",
       },
       {
-        title: "Data Analytics",
+        title: "DevOps and MLOps",
         link: "/services/data-analytics",
       },
       {
-        title: "Cloud Computing",
+        title: "Large Language Models (LLMs)",
+        link: "/services/cloud-computing",
+      },
+      {
+        title: "Data Analytics & Predictive Modeling",
         link: "/services/cloud-computing",
       },
     ],
@@ -149,13 +155,7 @@ export const PARTNER_LOGOS = [
 
 
 export const services = [
-  // {
-  //   title: "Full-Stack Development",
-  //   description:
-  //     "We offer a full cycle of application design, integration and management services. Whether it is a consumer oriented app or a transformative enterprise-class solution.",
-  //     icon: MdCode,
-  //   linkText: "Learn more",
-  // },
+ 
   {
     title: "AI/ML Solutions",
     description:
@@ -174,6 +174,20 @@ export const services = [
     title: "Large Language Models (LLMs)",
     description:
       "Our LLM expertise helps enhance customer experiences and streamline workflows with intelligent, customizable models across various domains.",
+      icon: MdOutlineDeveloperMode,
+    linkText: "Learn more",
+  },
+  {
+    title: "DevOps and MLOps",
+    description:
+      "At CodefyU, we streamline the development and deployment process through our DevOps and MLOps services. By automating infrastructure and software delivery pipelines, we help businesses accelerate time-to-market and improve the quality of their software products and machine learning model.",
+      icon: AiFillApi,
+    linkText: "Learn more",
+  },
+  {
+    title: "Data Analytics and Predictive Modeling",
+    description:
+      "Data is at the core of decision-making, and at CodefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation",
       icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
   },

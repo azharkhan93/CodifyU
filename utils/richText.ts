@@ -25,7 +25,7 @@ export function extractRichText(blocks: any[]): string[] {
           const headingStyle = getHeadingStyle(block.type);
 
           currentContent.push(
-            `<${headingLevel} style="${headingStyle}  margin: 0;">${lastHeading}</${headingLevel}>`
+            `<${headingLevel} style="${headingStyle} margin: 0;">${lastHeading}</${headingLevel}>`
           );
 
           if (index === blocks.length - 1) {
@@ -42,7 +42,7 @@ export function extractRichText(blocks: any[]): string[] {
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
           currentContent.push(
-            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5;  margin: 0;">${paragraphText}</p>`
+            `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5; margin: 0;">${paragraphText}</p>`
           );
           break;
 
@@ -145,8 +145,15 @@ function processRichText(richTextArray: any[]): string {
     .map((text) => {
       if (text.type === "text") {
         const content = text.text.content;
+        const highlightedPattern = /(\*\*[^*]+\*\*)/g; 
         const urlPattern = /(https?:\/\/[^\s]+)/g;
-        return content.replace(
+        
+        const highlightedText = content.replace(
+          highlightedPattern,
+          (match: string) => `<span style="color: orange; font-weight: bold;">${match.replace(/\*\*/g, '')}</span>`
+        );
+        
+        return highlightedText.replace(
           urlPattern,
           (url: string) =>
             `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
@@ -177,12 +184,14 @@ function getStyles(): string {
       .content-images-container {
         display: flex;
         flex-direction: column;
+        // gap: 40px;
       }
       .content, .images {
         width: 100%;
         margin: 20px 0;
       }
       .content {
+        // border: 2px solid red;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -194,17 +203,18 @@ function getStyles(): string {
       .content-images-container {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 40px; 
       }
       .row-reverse {
         flex-direction: row-reverse;
       }
       .content, .images {
         width: 80%;
-        margin: 20px 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 30px; 
+        margin-bottom: 50px;
       }
     }
     .content {
@@ -212,7 +222,9 @@ function getStyles(): string {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 30px;
+      margin-bottom: 50px;
     }
   </style>`;
 }
+
