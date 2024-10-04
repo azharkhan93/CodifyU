@@ -258,7 +258,7 @@ export const Navbar: React.FC = () => {
                             width={'250px'}
                             top={40}
                             left={-40}
-                            bg={"white"}
+                            bg={"textColor"}
 
                             zIndex={9999}
                             gap={"xl"}
