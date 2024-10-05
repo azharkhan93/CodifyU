@@ -10,7 +10,7 @@ export const AboutUs = () => {
         <Column
           gap={"xl"}
           alignItems={"center"}
-          width={["100%", "900px"]}
+          width={["100%", "850px"]}
           px={["s", "xl"]}
         >
           <Text
