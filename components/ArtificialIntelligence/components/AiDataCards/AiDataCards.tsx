@@ -41,10 +41,6 @@ export const AiDataCards = () => {
           Unlock the full potential of AI technology to transform your business. Let codefyu Software help you gain a competitive edge, boost efficiency, and stay ahead in the ever-evolving digital landscape.
           </Text>
 
-          
-          {/* <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
-          Our Software provides a variety of AI solutions. We can help you incorporate AI into your existing products, start from the ground up with a new product, or integrate AI into your business processes.
-          </Text> */}
         </Column>
         <Row
         py={"xxxl"}
@@ -76,7 +72,7 @@ export const AiDataCards = () => {
       </Row>
     </motion.div>
     <motion.div {...fadeInUpProps}>
-    <Row justifyContent={"space-between"} py={"xl"} flexDirection={"row"}>
+    <Row justifyContent={"center"} py={"xl"} flexDirection={"row"} flexWrap={"wrap"} gap={"xxxl"}>
       {servicesData.map((service) => (
         <ServiceCards key={service.id} service={service} />
       ))}

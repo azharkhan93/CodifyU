@@ -166,7 +166,7 @@ export const services = [
     linkText: "Learn more",
   },
   {
-    title: "Geneartive AI",
+    title: "Generative AI",
     description:
       "Tap into the potential of Generative AI for automated content creation and tailored solutions that keep your business ahead of the curve.",
       icon: FaRobot,
@@ -462,6 +462,22 @@ export interface Service4 {
 export const servicesData: Service4[] = [
   {
     id: 1,
+    title: "Generative AI",
+    description:
+      "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
+    icon: GiArtificialIntelligence,
+    arrowIcon: MdOutlineArrowOutward,
+  },
+  {
+    id: 2,
+    title: "Generative AI",
+    description:
+      "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
+    icon: GiArtificialIntelligence,
+    arrowIcon: MdOutlineArrowOutward,
+  },
+  {
+    id: 3,
     title: "Generative AI",
     description:
       "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",

@@ -11,15 +11,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
   const { title, description, icon: Icon, arrowIcon: ArrowIcon } = service;
 
   return (
-    <Row
-      py={"xl"}
-      border={"4px solid red"}
-      position="relative"
-      justifyContent="center"
-      alignItems="center"
-      width="100%"
-      flexDirection={"row"}
-    >
+    
       <Column
         borderRadius={"m"}
         width={"600px"}
@@ -47,7 +39,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
             WebkitBackdropFilter: "blur(10px)",
           }}
         >
-          <Row justifyContent={"space-between"} alignItems={"center"}>
+          <Row justifyContent={"space-between"} alignItems={"center"} flexDirection={"row"}>
             <Text variant={"heading"}>{title}</Text>
             <Box
               alignItems={"center"}
@@ -57,7 +49,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
               px={"m"}
               bg={"background"}
             >
-              <Icon size={40} color="#fb9c42" />
+              <Icon size={38} color="#fb9c42" />
             </Box>
           </Row>
 
@@ -79,7 +71,6 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
           <Text lineHeight={"1.5"}>{description}</Text>
         </Column>
       </Column>
-    </Row>
   );
 };
 
