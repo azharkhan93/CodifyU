@@ -11,13 +11,14 @@ export const AboutCards = () => {
       alignItems={"center"}
     >
       <CenterBox
-        bg="primary"
+      borderRadius={"m"}
+        bg="textColor"
         width={["400px", "460px"]}
         height={["400px", "550px"]}
         position="relative"
       >
         <Box
-          width={["350px", "500px"]}
+          width={["350px", "600px"]}
           height={["300px", "400px"]}
           position="absolute"
           top="12%"
@@ -28,9 +29,9 @@ export const AboutCards = () => {
           overflow="hidden"
         >
           <Image
-            src="/images/bg.jpeg"
+            src="/images/aboutimg.png"
             alt="no image"
-            width={500}
+            width={600}
             height={400}
           />
         </Box>

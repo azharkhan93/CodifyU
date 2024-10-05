@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { AnimateCircle, Box, Column, Row, Text } from "@/components";
 import { CRD_ST } from "@/constants";
 import { TechCards } from "./components/TechCards";
-import { useEffect } from "react"; 
+import { useEffect } from "react";
 
 export const TechSolutions = () => {
   const controls = useAnimation();
@@ -39,10 +39,29 @@ export const TechSolutions = () => {
         width={["100%", "630px"]}
       >
         <Text variant="heading">
-          Unlock the power of AI/ML and data-driven solutions with <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span>
+          Unlock the power of AI/ML and data-driven solutions with{" "}
+          <span
+            style={{
+              color: "#fb9c42",
+              fontSize: "30px",
+              fontFamily: "ComfortaaMedium",
+            }}
+          >
+            codefyU
+          </span>
         </Text>
         <Text variant={"subHeading"} lineHeight={"1.5"}>
-          Streamline your business needs and automate your infrastructure with <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>codefyU</span>.
+          Streamline your business needs and automate your infrastructure with{" "}
+          <span
+            style={{
+              color: "#fb9c42",
+              fontSize: "22px",
+              fontFamily: "ComfortaaMedium",
+            }}
+          >
+            codefyU
+          </span>
+          .
         </Text>
 
         <Column gap="xxxl">
@@ -65,7 +84,7 @@ export const TechSolutions = () => {
       >
         <AnimateCircle />
 
-        <motion.div animate={controls} style={{ position: 'relative' }}>
+        <motion.div animate={controls} style={{ position: "relative" }}>
           <Box
             width={["364px", "500px"]}
             height={["280px", "400px"]}
@@ -81,7 +100,12 @@ export const TechSolutions = () => {
           </Box>
         </motion.div>
 
-        <Box position="absolute" left={["5px", "120px"]} bottom={[5, 200]} top={[100, 350]}>
+        <Box
+          position="absolute"
+          left={["5px", "120px"]}
+          bottom={[5, 200]}
+          top={[100, 350]}
+        >
           <motion.div animate={controls}>
             <Box
               width={["200px", "250px"]}
@@ -93,7 +117,7 @@ export const TechSolutions = () => {
                 alt="Smaller image 1"
                 width={250}
                 height={150}
-                style={{  borderRadius: "10px" }}
+                style={{ borderRadius: "10px" }}
               />
             </Box>
           </motion.div>
@@ -120,7 +144,3 @@ export const TechSolutions = () => {
     </Row>
   );
 };
-
-
-
-

@@ -1,6 +1,8 @@
-import { MdOutlineDeveloperMode, } from "react-icons/md";
+import { MdOutlineDeveloperMode, MdOutlineArrowOutward } from "react-icons/md";
 import { FaBrain, FaCode, FaCog, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 import { AiFillApi } from "react-icons/ai"; 
+import { IconType } from "react-icons";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 
 
@@ -448,4 +450,24 @@ export const REVIEW_SLIDES = [
   "/testimonialHome/5.png",
 ];
 
+
+export interface Service4 {
+  id: number;
+  title: string;
+  description: string;
+  icon: IconType;
+  arrowIcon: IconType;
+}
+
+export const servicesData: Service4[] = [
+  {
+    id: 1,
+    title: "Generative AI",
+    description:
+      "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
+    icon: GiArtificialIntelligence,
+    arrowIcon: MdOutlineArrowOutward,
+  },
+ 
+];
 

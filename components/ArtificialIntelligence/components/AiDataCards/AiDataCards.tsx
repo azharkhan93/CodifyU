@@ -9,8 +9,9 @@ import {
 import { Row, Column,Text, } from "@/components/styled";
 import { AiServices } from "@/components/AiServices";
 import { FaCircle } from "react-icons/fa";
-import { AiBenefitsCardData } from "@/constants";
+import { AiBenefitsCardData, servicesData } from "@/constants";
 import { AiBenefitsCards } from "../AiBenefitsCards";
+import { ServiceCards } from "../ServiceCards";
 
 
 export const AiDataCards = () => {
@@ -60,7 +61,7 @@ export const AiDataCards = () => {
         // }}
         
         >
-          { AiBenefitsCardData.map((card, index) => (
+          {/* { AiBenefitsCardData.map((card, index) => (
       <AiBenefitsCards
               key={index}
               heading={card.heading}
@@ -68,14 +69,18 @@ export const AiDataCards = () => {
               benefitsTitle={card.benefitsTitle}
               benefits={card.benefits} imageUrl={card.imageUrl}     
               />
-    ))}
+    ))} */}
           
 
         </Row>
       </Row>
     </motion.div>
     <motion.div {...fadeInUpProps}>
-      <AiServices />
+    <Row justifyContent={"space-between"} py={"xl"} flexDirection={"row"}>
+      {servicesData.map((service) => (
+        <ServiceCards key={service.id} service={service} />
+      ))}
+    </Row>
         
         
       </motion.div>

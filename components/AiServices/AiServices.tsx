@@ -1,111 +1,13 @@
 "use client";
-import { useState, useEffect, ReactNode } from "react";
-import { Box, Button, CenterBox, Column, Row, Text } from "@/components";
-import Image from "next/image";
-import { FaRobot } from "react-icons/fa";
-import { motion } from "framer-motion";
-
-const flipVariants = {
-  initial: { rotateY: 0, opacity: 1 },
-  flipped: { rotateY: 180, opacity: 0.4, transition: { duration: 0.8, ease: "easeInOut" } },
-  visible: { rotateY: 0, opacity: 1, transition: { duration: 0.8, ease: "easeInOut" } },
-};
-
-interface AnimatedTextProps {
-  isActive: boolean;
-  children: ReactNode;
-}
-
-const AnimatedText = ({ isActive, children }: AnimatedTextProps) => {
-  return (
-    <motion.div
-      initial="initial"
-      animate={isActive ? "visible" : "flipped"}
-      variants={flipVariants}
-      style={{
-        backfaceVisibility: "hidden",
-        color: isActive ? "green" : "black",
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-const AnimatedIcon = () => {
-  return (
-    <motion.div
-      initial={{ rotateY: 0, opacity: 0 }}
-      animate={{ rotateY: 360, opacity: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
-      style={{ backfaceVisibility: "hidden" }}
-    >
-      <FaRobot size={35} color="green" />
-    </motion.div>
-  );
-};
+import { Box, CenterBox, Column, Row, Text } from "@/components";
+import { GiArtificialIntelligence } from "react-icons/gi"; 
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 export const AiServices = () => {
-  const [showFirstRow, setShowFirstRow] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowFirstRow((prev) => !prev);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <CenterBox
-      justifyContent={"space-between"}
-      py={"header"}
-      flexDirection={"row"}
-    >
-      <Column>
-      <Text
-      variant={"heading"}
-      >
-      Our AI Expertise
-      </Text>
-      <Text
-      variant={"body"}
-      >
-      Our Software has provided AI development services since the industrys early days. We have experience in many of the fields of AI.
-      </Text>
-
-      </Column>
-      <Column
-        py={"header"}
-        border={"4px solid red"}
-        width={"500px"}
-        px={"xxxl"}
-        gap={"xxxxl"}
-      >
-        <Row flexDirection={"row"} gap={"m"} alignItems={"center"}>
-          <AnimatedText isActive={showFirstRow}>
-            <Text
-              p={"s"}
-              borderTop={"1px solid green"}
-              borderBottom={"1px solid green"}
-              variant={"heading"}
-            >
-              Generative AI 1
-            </Text>
-          </AnimatedText>
-          <AnimatedIcon />
-        </Row>
-
-        <AnimatedText isActive={!showFirstRow}>
-          <Text variant={"heading"}>Generative AI 2</Text>
-        </AnimatedText>
-
-        <Text variant={"heading"} style={{ color: "black" }}>
-          Generative AI
-        </Text>
-      </Column>
-
+    <Row justifyContent={"space-between"} py={"xl"} flexDirection={"row"}>
       <Row
+        py={"xl"}
         border={"4px solid red"}
         position="relative"
         justifyContent="center"
@@ -113,58 +15,86 @@ export const AiServices = () => {
         width="100%"
         flexDirection={"row"}
       >
-        <Box
-          py={"xxxl"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          position={"relative"}
-          ml={"xxxlg"}
-        >
-          <Image
-            src={showFirstRow ? "/images/statsimg.jpg" : "/images/statsimg.jpg"}
-            alt="Generative AI Image"
-            width={800}
-            height={290}
-          />
-        </Box>
-
         <Column
-          gap={"xxxl"}
-          border={"4px solid green"}
-          alignItems={"flex-start"}
-          height={"370px"}
-          bg="textColor"
-          width="510px"
-          position={"absolute"}
-          top="0px"
-          left="0%"
-          zIndex={2}
+          borderRadius={"m"}
+          width={"600px"}
+          color="textColor"
           py={"xxxl"}
-          as={motion.div}
-          initial={{ rotateY: 0 }}
-          animate={showFirstRow ? { rotateY: 0 } : { rotateY: 180 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          gap={"xl"}
+          position="relative"
           style={{
-            backfaceVisibility: "hidden",
-            perspective: 1000,
+            backgroundImage: "url('/images/bg.jpeg')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
         >
-          <Text variant="heading" textAlign="center">
-            {showFirstRow ? "Generative AI 1" : "Generative AI 2"}
+          <Column
+            px={"m"}
+            width={"490px"}
+            py={"xxxl"}
+            gap={"l"}
+            borderBottomRightRadius={"xl"}
+            borderTopRightRadius={"xl"}
+            style={{
+              background: "rgba(255, 255, 255, 0.1)",
+              backdropFilter: "blur(10px)",
+              WebkitBackdropFilter: "blur(10px)",
+            }}
+          >
+            <Row
+            flexDirection={"row"}
+            // width={"100%"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+            >
+              <Text variant={"heading"}>Genrative AI</Text>
+              <Box
+              alignItems={"center"}
+              justifyContent={"center"}
+              borderRadius={"circle"}
+              py={"m"}
+              px={"m"}
+              bg={"background"}
+              >
+              <GiArtificialIntelligence size={40} color="#fb9c42" /> 
+              </Box>
+            
+
+            </Row>
+            <Box
+            position="absolute"
+            bottom={"s"} 
+            right={"xl"}  
+            bg={"background"}
+            borderRadius={"circle"}
+            py={"s"}
+            px={"s"}
+            style={{
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",  
+            }}
+          >
+            <MdOutlineArrowOutward size={30} color="#fb9c42" />  
+          </Box>
+            
+            <Text lineHeight={"1.5"}>
+              codefyU specializes in designing advanced generative AI models
+              that revolutionize content creation From personalized marketing to
+              automated content generation our models are tailored to meet the
+              creative needs of your business
+            </Text>
+          </Column>
+        </Column>
+        <Column width={"600px"} py={"xl"} gap={"xl"}>
+          <Text variant={"heading"}>Genrative AI</Text>
+          <Text>
+            codefyU specializes in designing advanced generative AI models that
+            revolutionize content creation From personalized marketing to
+            automated content generation our models are tailored to meet the
+            creative needs of your business
           </Text>
-          <Text variant="body" textAlign="start">
-            {showFirstRow
-              ? "Our Software provides a variety of AI solutions. We can help you incorporate AI into your existing products, start from the ground up with a new product, or integrate AI into your business processes"
-              : "This is the second description for Generative AI 2. It provides additional insights and information about the updated features."}
-          </Text>
-          <Button variant="primary" mt="l">
-            Talk To Us
-          </Button>
         </Column>
       </Row>
-    </CenterBox>
+    </Row>
   );
 };
-
-
-

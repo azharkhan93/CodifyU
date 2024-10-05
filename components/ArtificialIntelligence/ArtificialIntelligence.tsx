@@ -1,10 +1,14 @@
 import { Box, Column, Row, Text } from "../styled";
 import Image from "next/image";
-import { aiAdvantages } from "@/constants";
+import { AiBenefitsCardData, aiAdvantages } from "@/constants";
 import { AiAdvantages } from "./components";
+import { AiDataCards } from "./components/AiDataCards";
 
 export const ArtificialIntelligence = () => {
   return (
+
+    <>
+    <AiDataCards />
     <Row
       alignItems={"center"}
       justifyContent={"center"}
@@ -32,8 +36,7 @@ export const ArtificialIntelligence = () => {
           style={{
             width: "100%",
             height: "100%",
-          }}
-        />
+          }} />
       </Box>
       <Column alignItems={"center"} py={"xl"} gap={"xl"}>
         <Column
@@ -54,6 +57,8 @@ export const ArtificialIntelligence = () => {
           </Text>
         </Column>
 
+
+
         <Column
           width={["100%", "600px"]}
           borderRadius={"m"}
@@ -67,11 +72,10 @@ export const ArtificialIntelligence = () => {
               key={index}
               number={index + 1}
               title={advantage.title}
-              description={advantage.description}
-            />
+              description={advantage.description} />
           ))}
         </Column>
       </Column>
-    </Row>
+    </Row></>
   );
 };
