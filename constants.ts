@@ -180,14 +180,14 @@ export const services = [
   {
     title: "DevOps and MLOps",
     description:
-      "At CodefyU, we streamline the development and deployment process through our DevOps and MLOps services. By automating infrastructure and software delivery pipelines, we help businesses accelerate time-to-market and improve the quality of their software products and machine learning model.",
+      "We streamline the development and deployment process through our DevOps and MLOps services. By automating infrastructure and software delivery pipelines, we help businesses accelerate time-to-market and improve the quality of their software products and machine learning model.",
       icon: AiFillApi,
     linkText: "Learn more",
   },
   {
     title: "Data Analytics and Predictive Modeling",
     description:
-      "Data is at the core of decision-making, and at CodefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation",
+      "Data is at the core of decision-making, and at codefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation",
       icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
   },
@@ -375,24 +375,25 @@ export const workSpaceData = [
 ];
 
 
-export const aiAdvantages = [
-  {
-    description:
-      "Automate highly detailed, repetitive, and even physically strenuous tasks without requiring human intervention.",
-  },
-  {
-    description:
-      "Improve decision-making processes by analyzing large volumes of data and providing actionable insights.",
-  },
-  {
-    description:
-      "Enhance productivity by freeing up human workers to focus on complex, creative, or higher-value tasks.",
-  },
-  {
-    description:
-      "Increase accuracy and reduce errors in tasks such as data entry, diagnosis, and predictive analytics.",
-  },
-];
+
+  export const aiAdvantages = [
+    {
+      description: "AI-powered automation reduces human error, increases efficiency, and enhances decision-making accuracy.",
+      title: "Unparalleled Automation Capabilities:",
+    },
+    {
+      description: "Generative AI allows businesses to offer highly personalized content, improving user engagement and retention.",
+      title: "Personalized User Experiences:",
+    },
+    {
+      description: "Edge AI delivers real-time processing on devices, enabling faster decision-making without relying on cloud infrastructure.",
+      title: "Real-Time Insights and Adaptation:",
+    },
+    {
+      description: "Computer Vision provides accurate visual analysis and object recognition, optimizing quality control, safety, and operational efficiency across industries.",
+      title: "Enhanced Precision with Computer Vision:",
+    },
+  ]
 
 
 

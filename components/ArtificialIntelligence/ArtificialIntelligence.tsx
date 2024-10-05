@@ -1,6 +1,5 @@
 import { Box, Column, Row, Text } from "../styled";
 import Image from "next/image";
-
 import { aiAdvantages } from "@/constants";
 import { AiAdvantages } from "./components";
 
@@ -45,27 +44,31 @@ export const ArtificialIntelligence = () => {
           px={["m", "xxxl"]}
         >
           <Text variant={"heading"} color={"white"}>
-            Advantages of Artificial Intelligence (AI) technology
+            Advantages Of Using AI & Machine Learning
           </Text>
           <Text variant={"body"} color="white">
             As AI systems become better at processing, interpreting, and turning
-            data into actionable information, both businesses and society as a
-            whole will continue to integrate AI into society in a way that
-            offers numerous advantages. Some of the most important advantages
-            include the ability to:
+            data into actionable information, both businesses and society will
+            continue to integrate AI in ways that offer numerous advantages.
+            Some of the most important advantages include the ability to:
           </Text>
         </Column>
 
         <Column
-          width={["100%", "670px"]}
+          width={["100%", "600px"]}
           borderRadius={"m"}
           py={"xxxxl"}
           bg={"textColor"}
           gap={"xxxl"}
           px={["s", "xxxl"]}
         >
-          {aiAdvantages.map((item, index) => (
-            <AiAdvantages key={index} description={item.description} />
+          {aiAdvantages.map((advantage, index) => (
+            <AiAdvantages
+              key={index}
+              number={index + 1}
+              title={advantage.title}
+              description={advantage.description}
+            />
           ))}
         </Column>
       </Column>

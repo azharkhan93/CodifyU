@@ -161,6 +161,8 @@ export type WorkSpaceSection = {
   workImage: string;
 };
 export type AiAdvantagesProps = {
+  number: number;
+  title: string;
   description: string;
 };
 export type CardProps = {

@@ -12,7 +12,13 @@ import {
   Text,
 } from "@/components";
 import { CgMenuGridO } from "react-icons/cg";
-import { FaChevronDown, FaChevronUp, FaMinus, FaPlus, FaTimes } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaMinus,
+  FaPlus,
+  FaTimes,
+} from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import Image from "next/image";
 
@@ -20,14 +26,14 @@ export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null); 
+  const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleDropdownToggle = (index: number) => {
-    setDropdownOpen(dropdownOpen === index ? null : index); 
+    setDropdownOpen(dropdownOpen === index ? null : index);
   };
 
   useEffect(() => {
@@ -48,8 +54,8 @@ export const Navbar: React.FC = () => {
 
   const navigateTo = (link: string) => {
     router.push(link);
-    setIsOpen(false); 
-    setDropdownOpen(null); 
+    setIsOpen(false);
+    setDropdownOpen(null);
   };
 
   return (
@@ -105,7 +111,7 @@ export const Navbar: React.FC = () => {
                     {dropdownOpen === index ? (
                       <FaChevronUp size={17} fill="#fb9c42" />
                     ) : (
-                      <FaChevronDown  size={17} fill="#fb9c42" />
+                      <FaChevronDown size={17} fill="#fb9c42" />
                     )}
                   </Box>
 
@@ -136,7 +142,7 @@ export const Navbar: React.FC = () => {
                         </StyledLink>
                       ))}
                     </Row>
-                  ): null}
+                  ) : null}
                 </>
               ) : null}
             </Row>
@@ -158,7 +164,6 @@ export const Navbar: React.FC = () => {
         </Box>
       </Row>
 
-      
       <Box
         display={["block", "none"]}
         position="fixed"
@@ -178,17 +183,16 @@ export const Navbar: React.FC = () => {
         )}
       </Box>
 
-      
       {isOpen ? (
         <>
-        <Box
-          position="fixed"
-          top={0}
-          left={0}
-          width="100vw"
-          height="100vh"
-          zIndex={9997}
-          bg={"Overlay"} 
+          <Box
+            position="fixed"
+            top={0}
+            left={0}
+            width="100vw"
+            height="100vh"
+            zIndex={9997}
+            bg={"Overlay"}
           />
           <Box
             position="fixed"
@@ -224,7 +228,10 @@ export const Navbar: React.FC = () => {
                 justifyContent={"center"}
               >
                 {NavbarData.map((item, index) => (
-                  <Box key={index} gap={"l"} flexDirection={"row"}
+                  <Box
+                    key={index}
+                    gap={"l"}
+                    flexDirection={"row"}
                     position={"relative"}
                   >
                     <StyledLink onClick={() => navigateTo(item.link)}>
@@ -238,7 +245,6 @@ export const Navbar: React.FC = () => {
                         <Box
                           alignItems={"center"}
                           flexDirection={"row"}
-
                           onClick={() => handleDropdownToggle(index)}
                           position={"relative"}
                           style={{ cursor: "pointer" }}
@@ -251,18 +257,17 @@ export const Navbar: React.FC = () => {
                         </Box>
 
                         {dropdownOpen === index ? (
-                          <Column position={"absolute"}
+                          <Column
+                            position={"absolute"}
                             borderRadius={"m"}
                             px={"m"}
-                            py={'xl'}
-                            width={'250px'}
+                            py={"xl"}
+                            width={"250px"}
                             top={40}
                             left={-40}
                             bg={"textColor"}
-
                             zIndex={9999}
                             gap={"xl"}
-
                           >
                             {item.dropdown.map((subItem, subIndex) => (
                               <StyledLink
@@ -281,10 +286,15 @@ export const Navbar: React.FC = () => {
                 ))}
               </Column>
 
-              <CenterBox width={"100%"} position={"absolute"} bottom={5} bg={"textColor"} py={"m"}
+              <CenterBox
+                width={"100%"}
+                position={"absolute"}
+                bottom={5}
+                bg={"textColor"}
+                py={"m"}
                 borderRadius={"m"}
                 style={{
-                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)"
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
                 }}
               >
                 <Button
@@ -300,12 +310,9 @@ export const Navbar: React.FC = () => {
                 </Button>
               </CenterBox>
             </AnimatedBox>
-
-          </Box></>
-        
+          </Box>
+        </>
       ) : null}
-      
     </>
   );
 };
-
