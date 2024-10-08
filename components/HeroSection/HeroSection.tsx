@@ -86,7 +86,7 @@ export const HeroSection = () => {
           >
             codefyU
           </span>
-          , we craft tailored tech solutions to solve complex challenges with
+          We craft tailored tech solutions to solve complex challenges with
           precision. Our innovative, scalable strategies drive business growth,
           empowering companies to thrive in todays fast-paced digital world
         </Text>
