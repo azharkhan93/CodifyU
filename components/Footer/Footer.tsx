@@ -1,4 +1,5 @@
 import {
+  BackToTop,
   Box,
   Button,
   CenterBox,
@@ -83,13 +84,13 @@ export const Footer = () => {
           </Box>
         </CenterBox>
         <CenterBox width={"100%"} py={"xl"}>
-        <Link href="/" passHref style={{ textDecoration: "none" }}> 
-          <Image
-            src="/images/logo.svg"
-            alt="Logo Missing"
-            width={250}
-            height={100}
-          />
+          <Link href="/" passHref style={{ textDecoration: "none" }}>
+            <Image
+              src="/images/logo.svg"
+              alt="Logo Missing"
+              width={250}
+              height={100}
+            />
           </Link>
         </CenterBox>
 
@@ -172,11 +173,12 @@ export const Footer = () => {
                 fontFamily: "ComfortaaMedium",
               }}
             >
-              codefyU {" "} {" "}
+              codefyU{" "}
             </span>
-              All Rights Reserved
+            All Rights Reserved
           </Text>
         </CenterBox>
+        <BackToTop />
       </Box>
     </>
   );
