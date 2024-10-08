@@ -84,7 +84,7 @@ export const HeroSection = () => {
               fontFamily: "ComfortaaMedium",
             }}
           >
-            codefyU
+            codefyU {" "}
           </span>
           We craft tailored tech solutions to solve complex challenges with
           precision. Our innovative, scalable strategies drive business growth,
