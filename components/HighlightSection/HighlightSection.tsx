@@ -2,11 +2,10 @@
 import { services } from "@/constants";
 import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 import { ServicesCard } from "./components/ServicesCard";
+import Link from "next/link";
+import { HighlightSectionProps } from "@/types";
 
-interface HighlightSectionProps {
-  cardLimit?: number; 
-  showButton?: boolean; 
-}
+
 
 export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 3, showButton = true }) => {
   return (
@@ -51,6 +50,7 @@ export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 
       </Row>
       {showButton ? ( 
         <CenterBox width={"100%"} py={"m"}>
+          <Link href="/services" passHref style={{ textDecoration: "none" }}>
           <Button
             borderTopLeftRadius={"xxl"}
             variant={"primary"}
@@ -62,6 +62,7 @@ export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 
           >
             {`Explore Our Services`}
           </Button>
+          </Link>
         </CenterBox>
       ): null}
     </Column>

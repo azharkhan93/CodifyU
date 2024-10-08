@@ -4,10 +4,6 @@ import { AiFillApi, } from "react-icons/ai";
 import { IconType } from "react-icons";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
-
-
-
-
 export const STATS_DATA = [
   {
     id: 1,
@@ -157,43 +153,48 @@ export const PARTNER_LOGOS = [
 
 
 export const services = [
- 
   {
     title: "AI/ML Solutions",
     description:
       "Harness the power of AI and Machine Learning to automate and optimize processes, improving efficiency and scaling your operations seamlessly.",
     icon: FaBrain,
     linkText: "Learn more",
+    link: "/services/ai-ml", 
   },
   {
     title: "Generative AI",
     description:
       "Tap into the potential of Generative AI for automated content creation and tailored solutions that keep your business ahead of the curve.",
-      icon: FaRobot,
+    icon: FaRobot,
     linkText: "Learn more",
+    link: "/services/ai-ml", 
   },
   {
     title: "Large Language Models (LLMs)",
     description:
       "Our LLM expertise helps enhance customer experiences and streamline workflows with intelligent, customizable models across various domains.",
-      icon: MdOutlineDeveloperMode,
+    icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
+    link: "/services/ai-ml", 
   },
   {
     title: "DevOps and MLOps",
     description:
       "We streamline the development and deployment process through our DevOps and MLOps services. By automating infrastructure and software delivery pipelines, we help businesses accelerate time-to-market and improve the quality of their software products and machine learning model.",
-      icon: AiFillApi,
+    icon: AiFillApi,
     linkText: "Learn more",
+    link: "/services/ai-ml",
   },
   {
     title: "Data Analytics and Predictive Modeling",
     description:
       "Data is at the core of decision-making, and at codefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation",
-      icon: MdOutlineDeveloperMode,
+    icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
+    link: "/services/ai-ml", 
   },
 ];
+
 export const faqItems = [
   {
     question: "How Can I Request a Software Solution from Your Company?",

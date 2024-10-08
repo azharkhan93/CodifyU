@@ -36,6 +36,7 @@ export type Service = {
   description: string;
   icon: IconType;
   linkText: string;
+  link: string;
 };
 
 export type ModalProps = {
@@ -185,3 +186,8 @@ export type Testimonial = {
   imageSrc: string;
   altText: string;
 };
+
+export type  HighlightSectionProps = {
+  cardLimit?: number; 
+  showButton?: boolean; 
+}
