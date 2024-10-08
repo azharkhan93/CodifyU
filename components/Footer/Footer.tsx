@@ -82,18 +82,14 @@ export const Footer = () => {
             </Button>
           </Box>
         </CenterBox>
-        <CenterBox 
-        width={"100%"}
-        py={"xl"}
-        >
+        <CenterBox width={"100%"} py={"xl"}>
           <Image
-          src="/images/logo.svg"
-          alt="Logo Missing"
-          width={250}
-          height={100}
-        />
-
-          </CenterBox>
+            src="/images/logo.svg"
+            alt="Logo Missing"
+            width={250}
+            height={100}
+          />
+        </CenterBox>
 
         <Box
           flexDirection={["column", "row"]}
@@ -104,7 +100,6 @@ export const Footer = () => {
           px={"l"}
           borderBottom={"2px solid #fb9c42"}
         >
-          
           <Box gap={"xxl"} alignItems={"flex-start"}>
             <Text variant="subHeading">Quick Links</Text>
             <Row flexDirection={"row"} gap={"xl"} flexWrap={"wrap"}>
@@ -166,7 +161,19 @@ export const Footer = () => {
           </Box>
         </Box>
         <CenterBox py={"l"} zIndex={1}>
-          <Text variant={"body"}>© 2024 codefyU. All Rights Reserved</Text>
+          <Text variant={"body"}>
+            © 2024{" "}
+            <span
+              style={{
+                color: "#fb9c42",
+                fontSize: "22px",
+                fontFamily: "ComfortaaMedium",
+              }}
+            >
+              codefyU {" "} {" "}
+            </span>
+              All Rights Reserved
+          </Text>
         </CenterBox>
       </Box>
     </>
