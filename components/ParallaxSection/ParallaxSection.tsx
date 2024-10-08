@@ -2,8 +2,8 @@
 import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 
 export const ParallaxSection = ({
-  heading = "Got A Project In Mind?",
-  body = "Worried About The Delivery Of Scalable, High-Quality Solutions without Sacrificing Speed?",
+  heading = "Ready to Elevate? Let’s Build the Future Together!",
+  body = "",
   buttonText = "Let’s Work Together",
   animationSrc = "https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json",
 }) => {
@@ -20,7 +20,7 @@ export const ParallaxSection = ({
       px={["xl", "m"]}
     >
       <Column py={"xxxl"} alignItems={"center"} gap={"xl"}>
-        <Text variant={"heading"} textAlign={["start", "center"]}>
+        <Text variant={"heading"} textAlign={["start", "center"]} width={"600px"} lineHeight={"1.5"}>
           {heading}
         </Text>
         <Text variant="body" textAlign={["start", "center"]} lineHeight={"1.5"}>

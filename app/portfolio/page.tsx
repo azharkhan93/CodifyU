@@ -46,8 +46,8 @@ export default function Portfolio() {
       <Column px={["m", "l"]}>
         <PortfolioSection products={products} />
         <ParallaxSection
-          heading="Any Queries React Out To Us"
-          body="React out to us we got your project got covered."
+          heading="Inspired by Our Portfolio? Let’s Create Something Amazing Together!"
+          body=""
           buttonText="Start Collaborating"
           animationSrc="https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json"
         />

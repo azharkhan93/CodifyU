@@ -72,7 +72,7 @@ export const NavbarData = [
     link: "/contact",
   },
   {
-    title: "PortFolio",
+    title: "Portfolio",
     link: "/portfolio",
   },
   {
