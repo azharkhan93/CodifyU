@@ -306,13 +306,11 @@ export const Navbar: React.FC = () => {
                 <Link href="/contact" passHref style={{ textDecoration: "none" }}>
                   <Button
                     variant="primary"
-                    display={["none", "block"]}
+                    display={["block", "none"]}
                     py={"m"}
-                    borderTopRightRadius={"m"}
-                    borderBottomLeftRadius={"m"}
+                    borderRadius={"xl"}
                     px={"xxl"}
                     bg={"black"}
-                    style={{ textDecoration: "none" }}
                   >
                     Enquire Now
                   </Button>

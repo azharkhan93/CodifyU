@@ -32,7 +32,6 @@ export const AiBenefitsCards: React.FC<CardProps> = ({
         left: "85%",
         transform: "translateX(-50%)",
         borderRadius: "10%",
-        // boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
       }}
     />
 

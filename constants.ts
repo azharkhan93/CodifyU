@@ -1,6 +1,6 @@
 import { MdOutlineDeveloperMode, MdOutlineArrowOutward } from "react-icons/md";
-import { FaBrain, FaCode, FaCog, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
-import { AiFillApi } from "react-icons/ai"; 
+import { FaBrain, FaChartLine, FaCloud, FaCode, FaCog, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { AiFillApi, } from "react-icons/ai"; 
 import { IconType } from "react-icons";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
@@ -468,20 +468,29 @@ export const servicesData: Service4[] = [
     icon: GiArtificialIntelligence,
     arrowIcon: MdOutlineArrowOutward,
   },
+  
   {
     id: 2,
-    title: "Generative AI",
+    title: "Explainable AI (XAI)",
     description:
-      "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
-    icon: GiArtificialIntelligence,
+      "We prioritize transparency in AI models, offering Explainable AI solutions that help users understand how AI decisions are made, increasing trust and adoption across industries, particularly in finance and healthcare.",
+      icon: FaChartLine, 
     arrowIcon: MdOutlineArrowOutward,
   },
   {
     id: 3,
-    title: "Generative AI",
+    title: "Edge AI",
     description:
-      "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
-    icon: GiArtificialIntelligence,
+      "Our Edge AI solutions bring the power of AI closer to where the data is generated. By deploying AI models on edge devices, we enable real-time processing, reducing latency and ensuring critical insights are always available instantly.",
+      icon: FaCloud,
+    arrowIcon: MdOutlineArrowOutward,
+  },
+  {
+    id: 4,
+    title: "Computer Vision",
+    description:
+      "codefyU's Computer Vision solutions provide advanced visual recognition and image processing across industries. From autonomous systems and AR/VR in tech to quality control in manufacturing and smart surveillance in security, we optimize processes, enhance accuracy, and improve user experiences. Our expertise spans diverse sectors, delivering tailored solutions to meet your business needs.",
+      icon: FaRegEye,
     arrowIcon: MdOutlineArrowOutward,
   },
  
