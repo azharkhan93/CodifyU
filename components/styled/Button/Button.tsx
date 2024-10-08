@@ -37,6 +37,7 @@ type ButtonProps = TypographyProps &
 export const Button = styled.button.withConfig(StyledWithConfig)<ButtonProps>`
   display: flex;
   gap: 10px;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
   ${typography}

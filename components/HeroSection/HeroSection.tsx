@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Button, CenterBox, Column, Text } from "../styled";
+import Link from "next/link";
 
 const texts = ["AI/ML", "Gen AI", "LLMs"];
 
@@ -91,6 +92,7 @@ export const HeroSection = () => {
         </Text>
 
         <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
+        <Link href="/portfolio" passHref style={{ textDecoration: "none" }}> 
           <Button
             variant={"primary"}
             py={"m"}
@@ -101,6 +103,10 @@ export const HeroSection = () => {
           >
             View Work
           </Button>
+          </Link>
+
+          
+          <Link href="/contact" passHref style={{ textDecoration: "none" }}> 
           <Button
             variant={"primary"}
             py={"m"}
@@ -111,6 +117,7 @@ export const HeroSection = () => {
           >
             {`Let's Talk`}
           </Button>
+          </Link>
         </CenterBox>
       </Column>
     </Box>

@@ -1,9 +1,17 @@
 "use client";
+import styled from "styled-components";
 import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 
+// Define a styled span for the highlighted text
+const HighlightedText = styled.span`
+  color: orange;
+  font-family: "ComfortaaMedium";
+  font-size: 2rem;
+`;
+
 export const ParallaxSection = ({
-  heading = "Ready to Elevate? Let’s Build the Future Together!",
-  body = "",
+  spanText = "Ready to Elevate?", 
+  heading = "Let’s Build the Future Together!",
   buttonText = "Let’s Work Together",
   animationSrc = "https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json",
 }) => {
@@ -20,12 +28,11 @@ export const ParallaxSection = ({
       px={["xl", "m"]}
     >
       <Column py={"xxxl"} alignItems={"center"} gap={"xl"}>
-        <Text variant={"heading"} textAlign={["start", "center"]} width={"600px"} lineHeight={"1.5"}>
+        <Text variant={"heading"} textAlign={ "center"} width={["100%","600px"]} lineHeight={"1.5"}>
+          <HighlightedText>{spanText}</HighlightedText>{" "}
           {heading}
         </Text>
-        <Text variant="body" textAlign={["start", "center"]} lineHeight={"1.5"}>
-          {body}
-        </Text>
+        
         <CenterBox width={"100%"} mt={"xl"}>
           <Button
             borderTopLeftRadius={"xxl"}

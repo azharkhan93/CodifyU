@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -150,17 +151,20 @@ export const Navbar: React.FC = () => {
         </Box>
 
         <Box display={["none", "flex"]} flexDirection={"row"} gap={"xl"}>
-          <Button
-            variant="primary"
-            display={["none", "block"]}
-            py={"m"}
-            borderTopRightRadius={"m"}
-            borderBottomLeftRadius={"m"}
-            px={"xxl"}
-            bg={"black"}
-          >
-            {`Let's Talk`}
-          </Button>
+          <Link href="/contact" passHref style={{ textDecoration: "none" }}>
+            <Button
+              variant="primary"
+              display={["none", "block"]}
+              py={"m"}
+              borderTopRightRadius={"m"}
+              borderBottomLeftRadius={"m"}
+              px={"xxl"}
+              bg={"black"}
+              style={{ textDecoration: "none" }}
+            >
+              {`Let's Talk`}
+            </Button>
+          </Link>
         </Box>
       </Row>
 
@@ -297,17 +301,20 @@ export const Navbar: React.FC = () => {
                   boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
                 }}
               >
-                <Button
-                  borderTopLeftRadius={"xxl"}
-                  display={["block", "none"]}
-                  variant={"primary"}
-                  bg={"primary"}
-                  py={"m"}
-                  width={"60%"}
-                  borderRadius={"m"}
-                >
-                  Enquire Now
-                </Button>
+                <Link href="/contact" passHref style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="primary"
+                    display={["none", "block"]}
+                    py={"m"}
+                    borderTopRightRadius={"m"}
+                    borderBottomLeftRadius={"m"}
+                    px={"xxl"}
+                    bg={"black"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    Enquire Now
+                  </Button>
+                </Link>
               </CenterBox>
             </AnimatedBox>
           </Box>

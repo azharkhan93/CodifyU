@@ -11,8 +11,8 @@ export default function Home() {
       <WorkApproach />
       </Column>
       <ParallaxSection
-          heading="Chart New Territories – Let’s Build It with CodefyU!"
-          body=""
+      spanText = "Chart New Territories"
+          heading="– Let’s Build It with CodefyU!"
           buttonText="Start Collaborating"
           animationSrc="https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json"
         />
