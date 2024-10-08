@@ -17,10 +17,10 @@ export const AboutCards = () => {
         position="relative"
       >
         <Box
-          width={["415px", "600px"]}
+          width={["410px", "600px"]}
           height={["300px", "400px"]}
           position="absolute"
-          top={["0%","12%"]}
+          top={["13%","12%"]}
           left={["0%", "16%"]}
           alignItems={"center"}
           justifyContent={"center"}
