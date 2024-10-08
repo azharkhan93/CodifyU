@@ -2,7 +2,6 @@ import { Box, Button, CenterBox, Column, Row, Text } from "@/components/styled";
 import Image from "next/image";
 import { FeaturedCards } from "../FeaturedCards";
 import { featuredData } from "@/constants";
-
 export const AboutCards = () => {
   return (
     <Row
@@ -18,11 +17,11 @@ export const AboutCards = () => {
         position="relative"
       >
         <Box
-          width={["350px", "600px"]}
+          width={["415px", "600px"]}
           height={["300px", "400px"]}
           position="absolute"
-          top="12%"
-          left={["7%", "16%"]}
+          top={["0%","12%"]}
+          left={["0%", "16%"]}
           alignItems={"center"}
           justifyContent={"center"}
           borderRadius="s"
