@@ -84,7 +84,7 @@ export const HeroSection = () => {
               fontFamily: "ComfortaaMedium",
             }}
           >
-            codefyU {" "}
+            codefyU{" "}
           </span>
           We craft tailored tech solutions to solve complex challenges with
           precision. Our innovative, scalable strategies drive business growth,
@@ -92,31 +92,30 @@ export const HeroSection = () => {
         </Text>
 
         <CenterBox flexDirection={"row"} gap={["xxxl", "xxxl"]}>
-        <Link href="/portfolio" passHref style={{ textDecoration: "none" }}> 
-          <Button
-            variant={"primary"}
-            py={"m"}
-            borderTopRightRadius={"m"}
-            borderBottomLeftRadius={"m"}
-            px={["xxxl", "xxxxl"]}
-            bg={"primary"}
-          >
-            View Work
-          </Button>
+          <Link href="/portfolio" passHref style={{ textDecoration: "none" }}>
+            <Button
+              variant={"primary"}
+              py={"m"}
+              borderTopRightRadius={"m"}
+              borderBottomLeftRadius={"m"}
+              px={["xxxl", "xxxxl"]}
+              bg={"primary"}
+            >
+              View Work
+            </Button>
           </Link>
 
-          
-          <Link href="/contact" passHref style={{ textDecoration: "none" }}> 
-          <Button
-            variant={"primary"}
-            py={"m"}
-            borderTopRightRadius={"m"}
-            borderBottomLeftRadius={"m"}
-            px={["xxxl", "xxxxl"]}
-            bg={"primary"}
-          >
-            {`Let's Talk`}
-          </Button>
+          <Link href="/contact" passHref style={{ textDecoration: "none" }}>
+            <Button
+              variant={"primary"}
+              py={"m"}
+              borderTopRightRadius={"m"}
+              borderBottomLeftRadius={"m"}
+              px={["xxxl", "xxxxl"]}
+              bg={"primary"}
+            >
+              {`Let's Talk`}
+            </Button>
           </Link>
         </CenterBox>
       </Column>
