@@ -8,6 +8,7 @@ import {
   Text,
 } from "@/components";
 import React, { useState } from "react";
+import Image from "next/image";
 
 import { FaArrowRight } from "react-icons/fa";
 import { NavbarData } from "@/constants";
@@ -81,6 +82,18 @@ export const Footer = () => {
             </Button>
           </Box>
         </CenterBox>
+        <CenterBox 
+        width={"100%"}
+        py={"xl"}
+        >
+          <Image
+          src="/images/logo.svg"
+          alt="Logo Missing"
+          width={250}
+          height={100}
+        />
+
+          </CenterBox>
 
         <Box
           flexDirection={["column", "row"]}
@@ -91,6 +104,7 @@ export const Footer = () => {
           px={"l"}
           borderBottom={"2px solid #fb9c42"}
         >
+          
           <Box gap={"xxl"} alignItems={"flex-start"}>
             <Text variant="subHeading">Quick Links</Text>
             <Row flexDirection={"row"} gap={"xl"} flexWrap={"wrap"}>
