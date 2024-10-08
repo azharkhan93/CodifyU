@@ -7,9 +7,9 @@ import {
   StyledLink,
   Text,
 } from "@/components";
+import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-
 import { FaArrowRight } from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import { useRouter } from "next/navigation";
@@ -83,12 +83,14 @@ export const Footer = () => {
           </Box>
         </CenterBox>
         <CenterBox width={"100%"} py={"xl"}>
+        <Link href="/" passHref style={{ textDecoration: "none" }}> 
           <Image
             src="/images/logo.svg"
             alt="Logo Missing"
             width={250}
             height={100}
           />
+          </Link>
         </CenterBox>
 
         <Box

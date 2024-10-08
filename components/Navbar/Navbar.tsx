@@ -76,12 +76,14 @@ export const Navbar: React.FC = () => {
           transition: "background-color 0.3s ease",
         }}
       >
+         <Link href="/" passHref style={{ textDecoration: "none" }}>
         <Image
           src="/images/logo.svg"
           alt="Logo Missing"
           width={200}
           height={55}
         />
+        </Link>
 
         <Box
           display={["none", "flex"]}
