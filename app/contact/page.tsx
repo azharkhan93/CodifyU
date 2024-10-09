@@ -1,4 +1,4 @@
-import { Column, ContactSection, Mapsection, TopBar } from "@/components";
+import { Column, ContactSection, MapSection, TopBar } from "@/components";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
     >
 
       <ContactSection />
-      <Mapsection />
+      <MapSection />
       </Column>
     </>
     

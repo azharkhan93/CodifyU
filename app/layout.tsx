@@ -10,11 +10,18 @@ import { ModalProvider } from "@/contexts";
 import { StyleSheetManager } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
 import Template from "./template";
+// import 'leaflet/dist/leaflet.css';
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <Head>
+      {/* <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossOrigin=""
+        /> */}
         <title>codefyU</title>
         <meta name="description" content="one stop for all software solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
