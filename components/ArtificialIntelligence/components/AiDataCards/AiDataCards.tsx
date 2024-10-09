@@ -7,10 +7,7 @@ import {
   useFadeInUp,
 } from "@/hooks/useAnimations"; 
 import { Row, Column,Text, } from "@/components/styled";
-import { AiServices } from "@/components/AiServices";
-import { FaCircle } from "react-icons/fa";
-import { AiBenefitsCardData, servicesData } from "@/constants";
-import { AiBenefitsCards } from "../AiBenefitsCards";
+import {servicesData } from "@/constants";
 import { ServiceCards } from "../ServiceCards";
 
 
