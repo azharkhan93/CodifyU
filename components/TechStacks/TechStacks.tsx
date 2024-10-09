@@ -15,7 +15,7 @@ export const TechStacks = () => {
         <Text variant="heading" textAlign={"start"}>
           Tools And Technologies
         </Text>
-        <Text variant={"body"}>
+        <Text variant={"body"} lineHeight={"1.5"} width={["full", "550px"]} textAlign={["start","center"]}>
           We are proud to collaborate with some of the most innovative and
           esteemed companies in the industry.
         </Text>
