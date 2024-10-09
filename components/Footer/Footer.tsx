@@ -180,15 +180,16 @@ export const Footer = () => {
                 </a>
               </Text>
 
-              {/* <Text variant="body">
+              <Text variant="body">
                 <a
                   href="https://www.facebook.com/codefyutech"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "black", opacity: "0" }}
                 >
                   Facebook
                 </a>
-              </Text> */}
+              </Text>
             </Row>
           </Box>
         </Box>
