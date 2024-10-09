@@ -129,7 +129,7 @@ export const Footer = () => {
                   href="tel:+917006168185"
                   style={{ color: "black", textDecoration: "none" }}
                 >
-                  +91 7006168185
+                  +91 9515888396
                 </a>
               </Text>
               <Text variant={"body"}>
@@ -137,7 +137,7 @@ export const Footer = () => {
                   href="tel:+917006569557"
                   style={{ color: "black", textDecoration: "none" }}
                 >
-                  +91 7006569557
+                  +91 7780892868
                 </a>
               </Text>
               <Text variant={"body"}>
