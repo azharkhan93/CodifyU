@@ -1,11 +1,11 @@
 "use client";
-import { CenterBox, Column,  Row, Text } from "@/components";
+import { Box, CenterBox, Column, Row, Text } from "@/components";
 import { TechImages } from "./components/TecImages";
 import { TECH_IMAGES } from "@/constants";
 import { motion } from "framer-motion";
 import { useLogos } from "@/hooks/useAnimations";
 
-const MotionCenterBox = motion.create(CenterBox);
+const MotionBox = motion.create(Box);
 
 export const TechStacks = () => {
   const logosAnimation = useLogos();
@@ -15,20 +15,28 @@ export const TechStacks = () => {
         <Text variant="heading" textAlign={"start"}>
           Tools And Technologies
         </Text>
-        <Text variant={"body"} lineHeight={"1.5"} width={["full", "550px"]} textAlign={["start","center"]}>
+        <Text
+          variant={"body"}
+          lineHeight={"1.5"}
+          width={["full", "550px"]}
+          textAlign={["start", "center"]}
+        >
           We are proud to collaborate with some of the most innovative and
           esteemed companies in the industry.
         </Text>
       </Column>
 
-      <MotionCenterBox py={"xxxl"} flexDirection={["row", "row"]} gap={["l","header"]}  position={"relative"} 
-      {...logosAnimation}
+      <MotionBox
+      alignItems={"center"}
+      height={"200px"}
+        flexDirection={ "row"}
+        gap={["xxxxl", "header"]}
+        {...logosAnimation}
       >
-       
-          {TECH_IMAGES.map((image, index) => (
-            <TechImages key={index} src={image.src} alt={image.alt} />
-          ))}
-      </MotionCenterBox>
+        {TECH_IMAGES.map((image, index) => (
+          <TechImages key={index} src={image.src} alt={image.alt} />
+        ))}
+      </MotionBox>
     </>
   );
 };
