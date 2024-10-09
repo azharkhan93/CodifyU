@@ -312,12 +312,12 @@ export const contactData = [
   {
     id: 1,
     icon: FaPhoneAlt, 
-    text: "+91 7006168185",
+    text: "+91 9515888396",
   },
   {
     id: 2,
     icon: FaPhoneAlt,
-    text: "+91 7006569557",
+    text: "+91 7780892868",
   },
   {
     id: 3,
@@ -327,7 +327,7 @@ export const contactData = [
   {
     id: 4,
     icon: FaMapMarkerAlt,
-    text: "RajBagh Near Hurriyat Office, Srinagar",
+    text: "Rajbagh Near Hurriyat Office, Srinagar",
   },
 ];
 
@@ -452,7 +452,7 @@ export const REVIEW_SLIDES = [
 ];
 
 
-export interface Service4 {
+ interface Service4 {
   id: number;
   title: string;
   description: string;
