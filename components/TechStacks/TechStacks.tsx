@@ -5,7 +5,7 @@ import { TECH_IMAGES } from "@/constants";
 import { motion } from "framer-motion";
 import { useLogos } from "@/hooks/useAnimations";
 
-const MotionRow = motion.create(Row);
+const MotionCenterBox = motion.create(CenterBox);
 
 export const TechStacks = () => {
   const logosAnimation = useLogos();
@@ -21,17 +21,14 @@ export const TechStacks = () => {
         </Text>
       </Column>
 
-      <CenterBox py={"xxxl"} flexDirection={["column", "row"]} gap={"xl"}>
-        <MotionRow
-          flexDirection={["row", "row"]}
-          gap={["xxxxl", "xxxl"]}
-          {...logosAnimation}
-        >
+      <MotionCenterBox py={"xxxl"} flexDirection={["row", "row"]} gap={["l","header"]}  position={"relative"} 
+      {...logosAnimation}
+      >
+       
           {TECH_IMAGES.map((image, index) => (
             <TechImages key={index} src={image.src} alt={image.alt} />
           ))}
-        </MotionRow>
-      </CenterBox>
+      </MotionCenterBox>
     </>
   );
 };
