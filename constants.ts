@@ -452,7 +452,7 @@ export const REVIEW_SLIDES = [
 ];
 
 
- interface Service4 {
+export interface Service4 {
   id: number;
   title: string;
   description: string;
