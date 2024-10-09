@@ -17,8 +17,8 @@ export const AboutUs = () => {
             textAlign={["start", "center"]}
             variant={["heading", "footerHeading"]}
           >
-            {`We Don’t Just Deliver Solutions! We Tailor Them To Your Vision. Your
-            Success Is Our Mission`}
+            {`We Don’t Just Deliver Solutions We Tailor Them To Your Vision. Your
+            Success Is Our Mission!`}
           </Text>
           <Text textAlign={["start", "center"]} variant={"body"}>
             In The Fast-Paced World Of Startups, Complexity Is The Enemy Of

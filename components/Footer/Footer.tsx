@@ -114,7 +114,7 @@ export const Footer = () => {
             </Row>
           </Box>
           <Box gap={"xxxl"}>
-            <Box alignItems={["flex-start", "flex-start"]}>
+            <Box alignItems={["flex-start","flex-start"]}>
               <Text variant={"subHeading"}>Contact Us</Text>
             </Box>
             <Row
