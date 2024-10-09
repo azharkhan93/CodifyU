@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
   useFadeInLeft,
   useFadeInUp,
@@ -45,24 +44,9 @@ export const AiDataCards = () => {
         width={"100%"}
         alignItems={"center"}
         gap={"xxxl"}
-        // style={{
-        //   backgroundImage: 'url("/images/img4.jpg")',
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   backgroundRepeat: "no-repeat",
-          
-        // }}
         
         >
-          {/* { AiBenefitsCardData.map((card, index) => (
-      <AiBenefitsCards
-              key={index}
-              heading={card.heading}
-              body={card.body}
-              benefitsTitle={card.benefitsTitle}
-              benefits={card.benefits} imageUrl={card.imageUrl}     
-              />
-    ))} */}
+         
           
 
         </Row>

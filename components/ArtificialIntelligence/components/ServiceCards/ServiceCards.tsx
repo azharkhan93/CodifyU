@@ -6,7 +6,7 @@ type ServiceCardProps = {
 }
 
 export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
-  const { title, description, icon: Icon, arrowIcon: ArrowIcon } = service;
+  const { title, description, icon: Icon, arrowIcon: ArrowIcon, image } = service;
 
   return (
     <Column
@@ -17,7 +17,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
       gap={"xl"}
       position="relative"
       style={{
-        backgroundImage: "url('/images/data1.webp')",
+        backgroundImage: `url(${image})`, 
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -29,11 +29,12 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
         width={["100%", "490px"]}
         py={["xxl", "xxxl"]}
         gap={"l"}
+        bg={"background"}
         borderBottomRightRadius={["s", "xl"]}
         borderTopRightRadius={["s", "xl"]}
-        style={{
-          background: "rgba(255, 255, 255, 0.3)",
-        }}
+        // style={{
+        //   background: "rgba(255, 255, 255, 1)",
+        // }}
       >
         <Row
           justifyContent={"space-between"}
@@ -48,6 +49,9 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
             py={"m"}
             px={"m"}
             bg={"background"}
+            style={{
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+            }}
           >
             <Icon size={38} color="#fb9c42" />
           </Box>
@@ -73,3 +77,4 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
     </Column>
   );
 };
+

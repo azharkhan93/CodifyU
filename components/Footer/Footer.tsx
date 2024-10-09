@@ -88,7 +88,7 @@ export const Footer = () => {
             <Image
               src="/images/logo.svg"
               alt="Logo Missing"
-              width={250}
+              width={230}
               height={100}
             />
           </Link>
@@ -97,6 +97,7 @@ export const Footer = () => {
         <Box
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
+          alignItems={"center"}
           width={"100%"}
           py={"xxxxl"}
           gap={"xxl"}
@@ -114,7 +115,7 @@ export const Footer = () => {
             </Row>
           </Box>
           <Box gap={"xxxl"}>
-            <Box alignItems={["flex-start","flex-start"]}>
+            <Box alignItems={["flex-start", "flex-start"]}>
               <Text variant={"subHeading"}>Contact Us</Text>
             </Box>
             <Row
@@ -157,9 +158,37 @@ export const Footer = () => {
           >
             <Text variant="subHeading">Follow Us</Text>
             <Row flexDirection={"row"} gap={"xl"}>
-              <Text variant="body">LinkedIn</Text>
-              <Text variant="body">Instagram</Text>
-              <Text variant="body">Facebook</Text>
+              <Text variant="body">
+                <a
+                  href="https://www.linkedin.com/company/codefyu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  LinkedIn
+                </a>
+              </Text>
+
+              <Text variant="body">
+                <a
+                  href="https://www.instagram.com/codefyutech/profilecard/?igsh=MWZrMm5ndm5nd2Nubg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Instagram
+                </a>
+              </Text>
+
+              {/* <Text variant="body">
+                <a
+                  href="https://www.facebook.com/codefyutech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </Text> */}
             </Row>
           </Box>
         </Box>

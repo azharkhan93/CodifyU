@@ -20,7 +20,7 @@ export const AboutUs = () => {
             {`We Don’t Just Deliver Solutions We Tailor Them To Your Vision. Your
             Success Is Our Mission!`}
           </Text>
-          <Text textAlign={["start", "center"]} variant={"body"}>
+          <Text textAlign={["start", "center"]} variant={"body"} lineHeight={"1.5"}>
             In The Fast-Paced World Of Startups, Complexity Is The Enemy Of
             Execution.At{" "}
             <span
@@ -28,6 +28,7 @@ export const AboutUs = () => {
               color: "#fb9c42",
               fontSize: "22px",
               fontFamily: "ComfortaaMedium",
+              lineHeight:"1.5",
             }}
           >
             codefyU {" "}

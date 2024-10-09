@@ -1,6 +1,6 @@
 import { Box, Column, Row, Text } from "../styled";
 import Image from "next/image";
-import { AiBenefitsCardData, aiAdvantages } from "@/constants";
+import { aiAdvantages } from "@/constants";
 import { AiAdvantages } from "./components";
 import { AiDataCards } from "./components/AiDataCards";
 
@@ -10,15 +10,10 @@ export const ArtificialIntelligence = () => {
     <>
     <AiDataCards />
     <Row
+    py={["xl","xxxxl"]}
       alignItems={"center"}
       justifyContent={"center"}
       flexDirection={["column", "row"]}
-      style={{
-        backgroundImage: "url('/images/aitech.png')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
     >
       <Box
         mt={["xxxlg", "xlg"]}
@@ -29,7 +24,7 @@ export const ArtificialIntelligence = () => {
         height={["auto", "600px"]}
       >
         <Image
-          src={"/images/ai23.png"}
+          src={"/images/tech6.png"}
           alt="no image"
           width={800}
           height={600}
@@ -38,18 +33,19 @@ export const ArtificialIntelligence = () => {
             height: "100%",
           }} />
       </Box>
-      <Column alignItems={"center"} py={"xl"} gap={"xl"}>
+      <Column alignItems={"center"} py={["xl","xxxxl"]} gap={"xl"}>
         <Column
           textAlign={["start", "center"]}
           alignItems={"center"}
           gap={"xxxl"}
           width={["100%", "700px"]}
           px={["m", "xxxl"]}
+          color={"textColor"}
         >
-          <Text variant={"heading"} color={"white"}>
+          <Text variant={"heading"} >
             Advantages Of Using AI & Machine Learning
           </Text>
-          <Text variant={"body"} color="white">
+          <Text variant={"body"} lineHeight={"1.5"} >
             As AI systems become better at processing, interpreting, and turning
             data into actionable information, both businesses and society will
             continue to integrate AI in ways that offer numerous advantages.

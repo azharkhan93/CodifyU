@@ -458,6 +458,7 @@ export interface Service4 {
   description: string;
   icon: IconType;
   arrowIcon: IconType;
+  image: string;
 }
 
 export const servicesData: Service4[] = [
@@ -468,32 +469,35 @@ export const servicesData: Service4[] = [
       "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
     icon: GiArtificialIntelligence,
     arrowIcon: MdOutlineArrowOutward,
+    image: "/images/data1.webp", 
   },
-  
   {
     id: 2,
     title: "Explainable AI (XAI)",
     description:
       "We prioritize transparency in AI models, offering Explainable AI solutions that help users understand how AI decisions are made, increasing trust and adoption across industries, particularly in finance and healthcare.",
-      icon: FaChartLine, 
+    icon: FaChartLine, 
     arrowIcon: MdOutlineArrowOutward,
+    image: "/images/llms.webp",
   },
   {
     id: 3,
     title: "Edge AI",
     description:
       "Our Edge AI solutions bring the power of AI closer to where the data is generated. By deploying AI models on edge devices, we enable real-time processing, reducing latency and ensuring critical insights are always available instantly.",
-      icon: FaCloud,
+    icon: FaCloud,
     arrowIcon: MdOutlineArrowOutward,
+    image: "/images/devops.webp",
   },
   {
     id: 4,
     title: "Computer Vision",
     description:
-      "codefyU's Computer Vision solutions provide advanced visual recognition and image processing across industries. From autonomous systems and AR/VR in tech to quality control in manufacturing and smart surveillance in security, we optimize processes, enhance accuracy, and improve user experiences. Our expertise spans diverse sectors, delivering tailored solutions to meet your business needs.",
-      icon: FaRegEye,
+      "codefyU's Computer Vision solutions provide advanced visual recognition and image processing across industries. From autonomous systems and AR/VR in tech to quality control in manufacturing and smart surveillance in security, we optimize processes, enhance accuracy, and improve user experiences.",
+    icon: FaRegEye,
     arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
   },
- 
 ];
+
 

@@ -9,7 +9,7 @@ export const FeaturedCards: React.FC<FeatureCardProps> = ({ icon: Icon, title, d
         <Text variant={"subHeading"}>{title}</Text>
       </Row>
       <Column>
-        <Text variant={"body"} width={["100%", "600px"]}>
+        <Text variant={"body"} width={["100%", "600px"]} lineHeight={"1.5"}>
           {description}
         </Text>
       </Column>
