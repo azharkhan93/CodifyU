@@ -23,24 +23,22 @@ export const WorkCards: React.FC<WorkCardProps> = ({
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
         }}
       >
-       
         <Text
           borderRadius="m"
           bg="textColor"
           textAlign="center"
           py={"m"}
-          px= {'l'}
-        
+          px={"l"}
           variant="body"
           color="white"
           style={{
             left: "-10px",
             position: "absolute",
-            top: "-28px", 
+            top: "-28px",
             zIndex: 10,
           }}
         >
-           {step}
+          {step}
         </Text>
 
         {/* Icon box */}
@@ -67,4 +65,3 @@ export const WorkCards: React.FC<WorkCardProps> = ({
     </Column>
   );
 };
-

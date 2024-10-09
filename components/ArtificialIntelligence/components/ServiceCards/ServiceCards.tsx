@@ -17,7 +17,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
       gap={"xl"}
       position="relative"
       style={{
-        backgroundImage: "url('/images/bg.jpeg')",
+        backgroundImage: "url('/images/data1.webp')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
