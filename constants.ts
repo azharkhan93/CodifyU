@@ -1,5 +1,5 @@
 import { MdOutlineDeveloperMode, MdOutlineArrowOutward } from "react-icons/md";
-import { FaBrain, FaChartLine, FaCloud, FaCode, FaCog, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { FaBrain, FaChartLine, FaCloud, FaCode, FaCog, FaCogs, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaServer, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 import { AiFillApi, } from "react-icons/ai"; 
 import { IconType } from "react-icons";
 import { GiArtificialIntelligence } from "react-icons/gi";
@@ -85,15 +85,15 @@ export const NavbarData = [
       },
       {
         title: "DevOps and MLOps",
-        link: "/services/data-analytics",
+        link: "/services/dev-ops-and-ml-ops",
       },
       {
         title: "Large Language Models (LLMs)",
-        link: "/services/cloud-computing",
+        link: "/services/llms-and-nlp",
       },
       {
         title: "Data Analytics & Predictive Modeling",
-        link: "/services/cloud-computing",
+        link: "/services/data-analytics-and-predictive-modeling",
       },
     ],
   },
@@ -397,6 +397,60 @@ export const workSpaceData = [
       title: "Enhanced Precision with Computer Vision:",
     },
   ]
+  export const aiAdvantagesDataSet1 = [
+    {
+      description: "Automating the Continuous Integration and Continuous Deployment process enables rapid release cycles with fewer errors.",
+      title: "Accelerated Software Delivery with CI/CD:",
+    },
+    {
+      description: "MLOps ensures that your ML models are continuously monitored, retrained, and deployed, keeping them current and effective.",
+      title: "Efficient Machine Learning Management:",
+    },
+    {
+      description: "Infrastructure as Code (IaC) reduces manual errors and ensures that infrastructure can be easily replicated and scaled.",
+      title: "Infrastructure Consistency with IaC:",
+    },
+    {
+      description: "By automating infrastructure management and model deployments, businesses can reduce operational costs and increase scalability.",
+      title: "Cost Efficiency and Agility:",
+    },
+  ]
+  export const aiAdvantagesDataSet2 = [
+    {
+      description: "Real-time analytics allow businesses to act on fresh data instantly, improving agility and strategic planning.",
+      title: "Data-Driven Decision Making",
+    },
+    {
+      description: "Predictive modeling reduces downtime by forecasting equipment issues before they occur, saving time and money.",
+      title: "Operational Efficiency through Predictive Maintenance",
+    },
+    {
+      description: "Our analytics frameworks prioritize data privacy and comply with global regulations like GDPR, keeping your data safe.",
+      title: "Compliance and Security",
+    },
+    {
+      description: "We provide tailored analytics solutions that meet the specific needs of different sectors, from retail to finance.",
+      title: "Customizable Insights for Every Industry",
+    },
+  ]
+  export const aiAdvantagesDataSet3 = [
+    {
+      description: "Our conversational AI solutions offer precise responses, enhancing customer satisfaction with human-like interactions.",
+      title: "Contextual Accuracy in Conversations",
+    },
+    {
+      description: "Fine-tuned LLMs ensure that the language model fits industry-specific requirements, providing accurate, relevant output.",
+      title: "Tailored Solutions for Industry Needs",
+    },
+    {
+      description: "With multilingual NLP, businesses can engage a broader audience, breaking down language barriers.",
+      title: "Global Reach with Multilingual Capabilities",
+    },
+    {
+      description: "Our solutions combine LLMs with knowledge graphs, ensuring that AI models are accurate and contextually aware.",
+      title: "Integration with Structured Knowledge",
+    },
+  ]
 
 
 
@@ -498,6 +552,117 @@ export const servicesData: Service4[] = [
     arrowIcon: MdOutlineArrowOutward,
     image: "/images/aiml.webp",
   },
+  {
+    id: 5,
+    title: "Fine-Tuning LLMs",
+    description:
+      "We customize large language models for industry-specific use cases, ensuring that they meet the unique requirements of each sector, whether it’s healthcare, finance, or customer service.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 6,
+    title: "Conversational AI",
+    description:
+      "Our Conversational AI solutions power chatbots and virtual assistants capable of providing human-like interactions. From customer support to automated sales assistance, our solutions improve engagement and efficiency.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 7,
+    title: "Multilingual NLP",
+    description:
+      "Expand your global reach with our multilingual NLP capabilities. We enable businesses to engage with customers in multiple languages, ensuring inclusivity and accessibility in every market.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 8,
+    title: "Sentiment Analysis & Language Understanding",
+    description:
+      "We provide sentiment analysis and language understanding tools to help businesses gain deeper insights into customer behavior and preferences, improving customer interactions and decision-making.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 9,
+    title: "Real-Time Analytics",
+    description:
+      "We enable businesses to analyze data as it’s generated, allowing them to make dynamic decisions that impact operations instantly. Real-time insights provide a competitive advantage in industries like retail, finance, and manufacturing.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 10,
+    title: "Predictive Maintenance",
+    description:
+      "Our predictive maintenance solutions help companies anticipate equipment failures before they happen, reducing downtime and improving operational efficiency, particularly in manufacturing and logistics.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 11,
+    title: "Data Privacy and Compliance",
+    description:
+      "With global regulations around data privacy, CodefyU ensures that all data analytics practices comply with legal frameworks like GDPR. We prioritize data security and regulatory compliance in all our projects.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 12,
+    title: "AI-Driven Customer Analytics",
+    description:
+      "We provide customer analytics solutions that leverage AI to identify patterns and trends in consumer behavior, helping businesses refine their strategies and improve customer experiences.",
+    icon: FaRegEye,
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 13,
+    title: "CI/CD Automation",
+    description:
+      "We implement Continuous Integration and Continuous Deployment (CI/CD) pipelines to ensure faster delivery of new features and bug fixes, helping businesses remain agile and competitive.",
+    icon: FaCogs, 
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 14,
+    title: "MLOps",
+    description:
+      "Our MLOps solutions allow for seamless deployment, monitoring, and management of machine learning models. We create infrastructure that supports the full ML lifecycle, ensuring that models remain performant and up to date.",
+    icon: FaServer, 
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 15,
+    title: "Infrastructure as Code (IaC)",
+    description:
+      "With IaC, we automate the management of IT infrastructure, reducing manual errors and ensuring that infrastructure can be easily replicated and scaled as needed.",
+    icon: FaCode, 
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  {
+    id: 16,
+    title: "Cloud-Native Solutions",
+    description:
+      "We design and deploy cloud-native solutions that optimize performance, scalability, and cost efficiency, allowing businesses to leverage the power of the cloud for both development and operations.",
+    icon: FaCloud, 
+    arrowIcon: MdOutlineArrowOutward,
+    image: "/images/aiml.webp",
+  },
+  
+  
+  
 ];
 
 
