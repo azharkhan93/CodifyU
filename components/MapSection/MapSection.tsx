@@ -1,5 +1,5 @@
 "use client";
-// import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'; 
+
 import { Box } from '../styled';
 // const position = [34.06577, 74.83166]
 
@@ -21,26 +21,8 @@ export const MapSection = () => {
   );
 };
 
+  
     
-      // <MapContainer
-      //   center={[34.06577, 74.83166]} 
-      //   zoom={13}
-      //   scrollWheelZoom={true}
-      //   style={{ height: '400px', width: '100%' }}
-      // >
-      //   <TileLayer
-      //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      //   />
-      //   <Marker position={[34.06577, 74.83166]}>
-      //     <Popup>
-      //       Hurriyat Road, Rajbagh Extension, Srinagar
-      //     </Popup>
-      //   </Marker>
-      // </MapContainer>
-    
-//   );
-// };
 
 
 
