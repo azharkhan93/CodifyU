@@ -18,7 +18,7 @@ import {
               "At codefyU, we streamline the development and deployment process through our DevOps and MLOps services. By automating infrastructure and software delivery pipelines, we help businesses accelerate time-to-market and improve the quality of their software products and machine learning models",
           }}
           aiAdvantages={aiAdvantagesDataSet1}
-          imageSrc="/images/tech1.png"
+          imageSrc="/images/tech6.png"
           advantagesHeading="Advantages Of Using DevOps and MLOps"
           advantagesDescription="As development and operational processes become more intertwined, DevOps and MLOps offer several advantages for continuous integration and delivery. Some of the most important advantages include the ability to:"
         />

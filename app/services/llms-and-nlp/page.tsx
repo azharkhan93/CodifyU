@@ -1,5 +1,5 @@
 import { ArtificialIntelligence, Column, ParallaxSection } from "@/components";
-import { aiAdvantagesDataSet1, aiAdvantagesDataSet3, } from "@/constants";
+import { aiAdvantagesDataSet3 } from "@/constants";
 
 export default function Services() {
   return (
@@ -9,14 +9,14 @@ export default function Services() {
           aiCardsProps={{
             startIndex: 4,
             endIndex: 8,
-            headingText: "Accelerate Your Business with AI",
+            headingText: "Large Language Models (LLMs) and NLP",
             descriptionText:
-              "Unlock the full potential of AI technology to transform your business. Let codefyu Software help you gain a competitive edge, boost efficiency, and stay ahead in the ever-evolving digital landscape.",
+              "CodefyU is at the forefront of Natural Language Processing (NLP) and Large Language Models (LLMs). Our team leverages the latest advancements in AI to create conversational interfaces, chatbots, and domain-specific models that understand and respond to human language with accuracy and context.",
           }}
           aiAdvantages={aiAdvantagesDataSet3}
-          imageSrc="/images/tech1.png"
-          advantagesHeading="Advantages Of AI in Business"
-          advantagesDescription="AI is revolutionizing business by automating tasks, improving accuracy, and providing insights that can lead to better decision-making."
+          imageSrc="/images/tech6.png"
+          advantagesHeading="Large Language Models (LLMs) and NLP"
+          advantagesDescription="As companies increasingly rely on language processing for communication, automation, and analysis, LLMs and NLP offer a competitive edge. Some of the most important advantages include the ability to."
         />
 
         <ParallaxSection

@@ -13,14 +13,14 @@ export default function Data() {
           aiCardsProps={{
             startIndex: 8,
             endIndex: 12,
-            headingText: "Accelerate Your Business with AI",
+            headingText: "Data Analytics & Predictive Modeling",
             descriptionText:
-              "Unlock the full potential of AI technology to transform your business. Let codefyu Software help you gain a competitive edge, boost efficiency, and stay ahead in the ever-evolving digital landscape.",
+              "Data is at the core of decision-making, and at CodefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation.",
           }}
           aiAdvantages={aiAdvantagesDataSet2}
-          imageSrc="/images/tech1.png"
-          advantagesHeading="Advantages Of AI in Business"
-          advantagesDescription="AI is revolutionizing business by automating tasks, improving accuracy, and providing insights that can lead to better decision-making."
+          imageSrc="/images/tech6.png"
+          advantagesHeading="Advantages Of Using Data Analytics and Predictive Modeling"
+          advantagesDescription="As companies shift towards data-driven decision-making, data analytics and predictive modeling empower organizations with actionable insights. Some of the most important advantages include the ability to."
         />
 
         <ParallaxSection
