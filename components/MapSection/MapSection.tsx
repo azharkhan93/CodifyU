@@ -17,39 +17,6 @@ export const MapSection = () => {
     </Box>
 
     
-    // <MapContainer
-    //     center={[34.06577, 74.83166]} 
-    //     zoom={9}
-    //     scrollWheelZoom={false}
-    //     style={{ height: '100vh', width: '100%', zIndex: 999 }}
-    //   >
-    //     <TileLayer
-    //       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    //       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    //     />
-    //     <Marker position={[34.06577, 74.83166]}>
-    //       <Popup>
-    //         Hurriyat Road, Rajbagh Extension, Srinagar
-    //       </Popup>
-    //     </Marker>
-    //   </MapContainer>
-    
-
-    
-    //   <MapContainer center={position}
-    //     zoom={13} 
-    //     scrollWheelZoom={false}
-    //   >
-    //    <TileLayer
-    //   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    //   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    // />
-    //     <Marker position={position}>
-    //       <Popup>
-    //         Hurriyat Road, Rajbagh Extension, Srinagar
-    //       </Popup>
-    //     </Marker>
-    //   </MapContainer>
    
   );
 };

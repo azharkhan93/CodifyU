@@ -1,4 +1,4 @@
-import { Column, ContactSection, Mapsection,  ParallaxSection,  TestimonialsSection,  TopBar } from "@/components";
+import { Column,  ParallaxSection,  TestimonialsSection, } from "@/components";
 
 export default function Home() {
   return (
