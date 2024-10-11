@@ -1,5 +1,5 @@
 "use client";
-import { Box, CenterBox, Column, Row, Text } from "@/components";
+import { Box, Column, Text } from "@/components";
 import { TechImages } from "./components/TecImages";
 import { TECH_IMAGES } from "@/constants";
 import { motion } from "framer-motion";

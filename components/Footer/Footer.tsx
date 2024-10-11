@@ -44,7 +44,7 @@ export const Footer = () => {
             <Text
               textAlign={"center"}
               variant={["heading", "footerHeading"]}
-              width={["100%", "690px"]}
+              width={["100%", "600px"]}
             >
               Have Any Project Idea? {`Let's Talk ?`}
             </Text>
