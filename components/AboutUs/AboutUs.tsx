@@ -20,9 +20,8 @@ export const AboutUs = () => {
             {`We Don’t Just Deliver Solutions We Tailor Them To Your Vision. Your
             Success Is Our Mission!`}
           </Text>
-          <Text textAlign={["start", "center"]} variant={"body"} lineHeight={"1.5"}>
-            In The Fast-Paced World Of Startups, Complexity Is The Enemy Of
-            Execution.At{" "}
+          <Text textAlign={["start", "center"]} variant={"body"} lineHeight={"1.5"} width={["100%","685px"]}>
+             At 
             <span
             style={{
               color: "#fb9c42",
@@ -31,10 +30,10 @@ export const AboutUs = () => {
               lineHeight:"1.5",
             }}
           >
-            codefyU {" "}
+          {" "} codefyU {" "}
           </span>
-              We Streamline Your Path To Success, Making Startup Growth Not Just
-            Possible But Predictable.
+              we streamline your path to success, making startup growth not just
+            possible but predictable.
           </Text>
         </Column>
       </CenterBox>
