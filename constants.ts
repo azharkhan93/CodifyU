@@ -1,5 +1,5 @@
 import { MdOutlineDeveloperMode, MdOutlineArrowOutward } from "react-icons/md";
-import { FaBrain, FaChartLine, FaCloud, FaCode, FaCog, FaCogs, FaDollarSign,FaEnvelope,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaServer, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { FaBrain, FaBriefcase, FaChartLine, FaCloud, FaCode, FaCog, FaCogs, FaCommentDots, FaConciergeBell, FaDollarSign,FaEnvelope,  FaHome,  FaInfoCircle,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaServer, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 import { AiFillApi, } from "react-icons/ai"; 
 import { IconType } from "react-icons";
 import { GiArtificialIntelligence } from "react-icons/gi";
@@ -58,26 +58,32 @@ export const NavbarData = [
   {
     title: "Home",
     link: "/",
+    icon: FaHome,
   },
   {
     title: "About",
     link: "/about",
+    icon: FaInfoCircle,
   },
   {
     title: "Contact",
     link: "/contact",
+    icon: FaPhoneAlt,
   },
   {
     title: "Portfolio",
     link: "/portfolio",
+    icon: FaBriefcase,
   },
   {
     title: "Testimonials",
     link: "/testimonials",
+    icon: FaCommentDots,
   },
   {
     title: "Services",
     link: "/services",
+    icon: FaConciergeBell,
     dropdown: [
       {
         title: "AI and Machine Learning",

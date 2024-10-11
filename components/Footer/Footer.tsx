@@ -11,7 +11,13 @@ import {
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaEnvelope,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { NavbarData } from "@/constants";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/contexts";
@@ -104,28 +110,40 @@ export const Footer = () => {
           px={"l"}
           borderBottom={"2px solid #fb9c42"}
         >
-          <Box gap={"xxl"} alignItems={"flex-start"}>
+          <Box gap={"xxl"} alignItems={"flex-start"} width={["100%", "450px"]}>
             <Text variant="subHeading">Quick Links</Text>
-            <Row flexDirection={"row"} gap={"xl"} flexWrap={"wrap"}>
+            <Row
+              flexDirection={"row"}
+              gap={"xl"}
+              flexWrap={"wrap"}
+              alignItems={"center"}
+            >
               {NavbarData.map((item, index) => (
                 <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-                  {item.title}
+                  <Row alignItems={"center"} flexDirection={"row"} gap={"l"}>
+                    <item.icon size={20} fill="#fb9c42" />
+                    {item.title}
+                  </Row>
                 </StyledLink>
               ))}
             </Row>
           </Box>
-          <Box gap={"xxxl"}>
+          <Box gap={"xxxl"} width={["100%", "540px"]} flexWrap={"wrap"}>
             <Box alignItems={["flex-start", "flex-start"]}>
               <Text variant={"subHeading"}>Contact Us</Text>
             </Box>
+
             <Row
               flexDirection={"row"}
               gap={"xxxl"}
-              width={"100%"}
               alignItems={"center"}
               flexWrap={["wrap", "nowrap"]}
             >
-              <Text variant={"body"}>
+              <Text
+                variant={"body"}
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <FaPhoneAlt style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
                   href="tel:+917006168185"
                   style={{ color: "black", textDecoration: "none" }}
@@ -133,7 +151,11 @@ export const Footer = () => {
                   +91 9515888396
                 </a>
               </Text>
-              <Text variant={"body"}>
+              <Text
+                variant={"body"}
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <FaPhoneAlt style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
                   href="tel:+917006569557"
                   style={{ color: "black", textDecoration: "none" }}
@@ -141,7 +163,11 @@ export const Footer = () => {
                   +91 7780892868
                 </a>
               </Text>
-              <Text variant={"body"}>
+              <Text
+                variant={"body"}
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <FaEnvelope style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
                   href="mailto:info@codefyu.com"
                   style={{ color: "black", textDecoration: "none" }}
@@ -152,13 +178,18 @@ export const Footer = () => {
             </Row>
           </Box>
           <Box
+          width={["100%", "300px"]}
             gap={"xxl"}
             alignItems={["flex-start", "flex-start"]}
             flexDirection={"column"}
           >
             <Text variant="subHeading">Follow Us</Text>
             <Row flexDirection={"row"} gap={"xl"}>
-              <Text variant="body">
+              <Text
+                variant="body"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <FaLinkedin style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
                   href="https://www.linkedin.com/company/codefyu/"
                   target="_blank"
@@ -169,7 +200,11 @@ export const Footer = () => {
                 </a>
               </Text>
 
-              <Text variant="body">
+              <Text
+                variant="body"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <FaInstagram style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
                   href="https://www.instagram.com/codefyutech/profilecard/?igsh=MWZrMm5ndm5nd2Nubg=="
                   target="_blank"
