@@ -81,7 +81,7 @@ export const OurWorkSpaceSection = () => {
               >
                 {item.heading}
               </Text>
-              <Text variant={"body"}>{item.description}</Text>
+              <Text variant={"body"} lineHeight={"1.5"}>{item.description}</Text>
             </Column>
           ))}
         </CenterBox>

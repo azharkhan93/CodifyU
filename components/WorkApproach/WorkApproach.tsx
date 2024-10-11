@@ -11,7 +11,7 @@ export const WorkApproach = () => {
         <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span> Working Process
         </Text>
         <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]} width={["100%","590px"]} >
-        Our process is straightforward, making every step efficient, clear, andhassle-free.
+        Our process is straightforward, making every step efficient, clear, and hassle-free.
           </Text>
       </Column>
 

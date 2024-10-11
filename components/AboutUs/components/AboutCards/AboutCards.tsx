@@ -63,7 +63,7 @@ export const AboutCards = () => {
             description={description}
           />
         ))}
-        <CenterBox width={["100%", "30%"]}>
+        <CenterBox width={["100%", "60%"]}>
           <Button
             variant={"primary"}
             py={"m"}
@@ -72,7 +72,7 @@ export const AboutCards = () => {
             px={"xxxxl"}
             bg={"primary"}
           >
-            {`Lets' Talk`}
+            Continue The Story
           </Button>
         </CenterBox>
       </Column>
