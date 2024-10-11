@@ -72,7 +72,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
           <ArrowIcon size={30} color="#fb9c42" />
         </Box>
 
-        <Text lineHeight={"1.5"}>{description}</Text>
+        <Text lineHeight={"1.5"} fontFamily={"ComfortaaMedium"}>{description}</Text>
       </Column>
     </Column>
   );

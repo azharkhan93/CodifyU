@@ -1,5 +1,5 @@
 import { MdOutlineDeveloperMode, MdOutlineArrowOutward } from "react-icons/md";
-import { FaBrain, FaBriefcase, FaChartLine, FaCloud, FaCode, FaCog, FaCogs, FaCommentDots, FaConciergeBell, FaDollarSign,FaEnvelope,  FaHome,  FaInfoCircle,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaServer, FaStar, FaTools, FaUsers, } from "react-icons/fa";
+import { FaBrain, FaBriefcase, FaChartLine, FaCloud, FaCode, FaCog, FaCogs, FaCommentDots, FaConciergeBell, FaDollarSign,FaEnvelope,  FaHome,  FaInfoCircle,  FaLifeRing,  FaLightbulb, FaMapMarkerAlt, FaPhoneAlt, FaRegEye, FaRegHandPaper, FaRobot, FaRocket, FaSearch, FaServer, FaStar, FaTools, FaUsers, } from "react-icons/fa";
 import { AiFillApi, } from "react-icons/ai"; 
 import { IconType } from "react-icons";
 import { GiArtificialIntelligence } from "react-icons/gi";
@@ -245,7 +245,7 @@ export const workCardItems = [
     title: "Deployment & Support",
     description:
       "We ensure smooth integration with ongoing monitoring and optimization, driving continuous success for your business.",
-    icon: FaCode,
+    icon: FaLifeRing,
   },
 ];
 

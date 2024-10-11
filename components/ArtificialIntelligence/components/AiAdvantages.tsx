@@ -11,7 +11,7 @@ export const AiAdvantages: React.FC<AiAdvantagesProps> = ({ description, number,
           py={["l", "m"]}
           px={["xl", "l"]}
         >
-          <Text variant={"subHeading"} color="textColor">
+          <Text variant={"subHeading"} color={"textColor"}>
             {number}
           </Text>
         </CenterBox>
