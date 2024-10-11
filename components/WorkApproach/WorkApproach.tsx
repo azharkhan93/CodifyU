@@ -10,9 +10,8 @@ export const WorkApproach = () => {
         <Text variant="heading"  textAlign={"start"}>
         <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span> Working Process
         </Text>
-        <Text variant={"body"} lineHeight={"1.5"}>
-            We are proud to collaborate with some of the most innovative and
-            esteemed companies in the industry.
+        <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]} width={["100%","590px"]} >
+        Our process is straightforward, making every step efficient, clear, andhassle-free.
           </Text>
       </Column>
 

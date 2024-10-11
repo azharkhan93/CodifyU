@@ -46,7 +46,7 @@ export const Footer = () => {
               variant={["heading", "footerHeading"]}
               width={["100%", "690px"]}
             >
-              Have Any Project Idea! {`Lets's Talk With Us`}
+              Have Any Project Idea? {`Let's Talk ?`}
             </Text>
           </Column>
           <Box

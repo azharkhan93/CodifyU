@@ -16,6 +16,7 @@ const Map = () => {
             style={{ height: "490px", width: "100%", }}
         >
             <TileLayer
+            
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={position}>

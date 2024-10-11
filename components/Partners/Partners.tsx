@@ -15,8 +15,13 @@ export const Partners = () => {
       <Column mt={"l"} width={"100%"}>
         <Column py={"xl"} gap={"xl"} width={["100%", "900px"]}>
           <Text variant={"heading"}>Collaboration with Industry Leaders</Text>
-          <Text variant={"body"}>
-          {`We are honored to have worked with some of the industry's most distinguished and innovative companies.`}
+          <Text
+            variant={"body"}
+            textAlign={["start", "center"]}
+            width={["full", "630px"]}
+            lineHeight={"1.5"}
+          >
+            {`We are honored to have worked with some of the industry's most distinguished and innovative companies.`}
           </Text>
         </Column>
         <Row
@@ -35,7 +40,7 @@ export const Partners = () => {
               flexDirection={["row", "row"]}
               gap={["xxxxl", "xxxl"]}
               {...logosAnimation}
-            >
+              >
               {PARTNER_LOGOS.concat(PARTNER_LOGOS).map((logo, index) => (
                 <Logos key={index} src={logo.src} alt={logo.alt} />
               ))}

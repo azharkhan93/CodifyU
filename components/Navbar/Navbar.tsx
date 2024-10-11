@@ -164,7 +164,7 @@ export const Navbar: React.FC = () => {
               bg={"black"}
               style={{ textDecoration: "none" }}
             >
-              {`Let's Talk`}
+              {`Let's Collab`}
             </Button>
           </Link>
         </Box>
@@ -312,7 +312,7 @@ export const Navbar: React.FC = () => {
                     px={"xxl"}
                     bg={"black"}
                   >
-                    Enquire Now
+                    {`Let's Collab`}
                   </Button>
                 </Link>
               </CenterBox>

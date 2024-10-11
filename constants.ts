@@ -161,14 +161,14 @@ export const services = [
     linkText: "Learn more",
     link: "/services/ai-ml", 
   },
-  {
-    title: "Generative AI",
-    description:
-      "Tap into the potential of Generative AI for automated content creation and tailored solutions that keep your business ahead of the curve.",
-    icon: FaRobot,
-    linkText: "Learn more",
-    link: "/services/ai-ml", 
-  },
+  // {
+  //   title: "Generative AI",
+  //   description:
+  //     "Tap into the potential of Generative AI for automated content creation and tailored solutions that keep your business ahead of the curve.",
+  //   icon: FaRobot,
+  //   linkText: "Learn more",
+  //   link: "/services/ai-ml", 
+  // },
   {
     title: "Large Language Models (LLMs)",
     description:
@@ -180,11 +180,12 @@ export const services = [
   {
     title: "DevOps and MLOps",
     description:
-      "We streamline the development and deployment process through our DevOps and MLOps services. By automating infrastructure and software delivery pipelines, we help businesses accelerate time-to-market and improve the quality of their software products and machine learning model.",
+      "We accelerate development & deployment with DevOps & MLOps, automating infrastructure & software pipelines to reduce time-to-market and enhance software & ML model quality.",
     icon: AiFillApi,
     linkText: "Learn more",
     link: "/services/ai-ml",
   },
+ 
   {
     title: "Data Analytics and Predictive Modeling",
     description:
@@ -193,6 +194,7 @@ export const services = [
     linkText: "Learn more",
     link: "/services/ai-ml", 
   },
+  
 ];
 
 export const faqItems = [
@@ -270,7 +272,7 @@ export const teamMembers = [
 
 export const CRD_ST = [
   {
-    ItemsTitle: "Transform your vision with codefyU.", 
+    ItemsTitle: "Transform your vision.", 
   },
   {
     ItemsTitle: "Improve your customer interactions with advanced LLMs.",

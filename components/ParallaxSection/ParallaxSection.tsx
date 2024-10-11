@@ -2,7 +2,6 @@
 import styled from "styled-components";
 import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
 
-// Define a styled span for the highlighted text
 const HighlightedText = styled.span`
   color: orange;
   font-family: "ComfortaaMedium";
@@ -12,7 +11,7 @@ const HighlightedText = styled.span`
 export const ParallaxSection = ({
   spanText = "Ready to Elevate?", 
   heading = "Let’s Build the Future Together!",
-  buttonText = "Let’s Work Together",
+  buttonText = "Start A Conversation",
   animationSrc = "https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json",
 }) => {
   return (

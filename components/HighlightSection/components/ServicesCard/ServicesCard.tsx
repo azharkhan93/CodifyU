@@ -31,13 +31,13 @@ export const ServicesCard: React.FC<ServicesCardProps> = ({ service }) => {
         justifyContent={"space-between"}
       >
         <Link href={service.link} passHref style={{ textDecoration: "none" }}>
-          <Text variant={"subHeading"} color={"textColor"}>{service.title}</Text>
+          <Text variant={"subHeading"} color={"textColor"} fontWeight={"bold"}>{service.title}</Text>
         </Link>
         <CenterBox>
           <IconComponent size={40} fill="#FB9C42" />
         </CenterBox>
       </Row>
-      <Text variant={"body"}>{service.description}</Text>
+      <Text variant={"body"} lineHeight={"1.5"}>{service.description}</Text>
       <Row flexDirection={"row"} gap={"s"} alignItems={"center"}>
         <Link href={service.link} passHref style={{ textDecoration: "none" }}>
           <Text variant={"body"} color= {"textColor"}>{service.linkText}</Text>
