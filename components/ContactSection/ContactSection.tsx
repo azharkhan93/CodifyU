@@ -44,7 +44,7 @@ export const ContactSection = () => {
             >
               <Text variant={"subHeading"}>Follow Us On</Text>
               <Row gap={"xl"} flexDirection={"row"}>
-                {/* <FaFacebook size={32} fill="#fb9c42" /> */}
+                
                 <a
                   href="https://www.instagram.com/codefyutech/profilecard/?igsh=MWZrMm5ndm5nd2Nubg=="
                   target="_blank"

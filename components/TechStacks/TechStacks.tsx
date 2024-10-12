@@ -11,15 +11,15 @@ export const TechStacks = () => {
   const logosAnimation = useLogos();
   return (
     <>
-      <Column zIndex={2} py={"xxxxl"} gap={"xxl"}>
-        <Text variant="heading" textAlign={"start"}>
+      <Column zIndex={2} py={"xxxxl"} gap={"xxl"} alignItems={"center"}>
+        <Text variant="heading" textAlign={"center"}>
           Tools And Technologies
         </Text>
         <Text
           variant={"body"}
           lineHeight={"1.5"}
-          width={["full", "550px"]}
-          textAlign={["start", "center"]}
+          width={["100%", "600px"]}
+          textAlign={ "center"}
         >
           We are proud to collaborate with some of the most innovative and
           esteemed companies in the industry.

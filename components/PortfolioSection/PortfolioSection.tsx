@@ -21,7 +21,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
           py={"xxxl"}
           gap={"xxl"}
           justifyContent={"center"}
-          alignItems={"flex-start"}
+          alignItems={"center"}
           width={["100%", "45%"]}
         >
           <Text variant="heading">Our Work</Text>

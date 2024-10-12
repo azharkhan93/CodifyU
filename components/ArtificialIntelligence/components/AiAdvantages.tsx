@@ -4,7 +4,7 @@ import { AiAdvantagesProps } from "@/types";
 export const AiAdvantages: React.FC<AiAdvantagesProps> = ({ description, number, title }) => {
   return (
     <Row flexDirection={"column"} alignItems={"flex-start"} gap={["l", "xl"]}>
-      <Row alignItems={"center"} flexDirection={"row"} gap={"m"}>
+      <Row alignItems={"center"} flexDirection={"row"} gap={"l"}>
         <CenterBox
           borderRadius={"circle"}
           bg={"white"}
@@ -19,7 +19,7 @@ export const AiAdvantages: React.FC<AiAdvantagesProps> = ({ description, number,
           {title}
         </Text>
       </Row>
-      <Text variant={"body"} lineHeight={"1"}>{description}</Text>
+      <Text variant={"body"} lineHeight={"1.5"} >{description}</Text>
     </Row>
   );
 };

@@ -191,3 +191,25 @@ export type  HighlightSectionProps = {
   cardLimit?: number; 
   showButton?: boolean; 
 }
+
+
+
+export type AiProps = {
+  aiCardsProps: {
+    startIndex: number;
+    endIndex: number;
+    headingText: string;
+    descriptionText: string;
+  };
+  aiAdvantages: { title: string; description: string }[];
+  imageSrc: string;
+  advantagesHeading: string;
+  advantagesDescription: string;
+}
+
+export type AiDataCardsProps = {
+  startIndex: number;
+  endIndex: number;
+  headingText: string;
+  descriptionText: string;
+}

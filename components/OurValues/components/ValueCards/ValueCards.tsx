@@ -26,7 +26,7 @@ export const ValueCards: React.FC<ValueCardProps> = ({
       >
         <Icon size={35} color={"#FB9C42"} />
       </CenterBox>
-      <Text variant={"body"} textAlign={"center"}>
+      <Text variant={"body"} textAlign={"center"} >
         {title}
       </Text>
       <Text variant={"body"} textAlign={"center"}>

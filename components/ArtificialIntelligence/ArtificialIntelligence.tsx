@@ -3,19 +3,7 @@ import { Box, Column, Row, Text } from "../styled";
 import Image from "next/image";
 import { AiAdvantages } from "./components";
 import { AiDataCards } from "./components/AiDataCards";
-
-interface AiProps {
-  aiCardsProps: {
-    startIndex: number;
-    endIndex: number;
-    headingText: string;
-    descriptionText: string;
-  };
-  aiAdvantages: { title: string; description: string }[];
-  imageSrc: string;
-  advantagesHeading: string;
-  advantagesDescription: string;
-}
+import { AiProps } from "@/types";
 
 export const ArtificialIntelligence: React.FC<AiProps> = ({
   aiCardsProps,
@@ -66,8 +54,8 @@ export const ArtificialIntelligence: React.FC<AiProps> = ({
             px={["m", "xxxl"]}
             color={"textColor"}
           >
-            <Text variant={"heading"}>{advantagesHeading}</Text>
-            <Text variant={"body"} lineHeight={"1.5"}>
+            <Text variant={"heading"} lineHeight={"1.3"}>{advantagesHeading}</Text>
+            <Text variant={"body"} lineHeight={"1.5"} textAlign={"center"}>
               {advantagesDescription}
             </Text>
           </Column>

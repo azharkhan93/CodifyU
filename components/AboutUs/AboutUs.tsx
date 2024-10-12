@@ -14,13 +14,13 @@ export const AboutUs = () => {
           px={["s", "xl"]}
         >
           <Text
-            textAlign={["start", "center"]}
+            textAlign={"center"}
             variant={["heading", "footerHeading"]}
           >
             {`We Don’t Just Deliver Solutions We Tailor Them To Your Vision. Your
             Success Is Our Mission!`}
           </Text>
-          <Text textAlign={["start", "center"]} variant={"body"} lineHeight={"1.5"} width={["100%","685px"]}>
+          <Text textAlign={ "center"} variant={"body"} lineHeight={"1.5"} width={["100%","685px"]}>
              At 
             <span
             style={{

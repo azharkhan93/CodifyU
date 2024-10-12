@@ -5,12 +5,12 @@ import { WorkCards } from "./components/WorkCards";
 export const WorkApproach = () => {
   return (
     <Column py={"xl"} gap={["xl", "xxxl"]}>
-      <Column gap={"xl"}>
+      <Column gap={"xl"} alignItems={"center"}>
       
-        <Text variant="heading"  textAlign={"start"}>
+        <Text variant="heading"  textAlign={"center"}>
         <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span> Working Process
         </Text>
-        <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]} width={["100%","590px"]} >
+        <Text variant={"body"} lineHeight={"1.5"} textAlign={ "center"} width={["100%","590px"]} >
         Our process is straightforward, making every step efficient, clear, and hassle-free.
           </Text>
       </Column>

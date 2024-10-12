@@ -38,7 +38,7 @@ export const TechSolutions = () => {
         justifyContent={"center"}
         width={["100%", "630px"]}
       >
-        <Text variant="heading">
+        <Text variant="heading" textAlign={["center","start"]} lineHeight={"1.3"}>
           Unlock the power of AI/ML and data-driven solutions with{" "}
           <span
             style={{
@@ -50,7 +50,7 @@ export const TechSolutions = () => {
             codefyU
           </span>
         </Text>
-        <Text variant={"subHeading"} lineHeight={"1.5"}>
+        <Text variant={"subHeading"} lineHeight={"1.5"} textAlign={["center","start"]}>
           Streamline your business needs and automate your infrastructure with{" "}
           <span
             style={{

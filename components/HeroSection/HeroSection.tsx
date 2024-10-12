@@ -41,17 +41,17 @@ export const HeroSection = () => {
         alignItems={"center"}
         zIndex={1}
       >
-        <CenterBox
+        <Column
           flexDirection="column"
-          alignItems={"center"}
-          justifyContent={"center"}
+         
           gap={"m"}
           width={["100%", "1000px"]}
-          textAlign={["start", "center"]}
+          textAlign={ "center"}
         >
           <Text
             variant={["heading", "footerHeading"]}
-            textAlign={["start", "center"]}
+            textAlign={"center"}
+            lineHeight={"1.3"}
           >
             Growth Fueled By Expertise
           </Text>
@@ -68,12 +68,12 @@ export const HeroSection = () => {
               {showText}
             </Text>
           </motion.div>
-        </CenterBox>
+        </Column>
 
         <Text
           variant="body"
           width={["100%", "600px"]}
-          textAlign={["start", "center"]}
+          textAlign={ "center"}
           lineHeight={"1.5"}
         >
           At{" "}

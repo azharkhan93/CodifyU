@@ -42,11 +42,11 @@ export const AboutCards = () => {
         px={["s", "xl"]}
 
       >
-        <Text variant={["heading", "footerHeading"]}>About Us</Text>
-        <Text variant={["subHeading", "heading"]} width={["100%", "600px"]}>
+        <Text variant={["heading", "footerHeading"]} textAlign={"center"}>About Us</Text>
+        <Text variant={["subHeading", "heading"]} width={["100%", "600px"]} textAlign={"center"}>
           Beyond Technology Your Competitive Edge for Growth
         </Text>
-        <Text variant={"body"} width={["100%", "600px"]} lineHeight={"1.5"}>
+        <Text variant={"body"} width={["100%", "600px"]} lineHeight={"1.5"} >
           At CodefyU we dont just deliver technology we forge strategic
           partnerships that advance your business. Our client-centric solutions
           are tailored to your vision, ensuring swift, reliable outcomes.

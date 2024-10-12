@@ -43,7 +43,7 @@ export const AiBenefitsCards: React.FC<CardProps> = ({
       {benefits.map((benefit, index) => (
         <Row key={index} alignItems={"center"} gap={"m"} flexDirection={"row"}>
           <FaCircle style={{ marginRight: "8px" }} />
-          <Text variant={"subHeading"}>{benefit}</Text>
+          <Text variant={"subHeading"} border={"4px solid red"}>{benefit}</Text>
         </Row>
       ))}
     </Column>

@@ -27,7 +27,7 @@ export const ParallaxSection = ({
       px={["xl", "m"]}
     >
       <Column py={"xxxl"} alignItems={"center"} gap={"xl"}>
-        <Text variant={"heading"} textAlign={ "center"} width={["100%","600px"]} lineHeight={"1.5"}>
+        <Text variant={"heading"} textAlign={"center"} width={["100%","600px"]} lineHeight={"1.5"}>
           <HighlightedText>{spanText}</HighlightedText>{" "}
           {heading}
         </Text>

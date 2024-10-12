@@ -19,17 +19,17 @@ export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 
         py={"xxxl"}
         gap={"xxl"}
         justifyContent={"center"}
-        alignItems={"flex-start"}
+        alignItems={"center"}
         width={["100%", "100%"]}
       >
-        <Text variant={["heading", "heading"]}>
+        <Text variant={["heading", "heading"]} textAlign={"center"} lineHeight={"1.3"}>
           Driving Unmatched Efficiency Through Intelligent Solutions
         </Text>
         <Text
           variant={"body"}
           lineHeight={"1.5"}
           width={["100%", "700px"]}
-          textAlign={["start", "center"]}
+          textAlign={"center"}
         >
           At <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>codefyU</span>, we specialize in delivering transformative solutions that drive growth and innovation. Our core services—AI/ML, Generative AI, and Large Language Models (LLMs)—form the backbone of our offerings, but we provide much more to elevate your business.
         </Text>

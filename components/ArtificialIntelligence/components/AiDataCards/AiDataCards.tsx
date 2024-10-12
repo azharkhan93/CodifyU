@@ -5,15 +5,14 @@ import { useFadeInLeft, useFadeInUp } from "@/hooks/useAnimations";
 import { Row, Column, Text } from "@/components/styled";
 import { servicesData } from "@/constants";
 import { ServiceCards } from "../ServiceCards";
+import { AiDataCardsProps } from "@/types";
 
-interface AiDataCardsProps {
-  startIndex: number;
-  endIndex: number;
-  headingText: string;
-  descriptionText: string;
-}
-
-export const AiDataCards: React.FC<AiDataCardsProps> = ({ startIndex, endIndex, headingText, descriptionText }) => {
+export const AiDataCards: React.FC<AiDataCardsProps> = ({
+  startIndex,
+  endIndex,
+  headingText,
+  descriptionText,
+}) => {
   const fadeInLeftProps = useFadeInLeft();
   const fadeInUpProps = useFadeInUp();
 
@@ -27,19 +26,27 @@ export const AiDataCards: React.FC<AiDataCardsProps> = ({ startIndex, endIndex, 
           justifyContent={"space-between"}
         >
           <Column
+           
             py={"xl"}
             gap={"xxl"}
             justifyContent={["start", "center"]}
-            alignItems={"flex-start"}
-            width={["100%", "43%"]}
+            alignItems={"center"}
+            width={"100%"}
           >
-            <Text variant="heading" textAlign={["start", "center"]}>
+            <Text
+              variant="heading"
+              textAlign="center"
+              width={["100%", "900px"]}
+              lineHeight={"1.3"}
+              
+            >
               {headingText}
             </Text>
             <Text
               variant={"body"}
               lineHeight={"1.5"}
-              textAlign={["start", "center"]}
+              textAlign= {"center"}
+              width={["100%", "650px"]}
             >
               {descriptionText}
             </Text>
@@ -69,4 +76,3 @@ export const AiDataCards: React.FC<AiDataCardsProps> = ({ startIndex, endIndex, 
     </>
   );
 };
-

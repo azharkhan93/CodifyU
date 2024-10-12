@@ -13,13 +13,13 @@ import { REVIEW_SLIDES } from "@/constants";
 export const ReviewsSection = () => {
   return (
     <Column flexDirection={["column", "row"]} py={["xxl", "header"]} gap={"l"}>
-      <Column gap={["xl", "m"]}>
-        <Text variant="heading">What Our Clients Say</Text>
+      <Column gap={["xl", "m"]} alignItems={"center"} justifyContent={"center"}>
+        <Text variant="heading" textAlign={"center"}>What Our Clients Say</Text>
         <Text
           variant={"body"}
           width={["100%", "460px"]}
           lineHeight={"1.5"}
-          textAlign={["start", "center"]}
+          textAlign={ "center"}
         >
           {`Discover how our services have positively impacted our clients'
           experiences. Read their testimonials below to learn more.`}

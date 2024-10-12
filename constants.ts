@@ -186,7 +186,7 @@ export const services = [
   {
     title: "DevOps and MLOps",
     description:
-      "We accelerate development & deployment, automating infrastructure & software pipelines to reduce time-to-market and enhance software & ML model quality.",
+      "We accelerate development, automating infrastructure & software pipelines to reduce time-to-market and enhance software & ML model quality.",
     icon: AiFillApi,
     linkText: "Learn more",
     link: "/services/ai-ml",

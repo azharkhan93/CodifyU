@@ -32,16 +32,13 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
         bg={"background"}
         borderBottomRightRadius={["s", "xl"]}
         borderTopRightRadius={["s", "xl"]}
-        // style={{
-        //   background: "rgba(255, 255, 255, 1)",
-        // }}
       >
         <Row
           justifyContent={"space-between"}
           alignItems={"center"}
           flexDirection={"row"}
         >
-          <Text variant={"heading"}>{title}</Text>
+          <Text variant={"heading"} lineHeight={"1.3"} >{title}</Text>
           <Box
             alignItems={"center"}
             justifyContent={"center"}
@@ -72,7 +69,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
           <ArrowIcon size={30} color="#fb9c42" />
         </Box>
 
-        <Text lineHeight={"1.5"} fontFamily={"ComfortaaMedium"}>{description}</Text>
+        <Text lineHeight={"1.5"} fontFamily={"ComfortaaMedium"} color={"primary"}>{description}</Text>
       </Column>
     </Column>
   );

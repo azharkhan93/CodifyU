@@ -31,14 +31,14 @@ export const OurValues = () => {
             alignItems={"flex-start"}
             width={["100%", "43%"]}
           >
-            <Text variant="heading" textAlign={["start", "center"]}>
+            <Text variant="heading" textAlign={"center"}  width={["100%","600px"]}>
               Why <span style={{ color: "#fb9c42", fontSize: "30px", fontFamily: "ComfortaaMedium" }}>codefyU</span>?
               
             </Text>
             <Text
               variant={"body"}
               lineHeight={"1.5"}
-              textAlign={["start", "center"]}
+              textAlign={ "center"}
             >
               We have successfully delivered over 200 projects over the last 8
               years, collectively generating a value of{" "}
@@ -49,7 +49,7 @@ export const OurValues = () => {
             <Text
               variant={"body"}
               lineHeight={"1.5"}
-              textAlign={["start", "center"]}
+              textAlign={ "center"}
             >
               Our Startup Accelerator program is your launchpad to success.
               Fast-Track your market entry and expansion with our proven
