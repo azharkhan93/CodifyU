@@ -42,7 +42,8 @@ export const StatsCards = ({
         variant={["heading", "footerHeading"]}
         position={"relative"}
         zIndex={2}
-        // style={{fontFamily: "ComfortaaBold"}}
+         fontFamily={"ComfortaaBold"}
+         style={{fontFamily: "ComfortaaBold"}}
       >
         {isNumber.test(heading) ? (
           <CountUp
@@ -52,7 +53,9 @@ export const StatsCards = ({
             suffix={heading.replace(isNumber, "")}
           />
         ) : (
+          <Text fontFamily={"ComfortaaBold"}>
           heading
+          </Text>
         )}
       </Text>
       <Text
