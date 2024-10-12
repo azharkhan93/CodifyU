@@ -42,7 +42,7 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
               {product.productDesc ? product.productDesc : "No Description"}
             </Text>
             <Text variant={"heading"}>Technology And Tools</Text>
-            {product.iconUrls.length > 0 && (
+            {product.iconUrls.length > 0 ?(
               <Row gap={"m"} alignItems={"center"} flexDirection={"row"}>
                 {product.iconUrls.map((iconUrl, iconIndex) => (
                   <Image
@@ -55,7 +55,7 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
                   />
                 ))}
               </Row>
-            )}
+            ): null}
 
             <Box width={["60%", "30%"]}>
               <Button
@@ -68,7 +68,7 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
                 style={{ color: "white", cursor: "pointer" }}
                 onClick={() => handleViewMore(product.slug)}
               >
-                View Case Study
+                View Details
               </Button>
             </Box>
           </Column>
