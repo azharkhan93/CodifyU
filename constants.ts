@@ -19,7 +19,7 @@ export const STATS_DATA = [
   },
   {
     id: 3,
-    heading: "200+",
+    heading: "200$",
     subHeading: "Million Value Generation",
     image: "/websiteimages/27.png",
   },

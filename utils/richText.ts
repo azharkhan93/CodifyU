@@ -148,7 +148,6 @@ function processRichText(richTextArray: any[]): string {
         const annotations = text.annotations;
         let colorStyle = "";
 
-        // Apply color if specified in annotations
         if (annotations.color && annotations.color !== "default") {
           colorStyle = `color: ${annotations.color};`;
         }
