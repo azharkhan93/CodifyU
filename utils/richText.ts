@@ -145,19 +145,34 @@ function processRichText(richTextArray: any[]): string {
     .map((text) => {
       if (text.type === "text") {
         const content = text.text.content;
-        const highlightedPattern = /(\*\*[^*]+\*\*)/g; 
+        const annotations = text.annotations;
+        let colorStyle = "";
+
+        // Apply color if specified in annotations
+        if (annotations.color && annotations.color !== "default") {
+          colorStyle = `color: ${annotations.color};`;
+        }
+
+        const highlightedPattern = /(\*\*[^*]+\*\*)/g;
         const urlPattern = /(https?:\/\/[^\s]+)/g;
-        
+
         const highlightedText = content.replace(
           highlightedPattern,
-          (match: string) => `<span style="color: orange; font-weight: bold;">${match.replace(/\*\*/g, '')}</span>`
+          (match: string) =>
+            `<span style="color: orange; font-family: ${
+              BASE_TEXT_VARIANTS.heading.fontFamily
+            };">${match.replace(/\*\*/g, "")}</span>`
         );
-        
-        return highlightedText.replace(
-          urlPattern,
-          (url: string) =>
-            `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
-        );
+        return highlightedText
+          .replace(
+            urlPattern,
+            (url: string) =>
+              `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
+          )
+          .replace(
+            content,
+            `<span style="${colorStyle} font-family: ${BASE_TEXT_VARIANTS.body.fontFamily};">${content}</span>`
+          );
       }
       return "";
     })
@@ -227,4 +242,3 @@ function getStyles(): string {
     }
   </style>`;
 }
-

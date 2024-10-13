@@ -13,12 +13,12 @@ export const Partners = () => {
   return (
     <>
       <Column mt={"l"} width={"100%"}>
-        <Column py={"xl"} gap={"xl"} width={["100%", "900px"]} alignItems={"center"}>
+        <Column py={"xl"} gap={"xl"} alignItems={"center"} >
           <Text variant={"heading"} textAlign={"center"} lineHeight={"1.3"}>Collaboration with Industry Leaders</Text>
           <Text
             variant={"body"}
             textAlign={ "center"}
-            width={["full", "630px"]}
+            width={["100%", "630px"]}
             lineHeight={"1.5"}
           >
             {`We are honored to have worked with some of the industry's most distinguished and innovative companies.`}

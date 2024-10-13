@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
     font-family: 'Comfortaa', sans-serif;
-    font-weight: 400;
+    
 }
 
 `;

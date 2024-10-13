@@ -27,8 +27,8 @@ export const TechStacks = () => {
       </Column>
 
       <MotionBox
+      py={"m"}
         alignItems={"center"}
-        height={"200px"}
         flexDirection={"row"}
         gap={["xxxxl", "header"]}
         {...logosAnimation}

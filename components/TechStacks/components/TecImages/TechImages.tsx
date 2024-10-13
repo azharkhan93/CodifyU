@@ -11,14 +11,13 @@ export const TechImages: React.FC<TechImageProps> = ({
   return (
     <Box
     alignItems={"center"}
-    width={["170px","180px"]}
-    height={["80px","100px"]}
+    // s
   >
     <Image
       src={src}
       alt={alt}
-      width={180} 
-      height={100} 
+      width={70} 
+      height={70} 
      
     />
   </Box>
