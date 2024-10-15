@@ -1,11 +1,14 @@
 import { Box, Column, Row, Text } from "@/components";
 import { Service4 } from "@/constants";
+import { useModal } from "@/contexts";
+
 
 type ServiceCardProps = {
   service: Service4;
 }
 
 export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
+  const { openModal } = useModal();
   const { title, description, icon: Icon, arrowIcon: ArrowIcon, image } = service;
 
   return (
@@ -49,7 +52,9 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
             style={{
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
             }}
+            
           >
+            
             <Icon size={38} color="#fb9c42" />
           </Box>
         </Row>
@@ -63,8 +68,9 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
           py={"s"}
           px={"s"}
           style={{
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", cursor: "pointer"
           }}
+          onClick={openModal}
         >
           <ArrowIcon size={30} color="#fb9c42" />
         </Box>

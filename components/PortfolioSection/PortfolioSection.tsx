@@ -22,10 +22,10 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
           gap={"xxl"}
           justifyContent={"center"}
           alignItems={"center"}
-          width={["100%", "45%"]}
+          width={"100%"}
         >
           <Text variant="heading">Our Work</Text>
-          <Text variant={"body"} textAlign={"start"}>
+          <Text variant={"body"} textAlign={"center"} lineHeight={"1.5"}>
             Some Highlights Of Our favorite Projects We Have Done For Forward
             Thinking Clients.
           </Text>

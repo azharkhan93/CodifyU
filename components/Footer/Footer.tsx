@@ -64,7 +64,7 @@ export const Footer = () => {
             width={"180px"}
             px={"m"}
             borderRadius={"circle"}
-            onClick={openModal}
+            // onClick={openModal}
           >
             <FaArrowRight
               style={{
@@ -76,17 +76,19 @@ export const Footer = () => {
                 fontSize: "23px",
               }}
             />
+            <Link href="/contact" passHref style={{ textDecoration: "none" }}>
 
             <Button
               variant="primary"
               borderRadius={"circle"}
               py={"s"}
               px={"xl"}
-              onClick={openModal}
+              // onClick={openModal}
               bg={"textColor"}
             >
               Get In Touch
             </Button>
+            </Link>
           </Box>
         </CenterBox>
         <CenterBox width={"100%"} py={"xl"}>

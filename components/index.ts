@@ -29,6 +29,8 @@ export * from "./ArtificialIntelligence"
 export * from "./AiServices"
 export * from "./TestimonialsSection"
 export * from "./BackToTop"
+export * from "./DropDown"
+export * from "./FormSearcableSelect"
 
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CenterBox, StyledModal, Text } from "@/components/styled";
+import {  CenterBox, StyledModal, } from "@/components/styled";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BASE_COLORS } from "@/theme";
@@ -25,17 +25,17 @@ export const Modal: React.FC<ModalProps> = ({
     >
       <StyledModal
         mt={["xlg", "none"]}
-        bg={"secondary"}
+        bg={"textColor"}
         width={["97%", "45%"]}
         borderRadius={"xs"}
         position={"relative"}
         // boxShadow={BASE_COLORS.modalShadow}
-        height="70%"
+        height="80%"
         overflowY={"scroll"}
       >
         <CenterBox
           p={"s"}
-          // bg={"primary"}
+           bg={"primary"}
           borderRadius={"circle"}
           height={"33px"}
           width={"33px"}
@@ -45,7 +45,7 @@ export const Modal: React.FC<ModalProps> = ({
           onClick={onClose}
           style={{ cursor: "pointer" }}
         >
-          <FontAwesomeIcon icon={faTimes} size="2x" color="white" />
+          <FontAwesomeIcon icon={faTimes} size="2x" color="#eae9fd" />
         </CenterBox>
         <Component onClose={onClose} />
       </StyledModal>

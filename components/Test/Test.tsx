@@ -72,7 +72,6 @@ export const Test: React.FC<UpdateComponentProps> = ({
     } catch (error) {
       console.error("Error sending form data:", error);
       
-      // Optional: set form errors if needed
       if (axios.isAxiosError(error) && error.response) {
         setErrors({ 
           email: "Failed to send email, please try again." 

@@ -1,6 +1,5 @@
 "use client";
-
-import { Box, GlobalStyle } from "@/components";
+import { GlobalStyle } from "@/components";
 import "./globals.css";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
 import { Navbar } from "@/components/Navbar";
@@ -9,19 +8,13 @@ import Head from "next/head";
 import { ModalProvider } from "@/contexts";
 import { StyleSheetManager } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
-import Template from "./template";
-// import 'leaflet/dist/leaflet.css';
+// import Template from "./template";
+
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <Head>
-      {/* <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossOrigin=""
-        /> */}
         <title>codefyU</title>
         <meta name="description" content="one stop for all software solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,14 +26,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <ModalProvider>
           
             <StyleSheetManager shouldForwardProp={isPropValid}>
-            <Template>
+            {/* <Template> */}
           <Navbar />
             
               
               <GlobalStyle />
                 {children}
                 <Footer />
-            </Template>
+            {/* </Template> */}
           
               
             </StyleSheetManager>
