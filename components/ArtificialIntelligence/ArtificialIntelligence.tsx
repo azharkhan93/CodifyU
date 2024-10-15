@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Box, Column, Row, Text } from "../styled";
 import Image from "next/image";
 import { AiAdvantages } from "./components";
@@ -52,9 +52,10 @@ export const ArtificialIntelligence: React.FC<AiProps> = ({
             gap={"xxxl"}
             width={["100%", "700px"]}
             px={["m", "xxxl"]}
-            color={"textColor"}
           >
-            <Text variant={"heading"} lineHeight={"1.3"}>{advantagesHeading}</Text>
+            <Text variant={"heading"} lineHeight={"1.3"}>
+              {advantagesHeading}
+            </Text>
             <Text variant={"body"} lineHeight={"1.5"} textAlign={"center"}>
               {advantagesDescription}
             </Text>

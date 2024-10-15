@@ -20,17 +20,18 @@ export const OurWorkSpaceSection = () => {
           <Column
             py={"xl"}
             gap={"xxl"}
-            justifyContent={["start", "center"]}
-            alignItems={"flex-start"}
-            width={["100%", "43%"]}
+            justifyContent={"center"}
+            alignItems={"center"}
+            width={"100%"}
           >
-            <Text variant="heading" textAlign={["start", "center"]}>
+            <Text variant="heading" textAlign={ "center"}>
               Company Culture And Values
             </Text>
             <Text
               variant={"body"}
               lineHeight={"1.5"}
               textAlign={["start", "center"]}
+              width={["100%", "650px"]}
             >
               At <span style={{ color: "#fb9c42", fontSize: "22px" }}>codefyU</span>, we know that our success is built on the strength and
               well-being of our people. Our values guide how we create an

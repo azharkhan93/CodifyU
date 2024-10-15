@@ -47,7 +47,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowOverlay(false);
-    }, 1000);
+    }, 1200);
     return () => clearTimeout(timer);
   }, [children]);
 

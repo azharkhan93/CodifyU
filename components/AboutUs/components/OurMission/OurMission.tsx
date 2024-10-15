@@ -24,17 +24,17 @@ export const OurMission = () => {
         <Column
           py={"xl"}
           gap={"xxl"}
-          justifyContent={["start", "center"]}
-          alignItems={"flex-start"}
-          width={["100%", "43%"]}
+          justifyContent={"center"}
+          alignItems={"center"}
+          width={"100%"}
         >
-          <Text variant="heading" textAlign={["start", "center"]}>
+          <Text variant="heading" textAlign= "center" >
           Mission & Vision
           </Text>
-          <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
+          <Text variant={"body"} lineHeight={"1.5"} textAlign={"center"} width={["100%", "650px"]} >
           <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>codefyU</span>. is a specialized technology partner, focused on delivering rapid and scalable solutions that drive succes.
           </Text>
-          <Text variant={"body"} lineHeight={"1.5"} textAlign={["start", "center"]}>
+          <Text variant={"body"} lineHeight={"1.5"} textAlign={ "center"} width={["100%", "650px"]}>
           Our core principles—Innovation, Partnership, and Efficiency—shape our commitment to empowering your business with pioneering technology tailored to your needs.
           </Text>
         </Column>

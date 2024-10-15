@@ -62,7 +62,7 @@ export const ContactSection = () => {
                   <FaLinkedin size={32} fill="#fb9c42" />
                 </a>
 
-                <FaGithub size={32} fill="#fb9c42" />
+                {/* <FaGithub size={32} fill="#fb9c42" /> */}
               </Row>
             </CenterBox>
           </Column>

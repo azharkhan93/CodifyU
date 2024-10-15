@@ -40,10 +40,10 @@ export const OurValues = () => {
               lineHeight={"1.5"}
               textAlign={ "center"}
             >
-              We have successfully delivered over 200 projects over the last 8
+              We have successfully delivered over <span style={{ color: "#fb9c42", fontSize: "18px", fontFamily: "ComfortaaMedium", fontWeight: "bold" }}>200 projects</span>  over the last 8
               years, collectively generating a value of{" "}
         
-              $200 million
+              <span style={{ color: "#fb9c42", fontSize: "18px", fontFamily: "ComfortaaMedium", fontWeight: "bold" }}>$200 million</span>
               {/* </span> */}. High-Quality tech solutions without high costs.{" "}
             </Text>
             <Text

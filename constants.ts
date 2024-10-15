@@ -181,7 +181,7 @@ export const services = [
       "Our LLM expertise helps enhance customer experiences and streamline workflows with intelligent, customizable models across various domains.",
     icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
-    link: "/services/ai-ml", 
+    link: "/services/llms-and-nlp", 
   },
   {
     title: "DevOps and MLOps",
@@ -189,7 +189,7 @@ export const services = [
       "We accelerate development, automating infrastructure & software pipelines to reduce time-to-market and enhance software & ML model quality.",
     icon: AiFillApi,
     linkText: "Learn more",
-    link: "/services/ai-ml",
+    link: "/services/dev-ops-and-ml-ops",
   },
  
   {
@@ -198,7 +198,7 @@ export const services = [
       "Data is at the core of decision-making, and at codefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation",
     icon: MdOutlineDeveloperMode,
     linkText: "Learn more",
-    link: "/services/ai-ml", 
+    link: "/services/data-analytics-and-predictive-modeling", 
   },
   
 ];
@@ -336,6 +336,7 @@ export const contactData = [
     id: 4,
     icon: FaMapMarkerAlt,
     text: "Rajbagh Near Hurriyat Office, Srinagar",
+    link: "https://www.google.com/maps/search/?api=1&query=Rajbagh+Near+Hurriyat+Office,+Srinagar",
   },
 ];
 

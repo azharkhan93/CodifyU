@@ -148,6 +148,7 @@ export type TechImageProps = {
 export type ContactItemProps = {
   icon: IconType;
   text: string;
+  link?: string;
 };
 
 export type FeatureCardProps = {
