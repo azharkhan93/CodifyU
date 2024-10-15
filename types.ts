@@ -45,15 +45,15 @@ export type ModalProps = {
   component: React.FC<{ onClose: () => void }>;
 };
 
-export type TextAreaProps = {
-  name: string;
-  handleOnChange?: (value: string) => void;
-  placeholder: string;
-  type?: "text";
-  // value: string ;
-  onBlur?: () => void;
-  label?: string;
-};
+// export type TextAreaProps = {
+//   name: string;
+//   handleOnChange?: (value: string) => void;
+//   placeholder: string;
+//   type?: "text";
+//    value: string ;
+//   onBlur?: () => void;
+//   label?: string;
+// };
 
 export type ModalContextProps = {
   isModalOpen: boolean;

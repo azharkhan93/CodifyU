@@ -31,11 +31,11 @@ export const StyledTextarea = styled.textarea.withConfig(
   StyledWithConfig
 )<TextareaProps>`
   ${width}
-  min-height: 100px; /* Adjust as needed */
+  min-height: 100px;
   outline: none;
   font-family: DMSansRegular;
   font-size: 15px;
-  padding: ${BASE_SPACING.m}px; /* Adjust padding as needed */
+  padding: ${BASE_SPACING.m}px; 
   ${border}
   ${background}
   ${layout}

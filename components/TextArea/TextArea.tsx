@@ -1,21 +1,33 @@
 "use client";
 import { BASE_COLORS } from "@/theme";
 import { Box, StyledTextarea, Text } from "../styled";
-import { ChangeEvent } from "react";
-import { TextAreaProps } from "@/types";
+import {  useCallback } from "react";
+import { useField } from "formik";
+import { InputBoxProps } from "../InputBox";
 
-export const TextArea: React.FC<TextAreaProps> = ({
-  name,
-  handleOnChange,
-  placeholder,
-//   value,
-  onBlur,
+type UpdateFormInputBoxProps = Omit<InputBoxProps, "value" | "onBlur"> & {
+  label?: string;
+  value?: string;
+};
+
+export const TextArea: React.FC<UpdateFormInputBoxProps> = ({
   label,
+  name,
+  ...rest
 }) => {
-  const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    if (handleOnChange) handleOnChange(e.target.value);
-  };
 
+  const [field, meta, helpers] = useField(name);
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    helpers.setValue(event.target.value);
+  };
+  // const onChange = (newValue: string) => {
+  //   helpers.setValue(newValue);
+  // };
+
+  const handleBlur = useCallback(() => {
+    helpers.setTouched(true);
+  }, [helpers]);
+ 
   return (
     <>
       <Box width={"100%"} py={"s"}>
@@ -24,14 +36,15 @@ export const TextArea: React.FC<TextAreaProps> = ({
         </Text>
       </Box>
       <StyledTextarea
+      
         border={`1px solid ${BASE_COLORS.primary}`}
         width={["97%", "100%"]}
+        onChange={handleChange}
         name={name}
-        onChange={onChange}
-        onBlur={onBlur}
-        borderRadius={"xs"}
-        placeholder={placeholder}
-        // value={value}
+        value={field.value}
+        onBlur={handleBlur}
+        {...rest}
+        
       />
     </>
   );
