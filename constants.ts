@@ -7,7 +7,7 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 export const STATS_DATA = [
   {
     id: 1,
-    heading: "8+years",
+    heading: "9+years",
     subHeading: "In Business",
     image: "/websiteimages/25.png", 
   },
@@ -19,7 +19,7 @@ export const STATS_DATA = [
   },
   {
     id: 3,
-    heading: "200$",
+    heading: "$200M",
     subHeading: "Million Value Generation",
     image: "/websiteimages/27.png",
   },

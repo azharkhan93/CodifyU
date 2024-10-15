@@ -9,7 +9,10 @@ export const StatsCards = ({
   subHeading,
   statsImg,
 }: StatCardProps) => {
-  const isNumber = /\d+/g;
+  const isNumberWithPrefixSuffix = /^(\$)?(\d+)(M|k)?$/; 
+
+  const match = heading.match(isNumberWithPrefixSuffix);
+
   return (
     <Column
       justifyContent={"center"}
@@ -39,23 +42,22 @@ export const StatsCards = ({
       </Box>
 
       <Text
-        variant={["heading", "footerHeading"]}
+        variant={ "heading"}
         position={"relative"}
         zIndex={2}
-         fontFamily={"ComfortaaBold"}
-         style={{fontFamily: "ComfortaaBold"}}
+        fontFamily={"ComfortaaBold"}
+        style={{ fontFamily: "ComfortaaBold" }}
       >
-        {isNumber.test(heading) ? (
+        {match ? (
           <CountUp
             start={0}
-            end={parseInt(heading.match(isNumber)![0], 10)}
+            end={parseInt(match[2], 10)} 
             duration={8}
-            suffix={heading.replace(isNumber, "")}
+            prefix={match[1] || ""} 
+            suffix={match[3] || ""} 
           />
         ) : (
-          <Text fontFamily={"ComfortaaBold"}>
-          heading
-          </Text>
+          <Text fontFamily={"ComfortaaBold"}>{heading}</Text>
         )}
       </Text>
       <Text

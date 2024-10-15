@@ -26,25 +26,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <ModalProvider>
           
             <StyleSheetManager shouldForwardProp={isPropValid}>
-            {/* <Template> */}
-          <Navbar />
-            
-              
-              <GlobalStyle />
+            <Navbar />
+            <GlobalStyle />
                 {children}
                 <Footer />
-            {/* </Template> */}
-          
-              
-            </StyleSheetManager>
-            
-          </ModalProvider>
-          
-        </AppThemeProvider>
+                </StyleSheetManager>
+            </ModalProvider>
+          </AppThemeProvider>
       </body>
     </html>
   );
 }
+
+
+
+{/* <Template> */}
+{/* </Template> */}
 
 
 
