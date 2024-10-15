@@ -10,7 +10,7 @@ export async function getBlogPosts() {
     const blogPosts = await Promise.all(
       response.results.map(async (page: any, index: number) => {
         // Log raw page data to inspect structure
-        console.log(`Raw Page Data (Index ${index}):`, page);
+        // console.log(`Raw Page Data (Index ${index}):`, page);
 
         const slug = page.properties["slug"]?.rich_text?.[0]?.plain_text || "";
 

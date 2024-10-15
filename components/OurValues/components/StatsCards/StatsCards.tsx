@@ -45,8 +45,7 @@ export const StatsCards = ({
         variant={ "heading"}
         position={"relative"}
         zIndex={2}
-        
-      >
+        >
         {match ? (
           <CountUp
             start={0}

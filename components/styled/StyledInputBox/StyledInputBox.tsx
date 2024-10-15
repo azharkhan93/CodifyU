@@ -33,7 +33,7 @@ export const StyledInputBox = styled.input.withConfig(
   ${width}
   height: 40px;
   outline: none;
-  font-family: DMSansRegular;
+  font-family: ComfortaaRegular;
   font-size: 15px;
   padding-left: ${BASE_SPACING.l}px;
   ${border}
@@ -43,7 +43,7 @@ export const StyledInputBox = styled.input.withConfig(
   ${color}
   &::placeholder {
     color: ${BASE_COLORS.grey};
-    font-family: DMSansRegular;
+    font-family: ComfortaaRegular;
     font-size: 15px;
   }
   &::-webkit-file-upload-button {
