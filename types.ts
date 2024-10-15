@@ -214,3 +214,12 @@ export type AiDataCardsProps = {
   headingText: string;
   descriptionText: string;
 }
+
+export type UpdateFormValues = {
+  name?: string;
+  lastName?: string; 
+  email?: string;
+  phone?: string;
+  subject?: string; 
+   message?: string;
+};

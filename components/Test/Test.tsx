@@ -14,15 +14,9 @@ import * as Yup from "yup";
 import axios from "axios"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { UpdateFormValues } from "@/types";
 
-type UpdateFormValues = {
-  name?: string;
-  lastName?: string; 
-  email?: string;
-  phone?: string;
-  subject?: string; 
-   message?: string;
-};
+
 
 type UpdateComponentProps = {
   data?: UpdateFormValues;
