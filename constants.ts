@@ -189,22 +189,22 @@ export const services = [
     link: "/services/llms-and-nlp", 
   },
   {
+    title: "Data Analytics & Predictive Modeling",
+    description:
+      "We enable smarter, data-driven decisions through advanced analytics and predictive models, fueling real-time growth.",
+    icon: MdOutlineDeveloperMode,
+    linkText: "Learn more",
+    link: "/services/data-analytics-and-predictive-modeling", 
+  },
+  {
     title: "DevOps and MLOps",
     description:
-      "We accelerate development, automating infrastructure & software pipelines to reduce time-to-market and enhance software & ML model quality.",
+      "At codefyU, we streamline DevOps and MLOps to automate pipelines, speeding up development and improving software and ML model quality.",
     icon: AiFillApi,
     linkText: "Learn more",
     link: "/services/dev-ops-and-ml-ops",
   },
  
-  {
-    title: "Data Analytics and Predictive Modeling",
-    description:
-      "Data is at the core of decision-making, and at codefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation",
-    icon: MdOutlineDeveloperMode,
-    linkText: "Learn more",
-    link: "/services/data-analytics-and-predictive-modeling", 
-  },
   
 ];
 
