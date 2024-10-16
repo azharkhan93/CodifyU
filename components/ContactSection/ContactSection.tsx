@@ -23,8 +23,8 @@ export const ContactSection = () => {
         gap={"l"}
       >
         <Column gap={["xl", "m"]}>
-          <Text variant={"heading"}>Any Queries? Talk To Us!</Text>
-          <Text variant={"body"} width={["100%", "670px"]} lineHeight={"1.5"}>
+          <Text variant={"heading"} textAlign={["center","start"]}>Any Queries? Talk To Us!</Text>
+          <Text variant={"body"} width={["100%", "670px"]} lineHeight={"1.5"} textAlign={["center", "start"]}>
             Our Team model offers a proven pathway to success. Our team is ready
             to provide client references, estimate your project, or answer any
             other queries.

@@ -30,7 +30,7 @@ export const OurWorkSpaceSection = () => {
             <Text
               variant={"body"}
               lineHeight={"1.5"}
-              textAlign={["start", "center"]}
+              textAlign={"center"}
               width={["100%", "650px"]}
             >
               At <span style={{ color: "#fb9c42", fontSize: "22px" }}>codefyU</span>, we know that our success is built on the strength and
