@@ -107,52 +107,57 @@ export const NavbarData = [
 
 
 export const PARTNER_LOGOS = [
-  {
-    src: "/clientlogos/g23.webp",
-    alt: "Logo 1",
-  },
-  {
-    src: "/clientlogos/airlines.webp",
-    alt: "Logo 2",
-  },
+//   {
+//     src: "/clientlogos/g23.webp",
+//     alt: "Logo 1",
+//   },
+//   {
+//     src: "/clientlogos/airlines.webp",
+//     alt: "Logo 2",
+//   },
+// {
+//   src: "/clientlogos/tint.png",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/mgm1.jpg",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/LogoMain.png",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/zurich.jpg",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/its.jpg",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/john.png",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/mindgeek.jpg",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/square.jpg",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/start.jpg",
+//    alt: "Logo 3"
+// },
+// {
+//   src: "/clientlogos/ad.webp",
+//    alt: "Logo 3"
+// },
+
 {
-  src: "/clientlogos/tint.png",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/mgm1.jpg",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/LogoMain.png",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/zurich.jpg",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/its.jpg",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/john.png",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/mindgeek.jpg",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/square.jpg",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/start.jpg",
-   alt: "Logo 3"
-},
-{
-  src: "/clientlogos/ad.webp",
+  src: "/clientlogos2/1.png",
    alt: "Logo 3"
 },
 ];
