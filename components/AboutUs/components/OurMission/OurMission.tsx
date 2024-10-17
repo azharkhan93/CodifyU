@@ -41,7 +41,7 @@ export const OurMission = () => {
                   fontFamily: "ComfortaaMedium",
                 }}
               >
-                codefyU
+                {" "}codefyU {" "}
               </span>
                is a specialized technology partner, focused on delivering rapid
               and scalable solutions that drive succes.
@@ -76,8 +76,8 @@ export const OurMission = () => {
             description={
               <>
                 At{" "}
-                <span style={{ color: "#fb9c42", fontSize: "22px" }}>
-                  codefyU
+                <span style={{ color: "#fb9c42", fontSize: "22px", fontFamily: "ComfortaaMedium" }}>
+                {" "} codefyU {" "}
                 </span>
                  we are committed to enabling startups to achieve their fullest
                 potential. Through our expertise in AI, Machine Learning, and
