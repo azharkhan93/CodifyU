@@ -21,6 +21,7 @@ import {
 import { NavbarData } from "@/constants";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/contexts";
+import Map from "../NewMap";
 
 export const Footer = () => {
   const router = useRouter();
@@ -39,7 +40,7 @@ export const Footer = () => {
         <CenterBox
           zIndex={1}
           borderBottom={"2px solid #fb9c42"}
-          py={["xxxl", "xxl"]}
+          py={["xl", "xxl"]}
           flexDirection={["column", "column"]}
           px={["s", "xxxl"]}
           mx={["none", "xxxxl"]}
@@ -77,50 +78,55 @@ export const Footer = () => {
               }}
             />
             <Link href="/contact" passHref style={{ textDecoration: "none" }}>
-
-            <Button
-              variant="primary"
-              borderRadius={"circle"}
-              py={"s"}
-              px={"xl"}
-              // onClick={openModal}
-              bg={"textColor"}
-            >
-              Get In Touch
-            </Button>
+              <Button
+                variant="primary"
+                borderRadius={"circle"}
+                py={"s"}
+                px={"xl"}
+                // onClick={openModal}
+                bg={"textColor"}
+              >
+                Get In Touch
+              </Button>
             </Link>
           </Box>
         </CenterBox>
-        <CenterBox width={"100%"} py={"xl"}>
-          <Link href="/" passHref style={{ textDecoration: "none" }}>
-            <Image
-              src="/images/logo.svg"
-              alt="Logo Missing"
-              width={230}
-              height={100}
-            />
-          </Link>
-        </CenterBox>
 
         <Box
+        
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
           alignItems={"center"}
           width={"100%"}
-          py={"xxxxl"}
-          gap={"xxl"}
+          py={["xl","xxxxl"]}
+          gap={["xxxxl","xxl"]}
           px={"l"}
           borderBottom={"2px solid #fb9c42"}
         >
-          <Box gap={"xxl"} alignItems={"flex-start"} width={["100%", "450px"]}>
-            <Text variant="subHeading">Quick Links</Text>
+          <Box width={["100%","550px"]} alignItems={"center"}>
+            <Link href="/" passHref style={{ textDecoration: "none" }}>
+              <Image
+                src="/images/logo.svg"
+                alt="Logo Missing"
+                width={230}
+                height={100}
+              />
+            </Link>
+            <Text variant={"body"} lineHeight={"1.5"} textAlign={"center"}>
+            We dont just deliver solutions! We tailor them to your vision. Your
+    success is our mission. For our clients, we break the mold!
+            </Text>
+          </Box>
+
+          <Box gap={"xxl"}  width={["100%", "600px"]}>
+            <Text variant="subHeading" textAlign={["start","center"]}>Quick Links</Text>
             <Row
-              flexDirection={"row"}
+              flexDirection={"column"}
               gap={"xl"}
               flexWrap={"wrap"}
-              alignItems={"center"}
+              alignItems={["flex-start", "center"]}
             >
-              {NavbarData.map((item, index) => (
+              {NavbarData.slice(0, 3).map((item, index) => (
                 <StyledLink key={index} onClick={() => navigateTo(item.link)}>
                   <Row alignItems={"center"} flexDirection={"row"} gap={"l"}>
                     <item.icon size={20} fill="#fb9c42" />
@@ -130,15 +136,19 @@ export const Footer = () => {
               ))}
             </Row>
           </Box>
-          <Box gap={"xxxl"} width={["100%", "540px"]} flexWrap={"wrap"}>
-            <Box alignItems={["flex-start", "flex-start"]}>
-              <Text variant={"subHeading"}>Contact Us</Text>
-            </Box>
+
+          <Box gap={"xxxl"} width={["100%", "400px"]} flexWrap={"wrap"}>
+          
+              <Text variant={"subHeading"} textAlign={["start","center"]}>
+                Contact Us
+              </Text>
+          
 
             <Row
-              flexDirection={"row"}
+              flexDirection={"column"}
               gap={"xxxl"}
-              alignItems={"center"}
+              alignItems={["flex-start", "center"]}
+             
               flexWrap={["wrap", "nowrap"]}
             >
               <Text
@@ -155,7 +165,7 @@ export const Footer = () => {
               </Text>
               <Text
                 variant={"body"}
-                style={{ display: "flex", alignItems: "center" }}
+                
               >
                 <FaPhoneAlt style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
@@ -167,7 +177,8 @@ export const Footer = () => {
               </Text>
               <Text
                 variant={"body"}
-                style={{ display: "flex", alignItems: "center" }}
+                style={{display: "flex", alignItems: "center"}}
+                
               >
                 <FaEnvelope style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
@@ -180,13 +191,13 @@ export const Footer = () => {
             </Row>
           </Box>
           <Box
-          width={["100%", "300px"]}
+           width={["100%", "400px"]}
             gap={"xxl"}
-            alignItems={["flex-start", "flex-start"]}
+            alignItems={["flex-start", "center"]}
             flexDirection={"column"}
           >
             <Text variant="subHeading">Follow Us</Text>
-            <Row flexDirection={"row"} gap={"xl"}>
+            <Row flexDirection={"column"} gap={"xl"}>
               <Text
                 variant="body"
                 style={{ display: "flex", alignItems: "center" }}
@@ -233,7 +244,11 @@ export const Footer = () => {
               </Text>
             </Row>
           </Box>
+          {/* <Box gap={"xxl"} alignItems={"center"} width={["100%", "480px"]} >
+           <Map />
+          </Box> */}
         </Box>
+
         <CenterBox py={"l"} zIndex={1}>
           <Text variant={"body"}>
             © 2024{" "}

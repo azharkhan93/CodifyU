@@ -9,3 +9,4 @@ export * from "./StyledModal";
 export * from "./StyledAnimations"
 export * from "./AnimationBox"
 export * from "./StyledTextArea"
+export * from './HighlightedText'

@@ -19,7 +19,7 @@ export const STATS_DATA = [
   },
   {
     id: 3,
-    heading: "$200M",
+    heading: "$200m",
     subHeading: "Million Value Generation",
     image: "/websiteimages/27.png",
   },
@@ -208,28 +208,7 @@ export const services = [
   
 ];
 
-export const faqItems = [
-  {
-    question: "How Can I Request a Software Solution from Your Company?",
-    answer:
-      "You can request a software solution by visiting our website and exploring the various services we offer. Once you find the service that fits your needs, you can contact us through our online form or directly schedule a consultation. We'll discuss your requirements and provide a tailored solution.",
-  },
-  {
-    question: "What Types of Software Solutions Do You Offer?",
-    answer:
-      "We offer a wide range of software solutions, including custom software development, mobile app development, cloud solutions, and IT consulting. Our team specializes in creating tailored solutions to meet the specific needs of different industries.",
-  },
-  {
-    question: "Do You Provide Ongoing Support After the Software is Delivered?",
-    answer:
-      "Yes, we provide comprehensive support and maintenance services after the software is delivered. Our team is available to assist with updates, troubleshooting, and any additional modifications that may be needed as your business evolves.",
-  },
-  {
-    question: "What Payment Methods Do You Accept for Your Services?",
-    answer:
-      "We accept multiple payment methods, including online payments through credit/debit cards, PayPal, and bank transfers. We also offer flexible payment plans to accommodate the needs of our clients.",
-  },
-];
+
 export const workCardItems = [
   {
     step: 1,
@@ -341,7 +320,7 @@ export const contactData = [
     id: 4,
     icon: FaMapMarkerAlt,
     text: "Rajbagh Near Hurriyat Office, Srinagar",
-    link: "https://www.google.com/maps/search/?api=1&query=Rajbagh+Near+Hurriyat+Office,+Srinagar",
+    link: "https://maps.apple.com/?address=Hurriyat%20Road,%20Kursoo,%20Srinagar&ll=34.065499,74.831561&q=My%20Location&t=m",
   },
 ];
 
@@ -538,7 +517,7 @@ export const servicesData: Service4[] = [
       "codefyU specializes in designing advanced generative AI models that revolutionize content creation. From personalized marketing to automated content generation, our models are tailored to meet the creative needs of your business.",
     icon: GiArtificialIntelligence,
     arrowIcon: MdOutlineArrowOutward,
-    image: "/images/data1.webp", 
+    image: "/images/aboutimg.pngp", 
   },
   {
     id: 2,

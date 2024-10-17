@@ -1,12 +1,6 @@
 "use client";
-import styled from "styled-components";
-import { Box, Button, CenterBox, Column, Row, Text } from "../styled";
+import { Box, Button, CenterBox, Column, HighlightedText, Row, Text } from "../styled";
 
-const HighlightedText = styled.span`
-  color: orange;
-  font-family: "ComfortaaMedium";
-  font-size: 2rem;
-`;
 
 export const ParallaxSection = ({
   spanText = "Ready to Elevate?", 
@@ -28,7 +22,7 @@ export const ParallaxSection = ({
     >
       <Column py={"xxxl"} alignItems={"center"} gap={"xl"}>
         <Text variant={"heading"} textAlign={"center"} width={["100%","600px"]} lineHeight={"1.5"}>
-          <HighlightedText>{spanText}</HighlightedText>{" "}
+          <HighlightedText >{spanText}</HighlightedText>{" "}
           {heading}
         </Text>
         

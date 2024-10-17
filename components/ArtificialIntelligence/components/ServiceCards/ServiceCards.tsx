@@ -19,12 +19,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
       py={"xxxl"}
       gap={"xl"}
       position="relative"
-      style={{
-        backgroundImage: `url(${image})`, 
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
+   
     >
       <Column
         position={"relative"}
@@ -32,9 +27,16 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
         width={["100%", "490px"]}
         py={["xxl", "xxxl"]}
         gap={"l"}
-        bg={"background"}
+        // bg={"background"}
         borderBottomRightRadius={["s", "xl"]}
         borderTopRightRadius={["s", "xl"]}
+        style={{
+          background: "rgba(255, 255, 255, 0.1)", 
+  backdropFilter: "blur(5px)", 
+  WebkitBackdropFilter: "blur(10px)", 
+  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", 
+  
+          }}
       >
         <Row
           justifyContent={"space-between"}
