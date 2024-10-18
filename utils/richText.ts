@@ -153,7 +153,7 @@ function processRichText(richTextArray: any[]): string {
         const annotations = text.annotations;
         let style = "";
 
-        // Apply styles based on annotations
+        
         if (annotations.color && annotations.color !== "default") {
           style += `color: ${annotations.color};`;
         }
@@ -174,18 +174,18 @@ function processRichText(richTextArray: any[]): string {
           style += `text-decoration: line-through;`;
         }
 
-        // Only apply font-size if there are annotations (highlighted text in paragraphs)
+        
         const fontSize = annotations.bold || annotations.italic || annotations.underline || annotations.strikethrough
           ? "font-size: 23px;"
           : "";
 
-        // Process URLs in the text content
+        
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         let processedContent = content.replace(urlPattern, (url: string) => {
           return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
         });
 
-        // Apply the style only to the highlighted part inside the <span>
+       
         return `<span style="${style} ${fontSize} font-family: ${BASE_TEXT_VARIANTS.body.fontFamily};">${processedContent}</span>`;
       }
       return "";
