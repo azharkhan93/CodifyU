@@ -29,7 +29,7 @@ export const ValueCards: React.FC<ValueCardProps> = ({
       <Text variant={"subHeading"} textAlign={"center"} fontWeight={"bold"} >
         {title}
       </Text>
-      <Text variant={"body"} textAlign={"center"}>
+      <Text variant={"body"} textAlign={"center"} lineHeight={"1.5"}>
         {" "}
         {title2}
       </Text>

@@ -49,7 +49,7 @@ export const VALUES_DATA = [
   {
     id: 4,
     title: "Quality and Savings",
-    title2: "Getting high-quality tech services without breaking thebank. We offer PREMIUM services at a fraction of the cost of in-house teams.",
+    title2: "Getting high-quality tech services without breaking thebank. We offer premium services at a fraction of the cost of in-house teams.",
     icon: FaRegHandPaper, 
   },
 ];
