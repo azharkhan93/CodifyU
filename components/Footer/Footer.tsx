@@ -183,7 +183,7 @@ export const Footer = () => {
                       />
                     )}
                   </Box>
-                  <Text variant={"body"} fontFamily={"ComfortaaMedium"}>
+                  <Text variant={"body"} >
                     <a
                       href={detail.href}
                       style={{

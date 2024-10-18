@@ -49,7 +49,7 @@ export const ContactSection = () => {
                   href="https://www.instagram.com/codefyutech/profilecard/?igsh=MWZrMm5ndm5nd2Nubg=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "black", }}
                 >
                   <FaInstagram size={32} fill="#fb9c42" />
                 </a>

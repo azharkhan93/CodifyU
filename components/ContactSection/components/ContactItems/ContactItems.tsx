@@ -15,14 +15,14 @@ export const ContactItems: React.FC<ContactItemProps> = ({
         {text.startsWith("+") ? (
           <a
             href={`tel:${text}`}
-            style={{ color: "black", textDecoration: "none", }}
+            style={{ color: "black", textDecoration: "none",fontFamily: "ComfortaaMedium", }}
           >
             {text}
           </a>
         ) : text.includes("@") ? (
           <a
             href={`mailto:${text}`}
-            style={{ color: "black", textDecoration: "none", }}
+            style={{ color: "black", textDecoration: "none", fontFamily: "ComfortaaMedium", }}
           >
             {text}
           </a>
@@ -31,7 +31,7 @@ export const ContactItems: React.FC<ContactItemProps> = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "black", textDecoration: "none", }}
+            style={{ color: "black", textDecoration: "none",  fontFamily: "ComfortaaMedium",}}
           >
             {text}
           </a>
