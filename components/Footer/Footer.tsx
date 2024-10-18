@@ -18,7 +18,7 @@ import {
   FaLinkedin,
   FaPhoneAlt,
 } from "react-icons/fa";
-import { NavbarData } from "@/constants";
+import { NavbarData, contactDetails } from "@/constants";
 import { useRouter } from "next/navigation";
 import { useModal } from "@/contexts";
 import Map from "../NewMap";
@@ -111,13 +111,21 @@ export const Footer = () => {
                 height={100}
               />
             </Link>
-            <Text variant={"subHeading"} lineHeight={"1.5"} textAlign={"center"}>
+            <Text
+              variant={"subHeading"}
+              lineHeight={"1.5"}
+              textAlign={"center"}
+            >
               Startup Accelerator: Seamless Tech Solutions that Scale
             </Text>
           </Box>
 
           <Box gap={"xxl"} width={["100%", "600px"]}>
-            <Text variant="heading" textAlign={["start", "center"]} fontWeight={"bold"}>
+            <Text
+              variant="heading"
+              textAlign={["start", "center"]}
+              fontWeight={"bold"}
+            >
               Quick Links
             </Text>
             <Row
@@ -128,7 +136,7 @@ export const Footer = () => {
             >
               {NavbarData.slice(0, 3).map((item, index) => (
                 <StyledLink key={index} onClick={() => navigateTo(item.link)}>
-                  <Row alignItems={"center"} flexDirection={"row"} gap={"l"}>
+                  <Row alignItems={"center"} flexDirection={"row"} gap={"l"} style={{fontFamily: "ComfortaaMedium"}} >
                     <item.icon size={20} fill="#fb9c42" />
                     {item.title}
                   </Row>
@@ -138,7 +146,11 @@ export const Footer = () => {
           </Box>
 
           <Box gap={"xxxl"} width={["100%", "400px"]} flexWrap={"wrap"}>
-            <Text variant="heading" textAlign={["start", "center"]} fontWeight={"bold"}>
+            <Text
+              variant="heading"
+              textAlign={["start", "center"]}
+              fontWeight={"bold"}
+            >
               Contact Us
             </Text>
 
@@ -148,39 +160,43 @@ export const Footer = () => {
               alignItems={["flex-start", "center"]}
               flexWrap={["wrap", "nowrap"]}
             >
-              <Text
-                variant={"body"}
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                <FaPhoneAlt style={{ marginRight: "8px" }} fill="#fb9c42" />
-                <a
-                  href="tel:+917006168185"
-                  style={{ color: "black", textDecoration: "none" }}
+              {contactDetails.map((detail, index) => (
+                <Row
+              
+                  key={index}
+                  flexDirection={"row"}
+                  width={"200px"}
+                  gap={"l"}
+                  alignItems={"center"}
+                 
                 >
-                  +91 9515888396
-                </a>
-              </Text>
-              <Text variant={"body"}>
-                <FaPhoneAlt style={{ marginRight: "8px" }} fill="#fb9c42" />
-                <a
-                  href="tel:+917006569557"
-                  style={{ color: "black", textDecoration: "none" }}
-                >
-                  +91 88994 92805
-                </a>
-              </Text>
-              <Text
-                variant={"body"}
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                <FaEnvelope style={{ marginRight: "8px" }} fill="#fb9c42" />
-                <a
-                  href="mailto:info@codefyu.com"
-                  style={{ color: "black", textDecoration: "none" }}
-                >
-                  info@codefyu.com
-                </a>
-              </Text>
+                  <Box>
+                    {detail.icon === "phone" ? (
+                      <FaPhoneAlt
+                        fill="#fb9c42"
+                        
+                      />
+                    ) : (
+                      <FaEnvelope
+                        fill="#fb9c42"
+                        style={{ marginRight: "8px" }}
+                      />
+                    )}
+                  </Box>
+                  <Text variant={"body"} fontFamily={"ComfortaaMedium"}>
+                    <a
+                      href={detail.href}
+                      style={{
+                        color: "black",
+                        textDecoration: "none",
+                        fontFamily: "ComfortaaMedium",
+                      }}
+                    >
+                      {detail.contact}
+                    </a>
+                  </Text>
+                </Row>
+              ))}
             </Row>
           </Box>
           <Box
@@ -189,7 +205,13 @@ export const Footer = () => {
             alignItems={["flex-start", "center"]}
             flexDirection={"column"}
           >
-            <Text variant="heading" textAlign={["start", "center"]} fontWeight={"bold"}>Follow Us</Text>
+            <Text
+              variant="heading"
+              textAlign={["start", "center"]}
+              fontWeight={"bold"}
+            >
+              Follow Us
+            </Text>
             <Row flexDirection={"column"} gap={"xl"}>
               <Text
                 variant="body"
@@ -200,7 +222,7 @@ export const Footer = () => {
                   href="https://www.linkedin.com/company/codefyu/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "black", fontFamily: "ComfortaaMedium", }}
                 >
                   LinkedIn
                 </a>
@@ -215,7 +237,7 @@ export const Footer = () => {
                   href="https://www.instagram.com/codefyutech/profilecard/?igsh=MWZrMm5ndm5nd2Nubg=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "black", fontFamily: "ComfortaaMedium", }}
                 >
                   Instagram
                 </a>

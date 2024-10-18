@@ -661,3 +661,27 @@ export const servicesData: Service4[] = [
 ];
 
 
+
+export const contactDetails = [
+  {
+    type: "phone",
+    icon: "phone",
+    contact: "+91 9515888396",
+    href: "tel:+919515888396",
+  },
+  {
+    type: "phone",
+    icon: "phone",
+    contact: "+91 88994 92805",
+    href: "tel:+918899492805",
+  },
+  {
+    type: "email",
+    icon: "email",
+    contact: "info@codefyu.com",
+    href: "mailto:info@codefyu.com",
+  },
+];
+
+
+
