@@ -24,6 +24,7 @@ export function extractRichText(blocks: any[]): string[] {
           const headingLevel = block.type.replace("heading_", "h");
           const headingStyle = getHeadingStyle(block.type);
 
+          // No changes to headings, keep as is
           currentContent.push(
             `<${headingLevel} style="${headingStyle} margin: 0;">${lastHeading}</${headingLevel}>`
           );
@@ -41,6 +42,7 @@ export function extractRichText(blocks: any[]): string[] {
 
         case "paragraph":
           const paragraphText = processRichText(block.paragraph.rich_text);
+          // Only apply font-size: 23px to highlighted parts in the paragraph, not the entire text
           currentContent.push(
             `<p style="font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px; line-height: 1.5; margin: 0;">${paragraphText}</p>`
           );
@@ -121,6 +123,7 @@ export function extractRichText(blocks: any[]): string[] {
   }
 }
 
+
 function buildContentImageHtml(
   content: string[],
   images: string[],
@@ -148,40 +151,52 @@ function processRichText(richTextArray: any[]): string {
       if (text.type === "text") {
         const content = text.text.content;
         const annotations = text.annotations;
-        let style = `font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px;`; // Default font style
+        let style = "";
 
+        // Apply styles based on annotations
         if (annotations.color && annotations.color !== "default") {
           style += `color: ${annotations.color};`;
         }
+
         if (annotations.bold) {
           style += `font-weight: bold;`;
         }
+
         if (annotations.italic) {
           style += `font-style: italic;`;
         }
+
         if (annotations.underline) {
           style += `text-decoration: underline;`;
         }
+
         if (annotations.strikethrough) {
           style += `text-decoration: line-through;`;
         }
 
-        
-        if (annotations.bold || annotations.color !== "default") {
-          style += `font-family: ${BASE_TEXT_VARIANTS.heading.fontFamily}; font-size: 23px; color: orange;`;
-        }
+        // Only apply font-size if there are annotations (highlighted text in paragraphs)
+        const fontSize = annotations.bold || annotations.italic || annotations.underline || annotations.strikethrough
+          ? "font-size: 23px;"
+          : "";
 
+        // Process URLs in the text content
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         let processedContent = content.replace(urlPattern, (url: string) => {
           return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
         });
 
-        return `<span style="${style}">${processedContent}</span>`;
+        // Apply the style only to the highlighted part inside the <span>
+        return `<span style="${style} ${fontSize} font-family: ${BASE_TEXT_VARIANTS.body.fontFamily};">${processedContent}</span>`;
       }
       return "";
     })
     .join(" ");
 }
+
+
+
+
+
 
 function getStyles(): string {
   return `<style>
