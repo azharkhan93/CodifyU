@@ -17,7 +17,7 @@ export const AboutUs = () => {
             textAlign={"center"}
             variant={["heading", "footerHeading"]}
           >
-            {`We Don’t Just Deliver Solutions We Tailor Them To Your Vision. Your
+            {`We Don’t Just Deliver Solutions We Tailor Them To Your Vision  Your
             Success Is Our Mission!`}
           </Text>
           <Text textAlign={ "center"} variant={"body"} lineHeight={"1.5"} width={["100%","685px"]}>

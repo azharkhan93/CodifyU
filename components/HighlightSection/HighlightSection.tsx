@@ -7,12 +7,14 @@ import { HighlightSectionProps } from "@/types";
 
 
 
-export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 3, showButton = true }) => {
+export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 4, showButton = true }) => {
   return (
     <Column
       width={"100%"}
       position={"relative"}
       py={"header"}
+      alignItems={"center"}
+      justifyContent={"center"}
     >
       <Column
         zIndex={2}
@@ -38,9 +40,10 @@ export const HighlightSection: React.FC<HighlightSectionProps> = ({ cardLimit = 
       <Row
         flexWrap={"wrap"}
         alignItems={"center"}
-        width={"100%"}
+        width={"90%"}
         justifyContent={"center"}
         flexDirection={"row"}
+        px={["none","header"]}
         gap={["xl", "xl"]}
         py={["xxxxl", "xxxl"]}
       >

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Box, Button, CenterBox, Column, Text } from "../styled";
 import Link from "next/link";
 
-const texts = ["AI/ML", "Gen AI", "LLMs"];
+const texts = ["AI/ML", "DevOps & MLOps", "LLMs", "DA & PM"];
 
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);

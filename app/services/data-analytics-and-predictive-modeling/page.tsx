@@ -15,7 +15,7 @@ export default function Data() {
             endIndex: 12,
             headingText: "Data Analytics & Predictive Modeling",
             descriptionText:
-              "Data is at the core of decision-making, and at CodefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation.",
+              "Data is at the core of decision-making, and at codefyU, we help businesses harness the power of their data through advanced analytics and predictive modeling. Our data solutions empower companies to make real-time, data-driven decisions that propel growth and innovation.",
           }}
           aiAdvantages={aiAdvantagesDataSet2}
           imageSrc="/images/tech6.png"

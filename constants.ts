@@ -9,7 +9,7 @@ export const STATS_DATA = [
     id: 1,
     heading: "9+years",
     subHeading: "In Business",
-    image: "/websiteimages/25.png", 
+    image: "/websiteimages/9.png", 
   },
   {
     id: 2,
@@ -310,7 +310,7 @@ export const contactData = [
   {
     id: 2,
     icon: FaPhoneAlt,
-    text: "+91 7780892868",
+    text: "+91 88994 92805",
   },
   {
     id: 3,
@@ -360,7 +360,7 @@ export const workSpaceData = [
   {
     heading: "Well-Being",
     description:
-      "We prioritize a healthy work-life balance and the growth of every employee. At CodefyU, we ensure that everyone feels valued and supported in both their personal and professional journey.",
+      "We prioritize a healthy work-life balance and the growth of every employee. At codefyU, we ensure that everyone feels valued and supported in both their personal and professional journey.",
       workImage: "/websiteimages/17.png",
   },
   {

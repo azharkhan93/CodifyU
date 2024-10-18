@@ -93,17 +93,16 @@ export const Footer = () => {
         </CenterBox>
 
         <Box
-        
           flexDirection={["column", "row"]}
           justifyContent={"space-between"}
           alignItems={"center"}
           width={"100%"}
-          py={["xl","xxxxl"]}
-          gap={["xxxxl","xxl"]}
+          py={["xl", "xxxxl"]}
+          gap={["xxxxl", "xxl"]}
           px={"l"}
           borderBottom={"2px solid #fb9c42"}
         >
-          <Box width={["100%","550px"]} alignItems={"center"}>
+          <Box width={["100%", "550px"]} alignItems={"center"}>
             <Link href="/" passHref style={{ textDecoration: "none" }}>
               <Image
                 src="/images/logo.svg"
@@ -112,14 +111,15 @@ export const Footer = () => {
                 height={100}
               />
             </Link>
-            <Text variant={"body"} lineHeight={"1.5"} textAlign={"center"}>
-            We dont just deliver solutions! We tailor them to your vision. Your
-    success is our mission. For our clients, we break the mold!
+            <Text variant={"subHeading"} lineHeight={"1.5"} textAlign={"center"}>
+              Startup Accelerator: Seamless Tech Solutions that Scale
             </Text>
           </Box>
 
-          <Box gap={"xxl"}  width={["100%", "600px"]}>
-            <Text variant="subHeading" textAlign={["start","center"]}>Quick Links</Text>
+          <Box gap={"xxl"} width={["100%", "600px"]}>
+            <Text variant="heading" textAlign={["start", "center"]} fontWeight={"bold"}>
+              Quick Links
+            </Text>
             <Row
               flexDirection={"column"}
               gap={"xl"}
@@ -138,17 +138,14 @@ export const Footer = () => {
           </Box>
 
           <Box gap={"xxxl"} width={["100%", "400px"]} flexWrap={"wrap"}>
-          
-              <Text variant={"subHeading"} textAlign={["start","center"]}>
-                Contact Us
-              </Text>
-          
+            <Text variant="heading" textAlign={["start", "center"]} fontWeight={"bold"}>
+              Contact Us
+            </Text>
 
             <Row
               flexDirection={"column"}
               gap={"xxxl"}
               alignItems={["flex-start", "center"]}
-             
               flexWrap={["wrap", "nowrap"]}
             >
               <Text
@@ -163,22 +160,18 @@ export const Footer = () => {
                   +91 9515888396
                 </a>
               </Text>
-              <Text
-                variant={"body"}
-                
-              >
+              <Text variant={"body"}>
                 <FaPhoneAlt style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
                   href="tel:+917006569557"
                   style={{ color: "black", textDecoration: "none" }}
                 >
-                  +91 7780892868
+                  +91 88994 92805
                 </a>
               </Text>
               <Text
                 variant={"body"}
-                style={{display: "flex", alignItems: "center"}}
-                
+                style={{ display: "flex", alignItems: "center" }}
               >
                 <FaEnvelope style={{ marginRight: "8px" }} fill="#fb9c42" />
                 <a
@@ -191,12 +184,12 @@ export const Footer = () => {
             </Row>
           </Box>
           <Box
-           width={["100%", "400px"]}
+            width={["100%", "400px"]}
             gap={"xxl"}
             alignItems={["flex-start", "center"]}
             flexDirection={"column"}
           >
-            <Text variant="subHeading">Follow Us</Text>
+            <Text variant="heading" textAlign={["start", "center"]} fontWeight={"bold"}>Follow Us</Text>
             <Row flexDirection={"column"} gap={"xl"}>
               <Text
                 variant="body"

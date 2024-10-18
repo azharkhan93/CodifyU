@@ -11,7 +11,7 @@ export default function Services() {
             endIndex: 4,
             headingText: "Accelerate Your Business with AI",
             descriptionText:
-              "Unlock the full potential of AI technology to transform your business. Let codefyu Software help you gain a competitive edge, boost efficiency, and stay ahead in the ever-evolving digital landscape.",
+              "Unlock the full potential of AI technology to transform your business. Let codefyU Software help you gain a competitive edge, boost efficiency, and stay ahead in the ever-evolving digital landscape.",
           }}
           aiAdvantages={aiAdvantages}
           imageSrc="/images/tech6.png"

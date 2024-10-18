@@ -140,38 +140,43 @@ function buildImagesRowHtml(images: string[]): string {
           </div>`;
 }
 
+
+
 function processRichText(richTextArray: any[]): string {
   return richTextArray
     .map((text) => {
       if (text.type === "text") {
         const content = text.text.content;
         const annotations = text.annotations;
-        let colorStyle = "";
+        let style = `font-family: ${BASE_TEXT_VARIANTS.body.fontFamily}; font-size: ${BASE_TEXT_VARIANTS.body.fontSize}px;`; // Default font style
 
         if (annotations.color && annotations.color !== "default") {
-          colorStyle = `color: ${annotations.color};`;
+          style += `color: ${annotations.color};`;
+        }
+        if (annotations.bold) {
+          style += `font-weight: bold;`;
+        }
+        if (annotations.italic) {
+          style += `font-style: italic;`;
+        }
+        if (annotations.underline) {
+          style += `text-decoration: underline;`;
+        }
+        if (annotations.strikethrough) {
+          style += `text-decoration: line-through;`;
         }
 
-        const highlightedPattern = /(\*\*[^*]+\*\*)/g;
-        const urlPattern = /(https?:\/\/[^\s]+)/g;
+        
+        if (annotations.bold || annotations.color !== "default") {
+          style += `font-family: ${BASE_TEXT_VARIANTS.heading.fontFamily}; font-size: 23px; color: orange;`;
+        }
 
-        const highlightedText = content.replace(
-          highlightedPattern,
-          (match: string) =>
-            `<span style="color: orange; font-family: ${
-              BASE_TEXT_VARIANTS.heading.fontFamily
-            };">${match.replace(/\*\*/g, "")}</span>`
-        );
-        return highlightedText
-          .replace(
-            urlPattern,
-            (url: string) =>
-              `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`
-          )
-          .replace(
-            content,
-            `<span style="${colorStyle} font-family: ${BASE_TEXT_VARIANTS.body.fontFamily};">${content}</span>`
-          );
+        const urlPattern = /(https?:\/\/[^\s]+)/g;
+        let processedContent = content.replace(urlPattern, (url: string) => {
+          return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
+        });
+
+        return `<span style="${style}">${processedContent}</span>`;
       }
       return "";
     })

@@ -11,7 +11,7 @@ export default function Services() {
             endIndex: 8,
             headingText: "Large Language Models (LLMs) and NLP",
             descriptionText:
-              "CodefyU is at the forefront of Natural Language Processing (NLP) and Large Language Models (LLMs). Our team leverages the latest advancements in AI to create conversational interfaces, chatbots, and domain-specific models that understand and respond to human language with accuracy and context.",
+              "codefyU is at the forefront of Natural Language Processing (NLP) and Large Language Models (LLMs). Our team leverages the latest advancements in AI to create conversational interfaces, chatbots, and domain-specific models that understand and respond to human language with accuracy and context.",
           }}
           aiAdvantages={aiAdvantagesDataSet3}
           imageSrc="/images/tech6.png"
@@ -20,7 +20,7 @@ export default function Services() {
         />
 
         <ParallaxSection
-          heading="Any Queries React Out To Us"
+          heading="Any Queries Reach Out To Us"
           buttonText="Start Collaborating"
           animationSrc="https://lottie.host/embed/d11bd612-2169-4a1e-bed7-ad75ecbf7fa5/JtCPghDIUo.json"
         />

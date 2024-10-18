@@ -21,8 +21,7 @@ export const TechStacks = () => {
           width={["100%", "600px"]}
           textAlign={ "center"}
         >
-          We are proud to collaborate with some of the most innovative and
-          esteemed companies in the industry.
+        {`Harnessing The Most Advanced Tech Stack's To Drive Innovation And Excellence.`}
         </Text>
       </Column>
 

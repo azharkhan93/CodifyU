@@ -47,12 +47,12 @@ export const AboutCards = () => {
           Beyond Technology Your Competitive Edge for Growth
         </Text>
         <Text variant={"body"} width={["100%", "600px"]} lineHeight={"1.5"} >
-          At codefyU we dont just deliver technology we forge strategic
+          {`At codefyU we dont just deliver technology we forge strategic
           partnerships that advance your business. Our client-centric solutions
           are tailored to your vision, ensuring swift, reliable outcomes.
-          Leveraging Indias top talent, we provide cutting-edge services that
+          Leveraging India’s  top talent, we provide cutting-edge services that
           save you time and resources, offering end-to-end development for
-          seamless execution, here is what you can expect
+          seamless execution, here is what you can expect`}
         </Text>
 
         {featuredData.map(({ id, icon, title, description }) => (

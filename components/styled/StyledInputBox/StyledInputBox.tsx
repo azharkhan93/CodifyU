@@ -42,7 +42,7 @@ export const StyledInputBox = styled.input.withConfig(
   ${space}
   ${color}
   &::placeholder {
-    color: ${BASE_COLORS.grey};
+    color: ${BASE_COLORS.textColor};
     font-family: ComfortaaRegular;
     font-size: 15px;
   }

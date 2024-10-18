@@ -33,7 +33,7 @@ export const StyledTextarea = styled.textarea.withConfig(
   ${width}
   min-height: 100px;
   outline: none;
-  font-family: DMSansRegular;
+  font-family: ComfortaaRegular;
   font-size: 15px;
   padding: ${BASE_SPACING.m}px; 
   ${border}
@@ -43,8 +43,8 @@ export const StyledTextarea = styled.textarea.withConfig(
   ${color}
 
   &::placeholder {
-    color: ${BASE_COLORS.grey};
-    font-family: DMSansRegular;
+    color: ${BASE_COLORS.textColor};
+    font-family: ComfortaaRegular;
     font-size: 15px;
   }
 `;
