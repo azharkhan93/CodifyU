@@ -12,7 +12,8 @@ type DropDownProps = {
   data: DataType[];
   label: string;
   name: string;
-  handleChange: (val: string) => void;
+  handleChange: (val: DataType[]) => void; 
+  reset: () => void; 
 };
 
 export const DropDown: React.FC<DropDownProps> = ({
@@ -21,18 +22,31 @@ export const DropDown: React.FC<DropDownProps> = ({
   label,
   name,
   handleChange,
+  reset, 
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<string>("");
+  const [selectedItems, setSelectedItems] = useState<DataType[]>([]); 
 
   const toggleDropdown = () => {
     setIsVisible(!isVisible);
   };
 
   const handleSelect = (item: DataType) => {
-    setSelectedItem(item.name); 
-    handleChange(item.id); 
-    setIsVisible(false); 
+    const updatedSelectedItems = selectedItems.includes(item)
+      ? selectedItems.filter(selectedItem => selectedItem !== item) 
+      : [...selectedItems, item];
+
+    setSelectedItems(updatedSelectedItems);
+    handleChange(updatedSelectedItems);
+
+    
+    setIsVisible(false);
+  };
+
+  // Reset selected items when reset is called
+  const handleReset = () => {
+    setSelectedItems([]);
+    reset(); 
   };
 
   return (
@@ -43,7 +57,7 @@ export const DropDown: React.FC<DropDownProps> = ({
           readOnly
           type="text"
           borderRadius="xs"
-          value={selectedItem || placeholder}
+          value={selectedItems.map(item => item.name).join(", ") || placeholder} 
           placeholder={placeholder}
           onClick={toggleDropdown} 
         />
@@ -59,7 +73,7 @@ export const DropDown: React.FC<DropDownProps> = ({
           <FaChevronDown size={23} color={BASE_COLORS.textColor} />
         </Box>
       </Box>
-      {isVisible ? (
+      {isVisible && (
         <StyledScrollBox
           position="absolute"
           width="100%"
@@ -87,7 +101,7 @@ export const DropDown: React.FC<DropDownProps> = ({
             </Box>
           ))}
         </StyledScrollBox>
-      ) : null}
+      )}
     </Column>
   );
 };

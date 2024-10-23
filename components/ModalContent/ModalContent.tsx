@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useState } from "react";
 import axios from "axios";
 import {
@@ -6,134 +6,143 @@ import {
   Button,
   CenterBox,
   Column,
-  TextArea,
-  UpdateForm,
+  FormSearchableSelect,
   Text,
-  DropDown,
+  UpdateForm,
 } from "@/components";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { FormSearchableSelect } from "../FormSearcableSelect";
 
 
 type FormValues = {
   username: string;
   email: string;
-  password: string;
-  confirmpassword: string;
-  message?: string | number;
+  services: string[];  
 };
-
 const FormSchema = Yup.object({
   username: Yup.string().required("Username is required"),
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  password: Yup.string()
-    .min(6, "Password must be at least 6 characters")
-    .required("Password is required"),
-  confirmpassword: Yup.string()
-    .oneOf([Yup.ref("password")], "Passwords must match")
-    .required("Confirm Password is required"),
 });
 
 export const ModalContent = () => {
+  const handleSubmit = async (values: FormValues, resetForm: () => void) => {
+    console.log("Submitted Values:", values); 
+    console.log("Selected Services:", values.services);
+    try {
+      
+      const services = Array.isArray(values.services) ? values.services.join(", ") : values.services;
+
+      const response = await axios.post("/api/servicesemail", {
+        username: values.username,
+        email: values.email,
+        services: values.services.join(", ")  
+      });
+
+      if (response.data.sent) {
+        alert("Email sent successfully!");
+      } else {
+        alert("Failed to send email.");
+      }
+
+      resetForm();  
+    } catch (error) {
+      console.error("Error sending email", error);
+      alert("An error occurred while sending the email.");
+    }
+  };
+
   return (
-    <>
-      <CenterBox width={["100%", "90%"]} height={"100%"} p={"m"}>
-        <Formik
-          initialValues={{
-            username: "",
-            email: "",
-            message: "",
-          }}
-          validationSchema={FormSchema}
-          onSubmit={(values, { setSubmitting, resetForm }) => {
-            // handleSubmit(values, resetForm);
-            setSubmitting(false);
-          }}
-        >
-          {({ isSubmitting, errors, touched }) => (
-            <Form
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
+    <CenterBox width={["100%", "90%"]} height={"100%"} p={"m"}>
+      <Formik
+        initialValues={{
+          username: "",
+          email: "",
+          services: [],  
+        }}
+        validationSchema={FormSchema}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          handleSubmit(values, resetForm);
+          setSubmitting(false);
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <Box
+              width={"100%"}
+              height={"100%"}
+              alignItems={"center"}
+              textAlign={"start"}
             >
-              <Box
-                width={"100%"}
+              <Column
+                width={["98%", "100%"]}
                 height={"100%"}
                 alignItems={"center"}
-                textAlign={"start"}
+                justifyContent={"center"}
+                gap={["xl", "xxl"]}
               >
-                <Column
-                  width={["98%", "100%"]}
-                  height={"100%"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  gap={["xl", "xxl"]}
-                >
-                  <Text
-                 
-                  width={["100%","450px"]}
+                <Text
+                  width={["100%", "450px"]}
                   textAlign={"center"}
-                    variant={["subHeading", "heading"]}
-                    // px={["xl", "header"]}
-                  >
-                    {`Let'S Level Up Your Brand Together`}
-                  </Text>
-                  <Box width={["97%", "80%"]}>
-                    <UpdateForm
-                      name={"name"}
-                      placeholder={"name"}
-                      label={"Username"}
-                      type="text"
-                    />
-                  </Box>
-                  <Box width={["97%", "80%"]}>
-                    <UpdateForm
-                      name={"email"}
-                      placeholder={"Enter Email"}
-                      label={"Email"}
-                      type="email"
-                    />
-                  </Box>
-                  {/* <Box width={["97%", "80%"]}>
-                    <TextArea
-                      name={"message"}
-                      placeholder={"Enter your message"}
-                      label={"Message"}
-                      type="text"
-                    />
-                  </Box> */}
-                  <Box width={["97%", "80%"]}>
-                    <FormSearchableSelect placeholder={"Choose Service"} label={"Select Service"}
-                     name={"services"} />
-                  </Box>
+                  variant={["subHeading", "heading"]}
+                >
+                  {`Let's Level Up Your Brand Together`}
+                </Text>
+                <Box width={["97%", "80%"]}>
+                  <UpdateForm
+                    name={"username"}
+                    placeholder={"Enter Username"}
+                    label={"Username"}
+                    type="text"
+                  />
+                </Box>
+                <Box width={["97%", "80%"]}>
+                  <UpdateForm
+                    name={"email"}
+                    placeholder={"Enter Email"}
+                    label={"Email"}
+                    type="email"
+                  />
+                </Box>
+                <Box width={["97%", "80%"]}>
+                  <FormSearchableSelect
+                    placeholder={"Choose Service"}
+                    label={"Select Service"}
+                    name={"services"}
+                    
+                  />
+                </Box>
 
-                  <Box
-                    width={["100%", "80%"]}
-                    alignItems={"flex-end"}
-                    justifyContent={"center"}
+                <Box
+                  width={["100%", "80%"]}
+                  alignItems={"flex-end"}
+                  justifyContent={"center"}
+                >
+                  <Button
+                    borderRadius={"s"}
+                    px={"xxxl"}
+                    py={"s"}
+                    bg={"primary"}
+                    variant={"primary"}
+                    type="submit"
+                    disabled={isSubmitting}
                   >
-                    <Button
-                      borderRadius={"s"}
-                      px={"xxxl"}
-                      py={"s"}
-                      bg={"primary"}
-                      variant={"primary"}
-                      type="submit"
-                      disabled={isSubmitting}
-                    >
-                      Schedule Meeting
-                    </Button>
-                  </Box>
-                </Column>
-              </Box>
-            </Form>
-          )}
-        </Formik>
-      </CenterBox>
-    </>
+                    Schedule Meeting
+                  </Button>
+                </Box>
+              </Column>
+            </Box>
+          </Form>
+        )}
+      </Formik>
+    </CenterBox>
   );
 };
+
+
