@@ -112,7 +112,7 @@ export const Footer = () => {
               />
             </Link>
             <Text
-              variant={"subHeading"}
+              variant={"body"}
               lineHeight={"1.5"}
               textAlign={"center"}
             >
