@@ -13,7 +13,7 @@ type DropDownProps = {
   label: string;
   name: string;
   handleChange: (val: DataType[]) => void; 
-  reset: () => void; 
+ 
 };
 
 export const DropDown: React.FC<DropDownProps> = ({
@@ -22,7 +22,7 @@ export const DropDown: React.FC<DropDownProps> = ({
   label,
   name,
   handleChange,
-  reset, 
+
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItems, setSelectedItems] = useState<DataType[]>([]); 
@@ -38,16 +38,9 @@ export const DropDown: React.FC<DropDownProps> = ({
 
     setSelectedItems(updatedSelectedItems);
     handleChange(updatedSelectedItems);
-
-    
     setIsVisible(false);
   };
 
-  // Reset selected items when reset is called
-  const handleReset = () => {
-    setSelectedItems([]);
-    reset(); 
-  };
 
   return (
     <Column width={["100%", "104%"]} position="relative" gap={"m"}>

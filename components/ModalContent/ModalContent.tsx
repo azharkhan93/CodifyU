@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import axios from "axios";
 import {
@@ -13,11 +13,10 @@ import {
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-
 type FormValues = {
   username: string;
   email: string;
-  services: string[];  
+  services: string[];
 };
 const FormSchema = Yup.object({
   username: Yup.string().required("Username is required"),
@@ -28,16 +27,10 @@ const FormSchema = Yup.object({
 
 export const ModalContent = () => {
   const handleSubmit = async (values: FormValues, resetForm: () => void) => {
-    console.log("Submitted Values:", values); 
-    console.log("Selected Services:", values.services);
     try {
-      
-      const services = Array.isArray(values.services) ? values.services.join(", ") : values.services;
-
       const response = await axios.post("/api/servicesemail", {
-        username: values.username,
-        email: values.email,
-        services: values.services.join(", ")  
+        ...values,
+        services: values.services.join(", "),
       });
 
       if (response.data.sent) {
@@ -46,7 +39,7 @@ export const ModalContent = () => {
         alert("Failed to send email.");
       }
 
-      resetForm();  
+      resetForm();
     } catch (error) {
       console.error("Error sending email", error);
       alert("An error occurred while sending the email.");
@@ -59,7 +52,7 @@ export const ModalContent = () => {
         initialValues={{
           username: "",
           email: "",
-          services: [],  
+          services: [],
         }}
         validationSchema={FormSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -115,7 +108,6 @@ export const ModalContent = () => {
                     placeholder={"Choose Service"}
                     label={"Select Service"}
                     name={"services"}
-                    
                   />
                 </Box>
 
@@ -144,5 +136,3 @@ export const ModalContent = () => {
     </CenterBox>
   );
 };
-
-

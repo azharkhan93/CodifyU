@@ -29,10 +29,7 @@ export const FormSearchableSelect: React.FC<FormSearchableSelectProps> = ({
   ];
 
   const handleOnChange = (selectedValues: DataType[]) => {
-    const serviceNames = Array.from(
-      new Set(selectedValues.map((service) => service.name))
-    );
-    helpers.setValue(serviceNames);
+    helpers.setValue(selectedValues.map(service => service.name));
   };
 
   return (
@@ -43,7 +40,7 @@ export const FormSearchableSelect: React.FC<FormSearchableSelectProps> = ({
         label={label}
         name={name}
         handleChange={handleOnChange}
-        reset={() => helpers.setValue([])}
+        
       />
       {meta.touched && meta.error && (
         <Text style={{ color: "red" }}>{meta.error}</Text>
@@ -51,3 +48,4 @@ export const FormSearchableSelect: React.FC<FormSearchableSelectProps> = ({
     </>
   );
 };
+
