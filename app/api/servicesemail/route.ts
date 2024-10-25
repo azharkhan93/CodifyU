@@ -10,16 +10,16 @@ export async function POST(request: Request, response: Response) {
 //     console.error("No services selected.");
 //     return Response.json({ sent: false, error: "No services selected." });
 //   }
-
 const services = Array.isArray(ReceivedResponse.services) 
       ? ReceivedResponse.services.join(", ") 
       : ReceivedResponse.services;
 
   const data = {
     to: ["ak305368@gmail.com"],
-    from: "azharkhan.work101@gmail.com",
+    // to: ["ak305368@gmail.com", "another@example.com", "someoneelse@example.com"],
+    from: "codefyu.inquiries@gmail.com",
     subject: "Services Form Details",
-    templateId: "d-b600ae40c72b49fa8b19a28848ad1534",
+    templateId: "d-e93c89857c654e7d8b7a4ead31f3a7bd",
     dynamicTemplateData: {
         name: ReceivedResponse .username,
         email: ReceivedResponse .email,
@@ -27,19 +27,16 @@ const services = Array.isArray(ReceivedResponse.services)
         
       },
   };
-//   const userData = {
-//     to: ReceivedResponse.email, 
-//     from: "azharkhan.work101@gmail.com",
-//     subject: "Thank You for Contacting Us",
-//     templateId: "d-your-thank-you-template-id", 
-//     dynamicTemplateData: {
-//         email: ReceivedResponse .email,
-//       message: "Thank you for reaching out! We appreciate your interest and will get back to you shortly.", 
-//     },
-//   };
+  const userData = {
+    to: ReceivedResponse.email, 
+    from: "codefyu.inquiries@gmail.com",
+    subject: "Thank You for Contacting Us",
+    templateId: "d-7b051f274e8747c3a3d2351139fa1c30", 
+    dynamicTemplateData: {}
+  };
   try {
     await mail.send(data);
-    // await mail.send(userData);
+    await mail.send(userData);
     return Response.json({ sent: true });
   } catch (e) {
     return Response.json({ sent: false });

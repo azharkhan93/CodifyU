@@ -61,26 +61,6 @@ export const NavbarData = [
     icon: FaHome,
   },
   {
-    title: "About",
-    link: "/about",
-    icon: FaInfoCircle,
-  },
-  {
-    title: "Contact",
-    link: "/contact",
-    icon: FaPhoneAlt,
-  },
-  {
-    title: "Portfolio",
-    link: "/portfolio",
-    icon: FaBriefcase,
-  },
-  {
-    title: "Testimonials",
-    link: "/testimonials",
-    icon: FaCommentDots,
-  },
-  {
     title: "Services",
     link: "/services",
     icon: FaConciergeBell,
@@ -102,6 +82,27 @@ export const NavbarData = [
         link: "/services/data-analytics-and-predictive-modeling",
       },
     ],
+  },
+  {
+    title: "About",
+    link: "/about",
+    icon: FaInfoCircle,
+  },
+  {
+    title: "Portfolio",
+    link: "/portfolio",
+    icon: FaBriefcase,
+  },
+  {
+    title: "Testimonials",
+    link: "/testimonials",
+    icon: FaCommentDots,
+  },
+ 
+  {
+    title: "Contact",
+    link: "/contact",
+    icon: FaPhoneAlt,
   },
 ];
 

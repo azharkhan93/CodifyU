@@ -7,10 +7,11 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 export async function POST(request: Request, response: Response) {
   const ReceivedResponse = await request.json();
   const data = {
-    to: ["muqqadas.codefyu@gmail.com"],
-    from: "azharkhan.work101@gmail.com",
+    to: ["ak305368@gmail.com"],
+    from: "codefyu.inquiries@gmail.com",
     subject: "Contact Form Details",
-    templateId: "d-0dd53c7b88bc4f4bac91cd59bd0e2bcb",
+    templateId: "d-ce91e7838ef14cec83cde27aca9d9412",
+    
     dynamicTemplateData: {
         name: ReceivedResponse.name,
         lastName: ReceivedResponse.lastName,  
@@ -19,10 +20,18 @@ export async function POST(request: Request, response: Response) {
         subject: ReceivedResponse.subject,    
          message: ReceivedResponse.message,
     },
+    
+  };
+    const userData = {
+    to: ReceivedResponse.email, 
+    from: "codefyu.inquiries@gmail.com",
+    subject: "Thank You for Contacting Us",
+    templateId: "d-7b051f274e8747c3a3d2351139fa1c30", 
+    dynamicTemplateData: {}
   };
   try {
     await mail.send(data);
-    // await mail.send(userData);
+     await mail.send(userData);
     return Response.json({ sent: true });
   } catch (e) {
     return Response.json({ sent: false });
