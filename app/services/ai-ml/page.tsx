@@ -1,5 +1,5 @@
 import { ArtificialIntelligence, Column, ParallaxSection } from "@/components";
-import { aiAdvantages, } from "@/constants";
+import { aiAdvantages } from "@/constants";
 
 export default function Services() {
   return (
