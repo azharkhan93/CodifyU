@@ -109,7 +109,7 @@ export const NavbarData = [
 
 export const PARTNER_LOGOS = [
   {
-    src: "/clientlogos/g23.webp",
+    src: "/clientlogos/g23.png",
     alt: "Logo 1",
   },
   {
