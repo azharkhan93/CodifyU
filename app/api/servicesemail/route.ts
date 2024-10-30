@@ -15,7 +15,7 @@ const services = Array.isArray(ReceivedResponse.services)
       : ReceivedResponse.services;
 
   const data = {
-    to: ["ak305368@gmail.com"],
+    to: ["muqqadas.codefyu@gmail.com"],
     // to: ["ak305368@gmail.com", "another@example.com", "someoneelse@example.com"],
     from: "codefyu.inquiries@gmail.com",
     subject: "Services Form Details",
