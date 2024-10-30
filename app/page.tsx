@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
     <Column
-    px={["l", "l"]}
+    px={["xl", "l"]}
     >
       <HeroSection />
         <OurValues />
