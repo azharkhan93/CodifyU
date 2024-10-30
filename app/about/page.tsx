@@ -3,10 +3,10 @@ import { AboutUs, Column, ParallaxSection, WorkApproach } from "@/components";
 export default function Home() {
   return (
     <>
-      <Column px={["xl", "l"]}>
+      
         <AboutUs />
         <WorkApproach />
-      </Column>
+    
       <ParallaxSection
         spanText="Chart New Territories"
         heading="– Let’s Build It with CodefyU!"

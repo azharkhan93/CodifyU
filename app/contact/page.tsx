@@ -16,12 +16,10 @@ export default function Home() {
     ), [])
   return (
     <>
-     <Column
-    px={["xl", "l"]}
-    >
+    
       <ContactSection />
       <Map />
-      </Column>
+     
     </>
     
   );

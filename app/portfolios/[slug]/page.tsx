@@ -55,8 +55,7 @@ export default function Page({ params }: PageProps) {
   return (
     <>
       <Column
-        px={["xl", "l"]}
-        mt={"xlg"}
+       mt={"xlg"}
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
