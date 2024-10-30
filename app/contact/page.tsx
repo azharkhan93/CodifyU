@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
      <Column
-    px={["m", "l"]}
+    px={["xl", "l"]}
     >
       <ContactSection />
       <Map />

@@ -43,7 +43,9 @@ export default function Portfolio() {
 
   return (
     <>
-      <Column px={["m", "l"]}>
+      <Column
+       px={["xl", "l"]}
+      >
         <PortfolioSection products={products} />
         <ParallaxSection
          spanText = "Inspired by Our Portfolio?"

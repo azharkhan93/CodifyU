@@ -3,7 +3,9 @@ import { Column, ParallaxSection, TestimonialsSection } from "@/components";
 export default function Home() {
   return (
     <>
-      <Column px={["m", "l"]}>
+      <Column 
+      px={["xl", "l"]}
+      >
         <TestimonialsSection id={0} imageSrc={""} altText={""} />
       </Column>
       <ParallaxSection

@@ -3,7 +3,7 @@ import { AboutUs, Column, ParallaxSection, WorkApproach } from "@/components";
 export default function Home() {
   return (
     <>
-      <Column px={["l", "l"]}>
+      <Column px={["xl", "l"]}>
         <AboutUs />
         <WorkApproach />
       </Column>

@@ -8,7 +8,9 @@ import {  aiAdvantagesDataSet2, } from "@/constants";
 export default function Data() {
   return (
     <>
-      <Column px={["m", "l"]}>
+      <Column
+       px={["xl", "l"]}
+      >
         <ArtificialIntelligence
           aiCardsProps={{
             startIndex: 8,

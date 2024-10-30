@@ -4,7 +4,9 @@ import { aiAdvantages } from "@/constants";
 export default function Services() {
   return (
     <>
-      <Column px={["m", "l"]}>
+      <Column
+       px={["xl", "l"]}
+      >
         <ArtificialIntelligence
           aiCardsProps={{
             startIndex: 0,
