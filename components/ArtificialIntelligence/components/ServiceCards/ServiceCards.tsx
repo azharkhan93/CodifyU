@@ -2,14 +2,19 @@ import { Box, Column, Row, Text } from "@/components";
 import { Service4 } from "@/constants";
 import { useModal } from "@/contexts";
 
-
 type ServiceCardProps = {
   service: Service4;
-}
+};
 
 export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
   const { openModal } = useModal();
-  const { title, description, icon: Icon, arrowIcon: ArrowIcon, image } = service;
+  const {
+    title,
+    description,
+    icon: Icon,
+    arrowIcon: ArrowIcon,
+    image,
+  } = service;
 
   return (
     <Column
@@ -19,7 +24,6 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
       py={"xxxl"}
       gap={"xl"}
       position="relative"
-   
     >
       <Column
         position={"relative"}
@@ -31,19 +35,20 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
         borderBottomRightRadius={["s", "xl"]}
         borderTopRightRadius={["s", "xl"]}
         style={{
-          background: "rgba(255, 255, 255, 0.1)", 
-  backdropFilter: "blur(5px)", 
-  WebkitBackdropFilter: "blur(10px)", 
-  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", 
-  
-          }}
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(5px)",
+          WebkitBackdropFilter: "blur(10px)",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+        }}
       >
         <Row
           justifyContent={"space-between"}
           alignItems={"center"}
           flexDirection={"row"}
         >
-          <Text variant={"heading"} lineHeight={"1.3"} >{title}</Text>
+          <Text variant={"heading"} lineHeight={"1.3"}>
+            {title}
+          </Text>
           <Box
             alignItems={"center"}
             justifyContent={"center"}
@@ -54,9 +59,7 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
             style={{
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
             }}
-            
           >
-            
             <Icon size={38} color="#fb9c42" />
           </Box>
         </Row>
@@ -70,16 +73,22 @@ export const ServiceCards: React.FC<ServiceCardProps> = ({ service }) => {
           py={"s"}
           px={"s"}
           style={{
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", cursor: "pointer"
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+            cursor: "pointer",
           }}
           onClick={openModal}
         >
           <ArrowIcon size={30} color="#fb9c42" />
         </Box>
 
-        <Text lineHeight={"1.5"} fontFamily={"ComfortaaMedium"} color={"primary"}>{description}</Text>
+        <Text
+          lineHeight={"1.5"}
+          fontFamily={"ComfortaaMedium"}
+          color={"primary"}
+        >
+          {description}
+        </Text>
       </Column>
     </Column>
   );
 };
-

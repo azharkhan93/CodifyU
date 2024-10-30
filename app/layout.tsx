@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>codefyU</title>
+        <title>codefyU - Seamless Tech Solutions That Scale</title>
         <meta
           name="description"
           content="one stop for all software solutions"
