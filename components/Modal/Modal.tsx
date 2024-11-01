@@ -2,7 +2,6 @@ import React from "react";
 import {  CenterBox, StyledModal, } from "@/components/styled";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BASE_COLORS } from "@/theme";
 import { ModalProps } from "@/types";
 
 
