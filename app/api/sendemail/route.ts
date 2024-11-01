@@ -7,7 +7,7 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 export async function POST(request: Request, response: Response) {
   const ReceivedResponse = await request.json();
   const data = {
-    to: ["muqqadas.codefyu@gmail.com, adnaannazir@gmail.com"],
+    to: ["muqqadas.codefyu@gmail.com", "adnaannazir@gmail.com"],
     from: "codefyu.inquiries@gmail.com",
     subject: "Contact Form Details",
     templateId: "d-ce91e7838ef14cec83cde27aca9d9412",
