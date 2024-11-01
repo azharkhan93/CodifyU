@@ -15,8 +15,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { UpdateFormValues } from "@/types";
-
-
+import Swal from "sweetalert2";
 
 type UpdateComponentProps = {
   data?: UpdateFormValues;
@@ -33,7 +32,6 @@ const FormSchema = Yup.object({
     .matches(/^[0-9]+$/, "Phone number must contain only numbers")
     .required("Phone number is Required"),
   subject: Yup.string().required("Subject is Required"), 
-  // message: Yup.string().required("Message is Required"),
 });
 
 export const Test: React.FC<UpdateComponentProps> = ({
@@ -46,8 +44,7 @@ export const Test: React.FC<UpdateComponentProps> = ({
     email: data?.email || "",
     phone: data?.phone || "",
     subject: data?.subject || "", 
-     message: data?.message || "",
-    
+    message: data?.message || "",
   };
   console.log("Initial values:", initialValues); 
 
@@ -56,19 +53,29 @@ export const Test: React.FC<UpdateComponentProps> = ({
     { setSubmitting, setErrors, resetForm }: FormikHelpers<UpdateFormValues>
   ) => {
     try {
-
       console.log("Submitting form with values:", values);
-       
 
       const response = await axios.post("/api/sendemail", {
         ...values, 
       });
 
       console.log("Response from server:", response.data);
-      resetForm();
 
+      resetForm();
       onActionComplete();
-      
+
+      Swal.fire({
+        icon: "success",
+        title: "<span style='color: #fb9c42; font-family: ComfortaaRegular;'>Success</span>",
+        html: "<p style='color: #fb9c42; font-family: ComfortaaRegular;'>Thank you for reaching out!</p>",
+        confirmButtonText: "<span style='color: white; font-family: ComfortaaRegular;'>Confirmation</span>",
+        customClass: {
+          popup: "custom-swal-popup",
+          confirmButton: "custom-swal-confirm-button",
+          icon: "custom-swal-icon",
+        },
+      });
+
     } catch (error) {
       console.error("Error sending form data:", error);
       
@@ -83,88 +90,109 @@ export const Test: React.FC<UpdateComponentProps> = ({
   };
 
   return (
-    <Formik<UpdateFormValues>
-      initialValues={initialValues}
-      validationSchema={FormSchema}
-      onSubmit={handleSubmit}
-    >
-      {({ isSubmitting, errors }) => (
-        <Form style={{ width: "100%", height: "100%" }}>
-          <CenterBox width={"100%"} height={"100%"}>
-            <Column
-              style={{
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
-              }}
-              width={["100%", "90%"]}
-              gap={"xl"}
-              py={"l"}
-              px={"xxl"}
-              borderRadius={"m"}
-            >
-              <Box paddingY={"s"}>
-                <Text
-                  variant={["subHeading", "heading"]}
-                  color={"primary"}
-                  textAlign={["start", "center"]}
-                >
-                  Enter Your Details
-                </Text>
-              </Box>
-              <Row flexDirection={["column", "row"]} alignItems={"center"} gap={"xxxl"}>
+    <>
+      <style jsx global>{`
+        .custom-swal-popup {
+          background-color: #f0f0f5 !important;
+          color: #fb9c42 !important;
+        }
+        .custom-swal-icon {
+          background: #fb9c42 !important; 
+          color: #fb9c42 !important;
+        }
+        .custom-swal-confirm-button {
+          background-color: #fb9c42 !important;
+          color: black !important;
+          border: none !important;
+          border-radius: 4px !important;
+          width: "200px" !important; 
+        }
+      `}</style>
+      <Formik<UpdateFormValues>
+        initialValues={initialValues}
+        validationSchema={FormSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting, errors }) => (
+          <Form style={{ width: "100%", height: "100%" }}>
+            <CenterBox width={"100%"} height={"100%"}>
+              <Column
+                style={{
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+                }}
+                width={["100%", "90%"]}
+                gap={"xl"}
+                py={"l"}
+                px={"xxl"}
+                borderRadius={"m"}
+              >
+                <Box paddingY={"s"}>
+                  <Text
+                    variant={["subHeading", "heading"]}
+                    color={"primary"}
+                    textAlign={["start", "center"]}
+                  >
+                    Enter Your Details
+                  </Text>
+                </Box>
+                <Row flexDirection={["column", "row"]} alignItems={"center"} gap={"xxxl"}>
+                  <UpdateForm
+                    name={"name"}
+                    placeholder={"Name"}
+                    label={"Name"}
+                  />
+                  <UpdateForm
+                    name={"lastName"} 
+                    placeholder={"Last Name"}
+                    label={"Last Name"}
+                  />
+                </Row>
+                <Row flexDirection={["column", "row"]} alignItems={"center"} gap={"xxxl"}>
+                  <UpdateForm
+                    name={"email"}
+                    placeholder={"Email"}
+                    label={"Email"}
+                  />
+                  <UpdateForm
+                    name={"phone"}
+                    placeholder={"Phone Number"}
+                    label={"Phone Number"}
+                  />
+                </Row>
                 <UpdateForm
-                  name={"name"}
-                  placeholder={"Name"}
-                  label={"Name"}
+                  name={"subject"}
+                  placeholder={"Subject"}
+                  label={"Subject"}
                 />
-                <UpdateForm
-                  name={"lastName"} 
-                  placeholder={"Last Name"}
-                  label={"Last Name"}
-                />
-              </Row>
-              <Row flexDirection={["column", "row"]} alignItems={"center"} gap={"xxxl"}>
-                <UpdateForm
-                  name={"email"}
-                  placeholder={"Email"}
-                  label={"Email"}
-                />
-                <UpdateForm
-                  name={"phone"}
-                  placeholder={"Phone Number"}
-                  label={"Phone Number"}
-                />
-              </Row>
-              <UpdateForm
-                name={"subject"}
-                placeholder={"Subject"}
-                label={"Subject"}
-              />
-              <TextArea
-                name={"message"}
-                placeholder={"Message"}
-                label={"Message"}               
-                />
-              <CenterBox width={"100%"} paddingY={"s"}>
-                <Button
-                  borderRadius={"s"}
-                  py={"m"}
-                  width={"70%"}
-                  variant={isSubmitting ? `disabled` : "primary"}
-                  type="submit"
-                  disabled={isSubmitting}
-                  bg={"primary"}
-                >
-                  {isSubmitting ? (
-                    <FontAwesomeIcon icon={faSpinner} className="fa-spin" />
-                  ) : null}
-                  Submit
-                </Button>
-              </CenterBox>
-            </Column>
-          </CenterBox>
-        </Form>
-      )}
-    </Formik>
+                <TextArea
+                  name={"message"}
+                  placeholder={"Message"}
+                  label={"Message"}               
+                  />
+                <CenterBox width={"100%"} paddingY={"s"}>
+                  <Button
+                    borderRadius={"s"}
+                    py={"m"}
+                    width={"70%"}
+                    variant={isSubmitting ? `disabled` : "primary"}
+                    type="submit"
+                    disabled={isSubmitting}
+                    bg={"primary"}
+                  >
+                    {isSubmitting ? (
+                      <FontAwesomeIcon icon={faSpinner} className="fa-spin" />
+                    ) : null}
+                    Submit
+                  </Button>
+                </CenterBox>
+              </Column>
+            </CenterBox>
+          </Form>
+        )}
+      </Formik>
+    </>
   );
 };
+
+
 
