@@ -38,4 +38,3 @@ jobs:
     - name: Clean up Docker containers
       run: |
         docker container prune -f  # Remove stopped containers
-
