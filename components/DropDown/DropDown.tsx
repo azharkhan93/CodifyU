@@ -23,7 +23,7 @@ export const DropDown: React.FC<DropDownProps> = ({
   label,
   name,
   handleChange,
-  error, // Destructure error prop
+  error, 
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItems, setSelectedItems] = useState<DataType[]>([]); 

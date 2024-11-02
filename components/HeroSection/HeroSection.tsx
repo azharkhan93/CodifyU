@@ -53,7 +53,7 @@ export const HeroSection = () => {
             textAlign={"center"}
             lineHeight={"1.3"}
           >
-            Growth Fueled By Expertise
+            {/* Growth Fueled By Expertise */}
           </Text>
 
           <motion.div
