@@ -32,8 +32,11 @@ jobs:
 
     - name: Run Application
       run: |
-        docker run --rm -p 3000:3000 azhar022/codifyu:latest yarn dev  
+        docker run -d --rm -p 3000:3000 azhar022/codifyu:latest yarn dev
+        sleep 10  # Wait for a moment to let the server start
+
     - name: Clean up Docker containers
       run: |
-        docker container prune -f 
+        docker container prune -f  # Remove stopped containers
+
 
