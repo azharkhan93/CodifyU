@@ -14,7 +14,7 @@ jobs:
 
     services:
       docker:
-        image: codifyu-2:latest  
+        image: azhar022/codifyu:latest  
         options: --entrypoint="" 
         ports:
           - 3000:3000  
@@ -28,12 +28,12 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t codifyu-2:latest .
+        docker build -t azhar022/codifyu:latest .
         docker images
 
     - name: Run Tests
       run: |
-        docker run --rm -p 3000:3000 codifyu-2:latest yarn test  # Ensure the application is running on port 3000
+        docker run --rm -p 3000:3000 azhar022/codifyu:latest yarn test  # Ensure the application is running on port 3000
 
     - name: Clean up Docker containers
       run: |
