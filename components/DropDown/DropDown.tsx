@@ -6,6 +6,7 @@ import { StyledScrollBox } from "../styled/StyledScrollBox";
 import { StyledInputBox } from "../styled/StyledInputBox";
 import { BASE_COLORS } from "@/theme/elements/color";
 import { DataType } from "../FormSearcableSelect";
+import { UpdateFormInputBoxErrorMessage } from "@/components"; 
 
 type DropDownProps = {
   placeholder: string;
@@ -13,7 +14,7 @@ type DropDownProps = {
   label: string;
   name: string;
   handleChange: (val: DataType[]) => void; 
- 
+  error?: string; 
 };
 
 export const DropDown: React.FC<DropDownProps> = ({
@@ -22,7 +23,7 @@ export const DropDown: React.FC<DropDownProps> = ({
   label,
   name,
   handleChange,
-
+  error, // Destructure error prop
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItems, setSelectedItems] = useState<DataType[]>([]); 
@@ -40,7 +41,6 @@ export const DropDown: React.FC<DropDownProps> = ({
     handleChange(updatedSelectedItems);
     setIsVisible(false);
   };
-
 
   return (
     <Column width={["100%", "104%"]} position="relative" gap={"m"}>
@@ -95,6 +95,10 @@ export const DropDown: React.FC<DropDownProps> = ({
           ))}
         </StyledScrollBox>
       )}
+      
+      {error ? (
+        <UpdateFormInputBoxErrorMessage error={error} />
+      ): null}
     </Column>
   );
 };

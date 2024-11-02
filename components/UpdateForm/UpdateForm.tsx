@@ -6,6 +6,7 @@ import {
   InputBox,
   InputBoxProps,
   Text,
+  UpdateFormInputBoxErrorMessage,
 } from "@/components";
 import { useField } from "formik";
 import { useCallback } from "react";
@@ -53,7 +54,7 @@ export const UpdateForm: React.FC<UpdateFormInputBoxProps> = ({
           onBlur={handleBlur}
           {...rest}
         />
-        {/* {error ? <FormInputBoxErrorMessage error={error} /> : null} */}
+        {error ? <UpdateFormInputBoxErrorMessage error={error} /> : null}
       </Box>
     </Column>
   );
