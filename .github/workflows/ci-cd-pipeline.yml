@@ -30,11 +30,18 @@ jobs:
         docker build --no-cache -t azhar022/codifyu:latest .
         docker images
 
+    - name: Stop existing container (if it exists)
+      run: |
+        if [ "$(docker ps -q -f name=codefyu)" ]; then
+          docker stop codefyu
+        fi
+
     - name: Run Application
       run: |
-        docker run -d --rm -p 3000:3000 azhar022/codifyu:latest yarn dev
+        docker run -d --rm --name codefyu -p 3000:3000 azhar022/codifyu:latest
 
     - name: Clean up Docker containers
       run: |
-        docker container prune -f  # Remove stopped containers
+        docker container prune -f
+
 
