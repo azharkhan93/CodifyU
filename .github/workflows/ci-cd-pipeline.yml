@@ -32,9 +32,8 @@ jobs:
 
     - name: Run Application
       run: |
-        docker run --rm -p 3000:3000 azhar022/codifyu:latest yarn dev  # Start the application
-
+        docker run --rm -p 3000:3000 azhar022/codifyu:latest yarn dev  
     - name: Clean up Docker containers
       run: |
-        docker container prune -f  # Remove stopped containers
+        docker container prune -f 
 
