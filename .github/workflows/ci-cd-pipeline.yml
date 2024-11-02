@@ -1,0 +1,41 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: codifyu-2:latest  
+        options: --entrypoint="" 
+        ports:
+          - 3000:3000  
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      run: |
+        docker build -t codifyu-2:latest .
+        docker images
+
+    - name: Run Tests
+      run: |
+        docker run --rm -p 3000:3000 codifyu-2:latest yarn test  # Ensure the application is running on port 3000
+
+    - name: Clean up Docker containers
+      run: |
+        docker container prune -f  # Remove stopped containers
+
