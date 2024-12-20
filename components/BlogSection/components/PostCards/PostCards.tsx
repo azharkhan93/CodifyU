@@ -25,11 +25,11 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
 
   return (
     <Column
-      // width={{ xs: "100%", sm: "48%", md: "30%" }}
-      width={"400px"}
+    border={"1px solid white"}
+    borderRadius={"s"}
+      width={["350px", "370px"]}
       
       overflow="hidden"
-      // bg="white"
       position="relative"
       style={{
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", 
@@ -41,7 +41,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           alt={post.title || "Post Image"}
           width={500}
           height={300}
-          style={{ width: "100%", height: "auto", borderRadius: "5px" }}
+          style={{ width: "100%", height: "250px", borderRadius: "5px" }}
         />
       ) : (
         <Box
@@ -52,7 +52,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           }}
         />
       )}
-      <Column alignItems="flex-start" gap="l" px="m" py="xxxl">
+      <Column alignItems="flex-start" gap="l" px="m" py="xxxl" overflow={"hidden"}>
         <Text variant="subHeading">{post.title || "Untitled Post"}</Text>
         <Text variant="body" color="secondary" width={["100%", "100%"]}>
           {post.description || "No description available."}

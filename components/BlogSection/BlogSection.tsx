@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Box } from "../styled";
+import { Box , Column, Row, Text} from "../styled";
 import { PostCards } from "./components/PostCards";
 import { LoadingCard } from "./components/LoadingCard";
 
@@ -45,14 +45,31 @@ export const BlogSection = () => {
 
   return (
     <Box
-      display="flex"
-      flexWrap="wrap"
-      flexDirection="row"
+    overflow={"hidden"}
       gap="xxxl"
       width="100%"
-      px={["none","xxxl"]}
       py="header"
     >
+      <Column py={"xl"} gap={"xl"} alignItems={"center"} >
+          <Text variant={"heading"} textAlign={"center"} lineHeight={"1.3"}>Latest Blogs</Text>
+          <Text
+            variant={"body"}
+            textAlign={ "center"}
+            width={["100%", "630px"]}
+            lineHeight={"1.5"}
+          >
+            {`Explore our latest blogs to stay updated with industry trends, insights, and valuable tips. Dive into our posts for in-depth discussions and expert perspectives.`}
+          </Text>
+        </Column>
+        <Row
+        overflow={"hidden"}
+        justifyContent={"center"}
+        flexDirection={["column","row"]}
+        gap="xxxl"
+         width="100%"
+        flexWrap={"wrap"}
+    
+        >
       {itemsToRender.map((item, index) => {
         if (loading && item === null) {
           return <LoadingCard key={index} />;
@@ -60,6 +77,7 @@ export const BlogSection = () => {
 
         return <PostCards key={(item as Post).id} post={item as Post} loading={false} />;
       })}
+      </Row>
       
     </Box>
   );
