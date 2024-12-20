@@ -3914,6 +3914,11 @@ react-select@^5.8.0:
     react-transition-group "^4.3.0"
     use-isomorphic-layout-effect "^1.1.2"
 
+react-skeleton-loader@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-skeleton-loader/-/react-skeleton-loader-1.0.4.tgz#7bdfd35591f97bd10361e3a793360ce98fdf76ab"
+  integrity sha512-o52c3hmadpaMbQ4Gl8inCiAxjkfQopDJ6PCHfuuLh6NxRqL5ossJ1/FoeONIvOf/r4GC+VOB5an/jr4Qmj59zg==
+
 react-transition-group@^4.3.0:
   version "4.4.5"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"

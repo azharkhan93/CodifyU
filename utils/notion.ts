@@ -1,4 +1,4 @@
-import { notion } from "./notionClient";
+import { customNotionClient, notion } from "./notionClient";
 import { extractRichText } from "./richText";
 
 export async function getBlogPosts() {
@@ -49,12 +49,11 @@ export async function getBlogPosts() {
       })
     );
 
-
     const reversedBlogPosts = blogPosts.reverse();
 
     // console.log("Blog Posts (Reversed Order):", reversedBlogPosts);
 
-    return reversedBlogPosts; 
+    return reversedBlogPosts;
   } catch (error) {
     console.error("Failed to fetch blog posts:", error);
     throw new Error("Failed to fetch blog posts.");
@@ -77,4 +76,42 @@ async function getPageContent(pageId: string) {
   return blocks;
 }
 
+export async function getCustomBlogPosts() {
+  const response = await customNotionClient.databases.query({
+    database_id: process.env.CUSTOM_DATABASE_ID!,
+  });
 
+  console.log("Raw Page Data:", response.results);
+
+  return response.results.map((page: any) => {
+    console.log("Page Data:", page);
+
+    const file =
+      page.properties["Files & media"]?.files?.[0]?.type === "external"
+        ? page.properties["Files & media"].files[0].external.url
+        : page.properties["Files & media"]?.files?.[0]?.file?.url || "";
+
+    const title = page.properties.Name?.title?.[0]?.plain_text || "";
+    const description = page.properties.Description?.rich_text?.[0]?.plain_text || "";
+
+    const date = page.properties.Date?.date?.start || ""; 
+
+  
+    const author = page.properties.Author?.rich_text?.[0]?.plain_text || ""; 
+
+    
+    const iconUrl = page.properties.Author?.rich_text?.[0]?.text?.content || ""; 
+
+    console.log("Mapped Data:", { title, description, date, author, iconUrl });
+
+    return {
+      id: page.id,
+      title,
+      file,
+      description,
+      date,
+      author,
+      iconUrl,
+    };
+  });
+}

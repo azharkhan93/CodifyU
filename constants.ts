@@ -104,6 +104,11 @@ export const NavbarData = [
     link: "/contact",
     icon: FaPhoneAlt,
   },
+  {
+    title: "Blogs",
+    link: "/blogs",
+    icon: FaInfoCircle,
+  },
 ];
 
 
@@ -122,43 +127,43 @@ export const PARTNER_LOGOS = [
 },
 {
   src: "/clientlogos/mgm1.png",
-   alt: "Logo 3"
+   alt: "Logo 4"
 },
 {
   src: "/clientlogos/LogoMain.png",
-   alt: "Logo 3"
+   alt: "Logo 5"
 },
 {
   src: "/clientlogos/zurich.jpg",
-   alt: "Logo 3"
+   alt: "Logo 6"
 },
 {
   src: "/clientlogos/its.png",
-   alt: "Logo 3"
+   alt: "Logo 7"
 },
 {
-  src: "/clientlogos/snow.png",
-   alt: "Logo 3"
+  src: "/clientlogos/johnsnow.jpg",
+   alt: "Logo 8"
 },
 {
   src: "/clientlogos/mindgeek.jpg",
-   alt: "Logo 3"
+   alt: "Logo 9"
 },
 {
   src: "/clientlogos/mgm1.png",
-   alt: "Logo 3"
+   alt: "Logo 10"
 },
 {
   src: "/clientlogos/square1.png",
-   alt: "Logo 3"
+   alt: "Logo 11"
 },
 {
   src: "/clientlogos/start.jpg",
-   alt: "Logo 3"
+   alt: "Logo 12"
 },
 {
   src: "/clientlogos/ad.webp",
-   alt: "Logo 3"
+   alt: "Logo 13"
 },
 
 

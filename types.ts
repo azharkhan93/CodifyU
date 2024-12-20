@@ -109,6 +109,7 @@ export type IconBoxProps = {
   iconData: IconData;
 };
 export type Post = {
+  description: string;
   slug: string;
   id: string;
   imageUrl: string;

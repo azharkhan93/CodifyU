@@ -123,7 +123,6 @@ export function extractRichText(blocks: any[]): string[] {
   }
 }
 
-
 function buildContentImageHtml(
   content: string[],
   images: string[],
@@ -143,8 +142,6 @@ function buildImagesRowHtml(images: string[]): string {
           </div>`;
 }
 
-
-
 function processRichText(richTextArray: any[]): string {
   return richTextArray
     .map((text) => {
@@ -153,7 +150,6 @@ function processRichText(richTextArray: any[]): string {
         const annotations = text.annotations;
         let style = "";
 
-        
         if (annotations.color && annotations.color !== "default") {
           style += `color: ${annotations.color};`;
         }
@@ -174,29 +170,25 @@ function processRichText(richTextArray: any[]): string {
           style += `text-decoration: line-through;`;
         }
 
-        
-        const fontSize = annotations.bold || annotations.italic || annotations.underline || annotations.strikethrough
-          ? "font-size: 23px;"
-          : "";
+        const fontSize =
+          annotations.bold ||
+          annotations.italic ||
+          annotations.underline ||
+          annotations.strikethrough
+            ? "font-size: 23px;"
+            : "";
 
-        
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         let processedContent = content.replace(urlPattern, (url: string) => {
           return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${url}</a>`;
         });
 
-       
         return `<span style="${style} ${fontSize} font-family: ${BASE_TEXT_VARIANTS.body.fontFamily};">${processedContent}</span>`;
       }
       return "";
     })
     .join(" ");
 }
-
-
-
-
-
 
 function getStyles(): string {
   return `<style>
