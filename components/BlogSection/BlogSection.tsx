@@ -48,7 +48,7 @@ export const BlogSection = () => {
     overflow={"hidden"}
       gap="xxxl"
       width="100%"
-      py="header"
+      py={["xxl","header"]}
     >
       <Column py={"xl"} gap={"xl"} alignItems={"center"} >
           <Text variant={"heading"} textAlign={"center"} lineHeight={"1.3"}>Latest Blogs</Text>
@@ -62,6 +62,7 @@ export const BlogSection = () => {
           </Text>
         </Column>
         <Row
+        py="xxxl"
         overflow={"hidden"}
         justifyContent={"center"}
         flexDirection={["column","row"]}

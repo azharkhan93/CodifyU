@@ -5,6 +5,7 @@ import React from "react";
 import { Post } from "../../BlogSection";
 import { LoadingCard } from "../LoadingCard";
 import { FaUserAlt } from "react-icons/fa";
+import { overflow } from "styled-system";
 
 type PostCardProps = {
   post: Post;
@@ -25,7 +26,8 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
 
   return (
     <Column
-    border={"1px solid white"}
+    height={'520px'}
+    border={"1px solid #fb9c42"}
     borderRadius={"s"}
       width={["350px", "370px"]}
       
@@ -52,9 +54,13 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
           }}
         />
       )}
-      <Column alignItems="flex-start" gap="l" px="m" py="xxxl" overflow={"hidden"}>
-        <Text variant="subHeading">{post.title || "Untitled Post"}</Text>
-        <Text variant="body" color="secondary" width={["100%", "100%"]}>
+      <Column alignItems="flex-start" gap="l" px="m" py="xxxl" >
+        <Text variant="subHeading" width={["100%", "100%"]}  style={{
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+    overflow: "hidden"
+  }}>{post.title || "Untitled Post"}</Text>
+        <Text variant="body" color="secondary" width={["100%", "100%"]} lineHeight={"1.5"} >
           {post.description || "No description available."}
         </Text>
 
