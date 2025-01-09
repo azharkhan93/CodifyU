@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
       posts = await getBlogPosts();
 
       
-      await client.set(allPostsCacheKey, JSON.stringify(posts), "EX", 3600);
+      await client.set(allPostsCacheKey, JSON.stringify(posts), "EX", 86400);
     }
 
     
