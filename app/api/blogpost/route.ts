@@ -39,16 +39,15 @@ export async function GET(request: NextRequest) {
         const post = posts.find((p) => p.slug === slug);
 
         if (post) {
-          // Cache the specific post for 1 hour (3600 seconds)
-          await client.set(`blogPost:${slug}`, JSON.stringify(post), "EX", 3600);
-          return NextResponse.json(post); // Return the post
+          
+          await client.set(`blogPost:${slug}`, JSON.stringify(post), "EX", 86400);
+          return NextResponse.json(post); 
         } else {
           return NextResponse.json({ error: "Post not found" }, { status: 404 });
         }
       }
     }
 
-    // If no slug is provided, return all posts
     return NextResponse.json(posts);
 
   } catch (error) {
