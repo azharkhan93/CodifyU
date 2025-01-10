@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Box, CenterBox, Column, Row, Text, } from "@/components";
+import { Box, CenterBox, Column, Row, Text } from "@/components";
 import { FaSpinner } from "react-icons/fa";
 import { PageProps, Product } from "@/types";
 
@@ -14,10 +14,18 @@ export default function Page({ params }: PageProps) {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
+        console.log("Fetching product for slug:", slug); // Debugging line
         const response = await axios.get(`/api/blogpost?slug=${slug}`);
-        setProduct(response.data);
+        
+     
+        if (response.data) {
+          setProduct(response.data);
+        } else {
+          setError("No data found for this product.");
+        }
       } catch (err) {
-        setError("Product not found");
+        console.error("Error fetching product:", err); // More logging
+        setError("Failed to fetch product data.");
       } finally {
         setLoading(false);
       }
@@ -47,7 +55,7 @@ export default function Page({ params }: PageProps) {
         justifyContent="center"
         height="100vh"
       >
-        <Text variant="body">{error}</Text>
+        <Text variant="body">{error || "Product not found"}</Text>
       </Box>
     );
   }
@@ -55,7 +63,7 @@ export default function Page({ params }: PageProps) {
   return (
     <>
       <Column
-       mt={"xlg"}
+        mt={"xlg"}
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -75,16 +83,17 @@ export default function Page({ params }: PageProps) {
             py={"xxxxl"}
           >
             <Text variant={"heading"} textAlign={["start", "center"]}>
-              {product.productName}
+              {product.productName || "No product name available"}
             </Text>
             <Text
-            width={["100%","790px"]}
+              width={["100%", "790px"]}
               variant={["body", "subHeading"]}
               textAlign={["start", "center"]}
             >
-              {product.productDesc}
+              {product.productDesc || "No product description available"}
             </Text>
           </CenterBox>
+          {/* Uncomment and adjust if needed for the image */}
           {/* {product.imageUrl && (
             <Column
               width={["100%", "900px"]}
