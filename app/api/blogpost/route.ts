@@ -1,83 +1,84 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
-import { getBlogPosts } from "@/utils/notion";
 
-const apiUrl = process.env.KV_REST_API_URL; // Upstash API URL
-const readOnlyToken = process.env.KV_REST_API_READ_ONLY_TOKEN; // Read-only token
-const writeToken = process.env.KV_REST_API_TOKEN; 
+// Environment variables for Upstash API
+const API_URL = process.env.KV_REST_API_URL; // The base URL for your Upstash instance
+const READ_ONLY_TOKEN = process.env.KV_REST_API_READ_ONLY_TOKEN; // The read-only token
+const WRITE_TOKEN = process.env.KV_REST_API_TOKEN; // The write token
 
-// Helper function to set data in Redis (cache)
-const setCache = async (key: string, value: any) => {
+// Function to insert blog post into Redis using SET method
+async function insertBlogPost(slug: string, post: any) {
   try {
-    await axios.post(
-      `${apiUrl}/set`,
-      { key, value: JSON.stringify(value) }, 
+    // Set the key using the slug (e.g., 'post-first-post')
+    const response = await axios.post(
+      `${API_URL}/set`,
+      {
+        key: `post-${slug}`,
+        value: JSON.stringify(post),
+      },
       {
         headers: {
-          Authorization: `Bearer ${writeToken}`,
+          Authorization: `Bearer ${WRITE_TOKEN}`,
         },
       }
     );
-    console.log(`Data cached for key: ${key}`);
-  } catch (error) {
-    console.error(`Error caching data for key: ${key}`, error);
-  }
-};
 
+    console.log(`Data successfully saved for ${slug} in Redis:`, response.data);
+    return response.data;
+  } catch (error) {
+    console.error(`Error saving data for ${slug} to Redis:`, error);
+    throw new Error(`Failed to insert data for ${slug} into Redis`);
+  }
+}
+
+// Fetch blog posts from Upstash (using the read-only token)
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const slug = url.searchParams.get("slug");
 
   try {
-    let posts: any[] = [];
+    let post: any = null;
 
-    // Check if there's a slug and attempt to fetch it from Redis
     if (slug) {
-      const cachedPost = await axios.get(`${apiUrl}/get`, {
-        params: { key: slug },
+      // Check if the specific post exists in Redis
+      console.log(`Fetching data from Upstash for post: ${slug}`);
+
+      const response = await axios.get(`${API_URL}/get`, {
+        params: { key: `post-${slug}` }, // Use the slug to dynamically generate the key
         headers: {
-          Authorization: `Bearer ${readOnlyToken}`,
+          Authorization: `Bearer ${READ_ONLY_TOKEN}`,
         },
       });
 
-      // If a cached post exists in Redis, return it
-      if (cachedPost.data) {
-        console.log("Returning cached post from Redis");
-        return NextResponse.json(cachedPost.data);
+      if (response.data && response.data.value) {
+        // If post exists, parse the value and return it
+        post = JSON.parse(response.data.value);
+      } else {
+        // If no post is found in Redis, simulate fetching data and inserting it
+        console.log(`No data found for ${slug}. Inserting sample post.`);
+        const samplePost = {
+          slug: slug,
+          title: `Sample Blog Post: ${slug}`,
+          content: `This is the content for the blog post with the slug ${slug}.`,
+        };
+        await insertBlogPost(slug, samplePost);
+        post = samplePost;
       }
-    }
-
-    // If no cached data found, fetch fresh data from Notion
-    console.log("Fetching new data from Notion for all posts");
-    posts = await getBlogPosts(); // Replace with your function to get posts from Notion
-
-    // Cache the fresh data in Redis (only if slug is not provided)
-    if (!slug) {
-      console.log("Caching all posts in Redis");
-      await setCache('allPosts', posts); // Cache all posts (or you can cache individually per post if needed)
-    }
-
-    // If a slug is provided, find the post by slug
-    if (slug) {
-      const post = posts.find((p) => p.slug === slug);
 
       if (post) {
-        // Cache the post individually for future use
-        await setCache(slug, post);
         return NextResponse.json(post);
       } else {
         return NextResponse.json({ error: "Post not found" }, { status: 404 });
       }
     }
 
-    // Return all posts if no slug is provided
-    return NextResponse.json(posts);
-
+    return NextResponse.json({ error: "Slug parameter is required" }, { status: 400 });
   } catch (error) {
-    console.error("Failed to fetch blog posts:", error);
-    return NextResponse.json({ error: "Failed to fetch blog posts" }, { status: 500 });
+    console.error("Failed to fetch or insert blog post:", error);
+    return NextResponse.json({ error: "Failed to fetch or insert blog post" }, { status: 500 });
   }
 }
+
 
 
 
