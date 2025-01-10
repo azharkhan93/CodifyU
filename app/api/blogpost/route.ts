@@ -1,33 +1,18 @@
-import Redis from "ioredis";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { getBlogPosts } from "@/utils/notion";
-
-const redisUrl = process.env.HOST_URL_REDIS_URL;
-console.log("Redis URL:", redisUrl);
-
-if (!redisUrl) {
-  throw new Error("Redis URL is not defined in the environment variables.");
-}
-// const client = new Redis(redisUrl, {
-// });
+import { getRedisClient } from "@/utils/redisClient";
 
 
- const client = new Redis(redisUrl);
-
-client.on("error", (err) => {
-  console.log("Redis Client Error", err);
-});
-
-client.connect();
-
-export async function GET(request: NextRequest) {
+export async function GET(request: Request) {
   const url = new URL(request.url);
   const slug = url.searchParams.get("slug");
 
+  const redisClient = getRedisClient(); 
   const allPostsCacheKey = "blogPosts";
 
   try {
-    const cachedAllPosts = await client.get(allPostsCacheKey);
+    
+    const cachedAllPosts = await redisClient.get(allPostsCacheKey);
 
     let posts: any[] = [];
     if (cachedAllPosts) {
@@ -36,11 +21,11 @@ export async function GET(request: NextRequest) {
     } else {
       console.log("Fetching new data from Notion for all posts");
       posts = await getBlogPosts();
-      await client.set(allPostsCacheKey, JSON.stringify(posts), "EX", 86400);
+      await redisClient.set(allPostsCacheKey, JSON.stringify(posts), "EX", 86400); // Cache for 24 hours
     }
 
     if (slug) {
-      const cachedPost = await client.get(`blogPost:${slug}`);
+      const cachedPost = await redisClient.get(`blogPost:${slug}`);
 
       if (cachedPost) {
         console.log("Returning cached data for slug:", slug);
@@ -51,7 +36,7 @@ export async function GET(request: NextRequest) {
         const post = posts.find((p) => p.slug === slug);
 
         if (post) {
-          await client.set(
+          await redisClient.set(
             `blogPost:${slug}`,
             JSON.stringify(post),
             "EX",
@@ -76,5 +61,6 @@ export async function GET(request: NextRequest) {
     );
   }
 }
+
 
 // S4q1ti9z9fkoyquq3zie2t0ixbdmq0lxlusmagzeicuqifvnmbf
