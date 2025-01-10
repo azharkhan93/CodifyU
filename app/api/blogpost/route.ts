@@ -21,7 +21,7 @@ export async function GET(request: Request) {
     } else {
       console.log("Fetching new data from Notion for all posts");
       posts = await getBlogPosts();
-      await redisClient.set(allPostsCacheKey, JSON.stringify(posts), "EX", 86400); // Cache for 24 hours
+      await redisClient.set(allPostsCacheKey, JSON.stringify(posts), "EX", 400); 
     }
 
     if (slug) {
