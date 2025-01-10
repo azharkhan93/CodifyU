@@ -27,7 +27,7 @@ export const getRedisClient = (): Redis => {
 
     redisClient = new Redis(redisUrl, {
       tls: {
-        rejectUnauthorized: false, 
+        rejectUnauthorized: true, 
       },
     });
   }
