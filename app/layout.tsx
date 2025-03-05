@@ -30,7 +30,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://www.codefyu.com/" />
 
         <meta name="twitter:card" content="One Stop For All Software Solutions" />
-        <meta name="twitter:title" content="CodeFyu" />
+        <meta name="twitter:title" content="codefyU" />
         <meta name="twitter:description" content="One Stop For All Software Solutions" />
         <meta name="twitter:image" content="https://www.codefyu.com/apple-touch-icon.png" />
       </Head>
