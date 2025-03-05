@@ -33,7 +33,6 @@ export * from "./DropDown"
 export * from "./FormSearcableSelect"
 export * from "./UpdateFormInpuBoxErrorMessage"
 export * from "./BlogSection"
-export * from  "./CareersSection"
 
 
 

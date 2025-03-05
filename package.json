@@ -17,7 +17,7 @@
     "@sendgrid/mail": "^8.1.4",
     "axios": "^1.7.9",
     "formik": "^2.4.5",
-    "framer-motion": "^11.16.1",
+    "framer-motion": "^11.5.4",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "^15.1.4",
@@ -30,10 +30,10 @@
     "react-skeleton-loader": "^1.0.4",
     "styled-components": "^6.1.14",
     "styled-system": "^5.1.5",
-    "sweetalert2": "^11.15.10",
-    "swiper": "^11.2.0",
-    "swr": "^2.3.0",
-    "yup": "^1.6.1"
+    "sweetalert2": "^11.10.7",
+    "swiper": "^11.1.14",
+    "swr": "^2.2.5",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

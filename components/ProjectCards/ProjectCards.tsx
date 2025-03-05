@@ -5,8 +5,12 @@ import { useEffect } from "react";
 import { ProjectCardsProps } from "@/types";
 import { useRouter } from "next/navigation";
 
-export const ProjectCards: React.FC<ProjectCardsProps> = ({ products }) => {
+export const ProjectCards: React.FC<ProjectCardsProps> = ({ products}) => {
   const router = useRouter();
+
+  // useEffect(() => {
+  //   console.log(products);
+  // }, [products]);
 
   useEffect(() => {}, [products]);
 

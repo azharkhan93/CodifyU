@@ -81,10 +81,10 @@ export async function getCustomBlogPosts() {
     database_id: process.env.CUSTOM_DATABASE_ID!,
   });
 
-  console.log("Raw Page Data:", response.results);
+  // console.log("Raw Page Data:", response.results);
 
   return response.results.map((page: any) => {
-    console.log("Page Data:", page);
+    // console.log("Page Data:", page);
 
     const file =
       page.properties["Files & media"]?.files?.[0]?.type === "external"
