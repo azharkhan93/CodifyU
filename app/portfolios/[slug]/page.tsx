@@ -5,19 +5,28 @@ import { Box, CenterBox, Column, Row, Text } from "@/components";
 import { FaSpinner } from "react-icons/fa";
 import { PageProps, Product } from "@/types";
 
-export default function Page({ params }: PageProps) {
-  const { slug } = params;
+export default function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const [slug, setSlug] = useState<string | null>(null);
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+
   useEffect(() => {
+    params.then((resolvedParams) => {
+      console.log("Resolved Params:", resolvedParams);
+      setSlug(resolvedParams.slug);
+    });
+  }, [params]);
+
+  useEffect(() => {
+    if (!slug) return;
+
     const fetchProduct = async () => {
       try {
-        console.log("Fetching product for slug:", slug); 
+        console.log("Fetching product for slug:", slug);
         const response = await axios.get(`/api/blogpost?slug=${slug}`);
-        
-     
+
         if (response.data) {
           setProduct(response.data);
         } else {
