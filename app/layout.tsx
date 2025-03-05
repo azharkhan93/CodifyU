@@ -23,7 +23,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="One Stop For All Software Solutions" />
         <meta property="og:title" content="codefyU" />
         <meta property="og:description" content="One Stop For All Software Solutions" />
         <meta property="og:image" content="https://www.codefyu.com/apple-touch-icon.png" />
