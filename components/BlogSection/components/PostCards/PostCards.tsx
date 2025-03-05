@@ -5,7 +5,6 @@ import React from "react";
 import { Post } from "../../BlogSection";
 import { LoadingCard } from "../LoadingCard";
 import { FaUserAlt } from "react-icons/fa";
-import { overflow } from "styled-system";
 
 type PostCardProps = {
   post: Post;
@@ -64,12 +63,7 @@ export const PostCards: React.FC<PostCardProps> = ({ post, loading }) => {
         >
           {post.title || "Untitled Post"}
         </Text>
-        <Text
-          variant="body"
-          color="secondary"
-          width={["100%", "100%"]}
-          lineHeight={"1.5"}
-        >
+        <Text variant="body" width={["100%", "100%"]} lineHeight={"1.5"}>
           {post.description || "No description available."}
         </Text>
 

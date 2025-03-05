@@ -45,10 +45,11 @@ export const BlogSection = () => {
 
   return (
     <Box
+    mt={"xlg"}
     overflow={"hidden"}
       gap="xxxl"
       width="100%"
-      py={["xxl","header"]}
+       py="xxl"
     >
       <Column py={"xl"} gap={"xl"} alignItems={"center"} >
           <Text variant={"heading"} textAlign={"center"} lineHeight={"1.3"}>Latest Blogs</Text>
