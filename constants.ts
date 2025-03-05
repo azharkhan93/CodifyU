@@ -109,11 +109,6 @@ export const NavbarData = [
     link: "/blogs",
     icon: FaInfoCircle,
   },
-  {
-    title: "Careers",
-    link: "/careers",
-    icon: FaHome,
-  },
 ];
 
 
