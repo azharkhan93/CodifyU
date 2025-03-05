@@ -1,11 +1,11 @@
-import { CareeersSection, ParallaxSection } from "@/components";
+import {  ParallaxSection } from "@/components";
 
 export default function Careers() {
 
     return(
         <>
 
-        <CareeersSection />
+        {/* <CareeersSection /> */}
     
         <ParallaxSection
          spanText = "Inspired by Our Portfolio?"
