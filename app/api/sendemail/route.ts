@@ -1,50 +1,48 @@
-import { NextResponse } from "next/server";
 import mail from "@sendgrid/mail";
 
 mail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
 export async function POST(request: Request) {
   try {
-    const { name, lastName, email, phone, subject, message } =
-      await request.json();
-
-    // Validate required fields
-    if (!email || !name || !subject || !message) {
-      return NextResponse.json(
-        { success: false, error: "Missing required fields" },
-        { status: 400 }
-      );
-    }
-
-    // Email for admin
-    const adminEmail = {
+    const ReceivedResponse = await request.json();
+    
+    const data = {
       to: ["muqqadas.codefyu@gmail.com", "adnaannazir@gmail.com"],
       from: "codefyu.inquiries@gmail.com",
       subject: "Contact Form Details",
       templateId: "d-ce91e7838ef14cec83cde27aca9d9412",
-      dynamicTemplateData: { name, lastName, email, phone, subject, message },
+      dynamicTemplateData: {
+        name: ReceivedResponse.name,
+        lastName: ReceivedResponse.lastName,  
+        email: ReceivedResponse.email,
+        phone: ReceivedResponse.phone, 
+        subject: ReceivedResponse.subject,    
+        message: ReceivedResponse.message,
+      },
     };
 
-    // Email for user
-    const userEmail = {
-      to: email,
+    const userData = {
+      to: ReceivedResponse.email, 
       from: "codefyu.inquiries@gmail.com",
       subject: "Thank You for Contacting Us",
-      templateId: "d-7b051f274e8747c3a3d2351139fa1c30",
-      dynamicTemplateData: { name },
+      templateId: "d-7b051f274e8747c3a3d2351139fa1c30", 
+      dynamicTemplateData: {},
     };
 
-    // Send emails concurrently
-    await Promise.all([mail.send(adminEmail), mail.send(userEmail)]);
+    await mail.send(data);
+    await mail.send(userData);
 
-    return NextResponse.json({ success: true, message: "Emails sent successfully" });
+    return new Response(JSON.stringify({ sent: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
 
   } catch (error: any) {
     console.error("Error sending email:", error);
 
-    return NextResponse.json(
-      { success: false, error: error.message || "Internal Server Error" },
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ sent: false, error: error.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

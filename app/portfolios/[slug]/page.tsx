@@ -14,7 +14,7 @@ export default function Page({ params }: PageProps) {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        console.log("Fetching product for slug:", slug); // Debugging line
+        console.log("Fetching product for slug:", slug); 
         const response = await axios.get(`/api/blogpost?slug=${slug}`);
         
      
@@ -24,7 +24,7 @@ export default function Page({ params }: PageProps) {
           setError("No data found for this product.");
         }
       } catch (err) {
-        console.error("Error fetching product:", err); // More logging
+        console.error("Error fetching product:", err);
         setError("Failed to fetch product data.");
       } finally {
         setLoading(false);
