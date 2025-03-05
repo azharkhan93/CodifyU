@@ -13,26 +13,26 @@
 //   }
 //   return redisClient;
 // };
-import Redis from "ioredis";
+// import Redis from "ioredis";
 
-let redisClient: Redis | null = null;
+// let redisClient: Redis | null = null;
 
-export const getRedisClient = (): Redis => {
-  if (!redisClient) {
-    const redisUrl = process.env.REDIS_URL; 
+// export const getRedisClient = (): Redis => {
+//   if (!redisClient) {
+//     const redisUrl = process.env.REDIS_URL; 
 
-    if (!redisUrl) {
-      throw new Error("REDIS_URL is not defined in the environment variables.");
-    }
+//     if (!redisUrl) {
+//       throw new Error("REDIS_URL is not defined in the environment variables.");
+//     }
 
-    redisClient = new Redis(redisUrl, {
-      tls: {
-        rejectUnauthorized: true, 
-      },
-    });
-  }
-  return redisClient;
-};
+//     redisClient = new Redis(redisUrl, {
+//       tls: {
+//         rejectUnauthorized: true, 
+//       },
+//     });
+//   }
+//   return redisClient;
+// };
 
 
 // import Redis from 'ioredis';
