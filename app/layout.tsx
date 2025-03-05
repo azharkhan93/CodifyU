@@ -17,11 +17,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+      <Head>
         <title>codefyU - Seamless Tech Solutions That Scale</title>
         <meta name="description" content="One Stop For All Software Solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="codefyU" />
+        <meta property="og:description" content="One Stop For All Software Solutions" />
+        <meta property="og:image" content="https://www.codefyu.com/apple-touch-icon.png" />
+        <meta property="og:url" content="https://www.codefyu.com/" />
+
+        <meta name="twitter:card" content="One Stop For All Software Solutions" />
+        <meta name="twitter:title" content="CodeFyu" />
+        <meta name="twitter:description" content="One Stop For All Software Solutions" />
+        <meta name="twitter:image" content="https://www.codefyu.com/apple-touch-icon.png" />
+      </Head>
+        {/* <title>codefyU - Seamless Tech Solutions That Scale</title>
+        <meta name="description" content="One Stop For All Software Solutions" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> */}
       </Head>
       <body>
         <AppThemeProvider>
